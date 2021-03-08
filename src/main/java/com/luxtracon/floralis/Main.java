@@ -2,6 +2,8 @@ package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.init.ItemInit;
 
+import com.luxtracon.floralis.tabs.ModTab;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,6 +14,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid=Reference.MODID, name=Reference.MODNAME, version=Reference.MODVERSION)
 public class Main {
 
+	public static final ModTab MODTAB = new ModTab("floralis");
+
 	@Instance
 	public static Main instance;
 
@@ -19,6 +23,7 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ItemInit.init();
+		MODTAB.setTabIconItem(new ItemStack(ItemInit.dyePurple));
 	}
 
 	@EventHandler
