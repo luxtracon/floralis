@@ -1,4 +1,4 @@
-package com.luxtracon.floralis.items;
+package com.luxtracon.floralis.base;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
