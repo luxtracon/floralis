@@ -1,6 +1,6 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.init.ModItems;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -18,7 +18,7 @@ public class Main {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		ModItems.init();
+		ItemInit.init();
 	}
 
 	@EventHandler

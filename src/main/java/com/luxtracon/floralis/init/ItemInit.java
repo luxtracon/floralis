@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.init;
 
-import com.luxtracon.floralis.items.ItemBasic;
+import com.luxtracon.floralis.items.ItemBase;
 import com.luxtracon.floralis.Reference;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -12,25 +12,28 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid=Reference.MODID)
-public class ModItems {
+public class ItemInit {
 	
-	static Item petal;
+	static Item dyePurple;
+	static Item	dyeCyan;
 	
 	public static void init() {
-		petal = new ItemBasic("petal");
+		dyePurple = new ItemBase("dye_purple");
+		dyeCyan = new ItemBase ("dye_cyan");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(petal);
+		event.getRegistry().registerAll(dyePurple, dyeCyan);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(petal);
+		registerRender(dyePurple);
+		registerRender(dyeCyan);
 	}
 	
 	private static void registerRender(Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( item.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 }
