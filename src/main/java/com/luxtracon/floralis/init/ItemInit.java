@@ -14,65 +14,65 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber(modid=Reference.MODID)
 public class ItemInit {
 
-	static Item dyeBlack;
-	static Item dyeRed;
-	static Item dyeGreen;
-	static Item dyeBrown;
-	static Item dyeBlue;
-	static Item dyePurple;
-	static Item dyeCyan;
-	static Item dyeLightGray;
-	static Item dyeGray;
-	static Item dyePink;
-	static Item dyeLime;
-	static Item dyeYellow;
-	static Item dyeLightBlue;
-	static Item dyeMagenta;
-	static Item dyeOrange;
 	static Item	dyeWhite;
+	static Item dyeOrange;
+	static Item dyeMagenta;
+	static Item dyeLightBlue;
+	static Item dyeYellow;
+	static Item dyeLime;
+	static Item dyePink;
+	static Item dyeGray;
+	static Item dyeLightGray;
+	static Item dyeCyan;
+	static Item dyePurple;
+	static Item dyeBlue;
+	static Item dyeBrown;
+	static Item dyeGreen;
+	static Item dyeRed;
+	static Item dyeBlack;
 	
 	public static void init() {
-		dyeBlack = new ItemBase("blackdye");
-		dyeRed = new ItemBase("reddye");
-		dyeGreen = new ItemBase ("greendye");
-		dyeBrown = new ItemBase ("browndye");
-		dyeBlue = new ItemBase("bluedye");
-		dyePurple = new ItemBase("purpledye");
-		dyeCyan = new ItemBase ("cyandye");
-		dyeLightGray = new ItemBase("lightgraydye");
-		dyeGray = new ItemBase("graydye");
-		dyePink = new ItemBase ("pinkdye");
-		dyeLime = new ItemBase ("limedye");
-		dyeYellow = new ItemBase("yellowdye");
-		dyeLightBlue = new ItemBase("lightbluedye");
-		dyeMagenta = new ItemBase ("magentadye");
-		dyeOrange = new ItemBase("orangedye");
 		dyeWhite = new ItemBase ("whitedye");
+		dyeOrange = new ItemBase("orangedye");
+		dyeMagenta = new ItemBase ("magentadye");
+		dyeLightBlue = new ItemBase("lightbluedye");
+		dyeYellow = new ItemBase("yellowdye");
+		dyeLime = new ItemBase ("limedye");
+		dyePink = new ItemBase ("pinkdye");
+		dyeGray = new ItemBase("graydye");
+		dyeLightGray = new ItemBase("lightgraydye");
+		dyeCyan = new ItemBase ("cyandye");
+		dyePurple = new ItemBase("purpledye");
+		dyeBlue = new ItemBase("bluedye");
+		dyeBrown = new ItemBase ("browndye");
+		dyeGreen = new ItemBase ("greendye");
+		dyeRed = new ItemBase("reddye");
+		dyeBlack = new ItemBase("blackdye");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(dyeBlack, dyeRed, dyeGreen, dyeBrown, dyeBlue, dyePurple, dyeCyan, dyeLightGray, dyeGray, dyePink, dyeLime, dyeYellow, dyeLightBlue, dyeMagenta, dyeOrange, dyeWhite);
+		event.getRegistry().registerAll(dyeWhite, dyeOrange, dyeMagenta, dyeLightBlue, dyeYellow, dyeLime, dyePink, dyeGray, dyeLightGray, dyeCyan, dyePurple, dyeBlue, dyeBrown, dyeGreen, dyeRed, dyeBlack);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(dyeBlack);
-		registerRender(dyeRed);
-		registerRender(dyeGreen);
-		registerRender(dyeBrown);
-		registerRender(dyeBlue);
-		registerRender(dyePurple);
-		registerRender(dyeCyan);
-		registerRender(dyeLightGray);
-		registerRender(dyeGray);
-		registerRender(dyePink);
-		registerRender(dyeLime);
-		registerRender(dyeYellow);
-		registerRender(dyeLightBlue);
-		registerRender(dyeMagenta);
-		registerRender(dyeOrange);
 		registerRender(dyeWhite);
+		registerRender(dyeOrange);
+		registerRender(dyeMagenta);
+		registerRender(dyeLightBlue);
+		registerRender(dyeYellow);
+		registerRender(dyeLime);
+		registerRender(dyePink);
+		registerRender(dyeGray);
+		registerRender(dyeLightGray);
+		registerRender(dyeCyan);
+		registerRender(dyePurple);
+		registerRender(dyeBlue);
+		registerRender(dyeBrown);
+		registerRender(dyeGreen);
+		registerRender(dyeRed);
+		registerRender(dyeBlack);
 	}
 	
 	private static void registerRender(Item item) {
