@@ -1,0 +1,16 @@
+[
+{
+  "modid": "floralis",
+  "name": "Floralis",
+  "description": "",
+  "version": "1.0.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["luxtracon"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
