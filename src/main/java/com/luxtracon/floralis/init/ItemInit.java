@@ -52,7 +52,22 @@ public class ItemInit {
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(dyeWhite, dyeOrange, dyeMagenta, dyeLightBlue, dyeYellow, dyeLime, dyePink, dyeGray, dyeLightGray, dyeCyan, dyePurple, dyeBlue, dyeBrown, dyeGreen, dyeRed, dyeBlack);
+		event.getRegistry().registerAll(dyeWhite);
+		event.getRegistry().registerAll(dyeOrange);
+		event.getRegistry().registerAll(dyeMagenta);
+		event.getRegistry().registerAll(dyeLightBlue);
+		event.getRegistry().registerAll(dyeYellow);
+		event.getRegistry().registerAll(dyeLime);
+		event.getRegistry().registerAll(dyePink);
+		event.getRegistry().registerAll(dyeGray);
+		event.getRegistry().registerAll(dyeLightGray);
+		event.getRegistry().registerAll(dyeCyan);
+		event.getRegistry().registerAll(dyePurple);
+		event.getRegistry().registerAll(dyeBlue);
+		event.getRegistry().registerAll(dyeBrown);
+		event.getRegistry().registerAll(dyeGreen);
+		event.getRegistry().registerAll(dyeRed);
+		event.getRegistry().registerAll(dyeBlack);
 	}
 	
 	@SubscribeEvent

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "floralis:lightgraydye",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "floralis:lightgraydyeblock",
+    "data": 0
+  }
+}

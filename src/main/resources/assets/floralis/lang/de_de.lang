@@ -1,0 +1,36 @@
+item.whitedye.name=Weißer Farbstoff
+item.orangedye.name=Oranger Farbstoff
+item.magentadye.name=Magenta Farbstoff
+item.lightbluedye.name=Hellblauer Farbstoff
+item.yellowdye.name=Gelber Farbstoff
+item.limedye.name=Hellgrüner Farbstoff
+item.pinkdye.name=Rosa Farbstoff
+item.graydye.name=Grauer Farbstoff
+item.lightgraydye.name=Hellgrauer Farbstoff
+item.cyandye.name=Türkiser Farbstoff
+item.purpledye.name=Violetter Farbstoff
+item.bluedye.name=Blauer Farbstoff
+item.browndye.name= Brauner Farbstoff
+item.greendye.name=Grüner Farbstoff
+item.reddye.name=Roter Farbstoff
+item.blackdye.name=Schwarzer Farbstoff
+
+tile.whitedyeblock.name=Weißer Farbstoffblock
+tile.orangedyeblock.name=Oranger Farbstoffblock
+tile.magentadyeblock.name=Magenta Farbstoffblock
+tile.lightbluedyeblock.name=Hellblauer Farbstoffblock
+tile.yellowdyeblock.name=Gelber Farbstoffblock
+tile.limedyeblock.name=Hellgrüner Farbstoffblock
+tile.pinkdyeblock.name=Rosa Farbstoffblock
+tile.graydyeblock.name=Grauer Farbstoffblock
+tile.lightgraydyeblock.name=Hellgrauer Farbstoffblock
+tile.cyandyeblock.name=Türkiser Farbstoffblock
+tile.purpledyeblock.name=Violetter Farbstoffblock
+tile.bluedyeblock.name=Blauer Farbstoffblock
+tile.browndyeblock.name=Brauner Farbstoffblock
+tile.greendyeblock.name=Grüner Farbstoffblock
+tile.reddyeblock.name=Roter Farbstoffblock
+tile.blackdyeblock.name=Schwarzer Farbstoffblock
+
+
+itemGroup.floralis=Floralis

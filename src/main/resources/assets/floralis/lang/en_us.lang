@@ -15,4 +15,22 @@ item.greendye.name=Green Dye
 item.reddye.name=Red Dye
 item.blackdye.name=Black Dye
 
+tile.whitedyeblock.name=White Dye Block
+tile.orangedyeblock.name=Orange Dye Block
+tile.magentadyeblock.name=Magenta Dye Block
+tile.lightbluedyeblock.name=Light Blue Dye Block
+tile.yellowdyeblock.name=Yellow Dye Block
+tile.limedyeblock.name=Lime Dye Block
+tile.pinkdyeblock.name=Pink Dye Block
+tile.graydyeblock.name=Gray Dye Block
+tile.lightgraydyeblock.name=Light Gray Dye Block
+tile.cyandyeblock.name=Cyan Dye Block
+tile.purpledyeblock.name=Purple Dye Block
+tile.bluedyeblock.name=Blue Dye Block
+tile.browndyeblock.name=Brown Dye Block
+tile.greendyeblock.name=Green Dye Block
+tile.reddyeblock.name=Red Dye Block
+tile.blackdyeblock.name=Black Dye Block
+
+
 itemGroup.floralis=Floralis
