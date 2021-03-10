@@ -32,5 +32,21 @@ tile.greendyeblock.name=Grüner Farbstoffblock
 tile.reddyeblock.name=Roter Farbstoffblock
 tile.blackdyeblock.name=Schwarzer Farbstoffblock
 
+tile.whitedyeblock.tooltip=Dekorativ und platzsparend
+tile.orangedyeblock.tooltip=Dekorativ und platzsparend
+tile.magentadyeblock.tooltip=Dekorativ und platzsparend
+tile.lightbluedyeblock.tooltip=Dekorativ und platzsparend
+tile.yellowdyeblock.tooltip=Dekorativ und platzsparend
+tile.limedyeblock.tooltip=Dekorativ und platzsparend
+tile.pinkdyeblock.tooltip=Dekorativ und platzsparend
+tile.graydyeblock.tooltip=Dekorativ und platzsparend
+tile.lightgraydyeblock.tooltip=Dekorativ und platzsparend
+tile.cyandyeblock.tooltip=Dekorativ und platzsparend
+tile.purpledyeblock.tooltip=Dekorativ und platzsparend
+tile.bluedyeblock.tooltip=Dekorativ und platzsparend
+tile.browndyeblock.tooltip=Dekorativ und platzsparend
+tile.greendyeblock.tooltip=Dekorativ und platzsparend
+tile.reddyeblock.tooltip=Dekorativ und platzsparend
+tile.blackdyeblock.tooltip=Dekorativ und platzsparend
 
 itemGroup.floralis=Floralis

@@ -1,6 +1,7 @@
 package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.init.BlockInit;
+import com.luxtracon.floralis.init.FlowerInit;
 import com.luxtracon.floralis.init.ItemInit;
 
 import com.luxtracon.floralis.tabs.ModTab;
@@ -25,6 +26,7 @@ public class Main {
 	{
 		ItemInit.init();
 		BlockInit.init();
+		FlowerInit.init();
 		MODTAB.setTabIconItem(new ItemStack(ItemInit.dyePurple));
 	}
 

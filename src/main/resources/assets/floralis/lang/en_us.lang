@@ -32,5 +32,8 @@ tile.greendyeblock.name=Green Dye Block
 tile.reddyeblock.name=Red Dye Block
 tile.blackdyeblock.name=Black Dye Block
 
+tile.testflower.name=Test Flower
+
+tile.dyeblock.tooltip=Decorative and space-saving
 
 itemGroup.floralis=Floralis
