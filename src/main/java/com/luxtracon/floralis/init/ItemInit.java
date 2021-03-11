@@ -24,7 +24,7 @@ public class ItemInit {
 	static Item dyeGray;
 	static Item dyeLightGray;
 	static Item dyeCyan;
-	public static Item dyePurple;
+	static Item dyePurple;
 	static Item dyeBlue;
 	static Item dyeBrown;
 	static Item dyeGreen;

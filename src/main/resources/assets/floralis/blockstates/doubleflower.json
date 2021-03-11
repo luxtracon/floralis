@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cross"
+  },
+  "variants": {
+    "facing=north,half=lower,variant=sunflower": [{ "textures": { "cross": "floralis:blocks/blackdyeblock" } }],
+    "facing=north,half=upper,variant=sunflower": [{ "textures": { "cross": "floralis:blocks/whitedyeblock" } }]
+  }
+}

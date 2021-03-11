@@ -1,16 +1,16 @@
-package com.luxtracon.floralis.base;
+/*package com.luxtracon.floralis.base;
 
 import com.luxtracon.floralis.Main;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class FlowerBase extends BlockBush {
-    public FlowerBase(String name) {
+public class DoubleFlowerBase extends BlockDoublePlant {
+    public DoubleFlowerBase(String name) {
         setRegistryName(name);
         setTranslationKey(name);
         setLightLevel(8/16f);
@@ -29,4 +29,4 @@ public class FlowerBase extends BlockBush {
     {
         return Block.EnumOffsetType.XZ;
     }
-}
+}*/

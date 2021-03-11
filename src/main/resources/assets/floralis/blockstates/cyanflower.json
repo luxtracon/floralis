@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "floralis:cyanflower",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": [{ }],
+    "inventory": [{"model": "floralis:item/cyanflower"}],
+    "stage=0":[{ }],
+    "stage=1":[{ }]
+  }
+}

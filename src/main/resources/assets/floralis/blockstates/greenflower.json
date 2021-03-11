@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "floralis:greenflower",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": [{ }],
+    "inventory": [{"model": "floralis:item/greenflower"}],
+    "stage=0":[{ }],
+    "stage=1":[{ }]
+  }
+}

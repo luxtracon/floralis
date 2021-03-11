@@ -32,7 +32,22 @@ tile.greendyeblock.name=Green Dye Block
 tile.reddyeblock.name=Red Dye Block
 tile.blackdyeblock.name=Black Dye Block
 
-tile.testflower.name=Test Flower
+tile.whiteflower.name=White Flower
+tile.orangeflower.name=Orange Flower
+tile.magentaflower.name=Magenta Flower
+tile.lightblueflower.name=Light Blue Flower
+tile.yellowflower.name=Yellow Flower
+tile.limeflower.name=Lime Flower
+tile.pinkflower.name=Pink Flower
+tile.grayflower.name=Gray Flower
+tile.lightgrayflower.name=Light Gray Flower
+tile.cyanflower.name=Cyan Flower
+tile.purpleflower.name=Purple Flower
+tile.blueflower.name=Blue Flower
+tile.brownflower.name=Brown Flower
+tile.greenflower.name=Green Flower
+tile.redflower.name=Red Flower
+tile.blackflower.name=Black Flower
 
 tile.dyeblock.tooltip=Decorative and space-saving
 
