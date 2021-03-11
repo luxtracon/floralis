@@ -12,8 +12,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid=Reference.MODID)
-public class ItemInit {
-
+public class ItemInit
+{
 	static Item	dyeWhite;
 	static Item dyeOrange;
 	static Item dyeMagenta;
@@ -31,7 +31,8 @@ public class ItemInit {
 	static Item dyeRed;
 	static Item dyeBlack;
 	
-	public static void init() {
+	public static void init()
+	{
 		dyeWhite = new ItemBase ("whitedye");
 		dyeOrange = new ItemBase("orangedye");
 		dyeMagenta = new ItemBase ("magentadye");
@@ -51,7 +52,8 @@ public class ItemInit {
 	}
 	
 	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
+	public static void registerItems(RegistryEvent.Register<Item> event)
+	{
 		event.getRegistry().registerAll(dyeWhite);
 		event.getRegistry().registerAll(dyeOrange);
 		event.getRegistry().registerAll(dyeMagenta);
@@ -71,7 +73,8 @@ public class ItemInit {
 	}
 	
 	@SubscribeEvent
-	public static void registerRenders(ModelRegistryEvent event) {
+	public static void registerRenders(ModelRegistryEvent event)
+	{
 		registerRender(dyeWhite);
 		registerRender(dyeOrange);
 		registerRender(dyeMagenta);
@@ -90,7 +93,8 @@ public class ItemInit {
 		registerRender(dyeBlack);
 	}
 	
-	private static void registerRender(Item item) {
+	private static void registerRender(Item item)
+	{
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 }

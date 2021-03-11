@@ -12,9 +12,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BlockBase extends BlockFalling {
-
-    public BlockBase(String name, Material material, float hardness, float resistance, String tool, int miningLevel) {
+public class BlockBase extends BlockFalling
+{
+    public BlockBase(String name, Material material, float hardness, float resistance, String tool, int miningLevel)
+    {
         super(material);
         setRegistryName(name);
         setTranslationKey(name);
@@ -26,18 +27,21 @@ public class BlockBase extends BlockFalling {
     }
 
     /*@Override
-    public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flags) {
+    public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flags)
+    {
         super.addInformation(stack, world, tooltip, flags);
         tooltip.add(I18n.format(getTranslationKey() + ".tooltip"));
     }*/
 
     @Override
-    public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flags) {
+    public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flags)
+    {
         super.addInformation(stack, world, tooltip, flags);
         tooltip.add(I18n.format(getTooltipTranslationKey()));
     }
 
-    public String getTooltipTranslationKey() {
+    public String getTooltipTranslationKey()
+    {
         return "tile.dyeblock.tooltip";
     }
 }

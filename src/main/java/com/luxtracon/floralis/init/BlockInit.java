@@ -15,8 +15,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid=Reference.MODID)
-public class BlockInit {
-
+public class BlockInit
+{
     static Block blockDyeWhite;
     static Block blockDyeOrange;
     static Block blockDyeMagenta;
@@ -34,7 +34,8 @@ public class BlockInit {
     static Block blockDyeRed;
     static Block blockDyeBlack;
 
-    public static void init() {
+    public static void init()
+    {
         blockDyeWhite = new BlockBase("whitedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
         blockDyeOrange = new BlockBase("orangedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
         blockDyeMagenta = new BlockBase("magentadyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
@@ -54,7 +55,8 @@ public class BlockInit {
     }
 
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+    public static void registerBlocks(RegistryEvent.Register<Block> event)
+    {
         event.getRegistry().registerAll(blockDyeWhite);
         event.getRegistry().registerAll(blockDyeOrange);
         event.getRegistry().registerAll(blockDyeMagenta);
@@ -74,7 +76,8 @@ public class BlockInit {
     }
 
     @SubscribeEvent
-    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
+    public static void registerItemBlocks(RegistryEvent.Register<Item> event)
+    {
         event.getRegistry().registerAll(new ItemBlock(blockDyeWhite).setRegistryName(blockDyeWhite.getRegistryName()));
         event.getRegistry().registerAll(new ItemBlock(blockDyeOrange).setRegistryName(blockDyeOrange.getRegistryName()));
         event.getRegistry().registerAll(new ItemBlock(blockDyeMagenta).setRegistryName(blockDyeMagenta.getRegistryName()));
@@ -94,7 +97,8 @@ public class BlockInit {
     }
 
     @SubscribeEvent
-    public static void registerRenders(ModelRegistryEvent event) {
+    public static void registerRenders(ModelRegistryEvent event)
+    {
         registerRender(Item.getItemFromBlock(blockDyeWhite));
         registerRender(Item.getItemFromBlock(blockDyeOrange));
         registerRender(Item.getItemFromBlock(blockDyeMagenta));
@@ -113,7 +117,8 @@ public class BlockInit {
         registerRender(Item.getItemFromBlock(blockDyeBlack));
     }
 
-    public static void registerRender(Item item) {
+    public static void registerRender(Item item)
+    {
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
 }

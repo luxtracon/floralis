@@ -15,8 +15,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid= Reference.MODID)
-public class FlowerInit {
-
+public class FlowerInit
+{
     static BlockBush flowerWhite;
     static BlockBush flowerOrange;
     static BlockBush flowerMagenta;
@@ -34,7 +34,8 @@ public class FlowerInit {
     static BlockBush flowerRed;
     static BlockBush flowerBlack;
 
-    public static void init() {
+    public static void init()
+    {
         flowerWhite = new FlowerBase("whiteflower");
         flowerOrange = new FlowerBase("orangeflower");
         flowerMagenta = new FlowerBase("magentaflower");
@@ -54,7 +55,8 @@ public class FlowerInit {
     }
 
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+    public static void registerBlocks(RegistryEvent.Register<Block> event)
+    {
         event.getRegistry().registerAll(flowerWhite);
         event.getRegistry().registerAll(flowerOrange);
         event.getRegistry().registerAll(flowerMagenta);
@@ -74,7 +76,8 @@ public class FlowerInit {
     }
 
     @SubscribeEvent
-    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
+    public static void registerItemBlocks(RegistryEvent.Register<Item> event)
+    {
         event.getRegistry().registerAll(new ItemBlock(flowerWhite).setRegistryName(flowerWhite.getRegistryName()));
         event.getRegistry().registerAll(new ItemBlock(flowerOrange).setRegistryName(flowerOrange.getRegistryName()));
         event.getRegistry().registerAll(new ItemBlock(flowerMagenta).setRegistryName(flowerMagenta.getRegistryName()));
@@ -94,7 +97,8 @@ public class FlowerInit {
     }
 
     @SubscribeEvent
-    public static void registerRenders(ModelRegistryEvent event) {
+    public static void registerRenders(ModelRegistryEvent event)
+    {
         registerRender(Item.getItemFromBlock(flowerWhite));
         registerRender(Item.getItemFromBlock(flowerOrange));
         registerRender(Item.getItemFromBlock(flowerMagenta));
@@ -113,7 +117,8 @@ public class FlowerInit {
         registerRender(Item.getItemFromBlock(flowerBlack));
     }
 
-    public static void registerRender(Item item) {
+    public static void registerRender(Item item)
+    {
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
 }

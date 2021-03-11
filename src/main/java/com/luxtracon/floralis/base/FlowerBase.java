@@ -9,8 +9,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class FlowerBase extends BlockBush {
-    public FlowerBase(String name) {
+public class FlowerBase extends BlockBush
+{
+    public FlowerBase(String name)
+    {
         setRegistryName(name);
         setTranslationKey(name);
         setLightLevel(8/16f);
