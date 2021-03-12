@@ -1,19 +1,21 @@
 package com.luxtracon.floralis.init;
 
-import com.luxtracon.floralis.base.ItemBase;
+import com.luxtracon.floralis.base.BaseItem;
 import com.luxtracon.floralis.Reference;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.Objects;
+
 @EventBusSubscriber(modid=Reference.MODID)
-public class ItemInit
+public class InitItem
 {
 	public static Item seedWhite;
 	public static Item seedOrange;
@@ -68,56 +70,56 @@ public class ItemInit
 	
 	public static void init()
 	{
-		seedWhite = new ItemBase("whiteseed");
-		seedOrange = new ItemBase("orangeseed");
-		seedMagenta = new ItemBase("magentaseed");
-		seedLightBlue = new ItemBase("lightblueseed");
-		seedYellow = new ItemBase("yellowseed");
-		seedLime = new ItemBase("limeseed");
-		seedPink = new ItemBase("pinkseed");
-		seedGray = new ItemBase("grayseed");
-		seedLightGray = new ItemBase("lightgrayseed");
-		seedCyan = new ItemBase("cyanseed");
-		seedPurple = new ItemBase("purpleseed");
-		seedBlue = new ItemBase("blueseed");
-		seedBrown = new ItemBase("brownseed");
-		seedGreen = new ItemBase("greenseed");
-		seedRed = new ItemBase("redseed");
-		seedBlack = new ItemBase("blackseed");
+		seedWhite = new BaseItem("whiteseed");
+		seedOrange = new BaseItem("orangeseed");
+		seedMagenta = new BaseItem("magentaseed");
+		seedLightBlue = new BaseItem("lightblueseed");
+		seedYellow = new BaseItem("yellowseed");
+		seedLime = new BaseItem("limeseed");
+		seedPink = new BaseItem("pinkseed");
+		seedGray = new BaseItem("grayseed");
+		seedLightGray = new BaseItem("lightgrayseed");
+		seedCyan = new BaseItem("cyanseed");
+		seedPurple = new BaseItem("purpleseed");
+		seedBlue = new BaseItem("blueseed");
+		seedBrown = new BaseItem("brownseed");
+		seedGreen = new BaseItem("greenseed");
+		seedRed = new BaseItem("redseed");
+		seedBlack = new BaseItem("blackseed");
 
-		petalWhite = new ItemBase("whitepetal");
-		petalOrange = new ItemBase("orangepetal");
-		petalMagenta = new ItemBase("magentapetal");
-		petalLightBlue = new ItemBase("lightbluepetal");
-		petalYellow = new ItemBase("yellowpetal");
-		petalLime = new ItemBase("limepetal");
-		petalPink = new ItemBase("pinkpetal");
-		petalGray = new ItemBase("graypetal");
-		petalLightGray = new ItemBase("lightgraypetal");
-		petalCyan = new ItemBase("cyanpetal");
-		petalPurple = new ItemBase("purplepetal");
-		petalBlue = new ItemBase("bluepetal");
-		petalBrown = new ItemBase("brownpetal");
-		petalGreen = new ItemBase("greenpetal");
-		petalRed = new ItemBase("redpetal");
-		petalBlack = new ItemBase("blackpetal");
+		petalWhite = new BaseItem("whitepetal");
+		petalOrange = new BaseItem("orangepetal");
+		petalMagenta = new BaseItem("magentapetal");
+		petalLightBlue = new BaseItem("lightbluepetal");
+		petalYellow = new BaseItem("yellowpetal");
+		petalLime = new BaseItem("limepetal");
+		petalPink = new BaseItem("pinkpetal");
+		petalGray = new BaseItem("graypetal");
+		petalLightGray = new BaseItem("lightgraypetal");
+		petalCyan = new BaseItem("cyanpetal");
+		petalPurple = new BaseItem("purplepetal");
+		petalBlue = new BaseItem("bluepetal");
+		petalBrown = new BaseItem("brownpetal");
+		petalGreen = new BaseItem("greenpetal");
+		petalRed = new BaseItem("redpetal");
+		petalBlack = new BaseItem("blackpetal");
 
-		dyeWhite = new ItemBase ("whitedye");
-		dyeOrange = new ItemBase("orangedye");
-		dyeMagenta = new ItemBase ("magentadye");
-		dyeLightBlue = new ItemBase("lightbluedye");
-		dyeYellow = new ItemBase("yellowdye");
-		dyeLime = new ItemBase ("limedye");
-		dyePink = new ItemBase ("pinkdye");
-		dyeGray = new ItemBase("graydye");
-		dyeLightGray = new ItemBase("lightgraydye");
-		dyeCyan = new ItemBase ("cyandye");
-		dyePurple = new ItemBase("purpledye");
-		dyeBlue = new ItemBase("bluedye");
-		dyeBrown = new ItemBase ("browndye");
-		dyeGreen = new ItemBase ("greendye");
-		dyeRed = new ItemBase("reddye");
-		dyeBlack = new ItemBase("blackdye");
+		dyeWhite = new BaseItem("whitedye");
+		dyeOrange = new BaseItem("orangedye");
+		dyeMagenta = new BaseItem("magentadye");
+		dyeLightBlue = new BaseItem("lightbluedye");
+		dyeYellow = new BaseItem("yellowdye");
+		dyeLime = new BaseItem("limedye");
+		dyePink = new BaseItem("pinkdye");
+		dyeGray = new BaseItem("graydye");
+		dyeLightGray = new BaseItem("lightgraydye");
+		dyeCyan = new BaseItem("cyandye");
+		dyePurple = new BaseItem("purpledye");
+		dyeBlue = new BaseItem("bluedye");
+		dyeBrown = new BaseItem("browndye");
+		dyeGreen = new BaseItem("greendye");
+		dyeRed = new BaseItem("reddye");
+		dyeBlack = new BaseItem("blackdye");
 	}
 	
 	@SubscribeEvent
@@ -232,6 +234,6 @@ public class ItemInit
 	
 	private static void registerRender(Item item)
 	{
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
 	}
 }

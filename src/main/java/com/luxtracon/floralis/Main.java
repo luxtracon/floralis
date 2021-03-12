@@ -1,11 +1,12 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.init.BlockInit;
-import com.luxtracon.floralis.init.FlowerInit;
-import com.luxtracon.floralis.init.ItemInit;
+import com.luxtracon.floralis.init.InitBlock;
+import com.luxtracon.floralis.init.InitFlower;
+import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.tabs.Tab;
 
-import com.luxtracon.floralis.tabs.ModTab;
 import net.minecraft.creativetab.CreativeTabs;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -16,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid=Reference.MODID, name=Reference.MODNAME, version=Reference.MODVERSION)
 public class Main
 {
-	public static final CreativeTabs MODTAB = new ModTab("floralis");
+	public static final CreativeTabs MODTAB = new Tab("floralis");
 
 	@Instance
 	public static Main instance;
@@ -24,9 +25,9 @@ public class Main
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		FlowerInit.init();
-		ItemInit.init();
-		BlockInit.init();
+		InitFlower.init();
+		InitItem.init();
+		InitBlock.init();
 	}
 
 	@EventHandler

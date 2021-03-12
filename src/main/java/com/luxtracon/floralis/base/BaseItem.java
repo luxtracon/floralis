@@ -1,11 +1,12 @@
 package com.luxtracon.floralis.base;
 
 import com.luxtracon.floralis.Main;
+
 import net.minecraft.item.Item;
 
-public class ItemBase extends Item
+public class BaseItem extends Item
 {
-	public ItemBase(String name)
+	public BaseItem(String name)
 	{
 		setRegistryName(name);
 		setTranslationKey(name);

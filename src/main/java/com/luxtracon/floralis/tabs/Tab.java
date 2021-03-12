@@ -1,12 +1,13 @@
 package com.luxtracon.floralis.tabs;
 
-import com.luxtracon.floralis.init.FlowerInit;
+import com.luxtracon.floralis.init.InitFlower;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class ModTab extends CreativeTabs
+public class Tab extends CreativeTabs
 {
-    public ModTab (String label)
+    public Tab(String label)
     {
         super("floralis");
         setBackgroundImageName("item_search.png");
@@ -15,7 +16,7 @@ public class ModTab extends CreativeTabs
     @Override
     public ItemStack createIcon ()
     {
-        return new ItemStack(FlowerInit.flowerPurple);
+        return new ItemStack(InitFlower.flowerPurple);
     }
 
     @Override

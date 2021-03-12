@@ -1,21 +1,24 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.Reference;
-import com.luxtracon.floralis.base.FlowerBase;
+import com.luxtracon.floralis.flower.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.Objects;
+
 @EventBusSubscriber(modid= Reference.MODID)
-public class FlowerInit
+public class InitFlower
 {
     static BlockBush flowerWhite;
     static BlockBush flowerOrange;
@@ -36,22 +39,22 @@ public class FlowerInit
 
     public static void init()
     {
-        flowerWhite = new FlowerBase("whiteflower");
-        flowerOrange = new FlowerBase("orangeflower");
-        flowerMagenta = new FlowerBase("magentaflower");
-        flowerLightBlue = new FlowerBase("lightblueflower");
-        flowerYellow = new FlowerBase("yellowflower");
-        flowerLime = new FlowerBase("limeflower");
-        flowerPink = new FlowerBase("pinkflower");
-        flowerGray = new FlowerBase("grayflower");
-        flowerLightGray = new FlowerBase("lightgrayflower");
-        flowerCyan = new FlowerBase("cyanflower");
-        flowerPurple = new FlowerBase("purpleflower");
-        flowerBlue = new FlowerBase("blueflower");
-        flowerBrown = new FlowerBase("brownflower");
-        flowerGreen = new FlowerBase("greenflower");
-        flowerRed = new FlowerBase("redflower");
-        flowerBlack = new FlowerBase("blackflower");
+        flowerWhite = new FlowerWhite("whiteflower");
+        flowerOrange = new FlowerOrange("orangeflower");
+        flowerMagenta = new FlowerMagenta("magentaflower");
+        flowerLightBlue = new FlowerLightBlue("lightblueflower");
+        flowerYellow = new FlowerYellow("yellowflower");
+        flowerLime = new FlowerLime("limeflower");
+        flowerPink = new FlowerPink("pinkflower");
+        flowerGray = new FlowerGray("grayflower");
+        flowerLightGray = new FlowerLightGray("lightgrayflower");
+        flowerCyan = new FlowerCyan("cyanflower");
+        flowerPurple = new FlowerPurple("purpleflower");
+        flowerBlue = new FlowerBlue("blueflower");
+        flowerBrown = new FlowerBrown("brownflower");
+        flowerGreen = new FlowerGreen("greenflower");
+        flowerRed = new FlowerRed("redflower");
+        flowerBlack = new FlowerBlack("blackflower");
     }
 
     @SubscribeEvent
@@ -78,22 +81,22 @@ public class FlowerInit
     @SubscribeEvent
     public static void registerItemBlocks(RegistryEvent.Register<Item> event)
     {
-        event.getRegistry().registerAll(new ItemBlock(flowerWhite).setRegistryName(flowerWhite.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerOrange).setRegistryName(flowerOrange.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerMagenta).setRegistryName(flowerMagenta.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerLightBlue).setRegistryName(flowerLightBlue.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerYellow).setRegistryName(flowerYellow.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerLime).setRegistryName(flowerLime.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerPink).setRegistryName(flowerPink.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerGray).setRegistryName(flowerGray.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerLightGray).setRegistryName(flowerLightGray.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerCyan).setRegistryName(flowerCyan.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerPurple).setRegistryName(flowerPurple.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerBlue).setRegistryName(flowerBlue.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerBrown).setRegistryName(flowerBrown.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerGreen).setRegistryName(flowerGreen.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerRed).setRegistryName(flowerRed.getRegistryName()));
-        event.getRegistry().registerAll(new ItemBlock(flowerBlack).setRegistryName(flowerBlack.getRegistryName()));
+        event.getRegistry().registerAll(new ItemBlock(flowerWhite).setRegistryName(Objects.requireNonNull(flowerWhite.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerOrange).setRegistryName(Objects.requireNonNull(flowerOrange.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerMagenta).setRegistryName(Objects.requireNonNull(flowerMagenta.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerLightBlue).setRegistryName(Objects.requireNonNull(flowerLightBlue.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerYellow).setRegistryName(Objects.requireNonNull(flowerYellow.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerLime).setRegistryName(Objects.requireNonNull(flowerLime.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerPink).setRegistryName(Objects.requireNonNull(flowerPink.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerGray).setRegistryName(Objects.requireNonNull(flowerGray.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerLightGray).setRegistryName(Objects.requireNonNull(flowerLightGray.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerCyan).setRegistryName(Objects.requireNonNull(flowerCyan.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerPurple).setRegistryName(Objects.requireNonNull(flowerPurple.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerBlue).setRegistryName(Objects.requireNonNull(flowerBlue.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerBrown).setRegistryName(Objects.requireNonNull(flowerBrown.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerGreen).setRegistryName(Objects.requireNonNull(flowerGreen.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerRed).setRegistryName(Objects.requireNonNull(flowerRed.getRegistryName())));
+        event.getRegistry().registerAll(new ItemBlock(flowerBlack).setRegistryName(Objects.requireNonNull(flowerBlack.getRegistryName())));
     }
 
     @SubscribeEvent
@@ -119,6 +122,6 @@ public class FlowerInit
 
     public static void registerRender(Item item)
     {
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
     }
 }
