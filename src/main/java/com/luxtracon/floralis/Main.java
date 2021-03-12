@@ -24,10 +24,9 @@ public class Main
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		FlowerInit.init();
-		ItemInit.init();
 		BlockInit.init();
-		//DoubleFlowerInit.init();
+		ItemInit.init();
+		FlowerInit.init();
 	}
 
 	@EventHandler
