@@ -1,3 +1,37 @@
+item.whiteseed.name=White Seed
+item.orangeseed.name=Orange Seed
+item.magentaseed.name=Magenta Seed
+item.lightblueseed.name=Light Blue Seed
+item.yellowseed.name=Yellow Seed
+item.limeseed.name=Lime Seed
+item.pinkseed.name=Pink Seed
+item.grayseed.name=Gray Seed
+item.lightgrayseed.name=Light Gray Seed
+item.cyanseed.name=Cyan Seed
+item.purpleseed.name=Purple Seed
+item.blueseed.name=Blue Seed
+item.brownseed.name= Brown Seed
+item.greenseed.name=Green Seed
+item.redseed.name=Red Seed
+item.blackseed.name=Black Seed
+
+item.whitepetal.name=White Petal
+item.orangepetal.name=Orange Petal
+item.magentapetal.name=Magenta Petal
+item.lightbluepetal.name=Light Blue Petal
+item.yellowpetal.name=Yellow Petal
+item.limepetal.name=Lime Petal
+item.pinkpetal.name=Pink Petal
+item.graypetal.name=Gray Petal
+item.lightgraypetal.name=Light Gray Petal
+item.cyanpetal.name=Cyan Petal
+item.purplepetal.name=Purple Petal
+item.bluepetal.name=Blue Petal
+item.brownpetal.name= Brown Petal
+item.greenpetal.name=Green Petal
+item.redpetal.name=Red Petal
+item.blackpetal.name=Black Petal
+
 item.whitedye.name=White Dye
 item.orangedye.name=Orange Dye
 item.magentadye.name=Magenta Dye

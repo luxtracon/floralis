@@ -15,23 +15,22 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber(modid=Reference.MODID)
 public class ItemInit
 {
-
-	static Item	dyeWhite;
-	static Item dyeOrange;
-	static Item dyeMagenta;
-	static Item dyeLightBlue;
-	static Item dyeYellow;
-	static Item dyeLime;
-	static Item dyePink;
-	static Item dyeGray;
-	static Item dyeLightGray;
-	static Item dyeCyan;
-	static Item dyePurple;
-	static Item dyeBlue;
-	static Item dyeBrown;
-	static Item dyeGreen;
-	static Item dyeRed;
-	static Item dyeBlack;
+	public static Item seedWhite;
+	public static Item seedOrange;
+	public static Item seedMagenta;
+	public static Item seedLightBlue;
+	public static Item seedYellow;
+	public static Item seedLime;
+	public static Item seedPink;
+	public static Item seedGray;
+	public static Item seedLightGray;
+	public static Item seedCyan;
+	public static Item seedPurple;
+	public static Item seedBlue;
+	public static Item seedBrown;
+	public static Item seedGreen;
+	public static Item seedRed;
+	public static Item seedBlack;
 
 	public static Item petalWhite;
 	public static Item petalOrange;
@@ -50,41 +49,41 @@ public class ItemInit
 	public static Item petalRed;
 	public static Item petalBlack;
 
-	public static Item seedWhite;
-	public static Item seedOrange;
-	public static Item seedMagenta;
-	public static Item seedLightBlue;
-	public static Item seedYellow;
-	public static Item seedLime;
-	public static Item seedPink;
-	public static Item seedGray;
-	public static Item seedLightGray;
-	public static Item seedCyan;
-	public static Item seedPurple;
-	public static Item seedBlue;
-	public static Item seedBrown;
-	public static Item seedGreen;
-	public static Item seedRed;
-	public static Item seedBlack;
+	static Item	dyeWhite;
+	static Item dyeOrange;
+	static Item dyeMagenta;
+	static Item dyeLightBlue;
+	static Item dyeYellow;
+	static Item dyeLime;
+	static Item dyePink;
+	static Item dyeGray;
+	static Item dyeLightGray;
+	static Item dyeCyan;
+	static Item dyePurple;
+	static Item dyeBlue;
+	static Item dyeBrown;
+	static Item dyeGreen;
+	static Item dyeRed;
+	static Item dyeBlack;
 	
 	public static void init()
 	{
-		dyeWhite = new ItemBase ("whitedye");
-		dyeOrange = new ItemBase("orangedye");
-		dyeMagenta = new ItemBase ("magentadye");
-		dyeLightBlue = new ItemBase("lightbluedye");
-		dyeYellow = new ItemBase("yellowdye");
-		dyeLime = new ItemBase ("limedye");
-		dyePink = new ItemBase ("pinkdye");
-		dyeGray = new ItemBase("graydye");
-		dyeLightGray = new ItemBase("lightgraydye");
-		dyeCyan = new ItemBase ("cyandye");
-		dyePurple = new ItemBase("purpledye");
-		dyeBlue = new ItemBase("bluedye");
-		dyeBrown = new ItemBase ("browndye");
-		dyeGreen = new ItemBase ("greendye");
-		dyeRed = new ItemBase("reddye");
-		dyeBlack = new ItemBase("blackdye");
+		seedWhite = new ItemBase("whiteseed");
+		seedOrange = new ItemBase("orangeseed");
+		seedMagenta = new ItemBase("magentaseed");
+		seedLightBlue = new ItemBase("lightblueseed");
+		seedYellow = new ItemBase("yellowseed");
+		seedLime = new ItemBase("limeseed");
+		seedPink = new ItemBase("pinkseed");
+		seedGray = new ItemBase("grayseed");
+		seedLightGray = new ItemBase("lightgrayseed");
+		seedCyan = new ItemBase("cyanseed");
+		seedPurple = new ItemBase("purpleseed");
+		seedBlue = new ItemBase("blueseed");
+		seedBrown = new ItemBase("brownseed");
+		seedGreen = new ItemBase("greenseed");
+		seedRed = new ItemBase("redseed");
+		seedBlack = new ItemBase("blackseed");
 
 		petalWhite = new ItemBase("whitepetal");
 		petalOrange = new ItemBase("orangepetal");
@@ -103,43 +102,43 @@ public class ItemInit
 		petalRed = new ItemBase("redpetal");
 		petalBlack = new ItemBase("blackpetal");
 
-		seedWhite = new ItemBase("whiteseed");
-		seedOrange = new ItemBase("orangeseed");
-		seedMagenta = new ItemBase("magentaseed");
-		seedLightBlue = new ItemBase("lightblueseed");
-		seedYellow = new ItemBase("yellowseed");
-		seedLime = new ItemBase("limeseed");
-		seedPink = new ItemBase("pinkseed");
-		seedGray = new ItemBase("grayseed");
-		seedLightGray = new ItemBase("lightgrayseed");
-		seedCyan = new ItemBase("cyanseed");
-		seedPurple = new ItemBase("purpleseed");
-		seedBlue = new ItemBase("blueseed");
-		seedBrown = new ItemBase("brownseed");
-		seedGreen = new ItemBase("greenseed");
-		seedRed = new ItemBase("redseed");
-		seedBlack = new ItemBase("blackseed");
+		dyeWhite = new ItemBase ("whitedye");
+		dyeOrange = new ItemBase("orangedye");
+		dyeMagenta = new ItemBase ("magentadye");
+		dyeLightBlue = new ItemBase("lightbluedye");
+		dyeYellow = new ItemBase("yellowdye");
+		dyeLime = new ItemBase ("limedye");
+		dyePink = new ItemBase ("pinkdye");
+		dyeGray = new ItemBase("graydye");
+		dyeLightGray = new ItemBase("lightgraydye");
+		dyeCyan = new ItemBase ("cyandye");
+		dyePurple = new ItemBase("purpledye");
+		dyeBlue = new ItemBase("bluedye");
+		dyeBrown = new ItemBase ("browndye");
+		dyeGreen = new ItemBase ("greendye");
+		dyeRed = new ItemBase("reddye");
+		dyeBlack = new ItemBase("blackdye");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().registerAll(dyeWhite);
-		event.getRegistry().registerAll(dyeOrange);
-		event.getRegistry().registerAll(dyeMagenta);
-		event.getRegistry().registerAll(dyeLightBlue);
-		event.getRegistry().registerAll(dyeYellow);
-		event.getRegistry().registerAll(dyeLime);
-		event.getRegistry().registerAll(dyePink);
-		event.getRegistry().registerAll(dyeGray);
-		event.getRegistry().registerAll(dyeLightGray);
-		event.getRegistry().registerAll(dyeCyan);
-		event.getRegistry().registerAll(dyePurple);
-		event.getRegistry().registerAll(dyeBlue);
-		event.getRegistry().registerAll(dyeBrown);
-		event.getRegistry().registerAll(dyeGreen);
-		event.getRegistry().registerAll(dyeRed);
-		event.getRegistry().registerAll(dyeBlack);
+		event.getRegistry().registerAll(seedWhite);
+		event.getRegistry().registerAll(seedOrange);
+		event.getRegistry().registerAll(seedMagenta);
+		event.getRegistry().registerAll(seedLightBlue);
+		event.getRegistry().registerAll(seedYellow);
+		event.getRegistry().registerAll(seedLime);
+		event.getRegistry().registerAll(seedPink);
+		event.getRegistry().registerAll(seedGray);
+		event.getRegistry().registerAll(seedLightGray);
+		event.getRegistry().registerAll(seedCyan);
+		event.getRegistry().registerAll(seedPurple);
+		event.getRegistry().registerAll(seedBlue);
+		event.getRegistry().registerAll(seedBrown);
+		event.getRegistry().registerAll(seedGreen);
+		event.getRegistry().registerAll(seedRed);
+		event.getRegistry().registerAll(seedBlack);
 
 		event.getRegistry().registerAll(petalWhite);
 		event.getRegistry().registerAll(petalOrange);
@@ -158,43 +157,43 @@ public class ItemInit
 		event.getRegistry().registerAll(petalRed);
 		event.getRegistry().registerAll(petalBlack);
 
-		event.getRegistry().registerAll(seedWhite);
-		event.getRegistry().registerAll(seedOrange);
-		event.getRegistry().registerAll(seedMagenta);
-		event.getRegistry().registerAll(seedLightBlue);
-		event.getRegistry().registerAll(seedYellow);
-		event.getRegistry().registerAll(seedLime);
-		event.getRegistry().registerAll(seedPink);
-		event.getRegistry().registerAll(seedGray);
-		event.getRegistry().registerAll(seedLightGray);
-		event.getRegistry().registerAll(seedCyan);
-		event.getRegistry().registerAll(seedPurple);
-		event.getRegistry().registerAll(seedBlue);
-		event.getRegistry().registerAll(seedBrown);
-		event.getRegistry().registerAll(seedGreen);
-		event.getRegistry().registerAll(seedRed);
-		event.getRegistry().registerAll(seedBlack);
+		event.getRegistry().registerAll(dyeWhite);
+		event.getRegistry().registerAll(dyeOrange);
+		event.getRegistry().registerAll(dyeMagenta);
+		event.getRegistry().registerAll(dyeLightBlue);
+		event.getRegistry().registerAll(dyeYellow);
+		event.getRegistry().registerAll(dyeLime);
+		event.getRegistry().registerAll(dyePink);
+		event.getRegistry().registerAll(dyeGray);
+		event.getRegistry().registerAll(dyeLightGray);
+		event.getRegistry().registerAll(dyeCyan);
+		event.getRegistry().registerAll(dyePurple);
+		event.getRegistry().registerAll(dyeBlue);
+		event.getRegistry().registerAll(dyeBrown);
+		event.getRegistry().registerAll(dyeGreen);
+		event.getRegistry().registerAll(dyeRed);
+		event.getRegistry().registerAll(dyeBlack);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event)
 	{
-		registerRender(dyeWhite);
-		registerRender(dyeOrange);
-		registerRender(dyeMagenta);
-		registerRender(dyeLightBlue);
-		registerRender(dyeYellow);
-		registerRender(dyeLime);
-		registerRender(dyePink);
-		registerRender(dyeGray);
-		registerRender(dyeLightGray);
-		registerRender(dyeCyan);
-		registerRender(dyePurple);
-		registerRender(dyeBlue);
-		registerRender(dyeBrown);
-		registerRender(dyeGreen);
-		registerRender(dyeRed);
-		registerRender(dyeBlack);
+		registerRender(seedWhite);
+		registerRender(seedOrange);
+		registerRender(seedMagenta);
+		registerRender(seedLightBlue);
+		registerRender(seedYellow);
+		registerRender(seedLime);
+		registerRender(seedPink);
+		registerRender(seedGray);
+		registerRender(seedLightGray);
+		registerRender(seedCyan);
+		registerRender(seedPurple);
+		registerRender(seedBlue);
+		registerRender(seedBrown);
+		registerRender(seedGreen);
+		registerRender(seedRed);
+		registerRender(seedBlack);
 
 		registerRender(petalWhite);
 		registerRender(petalOrange);
@@ -213,22 +212,22 @@ public class ItemInit
 		registerRender(petalRed);
 		registerRender(petalBlack);
 
-		registerRender(seedWhite);
-		registerRender(seedOrange);
-		registerRender(seedMagenta);
-		registerRender(seedLightBlue);
-		registerRender(seedYellow);
-		registerRender(seedLime);
-		registerRender(seedPink);
-		registerRender(seedGray);
-		registerRender(seedLightGray);
-		registerRender(seedCyan);
-		registerRender(seedPurple);
-		registerRender(seedBlue);
-		registerRender(seedBrown);
-		registerRender(seedGreen);
-		registerRender(seedRed);
-		registerRender(seedBlack);
+		registerRender(dyeWhite);
+		registerRender(dyeOrange);
+		registerRender(dyeMagenta);
+		registerRender(dyeLightBlue);
+		registerRender(dyeYellow);
+		registerRender(dyeLime);
+		registerRender(dyePink);
+		registerRender(dyeGray);
+		registerRender(dyeLightGray);
+		registerRender(dyeCyan);
+		registerRender(dyePurple);
+		registerRender(dyeBlue);
+		registerRender(dyeBrown);
+		registerRender(dyeGreen);
+		registerRender(dyeRed);
+		registerRender(dyeBlack);
 	}
 	
 	private static void registerRender(Item item)
