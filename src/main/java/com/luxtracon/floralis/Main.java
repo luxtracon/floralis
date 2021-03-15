@@ -1,6 +1,7 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.init.InitBlock;
+import com.luxtracon.floralis.init.InitDryer;
+import com.luxtracon.floralis.init.InitDyeblock;
 import com.luxtracon.floralis.init.InitFlower;
 import com.luxtracon.floralis.init.InitItem;
 import com.luxtracon.floralis.tabs.Tab;
@@ -27,7 +28,8 @@ public class Main
 	{
 		InitFlower.init();
 		InitItem.init();
-		InitBlock.init();
+		InitDyeblock.init();
+		InitDryer.init();
 	}
 
 	@EventHandler
