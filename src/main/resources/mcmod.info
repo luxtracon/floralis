@@ -2,15 +2,10 @@
 {
   "modid": "floralis",
   "name": "Floralis",
-  "description": "",
-  "version": "1.0.0",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
+  "description": "Floralis adds farmable flowers to Minecraft for an easy (automatic) way to obtain dyes.",
+  "url": "https://github.com/luxtracon/floralis",
   "authorList": ["luxtracon"],
-  "credits": "",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "credits": "Thanks @zekroTJA and the internet for helping me out throughout the project.",
+  "logoFile": "assets/floralis/logo.png"
 }
 ]

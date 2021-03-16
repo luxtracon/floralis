@@ -30,13 +30,13 @@ public class Main
 		InitFlower.init();
 		InitItem.init();
 		InitBlock.init();
-		RecipeRegistry.init();
-		OredictRegistry.init();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		RecipeRegistry.init();
+		OredictRegistry.init();
 	}
 
 	@EventHandler
