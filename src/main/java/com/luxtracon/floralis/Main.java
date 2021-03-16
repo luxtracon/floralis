@@ -1,8 +1,10 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.init.InitDyeblock;
+import com.luxtracon.floralis.init.InitBlock;
 import com.luxtracon.floralis.init.InitFlower;
 import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.util.OredictRegistry;
+import com.luxtracon.floralis.util.RecipeRegistry;
 import com.luxtracon.floralis.tabs.Tab;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,7 +29,9 @@ public class Main
 	{
 		InitFlower.init();
 		InitItem.init();
-		InitDyeblock.init();
+		InitBlock.init();
+		RecipeRegistry.init();
+		OredictRegistry.init();
 	}
 
 	@EventHandler

@@ -14,7 +14,7 @@ public class Tab extends CreativeTabs
     }
 
     @Override
-    public ItemStack createIcon ()
+    public ItemStack createIcon()
     {
         return new ItemStack(InitFlower.flowerPurple);
     }

@@ -3,6 +3,7 @@ package com.luxtracon.floralis.init;
 import com.luxtracon.floralis.base.BaseItem;
 import com.luxtracon.floralis.Reference;
 
+import com.luxtracon.floralis.items.dye.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
@@ -51,22 +52,22 @@ public class InitItem
 	public static Item petalRed;
 	public static Item petalBlack;
 
-	static Item	dyeWhite;
-	static Item dyeOrange;
-	static Item dyeMagenta;
-	static Item dyeLightBlue;
-	static Item dyeYellow;
-	static Item dyeLime;
-	static Item dyePink;
-	static Item dyeGray;
-	static Item dyeLightGray;
-	static Item dyeCyan;
-	static Item dyePurple;
-	static Item dyeBlue;
-	static Item dyeBrown;
-	static Item dyeGreen;
-	static Item dyeRed;
-	static Item dyeBlack;
+	public static Item dyeWhite;
+	public static Item dyeOrange;
+	public static Item dyeMagenta;
+	public static Item dyeLightBlue;
+	public static Item dyeYellow;
+	public static Item dyeLime;
+	public static Item dyePink;
+	public static Item dyeGray;
+	public static Item dyeLightGray;
+	public static Item dyeCyan;
+	public static Item dyePurple;
+	public static Item dyeBlue;
+	public static Item dyeBrown;
+	public static Item dyeGreen;
+	public static Item dyeRed;
+	public static Item dyeBlack;
 	
 	public static void init()
 	{
@@ -104,22 +105,22 @@ public class InitItem
 		petalRed = new BaseItem("redpetal");
 		petalBlack = new BaseItem("blackpetal");
 
-		dyeWhite = new BaseItem("whitedye");
-		dyeOrange = new BaseItem("orangedye");
-		dyeMagenta = new BaseItem("magentadye");
-		dyeLightBlue = new BaseItem("lightbluedye");
-		dyeYellow = new BaseItem("yellowdye");
-		dyeLime = new BaseItem("limedye");
-		dyePink = new BaseItem("pinkdye");
-		dyeGray = new BaseItem("graydye");
-		dyeLightGray = new BaseItem("lightgraydye");
-		dyeCyan = new BaseItem("cyandye");
-		dyePurple = new BaseItem("purpledye");
-		dyeBlue = new BaseItem("bluedye");
-		dyeBrown = new BaseItem("browndye");
-		dyeGreen = new BaseItem("greendye");
-		dyeRed = new BaseItem("reddye");
-		dyeBlack = new BaseItem("blackdye");
+		dyeWhite = new DyeWhite("whitedye");
+		dyeOrange = new DyeOrange("orangedye");
+		dyeMagenta = new DyeMagenta("magentadye");
+		dyeLightBlue = new DyeLightBlue("lightbluedye");
+		dyeYellow = new DyeYellow("yellowdye");
+		dyeLime = new DyeLime("limedye");
+		dyePink = new DyePink("pinkdye");
+		dyeGray = new DyeGray("graydye");
+		dyeLightGray = new DyeLightGray("lightgraydye");
+		dyeCyan = new DyeCyan("cyandye");
+		dyePurple = new DyePurple("purpledye");
+		dyeBlue = new DyeBlue("bluedye");
+		dyeBrown = new DyeBrown("browndye");
+		dyeGreen = new DyeGreen("greendye");
+		dyeRed = new DyeRed("reddye");
+		dyeBlack = new DyeBlack("blackdye");
 	}
 	
 	@SubscribeEvent

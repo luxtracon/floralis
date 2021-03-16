@@ -12,9 +12,9 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BaseDyeblock extends BlockFalling
+public class BaseBlock extends BlockFalling
 {
-    public BaseDyeblock(String name, Material material, float hardness, float resistance, String tool, int miningLevel)
+    public BaseBlock(String name, Material material, float hardness, float resistance, String tool, int miningLevel)
     {
         super(material);
         setRegistryName(name);

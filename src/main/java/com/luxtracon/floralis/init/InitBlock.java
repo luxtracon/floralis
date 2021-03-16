@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.Reference;
-import com.luxtracon.floralis.base.BaseDyeblock;
+import com.luxtracon.floralis.base.BaseBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.Objects;
 
 @EventBusSubscriber(modid=Reference.MODID)
-public class InitDyeblock
+public class InitBlock
 {
     static Block blockDyeWhite;
     static Block blockDyeOrange;
@@ -39,22 +39,22 @@ public class InitDyeblock
 
     public static void init()
     {
-        blockDyeWhite = new BaseDyeblock("whitedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeOrange = new BaseDyeblock("orangedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeMagenta = new BaseDyeblock("magentadyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeLightBlue = new BaseDyeblock("lightbluedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeYellow = new BaseDyeblock("yellowdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeLime = new BaseDyeblock("limedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyePink = new BaseDyeblock("pinkdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeGray = new BaseDyeblock("graydyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeLightGray = new BaseDyeblock("lightgraydyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeCyan = new BaseDyeblock("cyandyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyePurple = new BaseDyeblock("purpledyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeBlue = new BaseDyeblock("bluedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeBrown = new BaseDyeblock("browndyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeGreen = new BaseDyeblock("greendyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeRed = new BaseDyeblock("reddyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
-        blockDyeBlack = new BaseDyeblock("blackdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeWhite = new BaseBlock("whitedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeOrange = new BaseBlock("orangedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeMagenta = new BaseBlock("magentadyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeLightBlue = new BaseBlock("lightbluedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeYellow = new BaseBlock("yellowdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeLime = new BaseBlock("limedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyePink = new BaseBlock("pinkdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeGray = new BaseBlock("graydyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeLightGray = new BaseBlock("lightgraydyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeCyan = new BaseBlock("cyandyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyePurple = new BaseBlock("purpledyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeBlue = new BaseBlock("bluedyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeBrown = new BaseBlock("browndyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeGreen = new BaseBlock("greendyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeRed = new BaseBlock("reddyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
+        blockDyeBlack = new BaseBlock("blackdyeblock", Material.SAND, 0.5f, 2.5f, "shovel", 0);
     }
 
     @SubscribeEvent

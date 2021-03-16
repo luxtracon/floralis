@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.Reference;
-import com.luxtracon.floralis.flower.*;
+import com.luxtracon.floralis.blocks.flower.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
@@ -17,25 +17,25 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-@EventBusSubscriber(modid= Reference.MODID)
+@EventBusSubscriber(modid=Reference.MODID)
 public class InitFlower
 {
-    static BlockBush flowerWhite;
-    static BlockBush flowerOrange;
-    static BlockBush flowerMagenta;
-    static BlockBush flowerLightBlue;
-    static BlockBush flowerYellow;
-    static BlockBush flowerLime;
-    static BlockBush flowerPink;
-    static BlockBush flowerGray;
-    static BlockBush flowerLightGray;
-    static BlockBush flowerCyan;
+    public static BlockBush flowerWhite;
+    public static BlockBush flowerOrange;
+    public static BlockBush flowerMagenta;
+    public static BlockBush flowerLightBlue;
+    public static BlockBush flowerYellow;
+    public static BlockBush flowerLime;
+    public static BlockBush flowerPink;
+    public static BlockBush flowerGray;
+    public static BlockBush flowerLightGray;
+    public static BlockBush flowerCyan;
     public static BlockBush flowerPurple;
-    static BlockBush flowerBlue;
-    static BlockBush flowerBrown;
-    static BlockBush flowerGreen;
-    static BlockBush flowerRed;
-    static BlockBush flowerBlack;
+    public static BlockBush flowerBlue;
+    public static BlockBush flowerBrown;
+    public static BlockBush flowerGreen;
+    public static BlockBush flowerRed;
+    public static BlockBush flowerBlack;
 
     public static void init()
     {
