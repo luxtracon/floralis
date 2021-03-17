@@ -1,0 +1,40 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cross"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/1"
+        }
+      },
+      "2": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/2"
+        }
+      },
+      "3": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/3"
+        }
+      },
+      "4": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/4"
+        }
+      },
+      "5": {
+        "textures": {
+          "cross": "floralis:blocks/crop/bluecrop/5"
+        }
+      }
+    }
+  }
+}

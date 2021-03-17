@@ -2,8 +2,9 @@ package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.BaseItem;
 import com.luxtracon.floralis.Reference;
-
 import com.luxtracon.floralis.items.dye.*;
+import com.luxtracon.floralis.items.seed.*;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
@@ -71,22 +72,22 @@ public class InitItem
 	
 	public static void init()
 	{
-		seedWhite = new BaseItem("whiteseed");
-		seedOrange = new BaseItem("orangeseed");
-		seedMagenta = new BaseItem("magentaseed");
-		seedLightBlue = new BaseItem("lightblueseed");
-		seedYellow = new BaseItem("yellowseed");
-		seedLime = new BaseItem("limeseed");
-		seedPink = new BaseItem("pinkseed");
-		seedGray = new BaseItem("grayseed");
-		seedLightGray = new BaseItem("lightgrayseed");
-		seedCyan = new BaseItem("cyanseed");
-		seedPurple = new BaseItem("purpleseed");
-		seedBlue = new BaseItem("blueseed");
-		seedBrown = new BaseItem("brownseed");
-		seedGreen = new BaseItem("greenseed");
-		seedRed = new BaseItem("redseed");
-		seedBlack = new BaseItem("blackseed");
+		seedWhite = new SeedWhite("whiteseed");
+		seedOrange = new SeedOrange("orangeseed");
+		seedMagenta = new SeedMagenta("magentaseed");
+		seedLightBlue = new SeedLightBlue("lightblueseed");
+		seedYellow = new SeedYellow("yellowseed");
+		seedLime = new SeedLime("limeseed");
+		seedPink = new SeedPink("pinkseed");
+		seedGray = new SeedGray("grayseed");
+		seedLightGray = new SeedLightGray("lightgrayseed");
+		seedCyan = new SeedCyan("cyanseed");
+		seedPurple = new SeedPurple("purpleseed");
+		seedBlue = new SeedBlue("blueseed");
+		seedBrown = new SeedBrown("brownseed");
+		seedGreen = new SeedGreen("greenseed");
+		seedRed = new SeedRed("redseed");
+		seedBlack = new SeedBlack("blackseed");
 
 		petalWhite = new BaseItem("whitepetal");
 		petalOrange = new BaseItem("orangepetal");

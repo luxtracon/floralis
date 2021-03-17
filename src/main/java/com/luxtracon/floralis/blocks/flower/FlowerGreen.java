@@ -23,8 +23,8 @@ public class FlowerGreen extends BaseFlower implements IShearable
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
-        drops.add(new ItemStack(InitItem.petalGreen, RANDOM.nextInt(2)+1));
-        drops.add(new ItemStack(InitItem.seedGreen, RANDOM.nextInt(2)+1));
+        drops.add(new ItemStack(InitItem.petalGreen, RANDOM.nextInt(2) + 1 + fortune));
+        drops.add(new ItemStack(InitItem.seedGreen, RANDOM.nextInt(2) + 1 + fortune));
     }
 
     @Override

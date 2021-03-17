@@ -1,10 +1,7 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.init.InitBlock;
-import com.luxtracon.floralis.init.InitFlower;
-import com.luxtracon.floralis.init.InitItem;
-import com.luxtracon.floralis.util.OredictRegistry;
-import com.luxtracon.floralis.util.RecipeRegistry;
+import com.luxtracon.floralis.init.*;
+import com.luxtracon.floralis.util.*;
 import com.luxtracon.floralis.tabs.Tab;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,6 +25,7 @@ public class Main
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		InitFlower.init();
+		InitCrop.init();
 		InitItem.init();
 		InitBlock.init();
 	}

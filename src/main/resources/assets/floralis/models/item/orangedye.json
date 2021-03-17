@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/orangedye"
+        "layer0": "floralis:items/dye/orangedye"
      },
      
     "display": {

@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.items.dye;
 
 import com.luxtracon.floralis.base.BaseItem;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;

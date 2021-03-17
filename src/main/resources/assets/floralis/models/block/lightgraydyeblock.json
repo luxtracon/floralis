@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "floralis:blocks/lightgraydyeblock"
+    "all": "floralis:blocks/block/lightgraydyeblock"
   }
 }

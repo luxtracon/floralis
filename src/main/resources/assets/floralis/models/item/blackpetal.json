@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/blackpetal"
+        "layer0": "floralis:items/petal/blackpetal"
      },
      
     "display": {
