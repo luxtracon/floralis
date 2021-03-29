@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-@EventBusSubscriber(modid=Reference.MODID)
+@EventBusSubscriber(modid = Reference.MODID)
 public class InitFlower
 {
     public static BlockBush flowerWhite;

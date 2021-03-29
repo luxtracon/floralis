@@ -1,4 +1,4 @@
-package com.luxtracon.floralis.world;
+package com.luxtracon.floralis.worldgen;
 
 import com.luxtracon.floralis.init.InitFlower;
 

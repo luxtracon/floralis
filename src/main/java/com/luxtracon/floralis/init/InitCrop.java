@@ -10,7 +10,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(modid= Reference.MODID)
+@EventBusSubscriber(modid = Reference.MODID)
 public class InitCrop
 {
     public static BlockCrops cropWhite;

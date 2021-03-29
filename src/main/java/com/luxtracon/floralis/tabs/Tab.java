@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 public class Tab extends CreativeTabs
 {
-    public Tab(String label)
+    public Tab()
     {
         super("floralis");
         setBackgroundImageName("item_search.png");

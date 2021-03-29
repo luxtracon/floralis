@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-@EventBusSubscriber(modid=Reference.MODID)
+@EventBusSubscriber(modid = Reference.MODID)
 public class InitItem
 {
 	public static Item seedWhite;

@@ -1,4 +1,4 @@
-package com.luxtracon.floralis.util;
+package com.luxtracon.floralis.registry;
 
 import com.luxtracon.floralis.init.InitItem;
 
