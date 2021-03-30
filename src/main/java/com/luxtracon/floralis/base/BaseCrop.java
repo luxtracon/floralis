@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class BaseCrop extends BlockCrops
 {
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
-    private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.375D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.625D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.875D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D)};
+    private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.375D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.5D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.625D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.75D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.875D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 1.0D, 0.7235D)};
 
     public BaseCrop(String name)
     {
@@ -43,9 +43,9 @@ public class BaseCrop extends BlockCrops
     }
 
     @Override
-    protected int getBonemealAgeIncrease(World worldIn)
+    protected int getBonemealAgeIncrease(World world)
     {
-        return MathHelper.getInt(worldIn.rand, 1, 3);
+        return MathHelper.getInt(world.rand, 1, 3);
     }
 
     @Override
@@ -55,10 +55,10 @@ public class BaseCrop extends BlockCrops
     }
 
     @Override
-    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
+    public boolean canBlockStay(World world, BlockPos pos, IBlockState state)
     {
-        IBlockState soil = worldIn.getBlockState(pos.down());
-        return (worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos)) && soil.getBlock() == Blocks.FARMLAND;
+        IBlockState soil = world.getBlockState(pos.down());
+        return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && soil.getBlock() == Blocks.FARMLAND;
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

@@ -8,7 +8,8 @@ import net.minecraft.item.ItemSeeds;
 
 public class SeedGreen extends ItemSeeds
 {
-    public SeedGreen(String name) {
+    public SeedGreen(String name)
+    {
         super(InitCrop.cropGreen, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);

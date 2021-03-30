@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureVillagePieces.PieceWeight;
 import net.minecraft.world.gen.structure.StructureVillagePieces.Start;
@@ -14,9 +15,9 @@ import net.minecraftforge.fml.common.registry.VillagerRegistry.IVillageCreationH
 public class CustomHandler implements IVillageCreationHandler
 {
     @Override
-    public PieceWeight getVillagePieceWeight(Random parRandom, int parType)
+    public PieceWeight getVillagePieceWeight(Random random, int type)
     {
-        return new PieceWeight(getComponentClass(), 3, 3);
+        return new PieceWeight(getComponentClass(), MathHelper.getInt(random, 1, 3), MathHelper.getInt(random, 1, 3));
     }
 
     @Override
@@ -26,8 +27,8 @@ public class CustomHandler implements IVillageCreationHandler
     }
 
     @Override
-    public Village buildComponent(PieceWeight villagePiece, Start startPiece, List<StructureComponent> pieces, Random random, int x, int y, int z, EnumFacing facing, int p5)
+    public Village buildComponent(PieceWeight piece, Start start, List<StructureComponent> pieces, Random random, int x, int y, int z, EnumFacing facing, int type)
     {
-        return CustomField.createPiece(startPiece, pieces, random, x, y, z, facing, p5);
+        return CustomField.createPiece(start, pieces, random, x, y, z, facing, type);
     }
 }

@@ -17,7 +17,7 @@ public class DyeLightBlue extends BaseItem
     }
 
     @Override
-    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand)
+    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase target, EnumHand hand)
     {
         if (target instanceof EntitySheep)
         {
