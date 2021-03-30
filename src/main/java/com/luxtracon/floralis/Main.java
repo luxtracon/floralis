@@ -29,11 +29,12 @@ public class Main
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		DictionaryRegistry.init();
 		GeneratorRegistry.init();
 		HandlerRegistry.init();
-		OredictRegistry.init();
-		RecipeRegistry.init();
+		SmeltingRegistry.init();
 		StructureRegistry.init();
+		VillagerRegistry.init();
 	}
 
 	@EventHandler

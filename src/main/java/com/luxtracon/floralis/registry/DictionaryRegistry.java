@@ -5,7 +5,7 @@ import com.luxtracon.floralis.init.InitItem;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class OredictRegistry
+public class DictionaryRegistry
 {
     public static void init()
     {

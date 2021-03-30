@@ -79,7 +79,7 @@ public class CustomField extends StructureVillagePieces.Village
                 return true;
             }
 
-            this.boundingBox.offset(0, this.averageGroundLvl - this.boundingBox.maxY + 2, 0);
+            this.boundingBox.offset(0, this.averageGroundLvl - this.boundingBox.maxY + 3, 0);
         }
 
         IBlockState state = this.getBiomeSpecificBlockState(Blocks.LOG.getDefaultState());

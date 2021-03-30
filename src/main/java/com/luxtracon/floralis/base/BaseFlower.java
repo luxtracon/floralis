@@ -13,6 +13,8 @@ import net.minecraft.world.IBlockAccess;
 
 public class BaseFlower extends BlockBush
 {
+    private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
+
     public BaseFlower(String name)
     {
         setRegistryName(name);
@@ -30,7 +32,7 @@ public class BaseFlower extends BlockBush
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-        return super.getBoundingBox(state, source, pos).offset(state.getOffset(source, pos));
+        return AABB.offset(state.getOffset(source, pos));
     }
 
     @Override

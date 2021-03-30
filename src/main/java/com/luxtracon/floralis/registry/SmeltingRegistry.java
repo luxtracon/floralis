@@ -3,9 +3,10 @@ package com.luxtracon.floralis.registry;
 import com.luxtracon.floralis.init.InitItem;
 
 import net.minecraft.item.ItemStack;
+
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class RecipeRegistry
+public class SmeltingRegistry
 {
     public static void init()
     {
