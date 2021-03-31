@@ -1,4 +1,4 @@
-package com.luxtracon.floralis;
+package com.luxtracon.floralis.utility;
 
 public class Reference {
 

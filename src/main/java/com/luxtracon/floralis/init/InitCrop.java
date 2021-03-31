@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.init;
 
-import com.luxtracon.floralis.Reference;
+import com.luxtracon.floralis.utility.Reference;
 import com.luxtracon.floralis.blocks.crop.*;
 
 import net.minecraft.block.Block;
