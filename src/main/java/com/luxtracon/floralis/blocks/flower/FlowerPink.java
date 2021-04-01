@@ -11,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.IShearable;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class FlowerPink extends BaseFlower implements IShearable
@@ -36,6 +37,6 @@ public class FlowerPink extends BaseFlower implements IShearable
     @Override
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
-        return java.util.Arrays.asList(new ItemStack(InitFlower.flowerPink));
+        return Arrays.asList(new ItemStack(InitFlower.flowerPink));
     }
 }

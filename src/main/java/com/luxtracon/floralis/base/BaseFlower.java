@@ -18,14 +18,14 @@ public class BaseFlower extends BlockBush
     {
         setRegistryName(name);
         setTranslationKey(name);
-        setSoundType(SoundType.PLANT);
         setCreativeTab(Main.MODTAB);
+        setSoundType(SoundType.PLANT);
     }
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-        return AABB.offset(state.getOffset(source, pos));
+        return AABB;
     }
 
     @Override

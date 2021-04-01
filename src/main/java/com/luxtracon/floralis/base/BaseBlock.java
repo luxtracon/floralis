@@ -22,8 +22,8 @@ public class BaseBlock extends BlockFalling
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel(tool, miningLevel);
-        setSoundType(SoundType.SAND);
         setCreativeTab(Main.MODTAB);
+        setSoundType(SoundType.SAND);
     }
 
     public String getTooltipTranslationKey()
