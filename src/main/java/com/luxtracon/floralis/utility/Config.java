@@ -27,7 +27,7 @@ public class Config
     {
         configuration.load();
 
-        spawnflowers = configuration.get(Configuration.CATEGORY_GENERAL, "Spawn Floralis small flowers", true, "Whether to spawn Floralis small flowers or not. Default: true").getBoolean(true);
+        spawnflowers = configuration.get(Configuration.CATEGORY_GENERAL, "Spawn Floralis natural flowers", true, "Whether to spawn Floralis natural flowers or not. Default: true").getBoolean(true);
         spawnfields = configuration.get(Configuration.CATEGORY_GENERAL, "Spawn Floralis village fields", true, "Whether to spawn Floralis village fields or not. Default: true").getBoolean(true);
         loadtrades = configuration.get(Configuration.CATEGORY_GENERAL, "Load Floralis villager trades", true, "Whether to load Floralis villager trades or not. Default: true").getBoolean(true);
 
