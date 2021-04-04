@@ -13,6 +13,6 @@ public class SeedBlack extends ItemSeeds
         super(InitCrop.cropBlack, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

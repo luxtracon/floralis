@@ -13,6 +13,6 @@ public class SeedCyan extends ItemSeeds
         super(InitCrop.cropCyan, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

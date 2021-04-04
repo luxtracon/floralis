@@ -13,7 +13,7 @@ public class VillagerRegistry
     public static void init()
     {
         VillagerProfession farmer = ForgeRegistries.VILLAGER_PROFESSIONS.getValue(new ResourceLocation("minecraft:farmer"));
-        if (Config.loadtrades)
+        if(Config.loadtrades)
         {
             farmer.getCareer(0).addTrade(1, new CustomTrades());
         }

@@ -22,7 +22,7 @@ public class BaseBlock extends BlockFalling
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel(tool, miningLevel);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.COSMETICTAB);
         setSoundType(SoundType.SAND);
     }
 

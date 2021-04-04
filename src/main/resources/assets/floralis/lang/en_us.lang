@@ -83,6 +83,7 @@ tile.greenflower.name=Green Flower
 tile.redflower.name=Red Flower
 tile.blackflower.name=Black Flower
 
-tile.dyeblock.tooltip=Decorative and space-saving
+tile.dyeblock.tooltip=Cosmetic and compact
 
-itemGroup.floralis=Floralis
+itemGroup.floralistab=Floralis
+itemGroup.cosmetictab=Floralis Cosmetic

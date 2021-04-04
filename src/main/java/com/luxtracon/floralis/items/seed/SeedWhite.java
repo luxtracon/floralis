@@ -13,6 +13,6 @@ public class SeedWhite extends ItemSeeds
         super(InitCrop.cropWhite, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

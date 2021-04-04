@@ -13,6 +13,6 @@ public class SeedYellow extends ItemSeeds
         super(InitCrop.cropYellow, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

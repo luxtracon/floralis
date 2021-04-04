@@ -14,218 +14,6 @@ import java.util.Random;
 
 public class CustomWorldgen implements IWorldGenerator
 {
-    @Override
-    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
-    {
-        this.groups(random, chunkX, chunkZ, world);
-    }
-
-    public void groups(Random random, int chunkX, int chunkZ, World world)
-    {
-        int posX = chunkX * 16 + 8;
-        int posZ = chunkZ * 16 + 8;
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.BlackFlower(world, random, newPos);
-            }
-        }
-
-        //blue group
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.BlueFlower(world, random, newPos);
-                this.LightBlueFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.BrownFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.CyanFlower(world, random, newPos);
-            }
-        }
-
-        //gray group
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.GrayFlower(world, random, newPos);
-                this.LightGrayFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.GreenFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.LimeFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.MagentaFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.OrangeFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.PinkFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.PurpleFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.RedFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.WhiteFlower(world, random, newPos);
-            }
-        }
-
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
-            {
-                this.YellowFlower(world, random, newPos);
-            }
-        }
-    }
-
     public boolean BlackFlower(World world, Random random, BlockPos position)
     {
         IBlockState state = InitFlower.flowerBlack.getDefaultState();
@@ -480,5 +268,217 @@ public class CustomWorldgen implements IWorldGenerator
             }
         }
         return true;
+    }
+
+    public void groups(Random random, int chunkX, int chunkZ, World world)
+    {
+        int posX = chunkX * 16 + 8;
+        int posZ = chunkZ * 16 + 8;
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.BlackFlower(world, random, newPos);
+            }
+        }
+
+        //blue group
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.BlueFlower(world, random, newPos);
+                this.LightBlueFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.BrownFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.CyanFlower(world, random, newPos);
+            }
+        }
+
+        //gray group
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.GrayFlower(world, random, newPos);
+                this.LightGrayFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.GreenFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.LimeFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.MagentaFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.OrangeFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.PinkFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.PurpleFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.RedFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.WhiteFlower(world, random, newPos);
+            }
+        }
+
+        if (random.nextInt(8) == 0)
+        {
+            final int xPos = posX + random.nextInt(16);
+            final int yPos = random.nextInt(255);
+            final int zPos = posZ + random.nextInt(16);
+
+            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            if (newPos != null)
+            {
+                this.YellowFlower(world, random, newPos);
+            }
+        }
+    }
+
+    @Override
+    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+    {
+        this.groups(random, chunkX, chunkZ, world);
     }
 }

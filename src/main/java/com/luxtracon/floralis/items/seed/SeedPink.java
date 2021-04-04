@@ -13,6 +13,6 @@ public class SeedPink extends ItemSeeds
         super(InitCrop.cropPink, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

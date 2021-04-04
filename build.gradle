@@ -11,6 +11,12 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 
+repositories {
+    maven {
+        url 'https://maven.blamejared.com/'
+    }
+}
+
 version = "${mod_version}"
 group = "${mod_group}"
 archivesBaseName = "${mod_name}-${version_minecraft}"
@@ -58,6 +64,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
+    compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559:deobf'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

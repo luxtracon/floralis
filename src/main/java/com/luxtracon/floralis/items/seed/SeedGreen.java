@@ -13,6 +13,6 @@ public class SeedGreen extends ItemSeeds
         super(InitCrop.cropGreen, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.MODTAB);
+        setCreativeTab(Main.FLORALISTAB);
     }
 }

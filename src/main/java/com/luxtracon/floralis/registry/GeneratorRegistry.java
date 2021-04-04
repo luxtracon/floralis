@@ -9,7 +9,7 @@ public class GeneratorRegistry
 {
     public static void init()
     {
-        if (Config.spawnflowers)
+        if(Config.spawnflowers)
         {
             GameRegistry.registerWorldGenerator(new CustomWorldgen(), 0);
         }

@@ -39,8 +39,8 @@ public class CropPink extends BaseCrop
 
         else
         {
-            drops.add(new ItemStack(this.getSeed(),RANDOM.nextInt(2) + 1 + fortune));
-            drops.add(new ItemStack(this.getCrop(),RANDOM.nextInt(2) + 1 + fortune));
+            drops.add(new ItemStack(this.getSeed(), 2 + fortune));
+            drops.add(new ItemStack(this.getCrop(), 1 + fortune));
         }
     }
 }
