@@ -13,6 +13,6 @@ public class SeedPurple extends ItemSeeds
         super(InitCrop.cropPurple, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.FLORALISTAB);
+        setCreativeTab(Main.MODTAB);
     }
 }

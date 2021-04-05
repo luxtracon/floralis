@@ -13,6 +13,6 @@ public class SeedLightGray extends ItemSeeds
         super(InitCrop.cropLightGray, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.FLORALISTAB);
+        setCreativeTab(Main.MODTAB);
     }
 }

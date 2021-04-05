@@ -5,11 +5,11 @@ import com.luxtracon.floralis.init.InitFlower;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class TabFloralis extends CreativeTabs
+public class Tab extends CreativeTabs
 {
-    public TabFloralis()
+    public Tab()
     {
-        super("floralistab");
+        super("tab");
         setBackgroundImageName("item_search.png");
     }
 

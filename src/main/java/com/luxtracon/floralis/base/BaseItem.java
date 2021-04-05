@@ -10,6 +10,6 @@ public class BaseItem extends Item
 	{
 		setRegistryName(name);
 		setTranslationKey(name);
-		setCreativeTab(Main.FLORALISTAB);
+		setCreativeTab(Main.MODTAB);
 	}
 }

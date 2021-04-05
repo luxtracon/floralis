@@ -85,5 +85,4 @@ tile.blackflower.name=Black Flower
 
 tile.dyeblock.tooltip=Cosmetic and compact
 
-itemGroup.floralistab=Floralis
-itemGroup.cosmetictab=Floralis Cosmetic
+itemGroup.tab=Floralis

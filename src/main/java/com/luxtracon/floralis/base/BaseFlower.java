@@ -18,7 +18,7 @@ public class BaseFlower extends BlockBush
     {
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.FLORALISTAB);
+        setCreativeTab(Main.MODTAB);
         setSoundType(SoundType.PLANT);
     }
 

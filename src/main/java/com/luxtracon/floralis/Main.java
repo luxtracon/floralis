@@ -19,8 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION, dependencies = "after:immersiveengineering")
 public class Main
 {
-	public static final CreativeTabs FLORALISTAB = new TabFloralis();
-	public static final CreativeTabs COSMETICTAB = new TabCosmetic();
+	public static final CreativeTabs MODTAB = new Tab();
 
 	private static boolean isImmersiveEngineeringPresent;
 

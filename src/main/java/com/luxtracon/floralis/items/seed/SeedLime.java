@@ -13,6 +13,6 @@ public class SeedLime extends ItemSeeds
         super(InitCrop.cropLime, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.FLORALISTAB);
+        setCreativeTab(Main.MODTAB);
     }
 }

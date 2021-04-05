@@ -13,6 +13,6 @@ public class SeedMagenta extends ItemSeeds
         super(InitCrop.cropMagenta, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.FLORALISTAB);
+        setCreativeTab(Main.MODTAB);
     }
 }
