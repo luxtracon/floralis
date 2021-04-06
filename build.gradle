@@ -13,13 +13,20 @@ apply plugin: 'net.minecraftforge.gradle'
 
 repositories {
     maven {
-        url 'https://maven.blamejared.com/'
+        name 'Chicken Lib'
+        url 'http://chickenbones.net/maven'
     }
     maven {
-        url 'http://maven.covers1624.net/'
+        name 'Immersive Engineering'
+        url 'https://maven.blamejared.com'
     }
     maven {
-        url 'http://chickenbones.net/maven/'
+        name 'Industrial Foregoing'
+        url 'https://www.cursemaven.com'
+    }
+    maven {
+        name 'Thermal Series'
+        url 'http://maven.covers1624.net'
     }
 }
 
@@ -70,10 +77,9 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
-
-    compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559:deobf'
-
+    compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559'
     compileOnly 'codechicken:CodeChickenLib:1.12.2-3.2.2.+:universal'
+    compileOnly 'curse.maven:industrialforegoing-266515:2745321'
 
     compileOnly ('cofh:CoFHCore:1.12.2-4.6.2.+:universal') {
         exclude group: 'mezz.jei'
