@@ -16,17 +16,20 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION, dependencies = "after:immersiveengineering")
+@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION, dependencies = Reference.MODDEPENDENCIES)
 public class Main
 {
 	public static final CreativeTabs MODTAB = new Tab();
 
 	private static boolean isImmersiveEngineeringPresent;
+	private static boolean isThermalExpansionPresent;
+
 
 	@EventHandler
 	public static void onConstructionEvent(FMLConstructionEvent event)
 	{
 		isImmersiveEngineeringPresent = Loader.isModLoaded("immersiveengineering");
+		isThermalExpansionPresent = Loader.isModLoaded("thermalexpansion");
 	}
 
 	@EventHandler
@@ -46,6 +49,11 @@ public class Main
 		if(isImmersiveEngineeringPresent)
 		{
 			ImmersiveEngineering.init();
+		}
+
+		if(isThermalExpansionPresent)
+		{
+			ThermalExpansion.init();
 		}
 
 		DictionaryRegistry.init();

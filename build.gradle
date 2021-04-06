@@ -15,6 +15,12 @@ repositories {
     maven {
         url 'https://maven.blamejared.com/'
     }
+    maven {
+        url 'http://maven.covers1624.net/'
+    }
+    maven {
+        url 'http://chickenbones.net/maven/'
+    }
 }
 
 version = "${mod_version}"
@@ -64,7 +70,26 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
+
     compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559:deobf'
+
+    compileOnly 'codechicken:CodeChickenLib:1.12.2-3.2.2.+:universal'
+
+    compileOnly ('cofh:CoFHCore:1.12.2-4.6.2.+:universal') {
+        exclude group: 'mezz.jei'
+    }
+    compileOnly ('cofh:CoFHWorld:1.12.2-1.3.0.6+:universal') {
+        exclude group: 'mezz.jei'
+    }
+    compileOnly ('cofh:RedstoneFlux:1.12-2.1.0.7+:universal') {
+        exclude group: 'mezz.jei'
+    }
+    compileOnly ('cofh:ThermalExpansion:1.12.2-5.5.3.+:universal') {
+        exclude group: 'mezz.jei'
+    }
+    compileOnly ('cofh:ThermalFoundation:1.12.2-2.6.2.+:universal') {
+        exclude group: 'mezz.jei'
+    }
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
