@@ -21,6 +21,7 @@ public class Main
 {
 	public static final CreativeTabs MODTAB = new Tab();
 
+	private static boolean isForestryPresent;
 	private static boolean isImmersiveEngineeringPresent;
 	private static boolean isIndustrialForegoingPresent;
 	private static boolean isThermalExpansionPresent;
@@ -29,6 +30,7 @@ public class Main
 	@EventHandler
 	public static void onConstructionEvent(FMLConstructionEvent event)
 	{
+		isForestryPresent = Loader.isModLoaded("forestry");
 		isImmersiveEngineeringPresent = Loader.isModLoaded("immersiveengineering");
 		isIndustrialForegoingPresent = Loader.isModLoaded("industrialforegoing");
 		isThermalExpansionPresent = Loader.isModLoaded("thermalexpansion");
@@ -48,6 +50,11 @@ public class Main
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		if(isForestryPresent)
+		{
+			Forestry.init();
+		}
+
 		if(isImmersiveEngineeringPresent)
 		{
 			ImmersiveEngineering.init();

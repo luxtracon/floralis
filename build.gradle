@@ -28,6 +28,10 @@ repositories {
         name 'Thermal Series'
         url 'http://maven.covers1624.net'
     }
+    maven {
+        name 'Forestry'
+        url 'http://maven.ic2.player.to'
+    }
 }
 
 version = "${mod_version}"
@@ -80,6 +84,7 @@ dependencies {
     compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559'
     compileOnly 'codechicken:CodeChickenLib:1.12.2-3.2.2.+:universal'
     compileOnly 'curse.maven:industrialforegoing-266515:2745321'
+    compileOnly 'net.sengir.forestry:forestry_1.12.2:5.8.2.422'
 
     compileOnly ('cofh:CoFHCore:1.12.2-4.6.2.+:universal') {
         exclude group: 'mezz.jei'
