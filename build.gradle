@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 
 repositories {
     maven {
-        name 'Chicken Lib'
+        name 'Chicken Bones'
         url 'http://chickenbones.net/maven'
     }
     maven {
@@ -25,11 +25,11 @@ repositories {
         url 'https://www.cursemaven.com'
     }
     maven {
-        name 'Thermal Series'
+        name 'Thermal Expansion'
         url 'http://maven.covers1624.net'
     }
     maven {
-        name 'Forestry'
+        name 'Forestry Farming'
         url 'http://maven.ic2.player.to'
     }
 }

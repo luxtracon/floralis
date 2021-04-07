@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.init;
 
-import com.luxtracon.floralis.utility.Config;
-import com.luxtracon.floralis.utility.Reference;
+import com.luxtracon.floralis.utilities.Config;
+import com.luxtracon.floralis.utilities.Reference;
 import com.luxtracon.floralis.base.BaseBlock;
 
 import net.minecraft.block.Block;

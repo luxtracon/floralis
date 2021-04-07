@@ -12,7 +12,7 @@ import net.minecraft.world.gen.structure.StructureVillagePieces.Village;
 
 import net.minecraftforge.fml.common.registry.VillagerRegistry.IVillageCreationHandler;
 
-public class CustomHandler implements IVillageCreationHandler
+public class CustomCreation implements IVillageCreationHandler
 {
     @Override
     public PieceWeight getVillagePieceWeight(Random random, int type)

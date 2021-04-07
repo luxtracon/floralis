@@ -11,7 +11,7 @@ import forestry.farming.logic.farmables.FarmableAgingCrop;
 
 import net.minecraft.item.ItemStack;
 
-public class Forestry
+public class ForestryFarming
 {
     public static void init()
     {

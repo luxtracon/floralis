@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.registry;
 
-import com.luxtracon.floralis.utility.Config;
+import com.luxtracon.floralis.utilities.Config;
 import com.luxtracon.floralis.worldgen.CustomWorldgen;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;

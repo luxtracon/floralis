@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.BaseItem;
-import com.luxtracon.floralis.utility.Reference;
+import com.luxtracon.floralis.utilities.Reference;
 import com.luxtracon.floralis.items.dye.*;
 import com.luxtracon.floralis.items.seed.*;
 

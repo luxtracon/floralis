@@ -4,7 +4,7 @@ import com.luxtracon.floralis.compat.*;
 import com.luxtracon.floralis.init.*;
 import com.luxtracon.floralis.registry.*;
 import com.luxtracon.floralis.tabs.*;
-import com.luxtracon.floralis.utility.*;
+import com.luxtracon.floralis.utilities.*;
 
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -21,16 +21,15 @@ public class Main
 {
 	public static final CreativeTabs MODTAB = new Tab();
 
-	private static boolean isForestryPresent;
+	private static boolean isForestryFarmingPresent;
 	private static boolean isImmersiveEngineeringPresent;
 	private static boolean isIndustrialForegoingPresent;
 	private static boolean isThermalExpansionPresent;
 
-
 	@EventHandler
 	public static void onConstructionEvent(FMLConstructionEvent event)
 	{
-		isForestryPresent = Loader.isModLoaded("forestry");
+		isForestryFarmingPresent = Loader.isModLoaded("forestry");
 		isImmersiveEngineeringPresent = Loader.isModLoaded("immersiveengineering");
 		isIndustrialForegoingPresent = Loader.isModLoaded("industrialforegoing");
 		isThermalExpansionPresent = Loader.isModLoaded("thermalexpansion");
@@ -50,29 +49,29 @@ public class Main
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		if(isForestryPresent)
+		if(isForestryFarmingPresent && Config.ffcompat)
 		{
-			Forestry.init();
+			ForestryFarming.init();
 		}
 
-		if(isImmersiveEngineeringPresent)
+		if(isImmersiveEngineeringPresent && Config.iecompat)
 		{
 			ImmersiveEngineering.init();
 		}
 
-		if(isIndustrialForegoingPresent)
+		if(isIndustrialForegoingPresent && Config.ifcompat)
 		{
 			IndustrialForegoing.init();
 		}
 
-		if(isThermalExpansionPresent)
+		if(isThermalExpansionPresent && Config.tecompat)
 		{
 			ThermalExpansion.init();
 		}
 
+		CreationRegistry.init();
 		DictionaryRegistry.init();
 		GeneratorRegistry.init();
-		HandlerRegistry.init();
 		SmeltingRegistry.init();
 		StructureRegistry.init();
 		VillagerRegistry.init();
