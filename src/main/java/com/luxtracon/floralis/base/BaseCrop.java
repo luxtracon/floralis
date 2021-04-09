@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 public class BaseCrop extends BlockCrops
 {
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
+
     private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.375D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.5D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.625D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.75D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.875D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 1.0D, 0.7235D)};
 
     public BaseCrop(String name)
@@ -57,10 +58,10 @@ public class BaseCrop extends BlockCrops
     @Override
     public boolean canBlockStay(World world, BlockPos pos, IBlockState state)
     {
-        IBlockState soil = world.getBlockState(pos.down());
-        return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && soil.getBlock() == Blocks.FARMLAND;
+        return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && world.getBlockState(pos.down()).getBlock() == Blocks.FARMLAND;
     }
 
+    @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
         return AABB[state.getValue(this.getAgeProperty()).intValue()];

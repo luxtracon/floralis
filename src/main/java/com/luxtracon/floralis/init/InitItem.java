@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.BaseItem;
+import com.luxtracon.floralis.items.seedcactus.SeedCactusWhite;
 import com.luxtracon.floralis.utilities.Reference;
 import com.luxtracon.floralis.items.dye.*;
 import com.luxtracon.floralis.items.seed.*;
@@ -35,6 +36,8 @@ public class InitItem
 	public static Item seedGreen;
 	public static Item seedRed;
 	public static Item seedBlack;
+
+	public static Item seedCactusWhite;
 
 	public static Item petalWhite;
 	public static Item petalOrange;
@@ -88,6 +91,8 @@ public class InitItem
 		seedGreen = new SeedGreen("greenseed");
 		seedRed = new SeedRed("redseed");
 		seedBlack = new SeedBlack("blackseed");
+
+		seedCactusWhite = new SeedCactusWhite("whitecactusseed");
 
 		petalWhite = new BaseItem("whitepetal");
 		petalOrange = new BaseItem("orangepetal");
@@ -144,6 +149,8 @@ public class InitItem
 		event.getRegistry().registerAll(seedRed);
 		event.getRegistry().registerAll(seedBlack);
 
+		event.getRegistry().registerAll(seedCactusWhite);
+
 		event.getRegistry().registerAll(petalWhite);
 		event.getRegistry().registerAll(petalOrange);
 		event.getRegistry().registerAll(petalMagenta);
@@ -198,6 +205,8 @@ public class InitItem
 		registerRender(seedGreen);
 		registerRender(seedRed);
 		registerRender(seedBlack);
+
+		registerRender(seedCactusWhite);
 
 		registerRender(petalWhite);
 		registerRender(petalOrange);

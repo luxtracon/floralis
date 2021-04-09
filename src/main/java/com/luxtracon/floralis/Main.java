@@ -41,7 +41,11 @@ public class Main
 		Config.init(event);
 
 		InitBlock.init();
+		InitCactus.init();
 		InitCrop.init();
+
+		InitCropCactus.init();
+
 		InitFlower.init();
 		InitItem.init();
 	}

@@ -52,6 +52,8 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(InitFlower.flowerRed),
                 Item.getItemFromBlock(InitFlower.flowerBlack),
 
+                Item.getItemFromBlock(InitCactus.cactusWhite),
+
                 InitItem.seedWhite,
                 InitItem.seedOrange,
                 InitItem.seedMagenta,

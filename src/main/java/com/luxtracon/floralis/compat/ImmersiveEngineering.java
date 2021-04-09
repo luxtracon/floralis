@@ -4,6 +4,7 @@ import blusunrize.immersiveengineering.api.ComparableItemStack;
 import blusunrize.immersiveengineering.api.tool.BelljarHandler;
 
 import com.luxtracon.floralis.init.InitCrop;
+import com.luxtracon.floralis.init.InitCropCactus;
 import com.luxtracon.floralis.init.InitItem;
 
 import net.minecraft.block.state.IBlockState;
@@ -94,6 +95,14 @@ public class ImmersiveEngineering
     {
         return InitCrop.cropYellow.getStateFromMeta(age);
     }
+
+
+
+    private static IBlockState getStateWhiteCactusCrop(int age)
+    {
+        return InitCropCactus.cropCactusWhite.getStateFromMeta(age);
+    }
+
 
     public static void init()
     {
@@ -497,6 +506,32 @@ public class ImmersiveEngineering
             }
         };
 
+
+        BelljarHandler.DefaultPlantHandler whitecactuscrop = new BelljarHandler.DefaultPlantHandler()
+        {
+            private HashSet<ComparableItemStack> validSeeds = new HashSet<>();
+
+            @Override
+            protected HashSet<ComparableItemStack> getSeedSet()
+            {
+                return validSeeds;
+            }
+
+            @Override
+            public IBlockState[] getRenderedPlant(ItemStack seed, ItemStack soil, float growth, TileEntity tile)
+            {
+                int age = Math.min(5, Math.round(growth*5));
+
+                return new IBlockState[]{getStateWhiteCactusCrop(age)};
+            }
+
+            @Override
+            public float getRenderSize(ItemStack seed, ItemStack soil, float growth, TileEntity tile)
+            {
+                return 1.0f;
+            }
+        };
+
         BelljarHandler.registerHandler(blackcrop);
         blackcrop.register(new ItemStack(InitItem.seedBlack), new ItemStack[]{new ItemStack(InitItem.petalBlack, 1), new ItemStack(InitItem.seedBlack, 1)}, new ItemStack(Blocks.DIRT), InitCrop.cropBlack.getDefaultState());
 
@@ -544,5 +579,11 @@ public class ImmersiveEngineering
 
         BelljarHandler.registerHandler(yellowcrop);
         yellowcrop.register(new ItemStack(InitItem.seedYellow), new ItemStack[]{new ItemStack(InitItem.petalYellow, 1), new ItemStack(InitItem.seedYellow, 1)}, new ItemStack(Blocks.DIRT), InitCrop.cropYellow.getDefaultState());
+
+
+
+        BelljarHandler.registerHandler(whitecactuscrop);
+        whitecactuscrop.register(new ItemStack(InitItem.seedCactusWhite), new ItemStack[]{new ItemStack(InitItem.petalWhite, 1), new ItemStack(InitItem.seedWhite, 1)}, new ItemStack(Blocks.DIRT), InitCropCactus.cropCactusWhite.getDefaultState());
+
     }
 }
