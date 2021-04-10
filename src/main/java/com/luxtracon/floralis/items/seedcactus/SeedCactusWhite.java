@@ -1,14 +1,13 @@
 package com.luxtracon.floralis.items.seedcactus;
 
 import com.luxtracon.floralis.Main;
-import com.luxtracon.floralis.init.InitCrop;
 import com.luxtracon.floralis.init.InitCropCactus;
+
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemSeeds;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -26,20 +25,17 @@ public class SeedCactusWhite extends ItemSeeds
     }
 
     @Override
-    public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        if (facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, player.getHeldItem(hand)) && worldIn.getBlockState(pos).getBlock() == Blocks.SAND && worldIn.isAirBlock(pos.up()))
+        if (facing == EnumFacing.UP && world.getBlockState(pos).getBlock() == Blocks.SAND)
         {
-            worldIn.setBlockState(pos.up(), InitCropCactus.cropCactusWhite.getDefaultState());
-
-            if (player instanceof EntityPlayerMP)
-            {
-                CriteriaTriggers.PLACED_BLOCK.trigger((EntityPlayerMP)player, pos.up(), player.getHeldItem(hand));
-            }
+            world.setBlockState(pos.up(), InitCropCactus.cropCactusWhite.getDefaultState());
 
             player.getHeldItem(hand).shrink(1);
+
             return EnumActionResult.SUCCESS;
         }
+
         else
         {
             return EnumActionResult.FAIL;

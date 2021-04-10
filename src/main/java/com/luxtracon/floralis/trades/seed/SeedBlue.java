@@ -16,6 +16,6 @@ public class SeedBlue implements EntityVillager.ITradeList
     @Override
     public void addMerchantRecipe(IMerchant merchant, MerchantRecipeList recipeList, Random random)
     {
-        recipeList.add(new MerchantRecipe(new ItemStack(InitItem.seedBlue, 16), new ItemStack(Items.EMERALD, 1)));
+        recipeList.add(new MerchantRecipe(new ItemStack(InitItem.seedFlowerBlue, 16), new ItemStack(Items.EMERALD, 1)));
     }
 }

@@ -34,6 +34,26 @@ public class BaseCactus extends Block implements IPlantable
         setSoundType(SoundType.PLANT);
     }
 
+    public boolean canBlockStay(World world, BlockPos pos)
+    {
+        return world.getBlockState(pos.down()).getBlock() == Blocks.SAND && !world.getBlockState(pos.up()).getMaterial().isLiquid();
+    }
+
+    @Override
+    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos)
+    {
+        if (!this.canBlockStay(world, pos))
+        {
+            world.destroyBlock(pos, true);
+        }
+    }
+
+    @Override
+    public boolean canPlaceBlockAt(World world, BlockPos pos)
+    {
+        return super.canPlaceBlockAt(world, pos) ? this.canBlockStay(world, pos) : false;
+    }
+
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
@@ -44,15 +64,6 @@ public class BaseCactus extends Block implements IPlantable
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
         return COLLISIONAABB;
-    }
-
-    @Override
-    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos)
-    {
-        if (!this.canBlockStay(world, pos))
-        {
-            world.destroyBlock(pos, true);
-        }
     }
 
     @Override
@@ -71,17 +82,6 @@ public class BaseCactus extends Block implements IPlantable
     public boolean isOpaqueCube(IBlockState state)
     {
         return false;
-    }
-
-    @Override
-    public boolean canPlaceBlockAt(World world, BlockPos pos)
-    {
-        return super.canPlaceBlockAt(world, pos) ? this.canBlockStay(world, pos) : false;
-    }
-
-    public boolean canBlockStay(World world, BlockPos pos)
-    {
-       return world.getBlockState(pos.down()).getBlock() == Blocks.SAND && !world.getBlockState(pos.up()).getMaterial().isLiquid();
     }
 
     @Override

@@ -16,6 +16,6 @@ public class SeedPink implements EntityVillager.ITradeList
     @Override
     public void addMerchantRecipe(IMerchant merchant, MerchantRecipeList recipeList, Random random)
     {
-        recipeList.add(new MerchantRecipe(new ItemStack(InitItem.seedPink, 16), new ItemStack(Items.EMERALD, 1)));
+        recipeList.add(new MerchantRecipe(new ItemStack(InitItem.seedFlowerPink, 16), new ItemStack(Items.EMERALD, 1)));
     }
 }

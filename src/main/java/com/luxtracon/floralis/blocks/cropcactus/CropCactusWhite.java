@@ -2,6 +2,7 @@ package com.luxtracon.floralis.blocks.cropcactus;
 
 import com.luxtracon.floralis.base.BaseCropCactus;
 import com.luxtracon.floralis.init.InitItem;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +20,7 @@ public class CropCactusWhite extends BaseCropCactus
     @Override
     protected Item getSeed()
     {
-        return InitItem.seedWhite;
+        return InitItem.seedFlowerWhite;
     }
 
     @Override

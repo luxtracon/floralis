@@ -3,8 +3,8 @@ package com.luxtracon.floralis.villages;
 import java.util.List;
 import java.util.Random;
 
-import com.luxtracon.floralis.base.BaseCrop;
-import com.luxtracon.floralis.init.InitCrop;
+import com.luxtracon.floralis.base.BaseCropFlower;
+import com.luxtracon.floralis.init.InitCropFlower;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,7 +17,7 @@ import net.minecraft.world.gen.structure.StructureVillagePieces;
 
 public class CustomField extends StructureVillagePieces.Village
 {
-    private BaseCrop crop;
+    private BaseCropFlower crop;
 
     public CustomField(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {
@@ -27,42 +27,42 @@ public class CustomField extends StructureVillagePieces.Village
         this.crop = this.getRandomCropType(random);
     }
 
-    private BaseCrop getRandomCropType(Random random)
+    private BaseCropFlower getRandomCropType(Random random)
     {
         switch (random.nextInt(16))
         {
             case 0:
-                return (BaseCrop) InitCrop.cropBlack;
+                return (BaseCropFlower) InitCropFlower.cropFlowerBlack;
             case 1:
-                return (BaseCrop) InitCrop.cropBlue;
+                return (BaseCropFlower) InitCropFlower.cropFlowerBlue;
             case 2:
-                return (BaseCrop) InitCrop.cropBrown;
+                return (BaseCropFlower) InitCropFlower.cropFlowerBrown;
             case 3:
-                return (BaseCrop) InitCrop.cropCyan;
+                return (BaseCropFlower) InitCropFlower.cropFlowerCyan;
             case 4:
-                return (BaseCrop) InitCrop.cropGray;
+                return (BaseCropFlower) InitCropFlower.cropFlowerGray;
             case 5:
-                return (BaseCrop) InitCrop.cropGreen;
+                return (BaseCropFlower) InitCropFlower.cropFlowerGreen;
             case 6:
-                return (BaseCrop) InitCrop.cropLightBlue;
+                return (BaseCropFlower) InitCropFlower.cropFlowerLightBlue;
             case 7:
-                return (BaseCrop) InitCrop.cropLightGray;
+                return (BaseCropFlower) InitCropFlower.cropFlowerLightGray;
             case 8:
-                return (BaseCrop) InitCrop.cropLime;
+                return (BaseCropFlower) InitCropFlower.cropFlowerLime;
             case 9:
-                return (BaseCrop) InitCrop.cropMagenta;
+                return (BaseCropFlower) InitCropFlower.cropFlowerMagenta;
             case 10:
-                return (BaseCrop) InitCrop.cropOrange;
+                return (BaseCropFlower) InitCropFlower.cropFlowerOrange;
             case 11:
-                return (BaseCrop) InitCrop.cropPink;
+                return (BaseCropFlower) InitCropFlower.cropFlowerPink;
             case 12:
-                return (BaseCrop) InitCrop.cropPurple;
+                return (BaseCropFlower) InitCropFlower.cropFlowerPurple;
             case 13:
-                return (BaseCrop) InitCrop.cropRed;
+                return (BaseCropFlower) InitCropFlower.cropFlowerRed;
             case 14:
-                return (BaseCrop) InitCrop.cropWhite;
+                return (BaseCropFlower) InitCropFlower.cropFlowerWhite;
             case 15:
-                return (BaseCrop) InitCrop.cropYellow;
+                return (BaseCropFlower) InitCropFlower.cropFlowerYellow;
         }
         return null;
     }
@@ -97,10 +97,10 @@ public class CustomField extends StructureVillagePieces.Village
         {
             for (int i = 1; i <= 7; ++i)
             {
-                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCrop.AGE, MathHelper.getInt(random, 0, 2)), 1, 1, i, box);
-                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCrop.AGE, MathHelper.getInt(random, 0, 2)), 2, 1, i, box);
-                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCrop.AGE, MathHelper.getInt(random, 0, 2)), 4, 1, i, box);
-                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCrop.AGE, MathHelper.getInt(random, 0, 2)), 5, 1, i, box);
+                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCropFlower.AGE, MathHelper.getInt(random, 0, 2)), 1, 1, i, box);
+                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCropFlower.AGE, MathHelper.getInt(random, 0, 2)), 2, 1, i, box);
+                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCropFlower.AGE, MathHelper.getInt(random, 0, 2)), 4, 1, i, box);
+                this.setBlockState(world, crop.getDefaultState().withProperty(BaseCropFlower.AGE, MathHelper.getInt(random, 0, 2)), 5, 1, i, box);
             }
         }
 

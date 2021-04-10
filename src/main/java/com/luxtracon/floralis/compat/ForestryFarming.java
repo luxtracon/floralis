@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.compat;
 
-import com.luxtracon.floralis.base.BaseCrop;
-import com.luxtracon.floralis.init.InitCrop;
+import com.luxtracon.floralis.base.BaseCropFlower;
+import com.luxtracon.floralis.init.InitCropFlower;
 import com.luxtracon.floralis.init.InitItem;
 
 import forestry.api.core.ForestryAPI;
@@ -21,22 +21,22 @@ public class ForestryFarming
             (
                 ForestryFarmIdentifier.CROPS,
 
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedWhite), InitCrop.cropWhite, new ItemStack(InitItem.petalWhite), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedOrange), InitCrop.cropOrange, new ItemStack(InitItem.petalOrange), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedMagenta), InitCrop.cropMagenta, new ItemStack(InitItem.petalMagenta), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedLightBlue), InitCrop.cropLightBlue, new ItemStack(InitItem.petalLightBlue), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedYellow), InitCrop.cropYellow, new ItemStack(InitItem.petalYellow), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedLime), InitCrop.cropLime, new ItemStack(InitItem.petalLime), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedPink), InitCrop.cropPink, new ItemStack(InitItem.petalPink), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedGray), InitCrop.cropGray, new ItemStack(InitItem.petalGray), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedLightGray), InitCrop.cropLightGray, new ItemStack(InitItem.petalLightGray), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedCyan), InitCrop.cropCyan, new ItemStack(InitItem.petalCyan), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedPurple), InitCrop.cropPurple, new ItemStack(InitItem.petalPurple), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedBlue), InitCrop.cropBlue, new ItemStack(InitItem.petalBlue), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedBrown), InitCrop.cropBrown, new ItemStack(InitItem.petalBrown), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedGreen), InitCrop.cropGreen, new ItemStack(InitItem.petalGreen), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedRed), InitCrop.cropRed, new ItemStack(InitItem.petalRed), BaseCrop.AGE, 5, 0),
-                    new FarmableAgingCrop(new ItemStack(InitItem.seedBlack), InitCrop.cropBlack, new ItemStack(InitItem.petalBlack), BaseCrop.AGE, 5, 0)
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerWhite), InitCropFlower.cropFlowerWhite, new ItemStack(InitItem.petalWhite), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerOrange), InitCropFlower.cropFlowerOrange, new ItemStack(InitItem.petalOrange), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerMagenta), InitCropFlower.cropFlowerMagenta, new ItemStack(InitItem.petalMagenta), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerLightBlue), InitCropFlower.cropFlowerLightBlue, new ItemStack(InitItem.petalLightBlue), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerYellow), InitCropFlower.cropFlowerYellow, new ItemStack(InitItem.petalYellow), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerLime), InitCropFlower.cropFlowerLime, new ItemStack(InitItem.petalLime), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerPink), InitCropFlower.cropFlowerPink, new ItemStack(InitItem.petalPink), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerGray), InitCropFlower.cropFlowerGray, new ItemStack(InitItem.petalGray), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerLightGray), InitCropFlower.cropFlowerLightGray, new ItemStack(InitItem.petalLightGray), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerCyan), InitCropFlower.cropFlowerCyan, new ItemStack(InitItem.petalCyan), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerPurple), InitCropFlower.cropFlowerPurple, new ItemStack(InitItem.petalPurple), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerBlue), InitCropFlower.cropFlowerBlue, new ItemStack(InitItem.petalBlue), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerBrown), InitCropFlower.cropFlowerBrown, new ItemStack(InitItem.petalBrown), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerGreen), InitCropFlower.cropFlowerGreen, new ItemStack(InitItem.petalGreen), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerRed), InitCropFlower.cropFlowerRed, new ItemStack(InitItem.petalRed), BaseCropFlower.AGE, 5, 0),
+                    new FarmableAgingCrop(new ItemStack(InitItem.seedFlowerBlack), InitCropFlower.cropFlowerBlack, new ItemStack(InitItem.petalBlack), BaseCropFlower.AGE, 5, 0)
             );
     }
 }

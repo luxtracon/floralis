@@ -42,10 +42,8 @@ public class Main
 
 		InitBlock.init();
 		InitCactus.init();
-		InitCrop.init();
-
+		InitCropFlower.init();
 		InitCropCactus.init();
-
 		InitFlower.init();
 		InitItem.init();
 	}

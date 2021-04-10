@@ -21,12 +21,16 @@ public class BaseCropCactus extends BlockCrops
     private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.4375D, 0.0D, 0.4375D, 0.5625D, 0.125D, 0.5625D), new AxisAlignedBB(0.375D, 0.0D, 0.375D, 0.625D, 0.25D, 0.625D), new AxisAlignedBB(0.3125D, 0.0D, 0.3125D, 0.6875D, 0.375D, 0.6875D), new AxisAlignedBB(0.3125D, 0.0D, 0.3125D, 0.6875D, 0.375D, 0.6875D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D)};
     private static final AxisAlignedBB[] COLLISIONAABB = new AxisAlignedBB[] {new AxisAlignedBB(0.4375D, 0.0D, 0.4375D, 0.5625D, 0.125D, 0.5625D), new AxisAlignedBB(0.375D, 0.0D, 0.375D, 0.625D, 0.25D, 0.625D), new AxisAlignedBB(0.3125D, 0.0D, 0.3125D, 0.6875D, 0.375D, 0.6875D), new AxisAlignedBB(0.3125D, 0.0D, 0.3125D, 0.6875D, 0.375D, 0.6875D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D), new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D)};
 
-
     public BaseCropCactus(String name)
     {
         setRegistryName(name);
         setTranslationKey(name);
         setSoundType(SoundType.PLANT);
+    }
+
+    public boolean canBlockStay(World world, BlockPos pos, IBlockState state)
+    {
+        return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && world.getBlockState(pos.down()).getBlock() == Blocks.SAND;
     }
 
     @Override
@@ -42,15 +46,15 @@ public class BaseCropCactus extends BlockCrops
     }
 
     @Override
-    protected PropertyInteger getAgeProperty()
+    protected BlockStateContainer createBlockState()
     {
-        return AGE;
+        return new BlockStateContainer(this, AGE);
     }
 
     @Override
-    public int getMaxAge()
+    protected PropertyInteger getAgeProperty()
     {
-        return 5;
+        return AGE;
     }
 
     @Override
@@ -60,32 +64,16 @@ public class BaseCropCactus extends BlockCrops
     }
 
     @Override
+    public int getMaxAge()
+    {
+        return 5;
+    }
+
+    @Override
     protected int getBonemealAgeIncrease(World world)
     {
         return MathHelper.getInt(world.rand, 1, 3);
     }
-
-    @Override
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, AGE);
-    }
-
-    /*@Override
-    protected boolean canSustainBush(IBlockState state)
-    {
-        return state.getBlock() == Blocks.SAND;
-    }*/
-
-
-
-    @Override
-    public boolean canBlockStay(World world, BlockPos pos, IBlockState state)
-    {
-        return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && world.getBlockState(pos.down()).getBlock() == Blocks.SAND;
-    }
-
-
 
     @Override
     public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity)

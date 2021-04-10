@@ -22,16 +22,19 @@ public class DyeGray extends BaseItem
         if (target instanceof EntitySheep)
         {
             EntitySheep entitysheep = (EntitySheep)target;
+
             EnumDyeColor enumdyecolor = EnumDyeColor.byDyeDamage(8);
 
             if (!entitysheep.getSheared() && entitysheep.getFleeceColor() != enumdyecolor)
             {
                 entitysheep.setFleeceColor(enumdyecolor);
+
                 stack.shrink(1);
             }
 
             return true;
         }
+
         else
         {
             return false;

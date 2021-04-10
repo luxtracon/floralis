@@ -45,21 +45,21 @@ public class IndustrialForegoing
         IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.petalRed)));
         IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.petalBlack)));
 
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedWhite)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedOrange)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedMagenta)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedLightBlue)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedYellow)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedLime)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedPink)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedGray)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedLightGray)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedCyan)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedPurple)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedBlue)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedBrown)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedGreen)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedRed)));
-        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedBlack)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerWhite)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerOrange)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerMagenta)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerLightBlue)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerYellow)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerLime)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerPink)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerGray)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerLightGray)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerCyan)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerPurple)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerBlue)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerBrown)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerGreen)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerRed)));
+        IndustrialForegoingHelper.addBioReactorEntry(new BioReactorEntry(new ItemStack(InitItem.seedFlowerBlack)));
     }
 }

@@ -4,7 +4,7 @@ import com.luxtracon.floralis.base.BaseItem;
 import com.luxtracon.floralis.items.seedcactus.SeedCactusWhite;
 import com.luxtracon.floralis.utilities.Reference;
 import com.luxtracon.floralis.items.dye.*;
-import com.luxtracon.floralis.items.seed.*;
+import com.luxtracon.floralis.items.seedflower.*;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -20,22 +20,22 @@ import java.util.Objects;
 @EventBusSubscriber(modid = Reference.MODID)
 public class InitItem
 {
-	public static Item seedWhite;
-	public static Item seedOrange;
-	public static Item seedMagenta;
-	public static Item seedLightBlue;
-	public static Item seedYellow;
-	public static Item seedLime;
-	public static Item seedPink;
-	public static Item seedGray;
-	public static Item seedLightGray;
-	public static Item seedCyan;
-	public static Item seedPurple;
-	public static Item seedBlue;
-	public static Item seedBrown;
-	public static Item seedGreen;
-	public static Item seedRed;
-	public static Item seedBlack;
+	public static Item seedFlowerWhite;
+	public static Item seedFlowerOrange;
+	public static Item seedFlowerMagenta;
+	public static Item seedFlowerLightBlue;
+	public static Item seedFlowerYellow;
+	public static Item seedFlowerLime;
+	public static Item seedFlowerPink;
+	public static Item seedFlowerGray;
+	public static Item seedFlowerLightGray;
+	public static Item seedFlowerCyan;
+	public static Item seedFlowerPurple;
+	public static Item seedFlowerBlue;
+	public static Item seedFlowerBrown;
+	public static Item seedFlowerGreen;
+	public static Item seedFlowerRed;
+	public static Item seedFlowerBlack;
 
 	public static Item seedCactusWhite;
 
@@ -75,22 +75,22 @@ public class InitItem
 	
 	public static void init()
 	{
-		seedWhite = new SeedWhite("whiteseed");
-		seedOrange = new SeedOrange("orangeseed");
-		seedMagenta = new SeedMagenta("magentaseed");
-		seedLightBlue = new SeedLightBlue("lightblueseed");
-		seedYellow = new SeedYellow("yellowseed");
-		seedLime = new SeedLime("limeseed");
-		seedPink = new SeedPink("pinkseed");
-		seedGray = new SeedGray("grayseed");
-		seedLightGray = new SeedLightGray("lightgrayseed");
-		seedCyan = new SeedCyan("cyanseed");
-		seedPurple = new SeedPurple("purpleseed");
-		seedBlue = new SeedBlue("blueseed");
-		seedBrown = new SeedBrown("brownseed");
-		seedGreen = new SeedGreen("greenseed");
-		seedRed = new SeedRed("redseed");
-		seedBlack = new SeedBlack("blackseed");
+		seedFlowerWhite = new SeedFlowerWhite("whiteseed");
+		seedFlowerOrange = new SeedFlowerOrange("orangeseed");
+		seedFlowerMagenta = new SeedFlowerMagenta("magentaseed");
+		seedFlowerLightBlue = new SeedFlowerLightBlue("lightblueseed");
+		seedFlowerYellow = new SeedFlowerYellow("yellowseed");
+		seedFlowerLime = new SeedFlowerLime("limeseed");
+		seedFlowerPink = new SeedFlowerPink("pinkseed");
+		seedFlowerGray = new SeedFlowerGray("grayseed");
+		seedFlowerLightGray = new SeedFlowerLightGray("lightgrayseed");
+		seedFlowerCyan = new SeedFlowerCyan("cyanseed");
+		seedFlowerPurple = new SeedFlowerPurple("purpleseed");
+		seedFlowerBlue = new SeedFlowerBlue("blueseed");
+		seedFlowerBrown = new SeedFlowerBrown("brownseed");
+		seedFlowerGreen = new SeedFlowerGreen("greenseed");
+		seedFlowerRed = new SeedFlowerRed("redseed");
+		seedFlowerBlack = new SeedFlowerBlack("blackseed");
 
 		seedCactusWhite = new SeedCactusWhite("whitecactusseed");
 
@@ -132,22 +132,22 @@ public class InitItem
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().registerAll(seedWhite);
-		event.getRegistry().registerAll(seedOrange);
-		event.getRegistry().registerAll(seedMagenta);
-		event.getRegistry().registerAll(seedLightBlue);
-		event.getRegistry().registerAll(seedYellow);
-		event.getRegistry().registerAll(seedLime);
-		event.getRegistry().registerAll(seedPink);
-		event.getRegistry().registerAll(seedGray);
-		event.getRegistry().registerAll(seedLightGray);
-		event.getRegistry().registerAll(seedCyan);
-		event.getRegistry().registerAll(seedPurple);
-		event.getRegistry().registerAll(seedBlue);
-		event.getRegistry().registerAll(seedBrown);
-		event.getRegistry().registerAll(seedGreen);
-		event.getRegistry().registerAll(seedRed);
-		event.getRegistry().registerAll(seedBlack);
+		event.getRegistry().registerAll(seedFlowerWhite);
+		event.getRegistry().registerAll(seedFlowerOrange);
+		event.getRegistry().registerAll(seedFlowerMagenta);
+		event.getRegistry().registerAll(seedFlowerLightBlue);
+		event.getRegistry().registerAll(seedFlowerYellow);
+		event.getRegistry().registerAll(seedFlowerLime);
+		event.getRegistry().registerAll(seedFlowerPink);
+		event.getRegistry().registerAll(seedFlowerGray);
+		event.getRegistry().registerAll(seedFlowerLightGray);
+		event.getRegistry().registerAll(seedFlowerCyan);
+		event.getRegistry().registerAll(seedFlowerPurple);
+		event.getRegistry().registerAll(seedFlowerBlue);
+		event.getRegistry().registerAll(seedFlowerBrown);
+		event.getRegistry().registerAll(seedFlowerGreen);
+		event.getRegistry().registerAll(seedFlowerRed);
+		event.getRegistry().registerAll(seedFlowerBlack);
 
 		event.getRegistry().registerAll(seedCactusWhite);
 
@@ -189,22 +189,22 @@ public class InitItem
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event)
 	{
-		registerRender(seedWhite);
-		registerRender(seedOrange);
-		registerRender(seedMagenta);
-		registerRender(seedLightBlue);
-		registerRender(seedYellow);
-		registerRender(seedLime);
-		registerRender(seedPink);
-		registerRender(seedGray);
-		registerRender(seedLightGray);
-		registerRender(seedCyan);
-		registerRender(seedPurple);
-		registerRender(seedBlue);
-		registerRender(seedBrown);
-		registerRender(seedGreen);
-		registerRender(seedRed);
-		registerRender(seedBlack);
+		registerRender(seedFlowerWhite);
+		registerRender(seedFlowerOrange);
+		registerRender(seedFlowerMagenta);
+		registerRender(seedFlowerLightBlue);
+		registerRender(seedFlowerYellow);
+		registerRender(seedFlowerLime);
+		registerRender(seedFlowerPink);
+		registerRender(seedFlowerGray);
+		registerRender(seedFlowerLightGray);
+		registerRender(seedFlowerCyan);
+		registerRender(seedFlowerPurple);
+		registerRender(seedFlowerBlue);
+		registerRender(seedFlowerBrown);
+		registerRender(seedFlowerGreen);
+		registerRender(seedFlowerRed);
+		registerRender(seedFlowerBlack);
 
 		registerRender(seedCactusWhite);
 
