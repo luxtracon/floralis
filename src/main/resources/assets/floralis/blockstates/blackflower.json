@@ -1,13 +1,10 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "floralis:blackflower",
-    "uvlock": true
-  },
   "variants": {
-    "normal": [{ }],
-    "inventory": [{"model": "floralis:item/blackflower"}],
-    "stage=0":[{ }],
-    "stage=1":[{ }]
+    "normal": [
+      {"model": "floralis:blackflower"}
+    ],
+    "inventory": [
+      {"model": "floralis:item/blackflower"}
+    ]
   }
 }

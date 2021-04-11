@@ -1,13 +1,10 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "floralis:purpleflower",
-    "uvlock": true
-  },
   "variants": {
-    "normal": [{ }],
-    "inventory": [{"model": "floralis:item/purpleflower"}],
-    "stage=0":[{ }],
-    "stage=1":[{ }]
+    "normal": [
+      {"model": "floralis:purpleflower"}
+    ],
+    "inventory": [
+      {"model": "floralis:item/purpleflower"}
+    ]
   }
 }

@@ -7,32 +7,32 @@
     "age": {
       "0": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/0"
+          "cross": "floralis:blocks/crop/flower/magenta/0"
         }
       },
       "1": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/1"
+          "cross": "floralis:blocks/crop/flower/magenta/1"
         }
       },
       "2": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/2"
+          "cross": "floralis:blocks/crop/flower/magenta/2"
         }
       },
       "3": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/3"
+          "cross": "floralis:blocks/crop/flower/magenta/3"
         }
       },
       "4": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/4"
+          "cross": "floralis:blocks/crop/flower/magenta/4"
         }
       },
       "5": {
         "textures": {
-          "cross": "floralis:blocks/crop/purplecrop/5"
+          "cross": "floralis:blocks/crop/flower/magenta/5"
         }
       }
     }

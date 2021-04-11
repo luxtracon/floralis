@@ -1,9 +1,8 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/seed/blackseed"
+        "layer0": "floralis:items/seed/flower/black"
      },
-     
     "display": {
         "thirdperson": {
             "rotation": [-90,0,0],

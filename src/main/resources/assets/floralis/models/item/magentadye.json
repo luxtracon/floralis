@@ -1,9 +1,8 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/dye/magentadye"
+        "layer0": "floralis:items/dye/magenta"
      },
-     
     "display": {
         "thirdperson": {
             "rotation": [-90,0,0],

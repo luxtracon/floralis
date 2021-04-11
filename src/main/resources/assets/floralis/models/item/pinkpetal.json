@@ -1,9 +1,8 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/petal/pinkpetal"
+        "layer0": "floralis:items/petal/pink"
      },
-     
     "display": {
         "thirdperson": {
             "rotation": [-90,0,0],

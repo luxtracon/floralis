@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "floralis:blocks/flower/grayflower"
+    "layer0": "floralis:blocks/flower/gray"
   }
 }

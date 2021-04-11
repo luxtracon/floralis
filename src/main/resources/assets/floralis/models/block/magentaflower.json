@@ -1,6 +1,6 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "floralis:blocks/flower/magentaflower"
+    "cross": "floralis:blocks/flower/magenta"
   }
 }

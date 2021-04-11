@@ -32,22 +32,22 @@ public class InitCropFlower
 
     public static void init()
     {
-        cropFlowerWhite = new CropFlowerWhite("whitecrop");
-        cropFlowerOrange = new CropFlowerOrange("orangecrop");
-        cropFlowerMagenta = new CropFlowerMagenta("magentacrop");
-        cropFlowerLightBlue = new CropFlowerLightBlue("lightbluecrop");
-        cropFlowerYellow = new CropFlowerYellow("yellowcrop");
-        cropFlowerLime = new CropFlowerLime("limecrop");
-        cropFlowerPink = new CropFlowerPink("pinkcrop");
-        cropFlowerGray = new CropFlowerGray("graycrop");
-        cropFlowerLightGray = new CropFlowerLightGray("lightgraycrop");
-        cropFlowerCyan = new CropFlowerCyan("cyancrop");
-        cropFlowerPurple = new CropFlowerPurple("purplecrop");
-        cropFlowerBlue = new CropFlowerBlue("bluecrop");
-        cropFlowerBrown = new CropFlowerBrown("browncrop");
-        cropFlowerGreen = new CropFlowerGreen("greencrop");
-        cropFlowerRed = new CropFlowerRed("redcrop");
-        cropFlowerBlack = new CropFlowerBlack("blackcrop");
+        cropFlowerWhite = new CropFlowerWhite("whiteflowercrop");
+        cropFlowerOrange = new CropFlowerOrange("orangeflowercrop");
+        cropFlowerMagenta = new CropFlowerMagenta("magentaflowercrop");
+        cropFlowerLightBlue = new CropFlowerLightBlue("lightblueflowercrop");
+        cropFlowerYellow = new CropFlowerYellow("yellowflowercrop");
+        cropFlowerLime = new CropFlowerLime("limeflowercrop");
+        cropFlowerPink = new CropFlowerPink("pinkflowercrop");
+        cropFlowerGray = new CropFlowerGray("grayflowercrop");
+        cropFlowerLightGray = new CropFlowerLightGray("lightgrayflowercrop");
+        cropFlowerCyan = new CropFlowerCyan("cyanflowercrop");
+        cropFlowerPurple = new CropFlowerPurple("purpleflowercrop");
+        cropFlowerBlue = new CropFlowerBlue("blueflowercrop");
+        cropFlowerBrown = new CropFlowerBrown("brownflowercrop");
+        cropFlowerGreen = new CropFlowerGreen("greenflowercrop");
+        cropFlowerRed = new CropFlowerRed("redflowercrop");
+        cropFlowerBlack = new CropFlowerBlack("blackflowercrop");
     }
 
     @SubscribeEvent
