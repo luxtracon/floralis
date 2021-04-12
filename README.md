@@ -1,6 +1,6 @@
 <p><span style="font-family: helvetica, arial, sans-serif;"><img src="https://cdn.zekro.de/mods/floralis/media/logo.png" alt="" width="352" height="54" /></span></p>
 <p><span style="font-family: helvetica, arial, sans-serif;">&nbsp;</span></p>
-<p><span style="font-family: helvetica, arial, sans-serif;">Floralis aims to make any type of dye farmable in an automatable way with the help of third party mods. Furthermore the dye is compatible with pretty much every mod that requests any sort of dye in it's crafting recipes.&nbsp;</span><span style="font-family: helvetica, arial, sans-serif;">Currently supported mods for automated farming are<br /></span></p>
+<p><span style="font-family: helvetica, arial, sans-serif;">Floralis aims to make any type of dye farmable in an automatable way with the help of third party mods. Furthermore the dye is compatible with pretty much every mod that requests any sort of dye in it's crafting recipes.&nbsp;</span><span style="font-family: helvetica, arial, sans-serif;">Currently supported mods for automated farming are:<br /></span></p>
 <ul>
 <li><span style="font-family: helvetica, arial, sans-serif;"><a href="https://www.curseforge.com/minecraft/mc-mods/forestry">Forestry Farming</a> Multi Farm</span></li>
 <li><span style="font-family: helvetica, arial, sans-serif;"><a href="https://www.curseforge.com/minecraft/mc-mods/immersive-engineering">Immersive Engineering</a> Garden Cloches</span></li>
