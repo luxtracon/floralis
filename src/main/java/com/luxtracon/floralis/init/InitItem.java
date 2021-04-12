@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.BaseItem;
-import com.luxtracon.floralis.items.seedcactus.SeedCactusWhite;
+import com.luxtracon.floralis.items.seedcactus.*;
 import com.luxtracon.floralis.utilities.Reference;
 import com.luxtracon.floralis.items.dye.*;
 import com.luxtracon.floralis.items.seedflower.*;
@@ -38,6 +38,21 @@ public class InitItem
 	public static Item seedFlowerBlack;
 
 	public static Item seedCactusWhite;
+	public static Item seedCactusOrange;
+	public static Item seedCactusMagenta;
+	public static Item seedCactusLightBlue;
+	public static Item seedCactusYellow;
+	public static Item seedCactusLime;
+	public static Item seedCactusPink;
+	public static Item seedCactusGray;
+	public static Item seedCactusLightGray;
+	public static Item seedCactusCyan;
+	public static Item seedCactusPurple;
+	public static Item seedCactusBlue;
+	public static Item seedCactusBrown;
+	public static Item seedCactusGreen;
+	public static Item seedCactusRed;
+	public static Item seedCactusBlack;
 
 	public static Item petalWhite;
 	public static Item petalOrange;
@@ -93,6 +108,21 @@ public class InitItem
 		seedFlowerBlack = new SeedFlowerBlack("blackseed");
 
 		seedCactusWhite = new SeedCactusWhite("whitecactusseed");
+		seedCactusOrange = new SeedCactusOrange("orangecactusseed");
+		seedCactusMagenta = new SeedCactusMagenta("magentacactusseed");
+		seedCactusLightBlue = new SeedCactusLightBlue("lightbluecactusseed");
+		seedCactusYellow = new SeedCactusYellow("yellowcactusseed");
+		seedCactusLime = new SeedCactusLime("limecactusseed");
+		seedCactusPink = new SeedCactusPink("pinkcactusseed");
+		seedCactusGray = new SeedCactusGray("graycactusseed");
+		seedCactusLightGray = new SeedCactusLightGray("lightgraycactusseed");
+		seedCactusCyan = new SeedCactusCyan("cyancactusseed");
+		seedCactusPurple = new SeedCactusPurple("purplecactusseed");
+		seedCactusBlue = new SeedCactusBlue("bluecactusseed");
+		seedCactusBrown = new SeedCactusBrown("browncactusseed");
+		seedCactusGreen = new SeedCactusGreen("greencactusseed");
+		seedCactusRed = new SeedCactusRed("redcactusseed");
+		seedCactusBlack = new SeedCactusBlack("blackcactusseed");
 
 		petalWhite = new BaseItem("whitepetal");
 		petalOrange = new BaseItem("orangepetal");
@@ -150,6 +180,21 @@ public class InitItem
 		event.getRegistry().registerAll(seedFlowerBlack);
 
 		event.getRegistry().registerAll(seedCactusWhite);
+		event.getRegistry().registerAll(seedCactusOrange);
+		event.getRegistry().registerAll(seedCactusMagenta);
+		event.getRegistry().registerAll(seedCactusLightBlue);
+		event.getRegistry().registerAll(seedCactusYellow);
+		event.getRegistry().registerAll(seedCactusLime);
+		event.getRegistry().registerAll(seedCactusPink);
+		event.getRegistry().registerAll(seedCactusGray);
+		event.getRegistry().registerAll(seedCactusLightGray);
+		event.getRegistry().registerAll(seedCactusCyan);
+		event.getRegistry().registerAll(seedCactusPurple);
+		event.getRegistry().registerAll(seedCactusBlue);
+		event.getRegistry().registerAll(seedCactusBrown);
+		event.getRegistry().registerAll(seedCactusGreen);
+		event.getRegistry().registerAll(seedCactusRed);
+		event.getRegistry().registerAll(seedCactusBlack);
 
 		event.getRegistry().registerAll(petalWhite);
 		event.getRegistry().registerAll(petalOrange);
@@ -207,6 +252,21 @@ public class InitItem
 		registerRender(seedFlowerBlack);
 
 		registerRender(seedCactusWhite);
+		registerRender(seedCactusOrange);
+		registerRender(seedCactusMagenta);
+		registerRender(seedCactusLightBlue);
+		registerRender(seedCactusYellow);
+		registerRender(seedCactusLime);
+		registerRender(seedCactusPink);
+		registerRender(seedCactusGray);
+		registerRender(seedCactusLightGray);
+		registerRender(seedCactusCyan);
+		registerRender(seedCactusPurple);
+		registerRender(seedCactusBlue);
+		registerRender(seedCactusBrown);
+		registerRender(seedCactusGreen);
+		registerRender(seedCactusRed);
+		registerRender(seedCactusBlack);
 
 		registerRender(petalWhite);
 		registerRender(petalOrange);

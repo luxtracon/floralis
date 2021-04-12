@@ -20,7 +20,7 @@ public class CropCactusWhite extends BaseCropCactus
     @Override
     protected Item getSeed()
     {
-        return InitItem.seedFlowerWhite;
+        return InitItem.seedCactusWhite;
     }
 
     @Override

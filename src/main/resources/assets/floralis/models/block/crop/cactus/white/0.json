@@ -24,9 +24,9 @@
     }
   ],
   "textures": {
-    "particle": "floralis:blocks/cactus/white/side",
-    "top": "floralis:blocks/cactus/white/top",
-    "side": "floralis:blocks/cactus/white/side",
-    "bottom": "floralis:blocks/cactus/white/bottom"
+    "particle": "floralis:blocks/crop/cactus/white/0/side",
+    "top": "floralis:blocks/crop/cactus/white/0/top",
+    "side": "floralis:blocks/crop/cactus/white/0/side",
+    "bottom": "floralis:blocks/crop/cactus/white/0/bottom"
   }
 }

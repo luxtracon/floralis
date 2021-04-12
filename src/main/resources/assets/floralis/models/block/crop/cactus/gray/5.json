@@ -1,0 +1,37 @@
+{
+  "parent": "block/block",
+  "elements": [
+    { "from": [ 3, 0, 3 ],
+      "to": [ 13, 8, 13 ],
+      "faces": {
+        "up":   { "uv": [ 3, 3, 13, 13 ], "texture": "#top" }
+      }
+    },
+    { "from": [ 4, 0, 4 ],
+      "to": [ 12, 8, 12 ],
+      "faces": {
+        "down": { "uv": [ 4, 4, 12, 12 ], "texture": "#bottom" }
+      }
+    },
+    { "from": [ 3, 0, 4 ],
+      "to": [ 13, 9, 12 ],
+      "faces": {
+        "north": { "uv": [ 3, 3, 13, 12 ], "texture": "#side" },
+        "south": { "uv": [ 3, 3, 13, 12 ], "texture": "#side" }
+      }
+    },
+    { "from": [ 4, 0, 3 ],
+      "to": [ 12, 9, 13 ],
+      "faces": {
+        "east": { "uv": [ 3, 3, 13, 12 ], "texture": "#side" },
+        "west": { "uv": [ 3, 3, 13, 12 ], "texture": "#side" }
+      }
+    }
+  ],
+  "textures": {
+    "particle": "floralis:blocks/crop/cactus/gray/5/side",
+    "top": "floralis:blocks/crop/cactus/gray/5/top",
+    "side": "floralis:blocks/crop/cactus/gray/5/side",
+    "bottom": "floralis:blocks/crop/cactus/gray/5/bottom"
+  }
+}
