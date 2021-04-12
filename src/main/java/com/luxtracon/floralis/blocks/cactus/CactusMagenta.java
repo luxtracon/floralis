@@ -2,6 +2,7 @@ package com.luxtracon.floralis.blocks.cactus;
 
 import com.luxtracon.floralis.base.BaseCactus;
 import com.luxtracon.floralis.init.InitItem;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
