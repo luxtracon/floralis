@@ -1,7 +1,7 @@
 {
   "variants": {
     "normal": {
-      "model": "floralis:whitecactus"
+      "model": "floralis:cactus/white"
     }
   }
 }

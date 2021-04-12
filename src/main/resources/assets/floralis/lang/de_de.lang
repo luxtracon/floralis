@@ -1,19 +1,23 @@
-item.whiteseed.name=Weiße Samen
-item.orangeseed.name=Orange Samen
-item.magentaseed.name=Magenta Samen
-item.lightblueseed.name=Hellblaue Samen
-item.yellowseed.name=Gelbe Samen
-item.limeseed.name=Hellgrüne Samen
-item.pinkseed.name=Rosa Samen
-item.grayseed.name=Graue Samen
-item.lightgrayseed.name=Hellgraue Samen
-item.cyanseed.name=Türkise Samen
-item.purpleseed.name=Violette Samen
-item.blueseed.name=Blaue Samen
-item.brownseed.name= Braune Samen
-item.greenseed.name=Grüne Samen
-item.redseed.name=Rote Samen
-item.blackseed.name=Schwarze Samen
+itemGroup.tab=Floralis
+
+item.whiteseed.name=Weiße Blumensamen
+item.orangeseed.name=Orange Blumensamen
+item.magentaseed.name=Magenta Blumensamen
+item.lightblueseed.name=Hellblaue Blumensamen
+item.yellowseed.name=Gelbe Blumensamen
+item.limeseed.name=Hellgrüne Blumensamen
+item.pinkseed.name=Rosa Blumensamen
+item.grayseed.name=Graue Blumensamen
+item.lightgrayseed.name=Hellgraue Blumensamen
+item.cyanseed.name=Türkise Blumensamen
+item.purpleseed.name=Violette Blumensamen
+item.blueseed.name=Blaue Blumensamen
+item.brownseed.name= Braune Blumensamen
+item.greenseed.name=Grüne Blumensamen
+item.redseed.name=Rote Blumensamen
+item.blackseed.name=Schwarze Blumensamen
+
+item.whitecactusseed.name=Weiße Kaktussamen
 
 item.whitepetal.name=Weißes Blütenblatt
 item.orangepetal.name=Oranges Blütenblatt
@@ -83,6 +87,6 @@ tile.greenflower.name=Grüne Blume
 tile.redflower.name=Rote Blume
 tile.blackflower.name=Schwarze Blume
 
-tile.dyeblock.tooltip=Kosmetisch und kompakt
+tile.whitecactus.name=Weißer Kaktus
 
-itemGroup.tab=Floralis
+tile.dyeblock.tooltip=Kosmetisch und kompakt

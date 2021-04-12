@@ -1,10 +1,10 @@
 {
   "variants": {
-    "normal": [
-      {"model": "floralis:magentaflower"}
-    ],
-    "inventory": [
-      {"model": "floralis:item/magentaflower"}
-    ]
+    "normal": {
+      "model": "floralis:flower/magenta"
+    },
+    "inventory": {
+      "model": "floralis:item/magentaflower"
+    }
   }
 }

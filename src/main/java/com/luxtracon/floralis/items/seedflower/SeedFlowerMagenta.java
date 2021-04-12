@@ -10,7 +10,7 @@ public class SeedFlowerMagenta extends ItemSeeds
 {
     public SeedFlowerMagenta(String name)
     {
-        super(InitCropFlower.cropFlowerBrown, Blocks.FARMLAND);
+        super(InitCropFlower.cropFlowerMagenta, Blocks.FARMLAND);
         setRegistryName(name);
         setTranslationKey(name);
         setCreativeTab(Main.MODTAB);

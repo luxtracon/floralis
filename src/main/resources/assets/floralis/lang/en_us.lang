@@ -1,19 +1,23 @@
-item.whiteseed.name=White Seed
-item.orangeseed.name=Orange Seed
-item.magentaseed.name=Magenta Seed
-item.lightblueseed.name=Light Blue Seed
-item.yellowseed.name=Yellow Seed
-item.limeseed.name=Lime Seed
-item.pinkseed.name=Pink Seed
-item.grayseed.name=Gray Seed
-item.lightgrayseed.name=Light Gray Seed
-item.cyanseed.name=Cyan Seed
-item.purpleseed.name=Purple Seed
-item.blueseed.name=Blue Seed
-item.brownseed.name= Brown Seed
-item.greenseed.name=Green Seed
-item.redseed.name=Red Seed
-item.blackseed.name=Black Seed
+itemGroup.tab=Floralis
+
+item.whiteseed.name=White Flower Seed
+item.orangeseed.name=Orange Flower Seed
+item.magentaseed.name=Magenta Flower Seed
+item.lightblueseed.name=Light Blue Flower Seed
+item.yellowseed.name=Yellow Flower Seed
+item.limeseed.name=Lime Flower Seed
+item.pinkseed.name=Pink Flower Seed
+item.grayseed.name=Gray Flower Seed
+item.lightgrayseed.name=Light Gray Flower Seed
+item.cyanseed.name=Cyan Flower Seed
+item.purpleseed.name=Purple Flower Seed
+item.blueseed.name=Blue Flower Seed
+item.brownseed.name= Brown Flower Seed
+item.greenseed.name=Green Flower Seed
+item.redseed.name=Red Flower Seed
+item.blackseed.name=Black Flower Seed
+
+item.whitecactusseed.name=White Cactus Seed
 
 item.whitepetal.name=White Petal
 item.orangepetal.name=Orange Petal
@@ -83,6 +87,6 @@ tile.greenflower.name=Green Flower
 tile.redflower.name=Red Flower
 tile.blackflower.name=Black Flower
 
-tile.dyeblock.tooltip=Cosmetic and compact
+tile.whitecactus.name=White Cactus
 
-itemGroup.tab=Floralis
+tile.dyeblock.tooltip=Cosmetic and compact
