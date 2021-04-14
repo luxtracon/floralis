@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.blocks.cactus;
 
-import com.luxtracon.floralis.base.BaseCactus;
-import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.base.CactusBase;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -10,7 +10,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class CactusRed extends BaseCactus
+public class CactusRed extends CactusBase
 {
     public CactusRed(String name, Material material, float hardness, float resistance)
     {
@@ -20,7 +20,7 @@ public class CactusRed extends BaseCactus
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
-        drops.add(new ItemStack(InitItem.seedCactusRed, 2 + fortune));
-        drops.add(new ItemStack(InitItem.petalRed, 1 + fortune));
+        drops.add(new ItemStack(ItemInit.seedCactusRed, 2 + fortune));
+        drops.add(new ItemStack(ItemInit.petalRed, 1 + fortune));
     }
 }

@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.blocks.cropcactus;
 
-import com.luxtracon.floralis.base.BaseCropCactus;
-import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.base.CactusCropBase;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -10,7 +10,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class CropCactusLightBlue extends BaseCropCactus
+public class CropCactusLightBlue extends CactusCropBase
 {
     public CropCactusLightBlue(String name)
     {
@@ -20,13 +20,13 @@ public class CropCactusLightBlue extends BaseCropCactus
     @Override
     protected Item getSeed()
     {
-        return InitItem.seedCactusLightBlue;
+        return ItemInit.seedCactusLightBlue;
     }
 
     @Override
     protected Item getCrop()
     {
-        return InitItem.petalLightBlue;
+        return ItemInit.petalLightBlue;
     }
 
     @Override

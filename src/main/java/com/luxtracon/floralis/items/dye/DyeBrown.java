@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.items.dye;
 
-import com.luxtracon.floralis.base.BaseItem;
+import com.luxtracon.floralis.base.ItemBase;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntitySheep;
@@ -9,7 +9,7 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 
-public class DyeBrown extends BaseItem
+public class DyeBrown extends ItemBase
 {
     public DyeBrown(String name)
     {

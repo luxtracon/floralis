@@ -1,8 +1,8 @@
 package com.luxtracon.floralis.blocks.flower;
 
-import com.luxtracon.floralis.base.BaseFlower;
-import com.luxtracon.floralis.init.InitFlower;
-import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.base.FlowerBase;
+import com.luxtracon.floralis.init.FlowerInit;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ import net.minecraftforge.common.IShearable;
 import java.util.Arrays;
 import java.util.List;
 
-public class FlowerMagenta extends BaseFlower implements IShearable
+public class FlowerMagenta extends FlowerBase implements IShearable
 {
     public FlowerMagenta(String name)
     {
@@ -24,8 +24,8 @@ public class FlowerMagenta extends BaseFlower implements IShearable
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
-        drops.add(new ItemStack(InitItem.seedFlowerMagenta, 2 + fortune));
-        drops.add(new ItemStack(InitItem.petalMagenta, 1 + fortune));
+        drops.add(new ItemStack(ItemInit.seedFlowerMagenta, 2 + fortune));
+        drops.add(new ItemStack(ItemInit.petalMagenta, 1 + fortune));
     }
 
     @Override
@@ -37,6 +37,6 @@ public class FlowerMagenta extends BaseFlower implements IShearable
     @Override
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
-        return Arrays.asList(new ItemStack(InitFlower.flowerMagenta));
+        return Arrays.asList(new ItemStack(FlowerInit.flowerMagenta));
     }
 }

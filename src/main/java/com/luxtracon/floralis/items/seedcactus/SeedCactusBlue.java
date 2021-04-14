@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.items.seedcactus;
 
 import com.luxtracon.floralis.Main;
-import com.luxtracon.floralis.init.InitCropCactus;
+import com.luxtracon.floralis.init.CactusCropInit;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -16,7 +16,7 @@ public class SeedCactusBlue extends ItemSeeds
 {
     public SeedCactusBlue(String name)
     {
-        super(InitCropCactus.cropCactusBlue, Blocks.SAND);
+        super(CactusCropInit.cropCactusBlue, Blocks.SAND);
         setRegistryName(name);
         setTranslationKey(name);
         setCreativeTab(Main.MODTAB);
@@ -27,7 +27,7 @@ public class SeedCactusBlue extends ItemSeeds
     {
         if (facing == EnumFacing.UP && world.getBlockState(pos).getBlock() == Blocks.SAND)
         {
-            world.setBlockState(pos.up(), InitCropCactus.cropCactusBlue.getDefaultState());
+            world.setBlockState(pos.up(), CactusCropInit.cropCactusBlue.getDefaultState());
 
             player.getHeldItem(hand).shrink(1);
 

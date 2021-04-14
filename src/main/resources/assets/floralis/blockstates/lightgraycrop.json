@@ -1,39 +1,27 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "cross"
+    "transform": "forge:default-block"
   },
   "variants": {
     "age": {
       "0": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/0"
-        }
+        "model": "floralis:crop/flower/lightgray/0"
       },
       "1": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/1"
-        }
+        "model": "floralis:crop/flower/lightgray/1"
       },
       "2": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/2"
-        }
+        "model": "floralis:crop/flower/lightgray/2"
       },
       "3": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/3"
-        }
+        "model": "floralis:crop/flower/lightgray/3"
       },
       "4": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/4"
-        }
+        "model": "floralis:crop/flower/lightgray/4"
       },
       "5": {
-        "textures": {
-          "cross": "floralis:blocks/crop/flower/lightgray/5"
-        }
+        "model": "floralis:crop/flower/lightgray/5"
       }
     }
   }

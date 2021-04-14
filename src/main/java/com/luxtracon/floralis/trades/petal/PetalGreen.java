@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.trades.petal;
 
-import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.passive.EntityVillager;
@@ -16,6 +16,6 @@ public class PetalGreen implements EntityVillager.ITradeList
     @Override
     public void addMerchantRecipe(IMerchant merchant, MerchantRecipeList recipeList, Random random)
     {
-        recipeList.add(new MerchantRecipe(new ItemStack(Items.EMERALD,1), new ItemStack(InitItem.petalGreen, 8)));
+        recipeList.add(new MerchantRecipe(new ItemStack(Items.EMERALD,1), new ItemStack(ItemInit.petalGreen, 8)));
     }
 }

@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "floralis:items/seed/cactus/purple"
+        "layer0": "floralis:items/seedcactus/purple"
      },
     "display": {
         "thirdperson": {

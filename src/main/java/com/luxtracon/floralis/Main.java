@@ -40,12 +40,12 @@ public class Main
 	{
 		Config.init(event);
 
-		InitBlock.init();
-		InitCactus.init();
-		InitCropFlower.init();
-		InitCropCactus.init();
-		InitFlower.init();
-		InitItem.init();
+		BlockInit.init();
+		CactusInit.init();
+		FlowerCropInit.init();
+		CactusCropInit.init();
+		FlowerInit.init();
+		ItemInit.init();
 	}
 
 	@EventHandler
@@ -71,12 +71,12 @@ public class Main
 			ThermalExpansion.init();
 		}
 
-		CreationRegistry.init();
+		HandlerRegistry.init();
 		DictionaryRegistry.init();
 		GeneratorRegistry.init();
 		SmeltingRegistry.init();
 		StructureRegistry.init();
-		VillagerRegistry.init();
+		TradesRegistry.init();
 	}
 
 	@EventHandler

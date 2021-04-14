@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.registry;
 
-import com.luxtracon.floralis.init.InitItem;
+import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.item.ItemStack;
 
@@ -10,21 +10,21 @@ public class SmeltingRegistry
 {
     public static void init()
     {
-        GameRegistry.addSmelting(InitItem.petalBlack, new ItemStack(InitItem.dyeBlack), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalBlue, new ItemStack(InitItem.dyeBlue), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalBrown, new ItemStack(InitItem.dyeBrown), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalCyan, new ItemStack(InitItem.dyeCyan), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalGray, new ItemStack(InitItem.dyeGray), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalGreen, new ItemStack(InitItem.dyeGreen), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalLightBlue, new ItemStack(InitItem.dyeLightBlue), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalLightGray, new ItemStack(InitItem.dyeLightGray), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalLime, new ItemStack(InitItem.dyeLime), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalMagenta, new ItemStack(InitItem.dyeMagenta), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalOrange, new ItemStack(InitItem.dyeOrange), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalPink, new ItemStack(InitItem.dyePink), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalPurple, new ItemStack(InitItem.dyePurple), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalRed, new ItemStack(InitItem.dyeRed), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalWhite, new ItemStack(InitItem.dyeWhite), 0.2F);
-        GameRegistry.addSmelting(InitItem.petalYellow, new ItemStack(InitItem.dyeYellow), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalBlack, new ItemStack(ItemInit.dyeBlack), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalBlue, new ItemStack(ItemInit.dyeBlue), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalBrown, new ItemStack(ItemInit.dyeBrown), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalCyan, new ItemStack(ItemInit.dyeCyan), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalGray, new ItemStack(ItemInit.dyeGray), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalGreen, new ItemStack(ItemInit.dyeGreen), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalLightBlue, new ItemStack(ItemInit.dyeLightBlue), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalLightGray, new ItemStack(ItemInit.dyeLightGray), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalLime, new ItemStack(ItemInit.dyeLime), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalMagenta, new ItemStack(ItemInit.dyeMagenta), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalOrange, new ItemStack(ItemInit.dyeOrange), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalPink, new ItemStack(ItemInit.dyePink), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalPurple, new ItemStack(ItemInit.dyePurple), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalRed, new ItemStack(ItemInit.dyeRed), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalWhite, new ItemStack(ItemInit.dyeWhite), 0.2F);
+        GameRegistry.addSmelting(ItemInit.petalYellow, new ItemStack(ItemInit.dyeYellow), 0.2F);
     }
 }
