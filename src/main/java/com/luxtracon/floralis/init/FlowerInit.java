@@ -2,7 +2,7 @@ package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.FlowerBase;
 import com.luxtracon.floralis.blocks.flower.*;
-import com.luxtracon.floralis.utilities.Reference;
+import com.luxtracon.floralis.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

@@ -1,6 +1,74 @@
 {
-  "parent": "block/cross",
+  "parent": "block/block",
+  "elements": [
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "tintindex": 0 }
+      }
+    },
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" }
+      }
+    },
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "tintindex": 0 }
+      }
+    },
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "tintindex": 0 }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "tintindex": 0 }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" }
+      }
+    }
+  ],
   "textures": {
-    "cross": "floralis:blocks/crop/flower/lime/2"
+    "top": "floralis:blocks/crop/flower/lime/top/2",
+    "bottom": "floralis:blocks/crop/flower/lime/bottom/2",
+    "particle": "floralis:blocks/crop/flower/lime/bottom/2"
   }
 }

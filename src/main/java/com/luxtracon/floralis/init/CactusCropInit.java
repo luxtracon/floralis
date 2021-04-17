@@ -2,7 +2,7 @@ package com.luxtracon.floralis.init;
 
 import com.luxtracon.floralis.base.CactusCropBase;
 import com.luxtracon.floralis.blocks.cropcactus.*;
-import com.luxtracon.floralis.utilities.Reference;
+import com.luxtracon.floralis.Reference;
 
 import net.minecraft.block.Block;
 

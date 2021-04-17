@@ -1,3 +1,6 @@
 {
-  "parent": "floralis:block/cactus/orange"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "floralis:items/cactus/orange"
+  }
 }

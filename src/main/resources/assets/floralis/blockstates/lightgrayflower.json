@@ -2,9 +2,6 @@
   "variants": {
     "normal": {
       "model": "floralis:flower/lightgray"
-    },
-    "inventory": {
-      "model": "floralis:item/lightgrayflower"
     }
   }
 }

@@ -38,14 +38,14 @@ public class Main
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		Config.init(event);
-
 		BlockInit.init();
 		CactusInit.init();
 		FlowerCropInit.init();
 		CactusCropInit.init();
 		FlowerInit.init();
 		ItemInit.init();
+
+		Config.init(event);
 	}
 
 	@EventHandler
@@ -77,6 +77,8 @@ public class Main
 		SmeltingRegistry.init();
 		StructureRegistry.init();
 		TradesRegistry.init();
+
+		BlockColor.init();
 	}
 
 	@EventHandler

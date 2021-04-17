@@ -40,6 +40,7 @@ public class CactusBase extends Block implements IPlantable
         return world.getBlockState(pos.down()).getBlock() == Blocks.SAND && !world.getBlockState(pos.up()).getMaterial().isLiquid();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos)
     {
@@ -64,12 +65,14 @@ public class CactusBase extends Block implements IPlantable
         return super.canPlaceBlockAt(world, pos) ? this.canBlockStay(world, pos) : false;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
         return AABB;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
@@ -82,12 +85,14 @@ public class CactusBase extends Block implements IPlantable
         return BlockRenderLayer.CUTOUT;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean isFullCube(IBlockState state)
     {
         return false;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean isOpaqueCube(IBlockState state)
     {

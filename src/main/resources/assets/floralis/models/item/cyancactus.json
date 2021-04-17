@@ -1,3 +1,6 @@
 {
-  "parent": "floralis:block/cactus/cyan"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "floralis:items/cactus/cyan"
+  }
 }
