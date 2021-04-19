@@ -6,22 +6,22 @@
   "variants": {
     "age": {
       "0": {
-        "model": "floralis:crop/cactus/lime/0"
+        "model": "floralis:crop/crop/cactus/lime/0"
       },
       "1": {
-        "model": "floralis:crop/cactus/lime/1"
+        "model": "floralis:crop/crop/cactus/lime/1"
       },
       "2": {
-        "model": "floralis:crop/cactus/lime/2"
+        "model": "floralis:crop/crop/cactus/lime/2"
       },
       "3": {
-        "model": "floralis:crop/cactus/lime/3"
+        "model": "floralis:crop/crop/cactus/lime/3"
       },
       "4": {
-        "model": "floralis:crop/cactus/lime/4"
+        "model": "floralis:crop/crop/cactus/lime/4"
       },
       "5": {
-        "model": "floralis:crop/cactus/lime/5"
+        "model": "floralis:crop/crop/cactus/lime/5"
       }
     }
   }

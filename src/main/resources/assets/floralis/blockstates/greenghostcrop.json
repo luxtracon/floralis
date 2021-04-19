@@ -1,0 +1,28 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "model": "floralis:crop/ghost/flower/green/0"
+      },
+      "1": {
+        "model": "floralis:crop/ghost/flower/green/1"
+      },
+      "2": {
+        "model": "floralis:crop/ghost/flower/green/2"
+      },
+      "3": {
+        "model": "floralis:crop/ghost/flower/green/3"
+      },
+      "4": {
+        "model": "floralis:crop/ghost/flower/green/4"
+      },
+      "5": {
+        "model": "floralis:crop/ghost/flower/green/5"
+      }
+    }
+  }
+}

@@ -16,162 +16,162 @@ public class ImmersiveEngineering
 {
     private static IBlockState getStateBlackFlower(int age)
     {
-        return FlowerCropInit.cropFlowerBlack.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostBlack.getStateFromMeta(age);
     }
 
     private static IBlockState getStateBlueFlower(int age)
     {
-        return FlowerCropInit.cropFlowerBlue.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostBlue.getStateFromMeta(age);
     }
 
     private static IBlockState getStateBrownFlower(int age)
     {
-        return FlowerCropInit.cropFlowerBrown.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostBrown.getStateFromMeta(age);
     }
 
     private static IBlockState getStateCyanFlower(int age)
     {
-        return FlowerCropInit.cropFlowerCyan.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostCyan.getStateFromMeta(age);
     }
 
     private static IBlockState getStateGrayFlower(int age)
     {
-        return FlowerCropInit.cropFlowerGray.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostGray.getStateFromMeta(age);
     }
 
     private static IBlockState getStateGreenFlower(int age)
     {
-        return FlowerCropInit.cropFlowerGreen.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostGreen.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLightBlueFlower(int age)
     {
-        return FlowerCropInit.cropFlowerLightBlue.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostLightBlue.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLightGrayFlower(int age)
     {
-        return FlowerCropInit.cropFlowerLightGray.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostLightGray.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLimeFlower(int age)
     {
-        return FlowerCropInit.cropFlowerLime.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostLime.getStateFromMeta(age);
     }
 
     private static IBlockState getStateMagentaFlower(int age)
     {
-        return FlowerCropInit.cropFlowerMagenta.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostMagenta.getStateFromMeta(age);
     }
 
     private static IBlockState getStateOrangeFlower(int age)
     {
-        return FlowerCropInit.cropFlowerOrange.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostOrange.getStateFromMeta(age);
     }
 
     private static IBlockState getStatePinkFlower(int age)
     {
-        return FlowerCropInit.cropFlowerPink.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostPink.getStateFromMeta(age);
     }
 
     private static IBlockState getStatePurpleFlower(int age)
     {
-        return FlowerCropInit.cropFlowerPurple.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostPurple.getStateFromMeta(age);
     }
 
     private static IBlockState getStateRedFlower(int age)
     {
-        return FlowerCropInit.cropFlowerRed.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostRed.getStateFromMeta(age);
     }
 
     private static IBlockState getStateWhiteFlower(int age)
     {
-        return FlowerCropInit.cropFlowerWhite.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostWhite.getStateFromMeta(age);
     }
 
     private static IBlockState getStateYellowFlower(int age)
     {
-        return FlowerCropInit.cropFlowerYellow.getStateFromMeta(age);
+        return GhostFlowerCropInit.cropFlowerGhostYellow.getStateFromMeta(age);
     }
 
     private static IBlockState getStateBlackCactus(int age)
     {
-        return CactusCropInit.cropCactusBlack.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostBlack.getStateFromMeta(age);
     }
 
     private static IBlockState getStateBlueCactus(int age)
     {
-        return CactusCropInit.cropCactusBlue.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostBlue.getStateFromMeta(age);
     }
 
     private static IBlockState getStateBrownCactus(int age)
     {
-        return CactusCropInit.cropCactusBrown.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostBrown.getStateFromMeta(age);
     }
 
     private static IBlockState getStateCyanCactus(int age)
     {
-        return CactusCropInit.cropCactusCyan.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostCyan.getStateFromMeta(age);
     }
 
     private static IBlockState getStateGrayCactus(int age)
     {
-        return CactusCropInit.cropCactusGray.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostGray.getStateFromMeta(age);
     }
 
     private static IBlockState getStateGreenCactus(int age)
     {
-        return CactusCropInit.cropCactusGreen.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostGreen.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLightBlueCactus(int age)
     {
-        return CactusCropInit.cropCactusLightBlue.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostLightBlue.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLightGrayCactus(int age)
     {
-        return CactusCropInit.cropCactusLightGray.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostLightGray.getStateFromMeta(age);
     }
 
     private static IBlockState getStateLimeCactus(int age)
     {
-        return CactusCropInit.cropCactusLime.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostLime.getStateFromMeta(age);
     }
 
     private static IBlockState getStateMagentaCactus(int age)
     {
-        return CactusCropInit.cropCactusMagenta.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostMagenta.getStateFromMeta(age);
     }
 
     private static IBlockState getStateOrangeCactus(int age)
     {
-        return CactusCropInit.cropCactusOrange.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostOrange.getStateFromMeta(age);
     }
 
     private static IBlockState getStatePinkCactus(int age)
     {
-        return CactusCropInit.cropCactusPink.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostPink.getStateFromMeta(age);
     }
 
     private static IBlockState getStatePurpleCactus(int age)
     {
-        return CactusCropInit.cropCactusPurple.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostPurple.getStateFromMeta(age);
     }
 
     private static IBlockState getStateRedCactus(int age)
     {
-        return CactusCropInit.cropCactusRed.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostRed.getStateFromMeta(age);
     }
 
     private static IBlockState getStateWhiteCactus(int age)
     {
-        return CactusCropInit.cropCactusWhite.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostWhite.getStateFromMeta(age);
     }
 
     private static IBlockState getStateYellowCactus(int age)
     {
-        return CactusCropInit.cropCactusYellow.getStateFromMeta(age);
+        return GhostCactusCropInit.cropCactusGhostYellow.getStateFromMeta(age);
     }
 
     public static void init()
@@ -977,99 +977,99 @@ public class ImmersiveEngineering
         };
 
         BelljarHandler.registerHandler(blackflower);
-        blackflower.register(new ItemStack(ItemInit.seedFlowerBlack), new ItemStack[]{new ItemStack(ItemInit.petalBlack, 1), new ItemStack(ItemInit.seedFlowerBlack, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerBlack.getDefaultState());
+        blackflower.register(new ItemStack(ItemInit.seedFlowerBlack), new ItemStack[]{new ItemStack(ItemInit.petalBlack, 1), new ItemStack(ItemInit.seedFlowerBlack, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostBlack.getDefaultState());
 
         BelljarHandler.registerHandler(blueflower);
-        blueflower.register(new ItemStack(ItemInit.seedFlowerBlue), new ItemStack[]{new ItemStack(ItemInit.petalBlue, 1), new ItemStack(ItemInit.seedFlowerBlue, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerBlue.getDefaultState());
+        blueflower.register(new ItemStack(ItemInit.seedFlowerBlue), new ItemStack[]{new ItemStack(ItemInit.petalBlue, 1), new ItemStack(ItemInit.seedFlowerBlue, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostBlue.getDefaultState());
 
         BelljarHandler.registerHandler(brownflower);
-        brownflower.register(new ItemStack(ItemInit.seedFlowerBrown), new ItemStack[]{new ItemStack(ItemInit.petalBrown, 1), new ItemStack(ItemInit.seedFlowerBrown, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerBrown.getDefaultState());
+        brownflower.register(new ItemStack(ItemInit.seedFlowerBrown), new ItemStack[]{new ItemStack(ItemInit.petalBrown, 1), new ItemStack(ItemInit.seedFlowerBrown, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostBrown.getDefaultState());
 
         BelljarHandler.registerHandler(cyanflower);
-        cyanflower.register(new ItemStack(ItemInit.seedFlowerCyan), new ItemStack[]{new ItemStack(ItemInit.petalCyan, 1), new ItemStack(ItemInit.seedFlowerCyan, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerCyan.getDefaultState());
+        cyanflower.register(new ItemStack(ItemInit.seedFlowerCyan), new ItemStack[]{new ItemStack(ItemInit.petalCyan, 1), new ItemStack(ItemInit.seedFlowerCyan, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostCyan.getDefaultState());
 
         BelljarHandler.registerHandler(grayflower);
-        grayflower.register(new ItemStack(ItemInit.seedFlowerGray), new ItemStack[]{new ItemStack(ItemInit.petalGray, 1), new ItemStack(ItemInit.seedFlowerGray, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerGray.getDefaultState());
+        grayflower.register(new ItemStack(ItemInit.seedFlowerGray), new ItemStack[]{new ItemStack(ItemInit.petalGray, 1), new ItemStack(ItemInit.seedFlowerGray, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostGray.getDefaultState());
 
         BelljarHandler.registerHandler(greenflower);
-        greenflower.register(new ItemStack(ItemInit.seedFlowerGreen), new ItemStack[]{new ItemStack(ItemInit.petalGreen, 1), new ItemStack(ItemInit.seedFlowerGreen, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerGreen.getDefaultState());
+        greenflower.register(new ItemStack(ItemInit.seedFlowerGreen), new ItemStack[]{new ItemStack(ItemInit.petalGreen, 1), new ItemStack(ItemInit.seedFlowerGreen, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostGreen.getDefaultState());
 
         BelljarHandler.registerHandler(lightblueflower);
-        lightblueflower.register(new ItemStack(ItemInit.seedFlowerLightBlue), new ItemStack[]{new ItemStack(ItemInit.petalLightBlue, 1), new ItemStack(ItemInit.seedFlowerLightBlue, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerLightBlue.getDefaultState());
+        lightblueflower.register(new ItemStack(ItemInit.seedFlowerLightBlue), new ItemStack[]{new ItemStack(ItemInit.petalLightBlue, 1), new ItemStack(ItemInit.seedFlowerLightBlue, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostLightBlue.getDefaultState());
 
         BelljarHandler.registerHandler(lightgrayflower);
-        lightgrayflower.register(new ItemStack(ItemInit.seedFlowerLightGray), new ItemStack[]{new ItemStack(ItemInit.petalLightGray, 1), new ItemStack(ItemInit.seedFlowerLightGray, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerLightGray.getDefaultState());
+        lightgrayflower.register(new ItemStack(ItemInit.seedFlowerLightGray), new ItemStack[]{new ItemStack(ItemInit.petalLightGray, 1), new ItemStack(ItemInit.seedFlowerLightGray, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostLightGray.getDefaultState());
 
         BelljarHandler.registerHandler(limeflower);
-        limeflower.register(new ItemStack(ItemInit.seedFlowerLime), new ItemStack[]{new ItemStack(ItemInit.petalLime, 1), new ItemStack(ItemInit.seedFlowerLime, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerLime.getDefaultState());
+        limeflower.register(new ItemStack(ItemInit.seedFlowerLime), new ItemStack[]{new ItemStack(ItemInit.petalLime, 1), new ItemStack(ItemInit.seedFlowerLime, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostLime.getDefaultState());
 
         BelljarHandler.registerHandler(magentaflower);
-        magentaflower.register(new ItemStack(ItemInit.seedFlowerMagenta), new ItemStack[]{new ItemStack(ItemInit.petalMagenta, 1), new ItemStack(ItemInit.seedFlowerMagenta, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerBlack.getDefaultState());
+        magentaflower.register(new ItemStack(ItemInit.seedFlowerMagenta), new ItemStack[]{new ItemStack(ItemInit.petalMagenta, 1), new ItemStack(ItemInit.seedFlowerMagenta, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostMagenta.getDefaultState());
 
         BelljarHandler.registerHandler(orangeflower);
-        orangeflower.register(new ItemStack(ItemInit.seedFlowerOrange), new ItemStack[]{new ItemStack(ItemInit.petalOrange, 1), new ItemStack(ItemInit.seedFlowerOrange, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerOrange.getDefaultState());
+        orangeflower.register(new ItemStack(ItemInit.seedFlowerOrange), new ItemStack[]{new ItemStack(ItemInit.petalOrange, 1), new ItemStack(ItemInit.seedFlowerOrange, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostOrange.getDefaultState());
 
         BelljarHandler.registerHandler(pinkflower);
-        pinkflower.register(new ItemStack(ItemInit.seedFlowerPink), new ItemStack[]{new ItemStack(ItemInit.petalPink, 1), new ItemStack(ItemInit.seedFlowerPink, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerPink.getDefaultState());
+        pinkflower.register(new ItemStack(ItemInit.seedFlowerPink), new ItemStack[]{new ItemStack(ItemInit.petalPink, 1), new ItemStack(ItemInit.seedFlowerPink, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostPink.getDefaultState());
 
         BelljarHandler.registerHandler(purpleflower);
-        purpleflower.register(new ItemStack(ItemInit.seedFlowerPurple), new ItemStack[]{new ItemStack(ItemInit.petalPurple, 1), new ItemStack(ItemInit.seedFlowerPurple, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerPurple.getDefaultState());
+        purpleflower.register(new ItemStack(ItemInit.seedFlowerPurple), new ItemStack[]{new ItemStack(ItemInit.petalPurple, 1), new ItemStack(ItemInit.seedFlowerPurple, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostPurple.getDefaultState());
 
         BelljarHandler.registerHandler(redflower);
-        redflower.register(new ItemStack(ItemInit.seedFlowerRed), new ItemStack[]{new ItemStack(ItemInit.petalRed, 1), new ItemStack(ItemInit.seedFlowerRed, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerRed.getDefaultState());
+        redflower.register(new ItemStack(ItemInit.seedFlowerRed), new ItemStack[]{new ItemStack(ItemInit.petalRed, 1), new ItemStack(ItemInit.seedFlowerRed, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostRed.getDefaultState());
 
         BelljarHandler.registerHandler(whiteflower);
-        whiteflower.register(new ItemStack(ItemInit.seedFlowerWhite), new ItemStack[]{new ItemStack(ItemInit.petalWhite, 1), new ItemStack(ItemInit.seedFlowerWhite, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerWhite.getDefaultState());
+        whiteflower.register(new ItemStack(ItemInit.seedFlowerWhite), new ItemStack[]{new ItemStack(ItemInit.petalWhite, 1), new ItemStack(ItemInit.seedFlowerWhite, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostWhite.getDefaultState());
 
         BelljarHandler.registerHandler(yellowflower);
-        yellowflower.register(new ItemStack(ItemInit.seedFlowerYellow), new ItemStack[]{new ItemStack(ItemInit.petalYellow, 1), new ItemStack(ItemInit.seedFlowerYellow, 1)}, new ItemStack(Blocks.DIRT), FlowerCropInit.cropFlowerYellow.getDefaultState());
+        yellowflower.register(new ItemStack(ItemInit.seedFlowerYellow), new ItemStack[]{new ItemStack(ItemInit.petalYellow, 1), new ItemStack(ItemInit.seedFlowerYellow, 1)}, new ItemStack(Blocks.DIRT), GhostFlowerCropInit.cropFlowerGhostYellow.getDefaultState());
 
         BelljarHandler.registerHandler(blackcactus);
-        blackcactus.register(new ItemStack(ItemInit.seedCactusBlack), new ItemStack[]{new ItemStack(ItemInit.petalBlack, 1), new ItemStack(ItemInit.seedCactusBlack, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusBlack.getDefaultState());
+        blackcactus.register(new ItemStack(ItemInit.seedCactusBlack), new ItemStack[]{new ItemStack(ItemInit.petalBlack, 1), new ItemStack(ItemInit.seedCactusBlack, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostBlack.getDefaultState());
 
         BelljarHandler.registerHandler(bluecactus);
-        bluecactus.register(new ItemStack(ItemInit.seedCactusBlue), new ItemStack[]{new ItemStack(ItemInit.petalBlue, 1), new ItemStack(ItemInit.seedCactusBlue, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusBlue.getDefaultState());
+        bluecactus.register(new ItemStack(ItemInit.seedCactusBlue), new ItemStack[]{new ItemStack(ItemInit.petalBlue, 1), new ItemStack(ItemInit.seedCactusBlue, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostBlue.getDefaultState());
 
         BelljarHandler.registerHandler(browncactus);
-        browncactus.register(new ItemStack(ItemInit.seedCactusBrown), new ItemStack[]{new ItemStack(ItemInit.petalBrown, 1), new ItemStack(ItemInit.seedCactusBrown, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusBrown.getDefaultState());
+        browncactus.register(new ItemStack(ItemInit.seedCactusBrown), new ItemStack[]{new ItemStack(ItemInit.petalBrown, 1), new ItemStack(ItemInit.seedCactusBrown, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostBrown.getDefaultState());
 
         BelljarHandler.registerHandler(cyancactus);
-        cyancactus.register(new ItemStack(ItemInit.seedCactusCyan), new ItemStack[]{new ItemStack(ItemInit.petalCyan, 1), new ItemStack(ItemInit.seedCactusCyan, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusCyan.getDefaultState());
+        cyancactus.register(new ItemStack(ItemInit.seedCactusCyan), new ItemStack[]{new ItemStack(ItemInit.petalCyan, 1), new ItemStack(ItemInit.seedCactusCyan, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostCyan.getDefaultState());
 
         BelljarHandler.registerHandler(graycactus);
-        graycactus.register(new ItemStack(ItemInit.seedCactusGray), new ItemStack[]{new ItemStack(ItemInit.petalGray, 1), new ItemStack(ItemInit.seedCactusGray, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusGray.getDefaultState());
+        graycactus.register(new ItemStack(ItemInit.seedCactusGray), new ItemStack[]{new ItemStack(ItemInit.petalGray, 1), new ItemStack(ItemInit.seedCactusGray, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostGray.getDefaultState());
 
         BelljarHandler.registerHandler(greencactus);
-        greencactus.register(new ItemStack(ItemInit.seedCactusGreen), new ItemStack[]{new ItemStack(ItemInit.petalGreen, 1), new ItemStack(ItemInit.seedCactusGreen, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusGreen.getDefaultState());
+        greencactus.register(new ItemStack(ItemInit.seedCactusGreen), new ItemStack[]{new ItemStack(ItemInit.petalGreen, 1), new ItemStack(ItemInit.seedCactusGreen, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostGreen.getDefaultState());
 
         BelljarHandler.registerHandler(lightbluecactus);
-        lightbluecactus.register(new ItemStack(ItemInit.seedCactusLightBlue), new ItemStack[]{new ItemStack(ItemInit.petalLightBlue, 1), new ItemStack(ItemInit.seedCactusLightBlue, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusLightBlue.getDefaultState());
+        lightbluecactus.register(new ItemStack(ItemInit.seedCactusLightBlue), new ItemStack[]{new ItemStack(ItemInit.petalLightBlue, 1), new ItemStack(ItemInit.seedCactusLightBlue, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostLightBlue.getDefaultState());
 
         BelljarHandler.registerHandler(lightgraycactus);
-        lightgraycactus.register(new ItemStack(ItemInit.seedCactusLightGray), new ItemStack[]{new ItemStack(ItemInit.petalLightGray, 1), new ItemStack(ItemInit.seedCactusLightGray, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusLightGray.getDefaultState());
+        lightgraycactus.register(new ItemStack(ItemInit.seedCactusLightGray), new ItemStack[]{new ItemStack(ItemInit.petalLightGray, 1), new ItemStack(ItemInit.seedCactusLightGray, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostLightGray.getDefaultState());
 
         BelljarHandler.registerHandler(limecactus);
-        limecactus.register(new ItemStack(ItemInit.seedCactusLime), new ItemStack[]{new ItemStack(ItemInit.petalLime, 1), new ItemStack(ItemInit.seedCactusLime, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusLime.getDefaultState());
+        limecactus.register(new ItemStack(ItemInit.seedCactusLime), new ItemStack[]{new ItemStack(ItemInit.petalLime, 1), new ItemStack(ItemInit.seedCactusLime, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostLime.getDefaultState());
 
         BelljarHandler.registerHandler(magentacactus);
-        magentacactus.register(new ItemStack(ItemInit.seedCactusMagenta), new ItemStack[]{new ItemStack(ItemInit.petalMagenta, 1), new ItemStack(ItemInit.seedCactusMagenta, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusBlack.getDefaultState());
+        magentacactus.register(new ItemStack(ItemInit.seedCactusMagenta), new ItemStack[]{new ItemStack(ItemInit.petalMagenta, 1), new ItemStack(ItemInit.seedCactusMagenta, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostMagenta.getDefaultState());
 
         BelljarHandler.registerHandler(orangecactus);
-        orangecactus.register(new ItemStack(ItemInit.seedCactusOrange), new ItemStack[]{new ItemStack(ItemInit.petalOrange, 1), new ItemStack(ItemInit.seedCactusOrange, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusOrange.getDefaultState());
+        orangecactus.register(new ItemStack(ItemInit.seedCactusOrange), new ItemStack[]{new ItemStack(ItemInit.petalOrange, 1), new ItemStack(ItemInit.seedCactusOrange, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostOrange.getDefaultState());
 
         BelljarHandler.registerHandler(pinkcactus);
-        pinkcactus.register(new ItemStack(ItemInit.seedCactusPink), new ItemStack[]{new ItemStack(ItemInit.petalPink, 1), new ItemStack(ItemInit.seedCactusPink, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusPink.getDefaultState());
+        pinkcactus.register(new ItemStack(ItemInit.seedCactusPink), new ItemStack[]{new ItemStack(ItemInit.petalPink, 1), new ItemStack(ItemInit.seedCactusPink, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostPink.getDefaultState());
 
         BelljarHandler.registerHandler(purplecactus);
-        purplecactus.register(new ItemStack(ItemInit.seedCactusPurple), new ItemStack[]{new ItemStack(ItemInit.petalPurple, 1), new ItemStack(ItemInit.seedCactusPurple, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusPurple.getDefaultState());
+        purplecactus.register(new ItemStack(ItemInit.seedCactusPurple), new ItemStack[]{new ItemStack(ItemInit.petalPurple, 1), new ItemStack(ItemInit.seedCactusPurple, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostPurple.getDefaultState());
 
         BelljarHandler.registerHandler(redcactus);
-        redcactus.register(new ItemStack(ItemInit.seedCactusRed), new ItemStack[]{new ItemStack(ItemInit.petalRed, 1), new ItemStack(ItemInit.seedCactusRed, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusRed.getDefaultState());
+        redcactus.register(new ItemStack(ItemInit.seedCactusRed), new ItemStack[]{new ItemStack(ItemInit.petalRed, 1), new ItemStack(ItemInit.seedCactusRed, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostRed.getDefaultState());
 
         BelljarHandler.registerHandler(whitecactus);
-        whitecactus.register(new ItemStack(ItemInit.seedCactusWhite), new ItemStack[]{new ItemStack(ItemInit.petalWhite, 1), new ItemStack(ItemInit.seedCactusWhite, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusWhite.getDefaultState());
+        whitecactus.register(new ItemStack(ItemInit.seedCactusWhite), new ItemStack[]{new ItemStack(ItemInit.petalWhite, 1), new ItemStack(ItemInit.seedCactusWhite, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostWhite.getDefaultState());
 
         BelljarHandler.registerHandler(yellowcactus);
-        yellowcactus.register(new ItemStack(ItemInit.seedCactusYellow), new ItemStack[]{new ItemStack(ItemInit.petalYellow, 1), new ItemStack(ItemInit.seedCactusYellow, 1)}, new ItemStack(Blocks.SAND), CactusCropInit.cropCactusYellow.getDefaultState());
+        yellowcactus.register(new ItemStack(ItemInit.seedCactusYellow), new ItemStack[]{new ItemStack(ItemInit.petalYellow, 1), new ItemStack(ItemInit.seedCactusYellow, 1)}, new ItemStack(Blocks.SAND), GhostCactusCropInit.cropCactusGhostYellow.getDefaultState());
     }
 }

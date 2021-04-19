@@ -1,0 +1,110 @@
+{
+  "parent": "block/block",
+  "elements": [
+    { "from": [ 4, 6, 4 ],
+      "to": [ 12, 6, 12 ],
+      "faces": {
+        "up":   { "uv": [ 4, 4, 12, 12 ], "texture": "#top-thorns" }
+      }
+    },
+    { "from": [ 5, 6, 5 ],
+      "to": [ 11, 6, 11 ],
+      "faces": {
+        "up":   { "uv": [ 5, 5, 11, 11 ], "texture": "#top-body", "tintindex": 0 }
+      }
+    },
+    { "from": [ 4, 0, 5 ],
+      "to": [ 12, 7, 5 ],
+      "faces": {
+        "north": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 4, 0, 11 ],
+      "to": [ 12, 7, 11 ],
+      "faces": {
+        "north": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 4, 0, 5 ],
+      "to": [ 12, 7, 5 ],
+      "faces": {
+        "south": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 4, 0, 11 ],
+      "to": [ 12, 7, 11 ],
+      "faces": {
+        "south": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 5, 0, 4 ],
+      "to": [ 5, 7, 12 ],
+      "faces": {
+        "east": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 11, 0, 4 ],
+      "to": [ 11, 7, 12 ],
+      "faces": {
+        "east": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 5, 0, 4 ],
+      "to": [ 5, 7, 12 ],
+      "faces": {
+        "west": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 11, 0, 4 ],
+      "to": [ 11, 7, 12 ],
+      "faces": {
+        "west": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-thorns" }
+      }
+    },
+    { "from": [ 4, 0, 5 ],
+      "to": [ 12, 7, 5 ],
+      "faces": {
+        "north": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-body", "tintindex": 0 }
+      }
+    },
+    { "from": [ 4, 0, 11 ],
+      "to": [ 12, 7, 11 ],
+      "faces": {
+        "south": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-body", "tintindex": 0 }
+      }
+    },
+    { "from": [ 11, 0, 4 ],
+      "to": [ 11, 7, 12 ],
+      "faces": {
+        "east": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-body", "tintindex": 0 }
+      }
+    },
+    { "from": [ 5, 0, 4 ],
+      "to": [ 5, 7, 12 ],
+      "faces": {
+        "west": { "uv": [ 4, 4, 12, 11 ], "texture": "#side-body", "tintindex": 0 }
+      }
+    },
+    { "from": [ 5, 0, 5 ],
+      "to": [ 11, 0, 11 ],
+      "faces": {
+        "down": { "uv": [ 5, 5, 11, 11 ], "texture": "#bottom-outer", "tintindex": 0 }
+      }
+    },
+    { "from": [ 5, 0, 5 ],
+      "to": [ 11, 0, 11 ],
+      "faces": {
+        "down": { "uv": [ 5, 5, 11, 11 ], "texture": "#bottom-inner" }
+      }
+    }
+  ],
+  "textures": {
+    "top-thorns": "floralis:blocks/crop/crop/cactus/green/top/2/thorns",
+    "top-body": "floralis:blocks/crop/crop/cactus/green/top/2/body",
+    "side-thorns": "floralis:blocks/crop/crop/cactus/green/side/2/thorns",
+    "side-body": "floralis:blocks/crop/crop/cactus/green/side/2/body",
+    "bottom-outer": "floralis:blocks/crop/crop/cactus/green/bottom/2/outer",
+    "bottom-inner": "floralis:blocks/crop/crop/cactus/green/bottom/2/inner",
+    "particle": "floralis:blocks/crop/crop/cactus/green/top/2/body"
+  }
+}

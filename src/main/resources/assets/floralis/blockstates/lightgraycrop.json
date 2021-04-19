@@ -6,22 +6,22 @@
   "variants": {
     "age": {
       "0": {
-        "model": "floralis:crop/flower/lightgray/0"
+        "model": "floralis:crop/crop/flower/lightgray/0"
       },
       "1": {
-        "model": "floralis:crop/flower/lightgray/1"
+        "model": "floralis:crop/crop/flower/lightgray/1"
       },
       "2": {
-        "model": "floralis:crop/flower/lightgray/2"
+        "model": "floralis:crop/crop/flower/lightgray/2"
       },
       "3": {
-        "model": "floralis:crop/flower/lightgray/3"
+        "model": "floralis:crop/crop/flower/lightgray/3"
       },
       "4": {
-        "model": "floralis:crop/flower/lightgray/4"
+        "model": "floralis:crop/crop/flower/lightgray/4"
       },
       "5": {
-        "model": "floralis:crop/flower/lightgray/5"
+        "model": "floralis:crop/crop/flower/lightgray/5"
       }
     }
   }

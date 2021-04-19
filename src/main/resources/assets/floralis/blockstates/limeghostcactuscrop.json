@@ -1,0 +1,28 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "model": "floralis:crop/ghost/cactus/lime/0"
+      },
+      "1": {
+        "model": "floralis:crop/ghost/cactus/lime/1"
+      },
+      "2": {
+        "model": "floralis:crop/ghost/cactus/lime/2"
+      },
+      "3": {
+        "model": "floralis:crop/ghost/cactus/lime/3"
+      },
+      "4": {
+        "model": "floralis:crop/ghost/cactus/lime/4"
+      },
+      "5": {
+        "model": "floralis:crop/ghost/cactus/lime/5"
+      }
+    }
+  }
+}

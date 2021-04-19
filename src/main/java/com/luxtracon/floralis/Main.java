@@ -2,7 +2,8 @@ package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.compat.*;
 import com.luxtracon.floralis.init.*;
-import com.luxtracon.floralis.registry.*;
+import com.luxtracon.floralis.proxies.CommonProxy;
+import com.luxtracon.floralis.registries.*;
 import com.luxtracon.floralis.tabs.*;
 import com.luxtracon.floralis.utilities.*;
 
@@ -11,6 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -26,6 +28,9 @@ public class Main
 	private static boolean isIndustrialForegoingPresent;
 	private static boolean isThermalExpansionPresent;
 
+	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
+	public static CommonProxy proxy;
+
 	@EventHandler
 	public static void onConstructionEvent(FMLConstructionEvent event)
 	{
@@ -40,9 +45,11 @@ public class Main
 	{
 		BlockInit.init();
 		CactusInit.init();
-		FlowerCropInit.init();
 		CactusCropInit.init();
 		FlowerInit.init();
+		FlowerCropInit.init();
+		GhostCactusCropInit.init();
+		GhostFlowerCropInit.init();
 		ItemInit.init();
 
 		Config.init(event);
@@ -71,14 +78,14 @@ public class Main
 			ThermalExpansion.init();
 		}
 
+		proxy.init();
+
 		HandlerRegistry.init();
 		DictionaryRegistry.init();
 		GeneratorRegistry.init();
 		SmeltingRegistry.init();
 		StructureRegistry.init();
 		TradesRegistry.init();
-
-		BlockColor.init();
 	}
 
 	@EventHandler

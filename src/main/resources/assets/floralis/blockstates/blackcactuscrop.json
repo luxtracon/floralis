@@ -6,22 +6,22 @@
   "variants": {
     "age": {
       "0": {
-        "model": "floralis:crop/cactus/black/0"
+        "model": "floralis:crop/crop/cactus/black/0"
       },
       "1": {
-        "model": "floralis:crop/cactus/black/1"
+        "model": "floralis:crop/crop/cactus/black/1"
       },
       "2": {
-        "model": "floralis:crop/cactus/black/2"
+        "model": "floralis:crop/crop/cactus/black/2"
       },
       "3": {
-        "model": "floralis:crop/cactus/black/3"
+        "model": "floralis:crop/crop/cactus/black/3"
       },
       "4": {
-        "model": "floralis:crop/cactus/black/4"
+        "model": "floralis:crop/crop/cactus/black/4"
       },
       "5": {
-        "model": "floralis:crop/cactus/black/5"
+        "model": "floralis:crop/crop/cactus/black/5"
       }
     }
   }

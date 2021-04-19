@@ -1,0 +1,46 @@
+{
+  "parent": "block/block",
+  "elements": [
+    { "from": [ 7, 2, 7 ],
+      "to": [ 9, 2, 9 ],
+      "faces": {
+        "up":   { "uv": [ 7, 7, 9, 9 ], "texture": "#top" }
+      }
+    },
+    { "from": [ 7, 0, 7 ],
+      "to": [ 9, 2, 7 ],
+      "faces": {
+        "north": { "uv": [ 7, 7, 9, 9 ], "texture": "#side" }
+      }
+    },
+    { "from": [ 7, 0, 9 ],
+      "to": [ 9, 2, 9 ],
+      "faces": {
+        "south": { "uv": [ 7, 7, 9, 9 ], "texture": "#side" }
+      }
+    },
+    { "from": [ 9, 0, 7 ],
+      "to": [ 9, 2, 9 ],
+      "faces": {
+        "east": { "uv": [ 7, 7, 9, 9 ], "texture": "#side" }
+      }
+    },
+    { "from": [ 7, 0, 7 ],
+      "to": [ 7, 2, 9 ],
+      "faces": {
+        "west": { "uv": [ 7, 7, 9, 9 ], "texture": "#side" }
+      }
+    },
+    { "from": [ 7, 0, 7 ],
+      "to": [ 9, 0, 9 ],
+      "faces": {
+        "down": { "uv": [ 7, 7, 9, 9 ], "texture": "#bottom" }
+      }
+    }
+  ],
+  "textures": {
+    "top": "floralis:blocks/crop/ghost/cactus/orange/0/top",
+    "side": "floralis:blocks/crop/ghost/cactus/orange/0/side",
+    "bottom": "floralis:blocks/crop/ghost/cactus/orange/0/bottom"
+  }
+}
