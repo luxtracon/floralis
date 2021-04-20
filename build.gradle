@@ -1,145 +1,96 @@
-buildscript {
-    repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+buildscript
+{
+    repositories
+    {
+        maven
+        {
+            url = 'https://files.minecraftforge.net/maven'
+        }
+
         jcenter()
-        mavenCentral()
+         mavenCentral()
     }
-    dependencies {
+
+    dependencies
+    {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3+'
     }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
 
-repositories {
-    maven {
-        name 'Chicken Bones'
-        url 'http://chickenbones.net/maven'
-    }
-    maven {
-        name 'Immersive Engineering'
-        url 'https://maven.blamejared.com'
-    }
-    maven {
-        name 'Industrial Foregoing'
-        url 'https://www.cursemaven.com'
-    }
-    maven {
-        name 'Thermal Expansion'
-        url 'http://maven.covers1624.net'
-    }
-    maven {
-        name 'Forestry Farming'
-        url 'http://maven.ic2.player.to'
+repositories
+{
+    flatDir
+    {
+        dir 'libs'
     }
 }
 
-version = "${mod_version}"
-group = "${mod_group}"
-archivesBaseName = "${mod_name}-${version_minecraft}"
-
+group = "${modgroup}"
+version = "${modversion}"
+archivesBaseName = "${modname}-${mcversion}"
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
-minecraft {
-    // The mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   Snapshot are built nightly.
-    // stable_#            Stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not always work.
-    // Simply re-run your setup task after changing the mappings to update your workspace.
+minecraft
+{
     mappings channel: 'stable', version: '39-1.12'
-    // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-
-    // Default run configurations.
-    // These can be tweaked, removed, or duplicated as needed.
-    runs {
-        client {
+    //makeObfSourceJar = false
+    //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    runs
+    {
+        client
+        {
             workingDirectory project.file('run')
-
-            // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
         }
 
-        server {
+        server
+        {
             workingDirectory project.file('run')
-
-            // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
-            // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
         }
     }
 }
 
-dependencies {
-    // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
+dependencies
+{
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
-    compileOnly 'blusunrize:ImmersiveEngineering:0.12-92-559'
-    compileOnly 'codechicken:CodeChickenLib:1.12.2-3.2.2.+:universal'
-    compileOnly 'curse.maven:industrialforegoing-266515:2745321'
-    compileOnly 'net.sengir.forestry:forestry_1.12.2:5.8.2.422'
-
-    compileOnly ('cofh:CoFHCore:1.12.2-4.6.2.+:universal') {
-        exclude group: 'mezz.jei'
-    }
-    compileOnly ('cofh:CoFHWorld:1.12.2-1.3.0.6+:universal') {
-        exclude group: 'mezz.jei'
-    }
-    compileOnly ('cofh:RedstoneFlux:1.12-2.1.0.7+:universal') {
-        exclude group: 'mezz.jei'
-    }
-    compileOnly ('cofh:ThermalExpansion:1.12.2-5.5.3.+:universal') {
-        exclude group: 'mezz.jei'
-    }
-    compileOnly ('cofh:ThermalFoundation:1.12.2-2.6.2.+:universal') {
-        exclude group: 'mezz.jei'
-    }
-
-    // You may put jars on which you depend on in ./libs or you may define them like so..
-    // compile "some.group:artifact:version:classifier"
-    // compile "some.group:artifact:version"
-
-    // Real examples
-    // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    // compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
-
-    // The 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-    // provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // These dependencies get remapped to your current MCP mappings
-    // deobf 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // For more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    compileOnly 'libs:CodeChickenLib:1.12.2-3.2.3.358:universal'
+    compileOnly 'libs:CoFHCore:1.12.2-4.6.6.1:universal'
+    compileOnly 'libs:CoFHWorld:1.12.2-1.4.0.1:universal'
+    compileOnly 'libs:forestry_1.12.2:5.8.2.422'
+    compileOnly 'libs:ImmersiveEngineering:0.12-98'
+    compileOnly 'libs:industrialforegoing:1.12.2:1.12.13-237'
+    compileOnly 'libs:RedstoneFlux:1.12-2.1.1.1:universal'
+    compileOnly 'libs:ThermalExpansion:1.12.2-5.5.7.1:universal'
+    compileOnly 'libs:ThermalFoundation:1.12.2-2.6.7.1:universal'
 }
 
-processResources {
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", version_minecraft
-
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
+processResources
+{
+    inputs.property "modversion", project.version
+    inputs.property "mcversion", version
+    from(sourceSets.main.resources.srcDirs)
+    {
         include 'mcmod.info'
-
-        // replace version and mcversion
-        expand 'version': project.version, 'mcversion': version_minecraft
+        expand 'modversion': project.version
     }
 
-    // copy everything else except the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
+    from(sourceSets.main.resources.srcDirs)
+    {
         exclude 'mcmod.info'
     }
 }
 
 jar.finalizedBy('reobfJar')
 
-sourceSets { main { output.resourcesDir = output.classesDir } }
+sourceSets
+{
+    main
+    {
+        output.resourcesDir = output.classesDir
+    }
+}

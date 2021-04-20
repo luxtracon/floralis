@@ -291,201 +291,206 @@ public class CactusWorldgen implements IWorldGenerator
         int posX = chunkX * 16 + 8;
         int posZ = chunkZ * 16 + 8;
 
-        if (random.nextInt(8) == 0)
+        if(world.provider.getDimension() == 0)
         {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.BlackCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.BlackCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            //blue group
+            if (random.nextInt(8) == 0)
             {
-                this.BlueCactus(world, random, newPos);
-                this.LightBlueCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.BlueCactus(world, random, newPos);
+                    this.LightBlueCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.BrownCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.BrownCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.CyanCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.CyanCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            //gray group
+            if (random.nextInt(8) == 0)
             {
-                this.GrayCactus(world, random, newPos);
-                this.LightGrayCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.GrayCactus(world, random, newPos);
+                    this.LightGrayCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.GreenCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.GreenCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.LimeCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.LimeCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.MagentaCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.MagentaCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.OrangeCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.OrangeCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.PinkCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.PinkCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.PurpleCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.PurpleCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.RedCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.RedCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.WhiteCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.WhiteCactus(world, random, newPos);
+                }
             }
-        }
 
-        if (random.nextInt(8) == 0)
-        {
-            final int xPos = posX + random.nextInt(16);
-            final int yPos = random.nextInt(255);
-            final int zPos = posZ + random.nextInt(16);
-
-            final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-            if (newPos != null)
+            if (random.nextInt(8) == 0)
             {
-                this.YellowCactus(world, random, newPos);
+                final int xPos = posX + random.nextInt(16);
+                final int yPos = random.nextInt(255);
+                final int zPos = posZ + random.nextInt(16);
+
+                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+                if (newPos != null)
+                {
+                    this.YellowCactus(world, random, newPos);
+                }
             }
         }
     }

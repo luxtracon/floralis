@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION, dependencies = Reference.MODDEPENDENCIES)
+@Mod(modid = Reference.MODID, dependencies = Reference.MODDEPENDENCIES)
 public class Main
 {
 	public static final CreativeTabs MODTAB = new Tab();
