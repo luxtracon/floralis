@@ -24,13 +24,11 @@ public class CactusBase extends Block implements IPlantable
     protected static final AxisAlignedBB AABB = new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D);
     protected static final AxisAlignedBB COLLISIONAABB = new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5D, 0.75D);
 
-    public CactusBase(String name, Material material, float hardness, float resistance)
+    public CactusBase(String name, Material material)
     {
         super(material);
         setRegistryName(name);
         setTranslationKey(name);
-        setHardness(hardness);
-        setResistance(resistance);
         setCreativeTab(Main.MODTAB);
         setSoundType(SoundType.PLANT);
     }

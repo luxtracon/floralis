@@ -1,34 +1,36 @@
 {
   "parent": "block/block",
   "elements": [
-    { "from": [ 6, 9, 6 ],
-      "to": [ 10, 9, 10 ],
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
       "faces": {
-        "up":   { "uv": [ 6, 6, 10, 10 ], "texture": "#blossom-outer" }
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
       }
     },
-    { "from": [ 7, 8, 9 ],
-      "to": [ 9, 9, 9 ],
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
       "faces": {
-        "south": { "uv": [ 7, 7, 9, 8 ], "texture": "#blossom-inner" }
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
       }
     },
-    { "from": [ 7, 8, 7 ],
-      "to": [ 9, 9, 7 ],
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
       "faces": {
-        "north": { "uv": [ 7, 7, 9, 8 ], "texture": "#blossom-inner" }
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
       }
     },
-    { "from": [ 7, 8, 7 ],
-      "to": [ 7, 9, 9 ],
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
       "faces": {
-        "west": { "uv": [ 7, 7, 9, 8 ], "texture": "#blossom-inner" }
-      }
-    },
-    { "from": [ 9, 8, 7 ],
-      "to": [ 9, 9, 9 ],
-      "faces": {
-        "east": { "uv": [ 7, 7, 9, 8 ], "texture": "#blossom-inner" }
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
       }
     },
     { "from": [ 3, 8, 3 ],
@@ -129,14 +131,13 @@
     }
   ],
   "textures": {
-    "blossom-outer": "floralis:blocks/cactus/yellow/blossom/outer",
-    "blossom-inner": "floralis:blocks/cactus/yellow/blossom/inner",
-    "top-thorns": "floralis:blocks/cactus/yellow/top/thorns",
-    "top-body": "floralis:blocks/cactus/yellow/top/body",
-    "side-thorns": "floralis:blocks/cactus/yellow/side/thorns",
-    "side-body": "floralis:blocks/cactus/yellow/side/body",
-    "bottom-outer": "floralis:blocks/cactus/yellow/bottom/outer",
-    "bottom-inner": "floralis:blocks/cactus/yellow/bottom/inner",
-    "particle": "floralis:blocks/cactus/yellow/top/body"
+    "blossom": "floralis:blocks/cactus/blossom/yellow",
+    "top-thorns": "floralis:blocks/cactus/top/thorns",
+    "top-body": "floralis:blocks/cactus/top/body",
+    "side-thorns": "floralis:blocks/cactus/side/thorns",
+    "side-body": "floralis:blocks/cactus/side/body",
+    "bottom-outer": "floralis:blocks/cactus/bottom/outer",
+    "bottom-inner": "floralis:blocks/cactus/bottom/inner",
+    "particle": "floralis:blocks/cactus/top/body"
   }
 }

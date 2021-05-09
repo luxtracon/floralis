@@ -1,6 +1,38 @@
 {
   "parent": "block/block",
   "elements": [
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
+      }
+    },
+    { "from": [ 0.8, 0, 8 ],
+      "to": [ 15.2, 16, 8 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
+      }
+    },
+    { "from": [ 8, 0, 0.8 ],
+      "to": [ 8, 16, 15.2 ],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": "true" },
+      "faces": {
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#blossom" }
+      }
+    },
     { "from": [ 4, 6, 4 ],
       "to": [ 12, 6, 12 ],
       "faces": {
@@ -99,12 +131,13 @@
     }
   ],
   "textures": {
-    "top-thorns": "floralis:blocks/crop/crop/cactus/gray/top/2/thorns",
-    "top-body": "floralis:blocks/crop/crop/cactus/gray/top/2/body",
-    "side-thorns": "floralis:blocks/crop/crop/cactus/gray/side/2/thorns",
-    "side-body": "floralis:blocks/crop/crop/cactus/gray/side/2/body",
-    "bottom-outer": "floralis:blocks/crop/crop/cactus/gray/bottom/2/outer",
-    "bottom-inner": "floralis:blocks/crop/crop/cactus/gray/bottom/2/inner",
-    "particle": "floralis:blocks/crop/crop/cactus/gray/top/2/body"
+    "blossom": "floralis:blocks/crop/crop/cactus/blossom/gray/2",
+    "top-thorns": "floralis:blocks/crop/crop/cactus/top/thorns/2",
+    "top-body": "floralis:blocks/crop/crop/cactus/top/body/2",
+    "side-thorns": "floralis:blocks/crop/crop/cactus/side/thorns/2",
+    "side-body": "floralis:blocks/crop/crop/cactus/side/body/2",
+    "bottom-outer": "floralis:blocks/crop/crop/cactus/bottom/outer/2",
+    "bottom-inner": "floralis:blocks/crop/crop/cactus/bottom/inner/2",
+    "particle": "floralis:blocks/crop/crop/cactus/top/body/2"
   }
 }

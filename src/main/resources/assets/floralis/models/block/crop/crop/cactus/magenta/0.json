@@ -39,9 +39,9 @@
     }
   ],
   "textures": {
-    "top-body": "floralis:blocks/crop/crop/cactus/magenta/top/0/body",
-    "side-body": "floralis:blocks/crop/crop/cactus/magenta/side/0/body",
-    "bottom-inner": "floralis:blocks/crop/crop/cactus/magenta/bottom/0/inner",
-    "particle": "floralis:blocks/crop/crop/cactus/magenta/top/0/body"
+    "top-body": "floralis:blocks/crop/crop/cactus/top/body/0",
+    "side-body": "floralis:blocks/crop/crop/cactus/side/body/0",
+    "bottom-inner": "floralis:blocks/crop/crop/cactus/bottom/inner/0",
+    "particle": "floralis:blocks/crop/crop/cactus/top/body/0"
   }
 }

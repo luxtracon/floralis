@@ -40,22 +40,22 @@ public class CactusInit
 
     public static void init()
     {
-        cactusWhite = new CactusWhite("whitecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusOrange = new CactusOrange("orangecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusMagenta = new CactusMagenta("magentacactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusLightBlue = new CactusLightBlue("lightbluecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusYellow = new CactusYellow("yellowcactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusLime = new CactusLime("limecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusPink = new CactusPink("pinkcactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusGray = new CactusGray("graycactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusLightGray = new CactusLightGray("lightgraycactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusCyan = new CactusCyan("cyancactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusPurple = new CactusPurple("purplecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusBlue = new CactusBlue("bluecactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusBrown = new CactusBrown("browncactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusGreen = new CactusGreen("greencactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusRed = new CactusRed("redcactus", Material.CACTUS, 0.4f, 0.4f);
-        cactusBlack = new CactusBlack("blackcactus", Material.CACTUS, 0.4f, 0.4f);
+        cactusWhite = new CactusWhite("whitecactus", Material.CACTUS);
+        cactusOrange = new CactusOrange("orangecactus", Material.CACTUS);
+        cactusMagenta = new CactusMagenta("magentacactus", Material.CACTUS);
+        cactusLightBlue = new CactusLightBlue("lightbluecactus", Material.CACTUS);
+        cactusYellow = new CactusYellow("yellowcactus", Material.CACTUS);
+        cactusLime = new CactusLime("limecactus", Material.CACTUS);
+        cactusPink = new CactusPink("pinkcactus", Material.CACTUS);
+        cactusGray = new CactusGray("graycactus", Material.CACTUS);
+        cactusLightGray = new CactusLightGray("lightgraycactus", Material.CACTUS);
+        cactusCyan = new CactusCyan("cyancactus", Material.CACTUS);
+        cactusPurple = new CactusPurple("purplecactus", Material.CACTUS);
+        cactusBlue = new CactusBlue("bluecactus", Material.CACTUS);
+        cactusBrown = new CactusBrown("browncactus", Material.CACTUS);
+        cactusGreen = new CactusGreen("greencactus", Material.CACTUS);
+        cactusRed = new CactusRed("redcactus", Material.CACTUS);
+        cactusBlack = new CactusBlack("blackcactus", Material.CACTUS);
     }
 
     @SubscribeEvent

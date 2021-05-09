@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.blocks.cactus;
 
 import com.luxtracon.floralis.base.CactusBase;
+import com.luxtracon.floralis.init.CactusInit;
 import com.luxtracon.floralis.init.ItemInit;
 
 import net.minecraft.block.material.Material;
@@ -10,11 +11,16 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class CactusGray extends CactusBase
+import net.minecraftforge.common.IShearable;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class CactusGray extends CactusBase implements IShearable
 {
-    public CactusGray(String name, Material material, float hardness, float resistance)
+    public CactusGray(String name, Material material)
     {
-        super(name, material, hardness, resistance);
+        super(name, material);
     }
 
     @Override
@@ -22,5 +28,17 @@ public class CactusGray extends CactusBase
     {
         drops.add(new ItemStack(ItemInit.seedCactusGray, 2 + fortune));
         drops.add(new ItemStack(ItemInit.petalGray, 1 + fortune));
+    }
+
+    @Override
+    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
+    {
+        return true;
+    }
+
+    @Override
+    public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
+    {
+        return Arrays.asList(new ItemStack(CactusInit.cactusGray));
     }
 }

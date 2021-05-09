@@ -67,8 +67,8 @@
     }
   ],
   "textures": {
-    "top": "floralis:blocks/flower/black/top",
-    "bottom": "floralis:blocks/flower/black/bottom",
-    "particle": "floralis:blocks/flower/black/bottom"
+    "top": "floralis:blocks/flower/top/black",
+    "bottom": "floralis:blocks/flower/bottom/bottom",
+    "particle": "floralis:blocks/flower/bottom/bottom"
   }
 }

@@ -67,8 +67,8 @@
     }
   ],
   "textures": {
-    "top": "floralis:blocks/crop/crop/flower/yellow/top/5",
-    "bottom": "floralis:blocks/crop/crop/flower/yellow/bottom/5",
-    "particle": "floralis:blocks/crop/crop/flower/yellow/bottom/5"
+    "top": "floralis:blocks/crop/crop/flower/top/yellow/5",
+    "bottom": "floralis:blocks/crop/crop/flower/bottom/5",
+    "particle": "floralis:blocks/crop/crop/flower/bottom/5"
   }
 }
