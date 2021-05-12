@@ -16,7 +16,7 @@ public class FlowerCropBase extends BlockCrops
 {
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
 
-    private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.375D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.5D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.625D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.75D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 0.875D, 0.7235D), new AxisAlignedBB(0.2765D, 0.0D, 0.2765D, 0.7235D, 1.0D, 0.7235D)};
+    private static final AxisAlignedBB[] AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.3125D, 0.7235D), new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.4375D, 0.7235D), new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.5625D, 0.7235D), new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.6875D, 0.7235D), new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.8125D, 0.7235D), new AxisAlignedBB(0.2765D, -0.0625D, 0.2765D, 0.7235D, 0.9375D, 0.7235D)};
 
     public FlowerCropBase(String name)
     {
