@@ -4,7 +4,6 @@ import com.luxtracon.floralis.compats.*;
 import com.luxtracon.floralis.inits.*;
 import com.luxtracon.floralis.proxies.CommonProxy;
 import com.luxtracon.floralis.registries.*;
-import com.luxtracon.floralis.tabs.*;
 import com.luxtracon.floralis.utilities.*;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,12 +14,16 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, dependencies = Reference.MODDEPENDENCIES)
+@Mod(modid = Main.MODID, dependencies = Main.MODDEPENDENCIES)
 public class Main
 {
+	public static final String MODID = "floralis";
+	public static final String CLIENT = "com.luxtracon.floralis.proxies.ClientProxy";
+	public static final String COMMON = "com.luxtracon.floralis.proxies.CommonProxy";
+	public static final String MODDEPENDENCIES = "after:forestry;"+"after:immersiveengineering;"+"after:industrialforegoing;"+"after:thermalexpansion";
+
 	public static final CreativeTabs MODTAB = new Tab();
 
 	private static boolean isForestryFarmingPresent;
@@ -28,7 +31,7 @@ public class Main
 	private static boolean isIndustrialForegoingPresent;
 	private static boolean isThermalExpansionPresent;
 
-	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
+	@SidedProxy(clientSide = Main.CLIENT, serverSide = Main.COMMON)
 	public static CommonProxy proxy;
 
 	@EventHandler

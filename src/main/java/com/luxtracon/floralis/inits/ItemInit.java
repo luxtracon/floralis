@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.inits;
 
+import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.items.*;
-import com.luxtracon.floralis.Reference;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-@EventBusSubscriber(modid = Reference.MODID)
+@EventBusSubscriber(modid = Main.MODID)
 public class ItemInit
 {
 	public static ItemSeedFlower seedFlowerWhite;

@@ -1,8 +1,8 @@
 package com.luxtracon.floralis.inits;
 
+import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.blocks.*;
 import com.luxtracon.floralis.utilities.Config;
-import com.luxtracon.floralis.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-@EventBusSubscriber(modid = Reference.MODID)
+@EventBusSubscriber(modid = Main.MODID)
 public class BlockInit
 {
     public static BlockDyedDust blockDyeWhite;

@@ -1,4 +1,4 @@
-package com.luxtracon.floralis.tabs;
+package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.inits.*;
 
