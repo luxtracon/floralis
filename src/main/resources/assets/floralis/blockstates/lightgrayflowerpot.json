@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "contents=empty": { "model": "floralis:pot/flower/lightgray/empty" },
+    "contents=white": { "model": "floralis:pot/flower/lightgray/white" },
+    "contents=orange": { "model": "floralis:pot/flower/lightgray/orange" },
+    "contents=magenta": { "model": "floralis:pot/flower/lightgray/magenta" },
+    "contents=lightblue": { "model": "floralis:pot/flower/lightgray/lightblue" },
+    "contents=yellow": { "model": "floralis:pot/flower/lightgray/yellow" },
+    "contents=lime": { "model": "floralis:pot/flower/lightgray/lime" },
+    "contents=pink": { "model": "floralis:pot/flower/lightgray/pink" },
+    "contents=gray": { "model": "floralis:pot/flower/lightgray/gray" },
+    "contents=lightgray": { "model": "floralis:pot/flower/lightgray/lightgray" },
+    "contents=cyan": { "model": "floralis:pot/flower/lightgray/cyan" },
+    "contents=purple": { "model": "floralis:pot/flower/lightgray/purple" },
+    "contents=blue": { "model": "floralis:pot/flower/lightgray/blue" },
+    "contents=brown": { "model": "floralis:pot/flower/lightgray/brown" },
+    "contents=green": { "model": "floralis:pot/flower/lightgray/green" },
+    "contents=red": { "model": "floralis:pot/flower/lightgray/red" },
+    "contents=black": { "model": "floralis:pot/flower/lightgray/black" }
+  }
+}

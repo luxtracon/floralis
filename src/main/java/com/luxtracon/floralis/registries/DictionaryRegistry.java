@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.registries;
 
-import com.luxtracon.floralis.init.ItemInit;
+import com.luxtracon.floralis.inits.ItemInit;
 
 import net.minecraft.item.ItemStack;
 
@@ -10,6 +10,23 @@ public class DictionaryRegistry
 {
     public static void init()
     {
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsBlack));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsBlue));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsBrown));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsCyan));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsGray));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsGreen));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsLightBlue));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsLightGray));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsLime));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsMagenta));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsOrange));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsPink));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsPurple));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsRed));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsWhite));
+        OreDictionary.registerOre("fertilizer", new ItemStack(ItemInit.partsYellow));
+
         OreDictionary.registerOre("dyeBlack", new ItemStack(ItemInit.dyeBlack));
         OreDictionary.registerOre("dyeBlue", new ItemStack(ItemInit.dyeBlue));
         OreDictionary.registerOre("dyeBrown", new ItemStack(ItemInit.dyeBrown));
@@ -27,23 +44,6 @@ public class DictionaryRegistry
         OreDictionary.registerOre("dyeWhite", new ItemStack(ItemInit.dyeWhite));
         OreDictionary.registerOre("dyeYellow", new ItemStack(ItemInit.dyeYellow));
 
-        OreDictionary.registerOre("seedCactusBlack", new ItemStack(ItemInit.seedCactusBlack));
-        OreDictionary.registerOre("seedCactusBlue", new ItemStack(ItemInit.seedCactusBlue));
-        OreDictionary.registerOre("seedCactusBrown", new ItemStack(ItemInit.seedCactusBrown));
-        OreDictionary.registerOre("seedCactusCyan", new ItemStack(ItemInit.seedCactusCyan));
-        OreDictionary.registerOre("seedCactusGray", new ItemStack(ItemInit.seedCactusGray));
-        OreDictionary.registerOre("seedCactusGreen", new ItemStack(ItemInit.seedCactusGreen));
-        OreDictionary.registerOre("seedCactusLightBlue", new ItemStack(ItemInit.seedCactusLightBlue));
-        OreDictionary.registerOre("seedCactusLightGray", new ItemStack(ItemInit.seedCactusLightGray));
-        OreDictionary.registerOre("seedCactusLime", new ItemStack(ItemInit.seedCactusLime));
-        OreDictionary.registerOre("seedCactusMagenta", new ItemStack(ItemInit.seedCactusMagenta));
-        OreDictionary.registerOre("seedCactusOrange", new ItemStack(ItemInit.seedCactusOrange));
-        OreDictionary.registerOre("seedCactusPink", new ItemStack(ItemInit.seedCactusPink));
-        OreDictionary.registerOre("seedCactusPurple", new ItemStack(ItemInit.seedCactusPurple));
-        OreDictionary.registerOre("seedCactusRed", new ItemStack(ItemInit.seedCactusRed));
-        OreDictionary.registerOre("seedCactusWhite", new ItemStack(ItemInit.seedCactusWhite));
-        OreDictionary.registerOre("seedCactusYellow", new ItemStack(ItemInit.seedCactusYellow));
-
         OreDictionary.registerOre("seedFlowerBlack", new ItemStack(ItemInit.seedFlowerBlack));
         OreDictionary.registerOre("seedFlowerBlue", new ItemStack(ItemInit.seedFlowerBlue));
         OreDictionary.registerOre("seedFlowerBrown", new ItemStack(ItemInit.seedFlowerBrown));
@@ -60,5 +60,22 @@ public class DictionaryRegistry
         OreDictionary.registerOre("seedFlowerRed", new ItemStack(ItemInit.seedFlowerRed));
         OreDictionary.registerOre("seedFlowerWhite", new ItemStack(ItemInit.seedFlowerWhite));
         OreDictionary.registerOre("seedFlowerYellow", new ItemStack(ItemInit.seedFlowerYellow));
+
+        OreDictionary.registerOre("seedCactusBlack", new ItemStack(ItemInit.seedCactusBlack));
+        OreDictionary.registerOre("seedCactusBlue", new ItemStack(ItemInit.seedCactusBlue));
+        OreDictionary.registerOre("seedCactusBrown", new ItemStack(ItemInit.seedCactusBrown));
+        OreDictionary.registerOre("seedCactusCyan", new ItemStack(ItemInit.seedCactusCyan));
+        OreDictionary.registerOre("seedCactusGray", new ItemStack(ItemInit.seedCactusGray));
+        OreDictionary.registerOre("seedCactusGreen", new ItemStack(ItemInit.seedCactusGreen));
+        OreDictionary.registerOre("seedCactusLightBlue", new ItemStack(ItemInit.seedCactusLightBlue));
+        OreDictionary.registerOre("seedCactusLightGray", new ItemStack(ItemInit.seedCactusLightGray));
+        OreDictionary.registerOre("seedCactusLime", new ItemStack(ItemInit.seedCactusLime));
+        OreDictionary.registerOre("seedCactusMagenta", new ItemStack(ItemInit.seedCactusMagenta));
+        OreDictionary.registerOre("seedCactusOrange", new ItemStack(ItemInit.seedCactusOrange));
+        OreDictionary.registerOre("seedCactusPink", new ItemStack(ItemInit.seedCactusPink));
+        OreDictionary.registerOre("seedCactusPurple", new ItemStack(ItemInit.seedCactusPurple));
+        OreDictionary.registerOre("seedCactusRed", new ItemStack(ItemInit.seedCactusRed));
+        OreDictionary.registerOre("seedCactusWhite", new ItemStack(ItemInit.seedCactusWhite));
+        OreDictionary.registerOre("seedCactusYellow", new ItemStack(ItemInit.seedCactusYellow));
     }
 }

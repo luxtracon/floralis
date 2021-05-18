@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"  ],
+  "key": {
+    "C": [
+      {
+        "item": "floralis:purpleclay"
+      }
+    ]
+  },
+  "result": {
+    "item": "floralis:purpleclayblock"
+  }
+}

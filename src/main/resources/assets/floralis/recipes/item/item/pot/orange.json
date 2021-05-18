@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "C C",
+    " C "  ],
+  "key": {
+    "C": [
+      {
+        "item": "floralis:orangeclay"
+      }
+    ]
+  },
+  "result": {
+    "item": "floralis:orangeunfiredpot"
+  }
+}

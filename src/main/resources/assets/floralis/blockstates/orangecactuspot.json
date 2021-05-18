@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "contents=empty": { "model": "floralis:pot/cactus/orange/empty" },
+    "contents=white": { "model": "floralis:pot/cactus/orange/white" },
+    "contents=orange": { "model": "floralis:pot/cactus/orange/orange" },
+    "contents=magenta": { "model": "floralis:pot/cactus/orange/magenta" },
+    "contents=lightblue": { "model": "floralis:pot/cactus/orange/lightblue" },
+    "contents=yellow": { "model": "floralis:pot/cactus/orange/yellow" },
+    "contents=lime": { "model": "floralis:pot/cactus/orange/lime" },
+    "contents=pink": { "model": "floralis:pot/cactus/orange/pink" },
+    "contents=gray": { "model": "floralis:pot/cactus/orange/gray" },
+    "contents=lightgray": { "model": "floralis:pot/cactus/orange/lightgray" },
+    "contents=cyan": { "model": "floralis:pot/cactus/orange/cyan" },
+    "contents=purple": { "model": "floralis:pot/cactus/orange/purple" },
+    "contents=blue": { "model": "floralis:pot/cactus/orange/blue" },
+    "contents=brown": { "model": "floralis:pot/cactus/orange/brown" },
+    "contents=green": { "model": "floralis:pot/cactus/orange/green" },
+    "contents=red": { "model": "floralis:pot/cactus/orange/red" },
+    "contents=black": { "model": "floralis:pot/cactus/orange/black" }
+  }
+}

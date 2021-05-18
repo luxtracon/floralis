@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "contents=empty": { "model": "floralis:pot/cactus/red/empty" },
+    "contents=white": { "model": "floralis:pot/cactus/red/white" },
+    "contents=orange": { "model": "floralis:pot/cactus/red/orange" },
+    "contents=magenta": { "model": "floralis:pot/cactus/red/magenta" },
+    "contents=lightblue": { "model": "floralis:pot/cactus/red/lightblue" },
+    "contents=yellow": { "model": "floralis:pot/cactus/red/yellow" },
+    "contents=lime": { "model": "floralis:pot/cactus/red/lime" },
+    "contents=pink": { "model": "floralis:pot/cactus/red/pink" },
+    "contents=gray": { "model": "floralis:pot/cactus/red/gray" },
+    "contents=lightgray": { "model": "floralis:pot/cactus/red/lightgray" },
+    "contents=cyan": { "model": "floralis:pot/cactus/red/cyan" },
+    "contents=purple": { "model": "floralis:pot/cactus/red/purple" },
+    "contents=blue": { "model": "floralis:pot/cactus/red/blue" },
+    "contents=brown": { "model": "floralis:pot/cactus/red/brown" },
+    "contents=green": { "model": "floralis:pot/cactus/red/green" },
+    "contents=red": { "model": "floralis:pot/cactus/red/red" },
+    "contents=black": { "model": "floralis:pot/cactus/red/black" }
+  }
+}

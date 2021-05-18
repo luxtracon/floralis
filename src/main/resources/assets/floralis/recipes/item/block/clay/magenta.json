@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralis:magentaclayblock"
+    }
+  ],
+  "result": {
+    "item": "floralis:magentaclay",
+    "count": 9
+  }
+}

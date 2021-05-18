@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralis:lightgraydyeblock"
+    }
+  ],
+  "result": {
+    "item": "floralis:lightgraydye",
+    "count": 9
+  }
+}

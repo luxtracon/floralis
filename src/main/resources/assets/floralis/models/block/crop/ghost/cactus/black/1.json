@@ -80,8 +80,8 @@
     "blossom": "floralis:blocks/crop/ghost/cactus/blossom/black/1",
     "top-body": "floralis:blocks/crop/ghost/cactus/top/body/1",
     "side-body": "floralis:blocks/crop/ghost/cactus/side/body/1",
-    "bottom-outer": "floralis:blocks/ghost/cactus/bottom/outer/1",
-    "bottom-inner": "floralis:blocks/ghost/cactus/bottom/inner/1",
+    "bottom-outer": "floralis:blocks/crop/ghost/cactus/bottom/outer/1",
+    "bottom-inner": "floralis:blocks/crop/ghost/cactus/bottom/inner/1",
     "particle": "floralis:blocks/crop/ghost/cactus/top/body/1"
   }
 }

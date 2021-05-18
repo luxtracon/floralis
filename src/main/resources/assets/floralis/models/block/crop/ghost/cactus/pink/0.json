@@ -34,14 +34,14 @@
     { "from": [ 7, 0, 7 ],
       "to": [ 9, 0, 9 ],
       "faces": {
-        "down": { "uv": [ 7, 7, 9, 9 ], "texture": "#bottom-inner" }
+        "down": { "uv": [ 7, 7, 9, 9 ], "texture": "#bottom-outer" }
       }
     }
   ],
   "textures": {
     "top-body": "floralis:blocks/crop/ghost/cactus/top/body/0",
     "side-body": "floralis:blocks/crop/ghost/cactus/side/body/0",
-    "bottom-inner": "floralis:blocks/crop/ghost/cactus/bottom/inner/0",
+    "bottom-outer": "floralis:blocks/crop/ghost/cactus/bottom/outer/0",
     "particle": "floralis:blocks/crop/ghost/cactus/top/body/0"
   }
 }

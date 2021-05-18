@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "floralis:items/seedflower/lightgray"
+    "layer0": "floralis:items/seed/flower/lightgray"
   }
 }

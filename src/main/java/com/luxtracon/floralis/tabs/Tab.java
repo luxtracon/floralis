@@ -1,6 +1,6 @@
 package com.luxtracon.floralis.tabs;
 
-import com.luxtracon.floralis.init.*;
+import com.luxtracon.floralis.inits.*;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -19,12 +19,6 @@ public class Tab extends CreativeTabs
     }
 
     @Override
-    public ItemStack createIcon()
-    {
-        return new ItemStack(FlowerInit.flowerPurple);
-    }
-
-    @Override
     public boolean hasSearchBar()
     {
         return true;
@@ -35,39 +29,39 @@ public class Tab extends CreativeTabs
     {
         List<Item> getItem = Arrays.asList
             (
-                Item.getItemFromBlock(FlowerInit.flowerWhite),
-                Item.getItemFromBlock(FlowerInit.flowerOrange),
-                Item.getItemFromBlock(FlowerInit.flowerMagenta),
-                Item.getItemFromBlock(FlowerInit.flowerLightBlue),
-                Item.getItemFromBlock(FlowerInit.flowerYellow),
-                Item.getItemFromBlock(FlowerInit.flowerLime),
-                Item.getItemFromBlock(FlowerInit.flowerPink),
-                Item.getItemFromBlock(FlowerInit.flowerGray),
-                Item.getItemFromBlock(FlowerInit.flowerLightGray),
-                Item.getItemFromBlock(FlowerInit.flowerCyan),
-                Item.getItemFromBlock(FlowerInit.flowerPurple),
-                Item.getItemFromBlock(FlowerInit.flowerBlue),
-                Item.getItemFromBlock(FlowerInit.flowerBrown),
-                Item.getItemFromBlock(FlowerInit.flowerGreen),
-                Item.getItemFromBlock(FlowerInit.flowerRed),
-                Item.getItemFromBlock(FlowerInit.flowerBlack),
+                Item.getItemFromBlock(BlockInit.flowerWhite),
+                Item.getItemFromBlock(BlockInit.flowerOrange),
+                Item.getItemFromBlock(BlockInit.flowerMagenta),
+                Item.getItemFromBlock(BlockInit.flowerLightBlue),
+                Item.getItemFromBlock(BlockInit.flowerYellow),
+                Item.getItemFromBlock(BlockInit.flowerLime),
+                Item.getItemFromBlock(BlockInit.flowerPink),
+                Item.getItemFromBlock(BlockInit.flowerGray),
+                Item.getItemFromBlock(BlockInit.flowerLightGray),
+                Item.getItemFromBlock(BlockInit.flowerCyan),
+                Item.getItemFromBlock(BlockInit.flowerPurple),
+                Item.getItemFromBlock(BlockInit.flowerBlue),
+                Item.getItemFromBlock(BlockInit.flowerBrown),
+                Item.getItemFromBlock(BlockInit.flowerGreen),
+                Item.getItemFromBlock(BlockInit.flowerRed),
+                Item.getItemFromBlock(BlockInit.flowerBlack),
 
-                Item.getItemFromBlock(CactusInit.cactusWhite),
-                Item.getItemFromBlock(CactusInit.cactusOrange),
-                Item.getItemFromBlock(CactusInit.cactusMagenta),
-                Item.getItemFromBlock(CactusInit.cactusLightBlue),
-                Item.getItemFromBlock(CactusInit.cactusYellow),
-                Item.getItemFromBlock(CactusInit.cactusLime),
-                Item.getItemFromBlock(CactusInit.cactusPink),
-                Item.getItemFromBlock(CactusInit.cactusGray),
-                Item.getItemFromBlock(CactusInit.cactusLightGray),
-                Item.getItemFromBlock(CactusInit.cactusCyan),
-                Item.getItemFromBlock(CactusInit.cactusPurple),
-                Item.getItemFromBlock(CactusInit.cactusBlue),
-                Item.getItemFromBlock(CactusInit.cactusBrown),
-                Item.getItemFromBlock(CactusInit.cactusGreen),
-                Item.getItemFromBlock(CactusInit.cactusRed),
-                Item.getItemFromBlock(CactusInit.cactusBlack),
+                Item.getItemFromBlock(BlockInit.cactusWhite),
+                Item.getItemFromBlock(BlockInit.cactusOrange),
+                Item.getItemFromBlock(BlockInit.cactusMagenta),
+                Item.getItemFromBlock(BlockInit.cactusLightBlue),
+                Item.getItemFromBlock(BlockInit.cactusYellow),
+                Item.getItemFromBlock(BlockInit.cactusLime),
+                Item.getItemFromBlock(BlockInit.cactusPink),
+                Item.getItemFromBlock(BlockInit.cactusGray),
+                Item.getItemFromBlock(BlockInit.cactusLightGray),
+                Item.getItemFromBlock(BlockInit.cactusCyan),
+                Item.getItemFromBlock(BlockInit.cactusPurple),
+                Item.getItemFromBlock(BlockInit.cactusBlue),
+                Item.getItemFromBlock(BlockInit.cactusBrown),
+                Item.getItemFromBlock(BlockInit.cactusGreen),
+                Item.getItemFromBlock(BlockInit.cactusRed),
+                Item.getItemFromBlock(BlockInit.cactusBlack),
 
                 ItemInit.seedFlowerWhite,
                 ItemInit.seedFlowerOrange,
@@ -103,6 +97,23 @@ public class Tab extends CreativeTabs
                 ItemInit.seedCactusRed,
                 ItemInit.seedCactusBlack,
 
+                ItemInit.partsWhite,
+                ItemInit.partsOrange,
+                ItemInit.partsMagenta,
+                ItemInit.partsLightBlue,
+                ItemInit.partsYellow,
+                ItemInit.partsLime,
+                ItemInit.partsPink,
+                ItemInit.partsGray,
+                ItemInit.partsLightGray,
+                ItemInit.partsCyan,
+                ItemInit.partsPurple,
+                ItemInit.partsBlue,
+                ItemInit.partsBrown,
+                ItemInit.partsGreen,
+                ItemInit.partsRed,
+                ItemInit.partsBlack,
+
                 ItemInit.petalWhite,
                 ItemInit.petalOrange,
                 ItemInit.petalMagenta,
@@ -137,6 +148,91 @@ public class Tab extends CreativeTabs
                 ItemInit.dyeRed,
                 ItemInit.dyeBlack,
 
+                ItemInit.clayWhite,
+                ItemInit.clayOrange,
+                ItemInit.clayMagenta,
+                ItemInit.clayLightBlue,
+                ItemInit.clayYellow,
+                ItemInit.clayLime,
+                ItemInit.clayPink,
+                ItemInit.clayGray,
+                ItemInit.clayLightGray,
+                ItemInit.clayCyan,
+                ItemInit.clayPurple,
+                ItemInit.clayBlue,
+                ItemInit.clayBrown,
+                ItemInit.clayGreen,
+                ItemInit.clayRed,
+                ItemInit.clayBlack,
+
+                ItemInit.potUnfiredWhite,
+                ItemInit.potUnfiredOrange,
+                ItemInit.potUnfiredMagenta,
+                ItemInit.potUnfiredLightBlue,
+                ItemInit.potUnfiredYellow,
+                ItemInit.potUnfiredLime,
+                ItemInit.potUnfiredPink,
+                ItemInit.potUnfiredGray,
+                ItemInit.potUnfiredLightGray,
+                ItemInit.potUnfiredCyan,
+                ItemInit.potUnfiredPurple,
+                ItemInit.potUnfiredBlue,
+                ItemInit.potUnfiredBrown,
+                ItemInit.potUnfiredGreen,
+                ItemInit.potUnfiredRed,
+                ItemInit.potUnfiredBlack,
+
+                ItemInit.potFiredWhite,
+                ItemInit.potFiredOrange,
+                ItemInit.potFiredMagenta,
+                ItemInit.potFiredLightBlue,
+                ItemInit.potFiredYellow,
+                ItemInit.potFiredLime,
+                ItemInit.potFiredPink,
+                ItemInit.potFiredGray,
+                ItemInit.potFiredLightGray,
+                ItemInit.potFiredCyan,
+                ItemInit.potFiredPurple,
+                ItemInit.potFiredBlue,
+                ItemInit.potFiredBrown,
+                ItemInit.potFiredGreen,
+                ItemInit.potFiredRed,
+                ItemInit.potFiredBlack,
+
+                Item.getItemFromBlock(BlockInit.potFlowerWhite),
+                Item.getItemFromBlock(BlockInit.potFlowerOrange),
+                Item.getItemFromBlock(BlockInit.potFlowerMagenta),
+                Item.getItemFromBlock(BlockInit.potFlowerLightBlue),
+                Item.getItemFromBlock(BlockInit.potFlowerYellow),
+                Item.getItemFromBlock(BlockInit.potFlowerLime),
+                Item.getItemFromBlock(BlockInit.potFlowerPink),
+                Item.getItemFromBlock(BlockInit.potFlowerGray),
+                Item.getItemFromBlock(BlockInit.potFlowerLightGray),
+                Item.getItemFromBlock(BlockInit.potFlowerCyan),
+                Item.getItemFromBlock(BlockInit.potFlowerPurple),
+                Item.getItemFromBlock(BlockInit.potFlowerBlue),
+                Item.getItemFromBlock(BlockInit.potFlowerBrown),
+                Item.getItemFromBlock(BlockInit.potFlowerGreen),
+                Item.getItemFromBlock(BlockInit.potFlowerRed),
+                Item.getItemFromBlock(BlockInit.potFlowerBlack),
+
+                Item.getItemFromBlock(BlockInit.potCactusWhite),
+                Item.getItemFromBlock(BlockInit.potCactusOrange),
+                Item.getItemFromBlock(BlockInit.potCactusMagenta),
+                Item.getItemFromBlock(BlockInit.potCactusLightBlue),
+                Item.getItemFromBlock(BlockInit.potCactusYellow),
+                Item.getItemFromBlock(BlockInit.potCactusLime),
+                Item.getItemFromBlock(BlockInit.potCactusPink),
+                Item.getItemFromBlock(BlockInit.potCactusGray),
+                Item.getItemFromBlock(BlockInit.potCactusLightGray),
+                Item.getItemFromBlock(BlockInit.potCactusCyan),
+                Item.getItemFromBlock(BlockInit.potCactusPurple),
+                Item.getItemFromBlock(BlockInit.potCactusBlue),
+                Item.getItemFromBlock(BlockInit.potCactusBrown),
+                Item.getItemFromBlock(BlockInit.potCactusGreen),
+                Item.getItemFromBlock(BlockInit.potCactusRed),
+                Item.getItemFromBlock(BlockInit.potCactusBlack),
+
                 Item.getItemFromBlock(BlockInit.blockDyeWhite),
                 Item.getItemFromBlock(BlockInit.blockDyeOrange),
                 Item.getItemFromBlock(BlockInit.blockDyeMagenta),
@@ -152,7 +248,24 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(BlockInit.blockDyeBrown),
                 Item.getItemFromBlock(BlockInit.blockDyeGreen),
                 Item.getItemFromBlock(BlockInit.blockDyeRed),
-                Item.getItemFromBlock(BlockInit.blockDyeBlack)
+                Item.getItemFromBlock(BlockInit.blockDyeBlack),
+
+                Item.getItemFromBlock(BlockInit.blockClayWhite),
+                Item.getItemFromBlock(BlockInit.blockClayOrange),
+                Item.getItemFromBlock(BlockInit.blockClayMagenta),
+                Item.getItemFromBlock(BlockInit.blockClayLightBlue),
+                Item.getItemFromBlock(BlockInit.blockClayYellow),
+                Item.getItemFromBlock(BlockInit.blockClayLime),
+                Item.getItemFromBlock(BlockInit.blockClayPink),
+                Item.getItemFromBlock(BlockInit.blockClayGray),
+                Item.getItemFromBlock(BlockInit.blockClayLightGray),
+                Item.getItemFromBlock(BlockInit.blockClayCyan),
+                Item.getItemFromBlock(BlockInit.blockClayPurple),
+                Item.getItemFromBlock(BlockInit.blockClayBlue),
+                Item.getItemFromBlock(BlockInit.blockClayBrown),
+                Item.getItemFromBlock(BlockInit.blockClayGreen),
+                Item.getItemFromBlock(BlockInit.blockClayRed),
+                Item.getItemFromBlock(BlockInit.blockClayBlack)
             );
 
         itemStack.clear();
@@ -161,5 +274,11 @@ public class Tab extends CreativeTabs
         {
             itemStack.add(new ItemStack(setItem));
         }
+    }
+
+    @Override
+    public ItemStack createIcon()
+    {
+        return new ItemStack(BlockInit.flowerPurple);
     }
 }

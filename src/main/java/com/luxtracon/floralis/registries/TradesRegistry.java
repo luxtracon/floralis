@@ -1,9 +1,6 @@
 package com.luxtracon.floralis.registries;
 
-import com.luxtracon.floralis.trades.dye.*;
-import com.luxtracon.floralis.trades.petal.*;
-import com.luxtracon.floralis.trades.seedcactus.*;
-import com.luxtracon.floralis.trades.seedflower.*;
+import com.luxtracon.floralis.trades.*;
 import com.luxtracon.floralis.utilities.Config;
 
 import net.minecraft.util.ResourceLocation;
@@ -17,84 +14,84 @@ public class TradesRegistry
     {
         VillagerProfession farmer = ForgeRegistries.VILLAGER_PROFESSIONS.getValue(new ResourceLocation("minecraft:farmer"));
 
-        if(Config.cactitrades)
-        {
-            farmer.getCareer(0).addTrade(1, new SeedCactusWhite());
-            farmer.getCareer(0).addTrade(1, new SeedCactusOrange());
-            farmer.getCareer(0).addTrade(1, new SeedCactusMagenta());
-            farmer.getCareer(0).addTrade(1, new SeedCactusLightBlue());
-            farmer.getCareer(0).addTrade(1, new SeedCactusYellow());
-            farmer.getCareer(0).addTrade(1, new SeedCactusLime());
-            farmer.getCareer(0).addTrade(1, new SeedCactusPink());
-            farmer.getCareer(0).addTrade(1, new SeedCactusGray());
-            farmer.getCareer(0).addTrade(1, new SeedCactusLightGray());
-            farmer.getCareer(0).addTrade(1, new SeedCactusCyan());
-            farmer.getCareer(0).addTrade(1, new SeedCactusPurple());
-            farmer.getCareer(0).addTrade(1, new SeedCactusBlue());
-            farmer.getCareer(0).addTrade(1, new SeedCactusBrown());
-            farmer.getCareer(0).addTrade(1, new SeedCactusGreen());
-            farmer.getCareer(0).addTrade(1, new SeedCactusRed());
-            farmer.getCareer(0).addTrade(1, new SeedCactusBlack());
-        }
-
         if(Config.flowertrades)
         {
-            farmer.getCareer(0).addTrade(1, new SeedFlowerWhite());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerOrange());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerMagenta());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerLightBlue());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerYellow());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerLime());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerPink());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerGray());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerLightGray());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerCyan());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerPurple());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerBlue());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerBrown());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerGreen());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerRed());
-            farmer.getCareer(0).addTrade(1, new SeedFlowerBlack());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerWhite());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerOrange());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerMagenta());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerLightBlue());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerYellow());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerLime());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerPink());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerGray());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerLightGray());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerCyan());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerPurple());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerBlue());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerBrown());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerGreen());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerRed());
+            farmer.getCareer(0).addTrade(1, new TradeSeedFlowerBlack());
+        }
+
+        if(Config.cactitrades)
+        {
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusWhite());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusOrange());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusMagenta());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusLightBlue());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusYellow());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusLime());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusPink());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusGray());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusLightGray());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusCyan());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusPurple());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusBlue());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusBrown());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusGreen());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusRed());
+            farmer.getCareer(0).addTrade(1, new TradeSeedCactusBlack());
         }
 
         if(Config.cactitrades || Config.flowertrades)
         {
-            farmer.getCareer(0).addTrade(1, new PetalWhite());
-            farmer.getCareer(0).addTrade(1, new PetalOrange());
-            farmer.getCareer(0).addTrade(1, new PetalMagenta());
-            farmer.getCareer(0).addTrade(1, new PetalLightBlue());
-            farmer.getCareer(0).addTrade(1, new PetalYellow());
-            farmer.getCareer(0).addTrade(1, new PetalLime());
-            farmer.getCareer(0).addTrade(1, new PetalPink());
-            farmer.getCareer(0).addTrade(1, new PetalGray());
-            farmer.getCareer(0).addTrade(1, new PetalLightGray());
-            farmer.getCareer(0).addTrade(1, new PetalCyan());
-            farmer.getCareer(0).addTrade(1, new PetalPurple());
-            farmer.getCareer(0).addTrade(1, new PetalBlue());
-            farmer.getCareer(0).addTrade(1, new PetalBrown());
-            farmer.getCareer(0).addTrade(1, new PetalGreen());
-            farmer.getCareer(0).addTrade(1, new PetalRed());
-            farmer.getCareer(0).addTrade(1, new PetalBlack());
+            farmer.getCareer(0).addTrade(1, new TradePartsWhite());
+            farmer.getCareer(0).addTrade(1, new TradePartsOrange());
+            farmer.getCareer(0).addTrade(1, new TradePartsMagenta());
+            farmer.getCareer(0).addTrade(1, new TradePartsLightBlue());
+            farmer.getCareer(0).addTrade(1, new TradePartsYellow());
+            farmer.getCareer(0).addTrade(1, new TradePartsLime());
+            farmer.getCareer(0).addTrade(1, new TradePartsPink());
+            farmer.getCareer(0).addTrade(1, new TradePartsGray());
+            farmer.getCareer(0).addTrade(1, new TradePartsLightGray());
+            farmer.getCareer(0).addTrade(1, new TradePartsCyan());
+            farmer.getCareer(0).addTrade(1, new TradePartsPurple());
+            farmer.getCareer(0).addTrade(1, new TradePartsBlue());
+            farmer.getCareer(0).addTrade(1, new TradePartsBrown());
+            farmer.getCareer(0).addTrade(1, new TradePartsGreen());
+            farmer.getCareer(0).addTrade(1, new TradePartsRed());
+            farmer.getCareer(0).addTrade(1, new TradePartsBlack());
         }
 
         if(Config.cactitrades || Config.flowertrades)
         {
-            farmer.getCareer(0).addTrade(1, new DyeWhite());
-            farmer.getCareer(0).addTrade(1, new DyeOrange());
-            farmer.getCareer(0).addTrade(1, new DyeMagenta());
-            farmer.getCareer(0).addTrade(1, new DyeLightBlue());
-            farmer.getCareer(0).addTrade(1, new DyeYellow());
-            farmer.getCareer(0).addTrade(1, new DyeLime());
-            farmer.getCareer(0).addTrade(1, new DyePink());
-            farmer.getCareer(0).addTrade(1, new DyeGray());
-            farmer.getCareer(0).addTrade(1, new DyeLightGray());
-            farmer.getCareer(0).addTrade(1, new DyeCyan());
-            farmer.getCareer(0).addTrade(1, new DyePurple());
-            farmer.getCareer(0).addTrade(1, new DyeBlue());
-            farmer.getCareer(0).addTrade(1, new DyeBrown());
-            farmer.getCareer(0).addTrade(1, new DyeGreen());
-            farmer.getCareer(0).addTrade(1, new DyeRed());
-            farmer.getCareer(0).addTrade(1, new DyeBlack());
+            farmer.getCareer(0).addTrade(1, new TradePetalWhite());
+            farmer.getCareer(0).addTrade(1, new TradePetalOrange());
+            farmer.getCareer(0).addTrade(1, new TradePetalMagenta());
+            farmer.getCareer(0).addTrade(1, new TradePetalLightBlue());
+            farmer.getCareer(0).addTrade(1, new TradePetalYellow());
+            farmer.getCareer(0).addTrade(1, new TradePetalLime());
+            farmer.getCareer(0).addTrade(1, new TradePetalPink());
+            farmer.getCareer(0).addTrade(1, new TradePetalGray());
+            farmer.getCareer(0).addTrade(1, new TradePetalLightGray());
+            farmer.getCareer(0).addTrade(1, new TradePetalCyan());
+            farmer.getCareer(0).addTrade(1, new TradePetalPurple());
+            farmer.getCareer(0).addTrade(1, new TradePetalBlue());
+            farmer.getCareer(0).addTrade(1, new TradePetalBrown());
+            farmer.getCareer(0).addTrade(1, new TradePetalGreen());
+            farmer.getCareer(0).addTrade(1, new TradePetalRed());
+            farmer.getCareer(0).addTrade(1, new TradePetalBlack());
         }
     }
 }

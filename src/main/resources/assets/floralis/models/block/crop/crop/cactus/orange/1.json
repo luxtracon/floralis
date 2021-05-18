@@ -80,8 +80,8 @@
     "blossom": "floralis:blocks/crop/crop/cactus/blossom/orange/1",
     "top-body": "floralis:blocks/crop/crop/cactus/top/body/1",
     "side-body": "floralis:blocks/crop/crop/cactus/side/body/1",
-    "bottom-outer": "floralis:blocks/crop/cactus/bottom/outer/1",
-    "bottom-inner": "floralis:blocks/crop/cactus/bottom/inner/1",
+    "bottom-outer": "floralis:blocks/crop/crop/cactus/bottom/outer/1",
+    "bottom-inner": "floralis:blocks/crop/crop/cactus/bottom/inner/1",
     "particle": "floralis:blocks/crop/crop/cactus/top/body/1"
   }
 }

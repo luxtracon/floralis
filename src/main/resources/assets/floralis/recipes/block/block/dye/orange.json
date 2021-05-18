@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DDD",
+    "DDD"  ],
+  "key": {
+    "D": [
+      {
+        "item": "floralis:orangedye"
+      }
+    ]
+  },
+  "result": {
+    "item": "floralis:orangedyeblock"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralis:blackclayblock"
+    }
+  ],
+  "result": {
+    "item": "floralis:blackclay",
+    "count": 9
+  }
+}

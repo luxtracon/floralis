@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralis:greendyeblock"
+    }
+  ],
+  "result": {
+    "item": "floralis:greendye",
+    "count": 9
+  }
+}

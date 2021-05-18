@@ -1,7 +1,7 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.compat.*;
-import com.luxtracon.floralis.init.*;
+import com.luxtracon.floralis.compats.*;
+import com.luxtracon.floralis.inits.*;
 import com.luxtracon.floralis.proxies.CommonProxy;
 import com.luxtracon.floralis.registries.*;
 import com.luxtracon.floralis.tabs.*;
@@ -44,12 +44,6 @@ public class Main
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		BlockInit.init();
-		CactusInit.init();
-		CactusCropInit.init();
-		FlowerInit.init();
-		FlowerCropInit.init();
-		GhostCactusCropInit.init();
-		GhostFlowerCropInit.init();
 		ItemInit.init();
 
 		Config.init(event);
@@ -86,10 +80,5 @@ public class Main
 		SmeltingRegistry.init();
 		StructureRegistry.init();
 		TradesRegistry.init();
-	}
-
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
 	}
 }

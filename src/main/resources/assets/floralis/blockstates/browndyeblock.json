@@ -1,7 +1,7 @@
 {
   "variants": {
     "normal": {
-      "model": "floralis:block/brown"
+      "model": "floralis:dye/brown"
     }
   }
 }
