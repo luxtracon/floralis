@@ -14,6 +14,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -188,6 +189,7 @@ public class BlockPotCactus extends BlockContainer
                 tileentity.setItemStack(stackhand);
 
                 player.addStat(StatList.FLOWER_POTTED);
+                player.playSound(SoundEvents.BLOCK_GRASS_PLACE, 1.0F, 1.0F);
 
                 if(!player.capabilities.isCreativeMode)
                 {

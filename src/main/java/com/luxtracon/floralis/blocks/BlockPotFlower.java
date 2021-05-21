@@ -12,6 +12,7 @@ import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -80,13 +81,13 @@ public class BlockPotFlower extends BlockContainer
         }
     }
 
-    public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player)
+    public void onBlockHarvested(World world, BlockPos pos, IBlockState state, EntityPlayer player)
     {
-        super.onBlockHarvested(worldIn, pos, state, player);
+        super.onBlockHarvested(world, pos, state, player);
 
         if(player.capabilities.isCreativeMode)
         {
-            TileEntityFlowerPot tileentityflowerpot = this.getTileEntity(worldIn, pos);
+            TileEntityFlowerPot tileentityflowerpot = this.getTileEntity(world, pos);
 
             if(tileentityflowerpot != null)
             {
@@ -130,7 +131,7 @@ public class BlockPotFlower extends BlockContainer
     }
 
     @SuppressWarnings("deprecation")
-    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos)
+    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos)
     {
         IBlockState downState = world.getBlockState(pos.down());
 
@@ -143,9 +144,9 @@ public class BlockPotFlower extends BlockContainer
     }
 
     @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        ItemStack stackhand = playerIn.getHeldItem(hand);
+        ItemStack stackhand = player.getHeldItem(hand);
 
         TileEntityFlowerPot tileentity = this.getTileEntity(world, pos);
 
@@ -167,9 +168,10 @@ public class BlockPotFlower extends BlockContainer
 
                 tileentity.setItemStack(stackhand);
 
-                playerIn.addStat(StatList.FLOWER_POTTED);
+                player.addStat(StatList.FLOWER_POTTED);
+                player.playSound(SoundEvents.BLOCK_GRASS_PLACE, 1.0F, 1.0F);
 
-                if(!playerIn.capabilities.isCreativeMode)
+                if(!player.capabilities.isCreativeMode)
                 {
                     stackhand.shrink(1);
                 }
@@ -179,12 +181,12 @@ public class BlockPotFlower extends BlockContainer
             {
                 if(stackhand.isEmpty())
                 {
-                    playerIn.setHeldItem(hand, stacktile);
+                    player.setHeldItem(hand, stacktile);
                 }
 
-                else if(!playerIn.addItemStackToInventory(stacktile))
+                else if(!player.addItemStackToInventory(stacktile))
                 {
-                    playerIn.dropItem(stacktile, false);
+                    player.dropItem(stacktile, false);
                 }
 
                 tileentity.setItemStack(ItemStack.EMPTY);
@@ -232,7 +234,7 @@ public class BlockPotFlower extends BlockContainer
     }
 
     @SuppressWarnings("deprecation")
-    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    public BlockFaceShape getBlockFaceShape(IBlockAccess world, IBlockState state, BlockPos pos, EnumFacing face)
     {
         return BlockFaceShape.UNDEFINED;
     }
