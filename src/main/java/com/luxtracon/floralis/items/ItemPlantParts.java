@@ -7,6 +7,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
@@ -80,6 +81,8 @@ public class ItemPlantParts extends Item
         {
             if (applyBonemeal(itemstack, worldIn, pos, player, hand))
             {
+                player.playSound(SoundEvents.BLOCK_GRASS_HIT, 1.0F, 1.0F);
+
                 if (!worldIn.isRemote)
                 {
                     worldIn.playEvent(2005, pos, 0);

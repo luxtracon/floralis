@@ -7,6 +7,7 @@ import com.luxtracon.floralis.inits.ItemInit;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -44,6 +45,8 @@ public class ItemSeedCactus extends Item implements IPlantable
     {
         if (facing == EnumFacing.UP && world.getBlockState(pos).getBlock() == Blocks.SAND)
         {
+            player.playSound(SoundEvents.BLOCK_GRASS_PLACE, 1.0F, 1.0F);
+
             if(player.getHeldItem(hand).getItem() == ItemInit.seedCactusBlack)
             {
                 world.setBlockState(pos.up(), BlockInit.cropCactusBlack.getDefaultState());
