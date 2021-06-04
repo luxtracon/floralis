@@ -14,6 +14,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -43,13 +44,25 @@ public class BlockPlantCactus extends Block implements IPlantable, IShearable
 
     public boolean canBlockStay(World world, BlockPos pos)
     {
-        return world.getBlockState(pos.down()).getBlock() == Blocks.SAND && !world.getBlockState(pos.up()).getMaterial().isLiquid();
+        boolean up = world.getBlockState(pos.up()).getMaterial().isLiquid();
+        boolean north = world.getBlockState(pos.north()).getMaterial().isLiquid();
+        boolean south = world.getBlockState(pos.south()).getMaterial().isLiquid();
+        boolean east = world.getBlockState(pos.east()).getMaterial().isLiquid();
+        boolean west = world.getBlockState(pos.west()).getMaterial().isLiquid();
+
+        return world.getBlockState(pos.down()).getBlock() == Blocks.SAND && !up && !north && !south && !east && !west;
     }
 
     @Override
     public boolean canPlaceBlockAt(World world, BlockPos pos)
     {
         return super.canPlaceBlockAt(world, pos) ? this.canBlockStay(world, pos) : false;
+    }
+
+    @Override
+    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return 300;
     }
 
     @Override
