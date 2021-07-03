@@ -1,13 +1,17 @@
 package com.luxtracon.floralis.proxies;
 
+import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.inits.BlockInit;
 import com.luxtracon.floralis.utilities.BlockColor;
+import com.luxtracon.floralis.utilities.TileEntityPlantPot;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.util.ResourceLocation;
+
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends CommonProxy
 {
-
     @Override
     public void init()
     {
@@ -78,5 +82,7 @@ public class ClientProxy extends CommonProxy
         Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler(BlockColor.blockColor, BlockInit.cropCactusRed);
         Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler(BlockColor.blockColor, BlockInit.cropCactusWhite);
         Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler(BlockColor.blockColor, BlockInit.cropCactusYellow);
+
+        GameRegistry.registerTileEntity(TileEntityPlantPot.class, new ResourceLocation(Main.MODID, "pot"));
     }
 }

@@ -3,6 +3,7 @@ package com.luxtracon.floralis.blocks;
 import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.inits.BlockInit;
 
+import com.luxtracon.floralis.utilities.TileEntityPlantPot;
 import com.luxtracon.floralis.utilities.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -20,7 +21,6 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFlowerPot;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumBlockRenderType;
@@ -74,16 +74,11 @@ public class BlockPotCactus extends BlockContainer
 
     public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity)
     {
-        TileEntityFlowerPot tileentity = this.getTileEntity(world, pos);
+        TileEntityPlantPot tileentity = this.getTileEntity(world, pos);
 
         ItemStack itemstack = tileentity.getFlowerItemStack();
 
-        if(itemstack.isEmpty())
-        {
-            entity.attackEntityFrom(DamageSource.CACTUS, 0.0F);
-        }
-
-        else if(Config.cactidamage)
+        if(!itemstack.isEmpty() && Config.cactidamage)
         {
             entity.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
@@ -93,7 +88,7 @@ public class BlockPotCactus extends BlockContainer
     {
         super.getDrops(drops, world, pos, state, fortune);
 
-        TileEntityFlowerPot tileentity = world.getTileEntity(pos) instanceof TileEntityFlowerPot ? (TileEntityFlowerPot)world.getTileEntity(pos) : null;
+        TileEntityPlantPot tileentity = world.getTileEntity(pos) instanceof TileEntityPlantPot ? (TileEntityPlantPot)world.getTileEntity(pos) : null;
 
         if(tileentity != null && tileentity.getFlowerPotItem() != null)
         {
@@ -107,7 +102,7 @@ public class BlockPotCactus extends BlockContainer
 
         if(player.capabilities.isCreativeMode)
         {
-            TileEntityFlowerPot tileentityflowerpot = this.getTileEntity(world, pos);
+            TileEntityPlantPot tileentityflowerpot = this.getTileEntity(world, pos);
 
             if(tileentityflowerpot != null)
             {
@@ -168,7 +163,7 @@ public class BlockPotCactus extends BlockContainer
     {
         ItemStack stackhand = player.getHeldItem(hand);
 
-        TileEntityFlowerPot tileentity = this.getTileEntity(world, pos);
+        TileEntityPlantPot tileentity = this.getTileEntity(world, pos);
 
         if(tileentity == null)
         {
@@ -237,14 +232,14 @@ public class BlockPotCactus extends BlockContainer
 
     public TileEntity createNewTileEntity(World world, int meta)
     {
-        return new TileEntityFlowerPot(Item.getItemFromBlock(null), 0);
+        return new TileEntityPlantPot(Item.getItemFromBlock(null), 0);
     }
 
-    private TileEntityFlowerPot getTileEntity(World world, BlockPos pos)
+    private TileEntityPlantPot getTileEntity(World world, BlockPos pos)
     {
         TileEntity tileentity = world.getTileEntity(pos);
 
-        return tileentity instanceof TileEntityFlowerPot ? (TileEntityFlowerPot)tileentity : null;
+        return tileentity instanceof TileEntityPlantPot ? (TileEntityPlantPot)tileentity : null;
     }
 
     @SuppressWarnings("deprecation")
@@ -268,7 +263,7 @@ public class BlockPotCactus extends BlockContainer
     @SuppressWarnings("deprecation")
     public ItemStack getItem(World world, BlockPos pos, IBlockState state)
     {
-        TileEntityFlowerPot tileentity = this.getTileEntity(world, pos);
+        TileEntityPlantPot tileentity = this.getTileEntity(world, pos);
 
         ItemStack itemstack = tileentity.getFlowerItemStack();
 
@@ -367,9 +362,9 @@ public class BlockPotCactus extends BlockContainer
 
         TileEntity tileentity = world instanceof ChunkCache ? ((ChunkCache)world).getTileEntity(pos, Chunk.EnumCreateEntityType.CHECK) : world.getTileEntity(pos);
 
-        if(tileentity instanceof TileEntityFlowerPot)
+        if(tileentity instanceof TileEntityPlantPot)
         {
-            TileEntityFlowerPot tileentityflowerpot = (TileEntityFlowerPot)tileentity;
+            TileEntityPlantPot tileentityflowerpot = (TileEntityPlantPot)tileentity;
 
             Item item = tileentityflowerpot.getFlowerPotItem();
 
