@@ -7,6 +7,7 @@ import com.luxtracon.floralis.utilities.TileEntityPlantPot;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockFaceShape;
@@ -243,6 +244,93 @@ public class BlockPotFlower extends BlockContainer
     public EnumBlockRenderType getRenderType(IBlockState state)
     {
         return EnumBlockRenderType.MODEL;
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos)
+    {
+        if(state.getBlock() == BlockInit.potFlowerBlack)
+        {
+            return MapColor.BLACK_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerBlue)
+        {
+            return MapColor.BLUE_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerBrown)
+        {
+            return MapColor.BROWN_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerCyan)
+        {
+            return MapColor.CYAN_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerGray)
+        {
+            return MapColor.GRAY_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerGreen)
+        {
+            return MapColor.GREEN_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerLightBlue)
+        {
+            return MapColor.LIGHT_BLUE_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerLightGray)
+        {
+            return MapColor.SILVER_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerLime)
+        {
+            return MapColor.LIME_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerMagenta)
+        {
+            return MapColor.MAGENTA_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerOrange)
+        {
+            return MapColor.ORANGE_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerPink)
+        {
+            return MapColor.PINK_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerPurple)
+        {
+            return MapColor.PURPLE_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerRed)
+        {
+            return MapColor.RED_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerWhite)
+        {
+            return MapColor.WHITE_STAINED_HARDENED_CLAY;
+        }
+
+        if(state.getBlock() == BlockInit.potFlowerYellow)
+        {
+            return MapColor.YELLOW_STAINED_HARDENED_CLAY;
+        }
+
+        return null;
     }
 
     @SuppressWarnings("deprecation")
