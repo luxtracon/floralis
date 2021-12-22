@@ -127,6 +127,6 @@ public class BlockDyedDust extends BlockFalling
 
     public String getTooltipTranslationKey()
     {
-        return "tile.dyeblock.tooltip";
+        return "tile.dyeblock.desc";
     }
 }

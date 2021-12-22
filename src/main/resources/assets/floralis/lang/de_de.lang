@@ -1,4 +1,23 @@
-itemGroup.tab=Floralis
+advancement.floralis.cactuspot.name=Kaktustopf
+advancement.floralis.cactuspot.desc=Stelle einen Kaktustopf her.
+advancement.floralis.clay.name=Gefärbter Lehm
+advancement.floralis.clay.desc=Stelle gefärbten Lehm her.
+advancement.floralis.clayblock.name=Gefärbter Lehmblock
+advancement.floralis.clayblock.desc=Stelle einen gefärbten Lehmblock her.
+advancement.floralis.dye.name=Farbstoff
+advancement.floralis.dye.desc=Nutze einen Ofen und erhalte Farbstoff aus Blütenblättern.
+advancement.floralis.dyeblock.name=Farbstoffblock
+advancement.floralis.dyeblock.desc=Stelle einen Farbstoffblock her.
+advancement.floralis.firedpot.name=Gebrannter Topf
+advancement.floralis.firedpot.desc=Nutzen einen Ofen und erhalte einen gebrannten Topf von einem ungebrannten Topf.
+advancement.floralis.flowerpot.name=Blumentopf
+advancement.floralis.flowerpot.desc=Stelle einen Blumentopf her.
+advancement.floralis.petal.name=Blütenblätter
+advancement.floralis.petal.desc=Finde Kakteen oder Blumen und sammle deren Blütenblätter.
+advancement.floralis.root.name=Floralis
+advancement.floralis.root.desc=Kultivierbare Kakteen und Blumen für einen automatisierbaren Weg alle Farbstoffe zu erhalten.
+advancement.floralis.unfiredpot.name=Ungebrannter Topf
+advancement.floralis.unfiredpot.desc=Stelle einen ungebrannten Topf her.
 
 item.whiteseed.name=Weiße Blumensamen
 item.orangeseed.name=Orange Blumensamen
@@ -51,7 +70,7 @@ item.greenparts.name=Grüne Pflanzenteile
 item.redparts.name=Rote Pflanzenteile
 item.blackparts.name=Schwarze Pflanzenteile
 
-item.parts.tooltip=Wie Knochenmehl
+item.parts.desc=Wie Knochenmehl
 
 item.whitepetal.name=Weißes Blütenblatt
 item.orangepetal.name=Oranges Blütenblatt
@@ -138,6 +157,8 @@ item.greenfiredpot.name=Grüner gebrannter Topf
 item.redfiredpot.name=Roter gebrannter Topf
 item.blackfiredpot.name=Schwarzer gebrannter Topf
 
+tab.floralis=Floralis
+
 tile.whiteflower.name=Weiße Blume
 tile.orangeflower.name=Orange Blume
 tile.magentaflower.name=Magenta Blume
@@ -223,6 +244,8 @@ tile.greendyeblock.name=Grüner Farbstoffblock
 tile.reddyeblock.name=Roter Farbstoffblock
 tile.blackdyeblock.name=Schwarzer Farbstoffblock
 
+tile.dyeblock.desc=Kosmetisch und kompakt
+
 tile.whiteclayblock.name=Weißer Lehmblock
 tile.orangeclayblock.name=Oranger Lehmblock
 tile.magentaclayblock.name=Magenta Lehmblock
@@ -240,5 +263,4 @@ tile.greenclayblock.name=Grüner Lehmblock
 tile.redclayblock.name=Roter Lehmblock
 tile.blackclayblock.name=Schwarzer Lehmblock
 
-tile.dyeblock.tooltip=Kosmetisch und kompakt
-tile.clayblock.tooltip=Kosmetisch und kompakt
+tile.clayblock.desc=Kosmetisch und kompakt

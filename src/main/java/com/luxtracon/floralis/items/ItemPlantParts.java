@@ -69,7 +69,7 @@ public class ItemPlantParts extends Item
 
     public String getTooltipTranslationKey()
     {
-        return "item.parts.tooltip";
+        return "item.parts.desc";
     }
 
     @Override

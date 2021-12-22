@@ -1,4 +1,23 @@
-itemGroup.tab=Floralis
+advancement.floralis.cactuspot.name=Cactus Pot
+advancement.floralis.cactuspot.desc=Craft a Cactus Pot
+advancement.floralis.clay.name=Dyed Clay
+advancement.floralis.clay.desc=Craft Dyed Clay
+advancement.floralis.clayblock.name=Dyed Clay Block
+advancement.floralis.clayblock.desc=Craft a Dyed Clay Block
+advancement.floralis.dye.name=Dye
+advancement.floralis.dye.desc=Use a furnace to turn Petals into Dye.
+advancement.floralis.dyeblock.name=Dye Block
+advancement.floralis.dyeblock.desc=Craft a Dye Block
+advancement.floralis.firedpot.name=Fired Pot
+advancement.floralis.firedpot.desc=Use a furnace to turn an Unfired Pot into a Fired Pot.
+advancement.floralis.flowerpot.name=Flower Pot
+advancement.floralis.flowerpot.desc=Craft a Flower Pot
+advancement.floralis.petal.name=Petals
+advancement.floralis.petal.desc=Find cacti or flowers to collect their Petals.
+advancement.floralis.root.name=Floralis
+advancement.floralis.root.desc=Farmable cacti and flowers for an automatable way to obtain all dyes.
+advancement.floralis.unfiredpot.name=Unfired Pot
+advancement.floralis.unfiredpot.desc=Craft an Unfired Pot
 
 item.whiteseed.name=White Flower Seed
 item.orangeseed.name=Orange Flower Seed
@@ -51,7 +70,7 @@ item.greenparts.name=Green Plant Parts
 item.redparts.name=Red Plant Parts
 item.blackparts.name=Black Plant Parts
 
-item.parts.tooltip=Like Bone Meal
+item.parts.desc=Like Bone Meal
 
 item.whitepetal.name=White Plant Petal
 item.orangepetal.name=Orange Plant Petal
@@ -138,6 +157,8 @@ item.greenfiredpot.name=Green Fired Pot
 item.redfiredpot.name=Red Fired Pot
 item.blackfiredpot.name=Black Fired Pot
 
+tab.floralis=Floralis
+
 tile.whiteflower.name=White Flower
 tile.orangeflower.name=Orange Flower
 tile.magentaflower.name=Magenta Flower
@@ -223,6 +244,8 @@ tile.greendyeblock.name=Green Dye Block
 tile.reddyeblock.name=Red Dye Block
 tile.blackdyeblock.name=Black Dye Block
 
+tile.dyeblock.desc=Cosmetic and compact
+
 tile.whiteclayblock.name=White Clay Block
 tile.orangeclayblock.name=Orange Clay Block
 tile.magentaclayblock.name=Magenta Clay Block
@@ -240,5 +263,4 @@ tile.greenclayblock.name=Green Clay Block
 tile.redclayblock.name=Red Clay Block
 tile.blackclayblock.name=Black Clay Block
 
-tile.dyeblock.tooltip=Cosmetic and compact
-tile.clayblock.tooltip=Cosmetic and compact
+tile.clayblock.desc=Cosmetic and compact

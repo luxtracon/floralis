@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.floralis.root.name"
+    },
+    "description": {
+      "translate": "advancement.floralis.root.desc"
+    },
+    "icon": {
+      "item": "floralis:purpleflower"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "floralis:textures/blocks/clay/white.png"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

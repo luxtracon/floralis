@@ -1,5 +1,6 @@
 package com.luxtracon.floralis.utilities;
 
+import com.luxtracon.floralis.Main;
 import com.luxtracon.floralis.inits.*;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -280,5 +281,11 @@ public class Tab extends CreativeTabs
     public ItemStack createIcon()
     {
         return new ItemStack(BlockInit.flowerPurple);
+    }
+
+    @Override
+    public String getTranslationKey()
+    {
+        return "tab." + Main.MODID;
     }
 }

@@ -1,0 +1,184 @@
+{
+    "display": {
+        "title": {
+            "translate": "advancement.floralis.clayblock.name"
+        },
+        "description": {
+            "translate": "advancement.floralis.clayblock.desc"
+        },
+        "icon": {
+            "item": "floralis:purpleclayblock"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "floralis:textures/blocks/clay/lightgray.png"
+    },
+    "criteria": {
+        "white": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:whiteclayblock"
+                    }
+                ]
+            }
+        },
+        "orange": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:orangeclayblock"
+                    }
+                ]
+            }
+        },
+        "magenta": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:magentaclayblock"
+                    }
+                ]
+            }
+        },
+        "lightblue": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:lightblueclayblock"
+                    }
+                ]
+            }
+        },
+        "yellow": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:yellowclayblock"
+                    }
+                ]
+            }
+        },
+        "lime": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:limeclayblock"
+                    }
+                ]
+            }
+        },
+        "pink": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:pinkclayblock"
+                    }
+                ]
+            }
+        },
+        "gray": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:grayclayblock"
+                    }
+                ]
+            }
+        },
+        "lightgray": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:lightgrayclayblock"
+                    }
+                ]
+            }
+        },
+        "cyan": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:cyanclayblock"
+                    }
+                ]
+            }
+        },
+        "purple": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:purpleclayblock"
+                    }
+                ]
+            }
+        },
+        "blue": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:blueclayblock"
+                    }
+                ]
+            }
+        },
+        "brown": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:brownclayblock"
+                    }
+                ]
+            }
+        },
+        "green": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:greenclayblock"
+                    }
+                ]
+            }
+        },
+        "red": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:redclayblock"
+                    }
+                ]
+            }
+        },
+        "black": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "floralis:blackclayblock"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["white", "orange", "magenta", "lightblue", "yellow", "lime", "pink", "gray", "lightgray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
+    ],
+    "parent": "floralis:floralis/clay"
+}

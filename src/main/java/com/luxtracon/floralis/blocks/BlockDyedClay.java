@@ -127,6 +127,6 @@ public class BlockDyedClay extends Block
 
     public String getTooltipTranslationKey()
     {
-        return "tile.clayblock.tooltip";
+        return "tile.clayblock.desc";
     }
 }
