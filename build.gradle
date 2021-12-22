@@ -57,7 +57,7 @@ minecraft
 
 dependencies
 {
-    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
     compileOnly 'libs:CodeChickenLib:1.12.2-3.2.3.358:universal'
     compileOnly 'libs:CoFHCore:1.12.2-4.6.6.1:universal'
     compileOnly 'libs:CoFHWorld:1.12.2-1.4.0.1:universal'
