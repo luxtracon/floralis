@@ -43,7 +43,7 @@ public class ItemSeedFlower extends Item implements IPlantable
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        if (facing == EnumFacing.UP && world.getBlockState(pos).getBlock() == Blocks.FARMLAND)
+        if (facing == EnumFacing.UP && world.getBlockState(pos).getBlock() == Blocks.FARMLAND && world.getBlockState(pos.up()).getBlock() == Blocks.AIR)
         {
             player.playSound(SoundEvents.BLOCK_GRASS_PLACE, 1.0F, 1.0F);
 
