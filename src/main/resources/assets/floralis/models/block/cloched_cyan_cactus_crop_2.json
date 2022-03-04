@@ -1,0 +1,22 @@
+{
+  "parent": "block/block",
+  "texture_size": [ 96, 96 ],
+  "textures": {
+    "cactus": "floralis:block/cloched_cyan_cactus",
+    "particle": "floralis:block/particle"
+  },
+  "elements": [
+    {
+      "from": [ 5, 0, 5 ],
+      "to": [ 11, 6, 11 ],
+      "faces": {
+        "north": { "uv": [ 6.16667, 8.83333, 7.16666, 9.83333 ], "texture": "#cactus" },
+        "east": { "uv": [ 6.16667, 8.83333, 7.16666, 9.83333 ], "texture": "#cactus" },
+        "south": { "uv": [ 6.16667, 8.83333, 7.16666, 9.83333 ], "texture": "#cactus" },
+        "west": { "uv": [ 6.16667, 8.83333, 7.16666, 9.83333 ], "texture": "#cactus" },
+        "up": { "uv": [ 6.16667, 3.5, 7.16667, 4.5 ], "texture": "#cactus" },
+        "down": { "uv": [ 6.16667, 14.16667, 7.16666, 15.16666 ], "texture": "#cactus" }
+      }
+    }
+  ]
+}

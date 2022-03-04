@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralis:magenta_dye_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:magenta_dye",
+    "count": 9
+  }
+}

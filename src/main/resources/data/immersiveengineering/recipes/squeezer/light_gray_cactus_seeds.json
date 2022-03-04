@@ -1,0 +1,17 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type": "immersiveengineering:squeezer",
+  "input": {
+    "item": "floralis:light_gray_cactus_seeds"
+  },
+  "fluid": {
+    "fluid": "immersiveengineering:plantoil",
+    "amount": 60
+  },
+  "energy": 6400
+}

@@ -1,96 +1,110 @@
-buildscript
-{
-    repositories
-    {
-        maven
-        {
-            url = 'https://files.minecraftforge.net/maven'
-        }
-
-        jcenter()
-         mavenCentral()
+buildscript {
+    repositories {
+        maven { url 'https://maven.minecraftforge.net' }
+        maven { url 'https://maven.parchmentmc.org' }
+        maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
     }
 
-    dependencies
-    {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:3+'
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'org.spongepowered.mixin'
 
-repositories
-{
-    flatDir
-    {
-        dir 'libs'
-    }
-}
+archivesBaseName = 'floralis'
+group = 'com.luxtracon.floralis'
+version = "${mcversion}-${modversion}"
 
-group = "${modgroup}"
-version = "${modversion}"
-archivesBaseName = "${modname}-${mcversion}"
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-minecraft
-{
-    mappings channel: 'stable', version: '39-1.12'
-    //makeObfSourceJar = false
-    //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-    runs
-    {
-        client
-        {
+minecraft {
+    mappings channel: 'parchment', version: '2022.02.13-1.18.1'
+
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            mods {
+                landsoficaria {
+                    source sourceSets.main
+                }
+            }
         }
 
-        server
-        {
+        server {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            mods {
+                landsoficaria {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'landsoficaria', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            mods {
+                landsoficaria {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
 
-dependencies
-{
-    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
-    compileOnly 'libs:CodeChickenLib:1.12.2-3.2.3.358:universal'
-    compileOnly 'libs:CoFHCore:1.12.2-4.6.6.1:universal'
-    compileOnly 'libs:CoFHWorld:1.12.2-1.4.0.1:universal'
-    compileOnly 'libs:forestry_1.12.2:5.8.2.422'
-    compileOnly 'libs:ImmersiveEngineering:0.12-98'
-    compileOnly 'libs:industrialforegoing:1.12.2:1.12.13-237'
-    compileOnly 'libs:RedstoneFlux:1.12-2.1.1.1:universal'
-    compileOnly 'libs:ThermalExpansion:1.12.2-5.5.7.1:universal'
-    compileOnly 'libs:ThermalFoundation:1.12.2-2.6.7.1:universal'
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
 }
 
-processResources
-{
-    inputs.property "modversion", project.version
-    inputs.property "mcversion", version
-    from(sourceSets.main.resources.srcDirs)
-    {
-        include 'mcmod.info'
-        expand 'modversion': project.version
+repositories {
+    maven {
+        name 'progwml6' // JEI
+        url 'https://dvs1.progwml6.com/files/maven'
     }
 
-    from(sourceSets.main.resources.srcDirs)
-    {
-        exclude 'mcmod.info'
+    maven {
+        name 'blamejared' // Immersive Engineering
+        url 'https://maven.blamejared.com/'
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.88'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    compileOnly fg.deobf("mezz.jei:jei-${mcversion}:${jeiversion}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mcversion}:${jeiversion}")
+    implementation fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:${ieversion}")
+}
+
+mixin {
+    add sourceSets.main, "floralis.refmap.json"
+    config "floralis.mixins.json"
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "floralis",
+                "Specification-Vendor"    : "luxtracon",
+                "Specification-Version"   : "${mcversion}-${modversion}",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.version,
+                "Implementation-Vendor"   : "floralis",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
     }
 }
 
 jar.finalizedBy('reobfJar')
-
-sourceSets
-{
-    main
-    {
-        output.resourcesDir = output.classesDir
-    }
-}

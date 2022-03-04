@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "result": {
+    "item": "floralis:magenta_dye_block"
+  }
+}

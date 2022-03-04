@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:green_petals"
+    },
+    {
+      "item": "floralis:green_flower_seeds"
+    }
+  ],
+  "input": {
+    "item": "floralis:green_flower_seeds"
+  },
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_green_flower_crop"
+  },
+  "time": 600
+}

@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="MIT License"
+[[mods]]
+modId="floralis"
+version="${file.jarVersion}"
+displayName="Floralis"
+logoFile="logo.png"
+authors="luxtracon"
+description='''Floralis adds farmable cacti and flowers for an automatable way to obtain all dyes.'''
+
+[[dependencies.floralis]]
+modId="forge"
+mandatory=true
+versionRange="[39,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.floralis]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.18.1,1.19)"
+ordering="NONE"
+side="BOTH"

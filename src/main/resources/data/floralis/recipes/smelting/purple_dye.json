@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "floralis:purple_petals"
+  },
+  "result": "minecraft:purple_dye",
+  "experience": 0.1,
+  "cookingtime": 200
+}

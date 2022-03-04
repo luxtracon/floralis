@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.luxtracon.floralis.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "floralis.refmap.json",
+  "mixins": [
+   "MixinFireBlock",
+   "MixinSinglePoolElement"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}

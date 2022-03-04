@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:orange_petals"
+    },
+    {
+      "item": "floralis:orange_cactus_seeds"
+    }
+  ],
+  "input": {
+    "item": "floralis:orange_cactus_seeds"
+  },
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_orange_cactus_crop"
+  },
+  "time": 600
+}

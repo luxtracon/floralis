@@ -1,0 +1,62 @@
+{
+  "parent": "block/block",
+  "texture_size": [ 96, 96 ],
+  "textures": {
+    "cactus": "floralis:block/cloched_purple_cactus",
+    "particle": "floralis:block/particle"
+  },
+  "elements": [
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 12, 8, 12 ],
+      "faces": {
+        "north": { "uv": [ 8.66667, 8.66666, 10, 10 ], "texture": "#cactus" },
+        "east": { "uv": [ 8.66667, 8.66666, 10, 10 ], "texture": "#cactus" },
+        "south": { "uv": [ 8.66667, 8.66666, 10, 10 ], "texture": "#cactus" },
+        "west": { "uv": [ 8.66667, 8.66666, 10, 10 ], "texture": "#cactus" },
+        "up": { "uv": [ 8.66667, 3.33333, 10, 4.66667 ], "texture": "#cactus" },
+        "down": { "uv": [ 8.66667, 14, 10, 15.33333 ], "texture": "#cactus" }
+      }
+    },
+    {
+      "from": [ 4, -1, 3 ],
+      "to": [ 4, 9, 13 ],
+      "faces": {
+        "east": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" },
+        "west": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" }
+      }
+    },
+    {
+      "from": [ 3, -1, 4 ],
+      "to": [ 13, 9, 4 ],
+      "faces": {
+        "north": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" },
+        "south": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" }
+      }
+    },
+    {
+      "from": [ 12, -1, 3 ],
+      "to": [ 12, 9, 13 ],
+      "faces": {
+        "east": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" },
+        "west": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" }
+      }
+    },
+    {
+      "from": [ 3, -1, 12 ],
+      "to": [ 13, 9, 12 ],
+      "faces": {
+        "north": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" },
+        "south": { "uv": [ 8.5, 11.16667, 10.16667, 12.83333 ], "texture": "#cactus" }
+      }
+    },
+    {
+      "from": [ 3, 8, 3 ],
+      "to": [ 13, 8, 13 ],
+      "faces": {
+        "up": { "uv": [ 8.5, 5.83333, 10.16667, 7.5 ], "texture": "#cactus" },
+        "down": { "uv": [ 8.5, 5.83333, 10.16667, 7.5 ], "texture": "#cactus" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/plant_fibers_block",
+    "#forge:storage_blocks/white_dye_block",
+    "#forge:storage_blocks/orange_dye_block",
+    "#forge:storage_blocks/magenta_dye_block",
+    "#forge:storage_blocks/light_blue_dye_block",
+    "#forge:storage_blocks/yellow_dye_block",
+    "#forge:storage_blocks/lime_dye_block",
+    "#forge:storage_blocks/pink_dye_block",
+    "#forge:storage_blocks/gray_dye_block",
+    "#forge:storage_blocks/light_gray_dye_block",
+    "#forge:storage_blocks/cyan_dye_block",
+    "#forge:storage_blocks/purple_dye_block",
+    "#forge:storage_blocks/blue_dye_block",
+    "#forge:storage_blocks/brown_dye_block",
+    "#forge:storage_blocks/green_dye_block",
+    "#forge:storage_blocks/red_dye_block",
+    "#forge:storage_blocks/black_dye_block"
+  ]
+}

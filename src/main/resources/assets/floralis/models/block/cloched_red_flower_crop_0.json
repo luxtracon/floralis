@@ -1,0 +1,50 @@
+{
+  "parent": "block/block",
+  "texture_size": [ 96, 32 ],
+  "textures": {
+    "flower": "floralis:block/cloched_red_flower",
+    "particle": "floralis:block/particle"
+  },
+  "elements": [
+    {
+      "from": [ 5.5, 0, 8 ],
+      "to": [ 10.5, 12, 8 ],
+      "shade": false,
+      "rotation": { "angle": 45, "axis": "y", "origin": [ 8, 8, 8 ], "rescale": true },
+      "faces": {
+        "north": { "uv": [ 0.83334, 10, 1.83334, 16 ], "texture": "#flower" },
+        "south": { "uv": [ 0.83334, 10, 1.83334, 16 ], "texture": "#flower" }
+      }
+    },
+    {
+      "from": [ 8, 0, 5.5 ],
+      "to": [ 8, 12, 10.5 ],
+      "shade": false,
+      "rotation": { "angle": 45, "axis": "y", "origin": [ 8, 8, 8 ], "rescale": true },
+      "faces": {
+        "east": { "uv": [ 0.83334, 10, 1.83334, 16 ], "texture": "#flower" },
+        "west": { "uv": [ 0.83334, 10, 1.83334, 16 ], "texture": "#flower" }
+      }
+    },
+    {
+      "from": [ 8, 0, 5.5 ],
+      "to": [ 8, 12, 10.5 ],
+      "shade": false,
+      "rotation": { "angle": 45, "axis": "y", "origin": [ 8, 8, 8 ], "rescale": true },
+      "faces": {
+        "east": { "uv": [ 0.83333, 2, 1.83333, 8 ], "texture": "#flower" },
+        "west": { "uv": [ 0.83333, 2, 1.83333, 8 ], "texture": "#flower" }
+      }
+    },
+    {
+      "from": [ 5.5, 0, 8 ],
+      "to": [ 10.5, 12, 8 ],
+      "shade": false,
+      "rotation": { "angle": 45, "axis": "y", "origin": [ 8, 8, 8 ], "rescale": true },
+      "faces": {
+        "north": { "uv": [ 0.83333, 2, 1.83333, 8 ], "texture": "#flower" },
+        "south": { "uv": [ 0.83333, 2, 1.83333, 8 ], "texture": "#flower" }
+      }
+    }
+  ]
+}
