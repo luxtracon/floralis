@@ -8,6 +8,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Ravager;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -124,6 +125,10 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 	public void entityInside(@Nonnull BlockState pState, @Nonnull Level pLevel, @Nonnull BlockPos pPos, @Nonnull Entity pEntity) {
 		if (pEntity instanceof Ravager && ForgeEventFactory.getMobGriefingEvent(pLevel, pEntity)) {
 			pLevel.destroyBlock(pPos, true, pEntity);
+		}
+
+		if (pEntity instanceof Villager) {
+			pEntity.setInvulnerable(true);
 		}
 
 		if (this.getAge(pState) >= 3) {
