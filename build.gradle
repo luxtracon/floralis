@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.88'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     compileOnly fg.deobf("mezz.jei:jei-${mcversion}:${jeiversion}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mcversion}:${jeiversion}")
