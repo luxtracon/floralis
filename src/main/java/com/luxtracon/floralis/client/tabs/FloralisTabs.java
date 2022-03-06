@@ -15,7 +15,7 @@ public class FloralisTabs {
 		}
 
 		public @Nonnull ItemStack makeIcon() {
-			return new ItemStack(FloralisItems.PURPLE_FLOWER.get());
+			return new ItemStack(FloralisItems.PURPLE_CACTUS.get());
 		}
 
 		public @Nonnull ResourceLocation getBackgroundImage() {
