@@ -39,4 +39,4 @@
 </ul>
 <p><span style="font-family: helvetica, arial, sans-serif;"><br />The provided config file will let you adjust the way the mod generates its features. You can You can enable and disable independently whether cacti and flowers should get generated naturally, as well as enable and disbale whether cacti and flower fields should get generated in villages. You can enable and disable village field generation independently per village type. You can also adjust the rarity and density in which natural generating cacti and flowers occur.</span></p>
 <p>&nbsp;</p>
-<p><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">You are allowed to use this mod in any modpack, as long as it's credited in some kind of modlist, in case the modpack public.</span></span></p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">You are allowed to use this mod in any modpack, as long as it's credited in some kind of modlist, in case the modpack is public.</span></span></p>
