@@ -16,6 +16,6 @@ public class TradePetalPurple implements EntityVillager.ITradeList
     @Override
     public void addMerchantRecipe(IMerchant merchant, MerchantRecipeList recipeList, Random random)
     {
-        recipeList.add(new MerchantRecipe(new ItemStack(Items.EMERALD,1), new ItemStack(ItemInit.petalPurple, 8)));
+        recipeList.add(new MerchantRecipe(new ItemStack(Items.EMERALD, 1), new ItemStack(ItemInit.petalPurple, 8)));
     }
 }
