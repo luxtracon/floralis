@@ -3,6 +3,10 @@ package com.luxtracon.floralis.common.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
+
 public class FloralisStructuresConfig {
 	public static BooleanValue PLAINS_FIELD;
 	public static BooleanValue SNOWY_FIELD;

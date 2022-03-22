@@ -1,9 +1,12 @@
 package com.luxtracon.floralis.common.events;
 
 import com.google.common.collect.ImmutableMap;
+
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.registry.FloralisItems;
+
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerDataHolder;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -14,15 +17,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
-import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@SuppressWarnings("unused")
+@ParametersAreNonnullByDefault
 
 @EventBusSubscriber(modid = Floralis.MODID)
 public class FloralisVillagerTrades {
@@ -87,7 +95,8 @@ public class FloralisVillagerTrades {
 			this.itemStack = pItemStack;
 		}
 
-		public MerchantOffer getOffer(@Nonnull Entity pTrader, @Nonnull Random pRand) {
+		@Override
+		public MerchantOffer getOffer(Entity pTrader, Random pRand) {
 			return new MerchantOffer(new ItemStack(Items.EMERALD, sellEmeralds), new ItemStack(this.itemStack.getItem(), sellItems), sellUses, sellXp, sellMultiplier);
 		}
 	}
@@ -99,7 +108,8 @@ public class FloralisVillagerTrades {
 			this.trades = pTrades;
 		}
 
-		public MerchantOffer getOffer(@Nonnull Entity pTrader, @Nonnull Random pRand) {
+		@Override
+		public MerchantOffer getOffer(Entity pTrader, Random pRand) {
 			if (pTrader instanceof VillagerDataHolder) {
 				return new MerchantOffer(new ItemStack(this.trades.get(((VillagerDataHolder)pTrader).getVillagerData().getType()), buyItems), new ItemStack(Items.EMERALD, buyEmeralds), buyUses, buyXp, buyMultiplier);
 			} else {

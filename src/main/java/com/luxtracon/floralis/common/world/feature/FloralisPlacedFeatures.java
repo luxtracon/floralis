@@ -1,8 +1,12 @@
 package com.luxtracon.floralis.common.world.feature;
 
 import com.luxtracon.floralis.common.config.FloralisFeaturesConfig;
+
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.placement.*;
+
+@MethodsReturnNonnullByDefault
 
 public class FloralisPlacedFeatures {
 	private static final int RARITY_FLOWER = FloralisFeaturesConfig.RARITY_FLOWER.get();

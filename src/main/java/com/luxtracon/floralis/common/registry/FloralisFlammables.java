@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.mixin.MixinFireBlock;
+
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FireBlock;

@@ -10,6 +10,7 @@ import com.luxtracon.floralis.common.registry.FloralisCompostables;
 import com.luxtracon.floralis.common.registry.FloralisFlammables;
 import com.luxtracon.floralis.common.registry.FloralisPottables;
 import com.luxtracon.floralis.common.world.structure.FloralisStructures;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -18,7 +19,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 
 @Mod("floralis")
 public class Floralis {
@@ -41,7 +44,7 @@ public class Floralis {
 		MinecraftForge.EVENT_BUS.register(FloralisBiomeLoading.class);
 	}
 
-	public void onCommonSetupEvent(@Nonnull FMLCommonSetupEvent event) {
+	public void onCommonSetupEvent(FMLCommonSetupEvent event) {
 		event.enqueueWork(FloralisCompostables::setup);
 		event.enqueueWork(FloralisFlammables::setup);
 		event.enqueueWork(FloralisPottables::setup);

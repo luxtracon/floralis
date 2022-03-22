@@ -1,14 +1,18 @@
 package com.luxtracon.floralis.common.world.structure;
 
 import com.google.common.collect.ImmutableList;
+
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.config.FloralisStructuresConfig;
 import com.luxtracon.floralis.mixin.MixinSinglePoolElement;
+
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Lifecycle;
+
 import it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+
 import net.minecraft.core.WritableRegistry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.*;

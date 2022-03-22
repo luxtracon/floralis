@@ -2,6 +2,7 @@ package com.luxtracon.floralis.common.world.feature;
 
 import com.luxtracon.floralis.common.config.FloralisFeaturesConfig;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
+
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;

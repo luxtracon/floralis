@@ -1,5 +1,6 @@
 package com.luxtracon.floralis.common.blocks;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -7,7 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.monster.Ravager;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -19,17 +20,23 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.event.ForgeEventFactory;
 
-import javax.annotation.Nonnull;
 import java.util.Random;
 
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 @SuppressWarnings("deprecation")
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
+
 public class CactusCropBlock extends Block implements BonemealableBlock, IPlantable {
 	private static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(7.0D, 0.0D, 7.0D, 9.0D, 2.0D, 9.0D), Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D)};
 	private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
@@ -40,32 +47,35 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		this.registerDefaultState(this.stateDefinition.any().setValue(this.getAgeProperty(), 0));
 	}
 
-	public boolean canSurvive(@Nonnull BlockState pState, @Nonnull LevelReader pLevel, @Nonnull BlockPos pPos) {
-		BlockPos posBelow = pPos.below();
-		return (pLevel.getRawBrightness(pPos, 0) >= 8 || pLevel.canSeeSky(pPos)) && this.mayPlaceOn(pLevel.getBlockState(posBelow));
+	@Override
+	public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
+		return (pLevel.getRawBrightness(pPos, 0) >= 8 || pLevel.canSeeSky(pPos)) && this.mayPlaceOn(pLevel.getBlockState(pPos.below()));
 	}
 
-	public boolean isBonemealSuccess(@Nonnull Level pLevel, @Nonnull Random pRandom, @Nonnull BlockPos pPos, @Nonnull BlockState pState) {
+	@Override
+	public boolean isBonemealSuccess(Level pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
 		return this.isNotMaxAge(pState);
 	}
 
-	public boolean isNotMaxAge(@Nonnull BlockState pState) {
+	public boolean isNotMaxAge(BlockState pState) {
 		return pState.getValue(this.getAgeProperty()) < this.getMaxAge();
 	}
 
-	public boolean isRandomlyTicking(@Nonnull BlockState pState) {
+	@Override
+	public boolean isRandomlyTicking(BlockState pState) {
 		return this.isNotMaxAge(pState);
 	}
 
-	public boolean isValidBonemealTarget(@Nonnull BlockGetter pLevel, @Nonnull BlockPos pPos, @Nonnull BlockState pState, boolean pIsClient) {
+	@Override
+	public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
 		return this.isNotMaxAge(pState);
 	}
 
-	public boolean mayPlaceOn(@Nonnull BlockState pState) {
+	public boolean mayPlaceOn(BlockState pState) {
 		return pState.is(BlockTags.SAND);
 	}
 
-	public static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, @Nonnull BlockPos pPos) {
+	public static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
 		BlockPos posBelow = pPos.below();
 		float floatFirst = 1.0F;
 		for(int i = -1; i <= 1; ++i) {
@@ -106,11 +116,11 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		return floatFirst;
 	}
 
-	public int getAge(@Nonnull BlockState pState) {
+	public int getAge(BlockState pState) {
 		return pState.getValue(this.getAgeProperty());
 	}
 
-	public int getBonemealAgeIncrease(@Nonnull Level pLevel) {
+	public int getBonemealAgeIncrease(Level pLevel) {
 		return Mth.nextInt(pLevel.random, 1, 3);
 	}
 
@@ -118,15 +128,13 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		return MAX_AGE;
 	}
 
-	public void createBlockStateDefinition(@Nonnull StateDefinition.Builder<Block, BlockState> pBuilder) {
+	@Override
+	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
 		pBuilder.add(AGE);
 	}
 
-	public void entityInside(@Nonnull BlockState pState, @Nonnull Level pLevel, @Nonnull BlockPos pPos, @Nonnull Entity pEntity) {
-		if (pEntity instanceof Ravager && ForgeEventFactory.getMobGriefingEvent(pLevel, pEntity)) {
-			pLevel.destroyBlock(pPos, true, pEntity);
-		}
-
+	@Override
+	public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
 		if (pEntity instanceof Villager) {
 			pEntity.setInvulnerable(true);
 		}
@@ -145,11 +153,13 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		pLevel.setBlock(pPos, this.getStateForAge(i), 2);
 	}
 
-	public void performBonemeal(@Nonnull ServerLevel pLevel, @Nonnull Random pRandom, @Nonnull BlockPos pPos, @Nonnull BlockState pState) {
+	@Override
+	public void performBonemeal(ServerLevel pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
 		this.growCrops(pLevel, pPos, pState);
 	}
 
-	public void randomTick(@Nonnull BlockState pState, @Nonnull ServerLevel pLevel, @Nonnull BlockPos pPos, @Nonnull Random pRandom) {
+	@Override
+	public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
 		if (!pLevel.isAreaLoaded(pPos, 1)) {
 			return;
 		}
@@ -164,7 +174,13 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		}
 	}
 
-	public BlockState getPlant(@Nonnull BlockGetter world, BlockPos pos) {
+	@Override
+	public BlockPathTypes getAiPathNodeType(BlockState state, BlockGetter level, BlockPos pos, @Nullable Mob entity) {
+		return BlockPathTypes.DAMAGE_CACTUS;
+	}
+
+	@Override
+	public BlockState getPlant(BlockGetter world, BlockPos pos) {
 		return world.getBlockState(pos);
 	}
 
@@ -172,23 +188,27 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		return this.defaultBlockState().setValue(this.getAgeProperty(), pAge);
 	}
 
-	public @Nonnull BlockState updateShape(@Nonnull BlockState pState, @Nonnull Direction pFacing, @Nonnull BlockState pFacingState, @Nonnull LevelAccessor pLevel, @Nonnull BlockPos pCurrentPos, @Nonnull BlockPos pFacingPos) {
+	@Override
+	public BlockState updateShape(BlockState pState, Direction pFacing, BlockState pFacingState, LevelAccessor pLevel, BlockPos pCurrentPos, BlockPos pFacingPos) {
 		return !pState.canSurvive(pLevel, pCurrentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);
 	}
 
-	public @Nonnull IntegerProperty getAgeProperty() {
+	public IntegerProperty getAgeProperty() {
 		return AGE;
 	}
 
+	@Override
 	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
 		return PlantType.CROP;
 	}
 
-	public @Nonnull VoxelShape getCollisionShape(@Nonnull BlockState pState, @Nonnull BlockGetter pLevel, @Nonnull BlockPos pPos, @Nonnull CollisionContext pContext) {
+	@Override
+	public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
 		return SHAPES[pState.getValue(this.getAgeProperty())];
 	}
 
-	public @Nonnull VoxelShape getShape(@Nonnull BlockState pState, @Nonnull BlockGetter pLevel, @Nonnull BlockPos pPos, @Nonnull CollisionContext pContext) {
+	@Override
+	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
 		return SHAPES[pState.getValue(this.getAgeProperty())];
 	}
 }
