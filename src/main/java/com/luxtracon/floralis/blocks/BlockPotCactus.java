@@ -20,6 +20,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
@@ -543,6 +544,13 @@ public class BlockPotCactus extends BlockContainer
         }
 
         return state.withProperty(CONTENTS, blockflowerpot$enumflowertype);
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public PathNodeType getAiPathNodeType(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return PathNodeType.DAMAGE_CACTUS;
     }
 
     public enum EnumCactusType implements IStringSerializable

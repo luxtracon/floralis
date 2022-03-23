@@ -10,13 +10,13 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.IShearable;
 
 import java.util.Collections;
@@ -41,16 +41,17 @@ public class BlockCropFlower extends BlockCrops implements IShearable
         return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && world.getBlockState(pos.down()).getBlock() == Blocks.FARMLAND;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
+    public boolean canSilkHarvest()
     {
         return true;
     }
 
     @Override
-    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
     {
-        return 300;
+        return true;
     }
 
     @Override
@@ -81,77 +82,77 @@ public class BlockCropFlower extends BlockCrops implements IShearable
                 drops.add(new ItemStack(ItemInit.seedFlowerBlack));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerBlue && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerBlue)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerBlue));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerBrown && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerBrown)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerBrown));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerCyan && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerCyan)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerCyan));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerGray && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerGray)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerGray));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerGreen && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerGreen)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerGreen));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerLightBlue && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerLightBlue)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerLightBlue));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerLightGray && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerLightGray)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerLightGray));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerLime && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerLime)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerLime));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerMagenta && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerMagenta)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerMagenta));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerOrange && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerOrange)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerOrange));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerPink && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerPink)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerPink));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerPurple && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerPurple)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerPurple));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerRed && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerRed)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerRed));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerWhite && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerWhite)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerWhite));
             }
 
-            if(state.getBlock() == BlockInit.cropFlowerYellow && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropFlowerYellow)
             {
                 drops.add(new ItemStack(ItemInit.seedFlowerYellow));
             }
@@ -368,6 +369,178 @@ public class BlockCropFlower extends BlockCrops implements IShearable
         }
 
         return null;
+    }
+    
+    @Override
+    public ItemStack getSilkTouchDrop(IBlockState state)
+    {
+        if(getAge(state) == getMaxAge())
+        {
+            if(state.getBlock() == BlockInit.cropFlowerBlack)
+            {
+                return new ItemStack(BlockInit.flowerBlack);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerBlue)
+            {
+                return new ItemStack(BlockInit.flowerBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerBrown)
+            {
+                return new ItemStack(BlockInit.flowerBrown);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerCyan)
+            {
+                return new ItemStack(BlockInit.flowerCyan);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerGray)
+            {
+                return new ItemStack(BlockInit.flowerGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerGreen)
+            {
+                return new ItemStack(BlockInit.flowerGreen);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLightBlue)
+            {
+                return new ItemStack(BlockInit.flowerLightBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLightGray)
+            {
+                return new ItemStack(BlockInit.flowerLightGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLime)
+            {
+                return new ItemStack(BlockInit.flowerLime);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerMagenta)
+            {
+                return new ItemStack(BlockInit.flowerMagenta);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerOrange)
+            {
+                return new ItemStack(BlockInit.flowerOrange);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerPink)
+            {
+                return new ItemStack(BlockInit.flowerPink);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerPurple)
+            {
+                return new ItemStack(BlockInit.flowerPurple);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerRed)
+            {
+                return new ItemStack(BlockInit.flowerRed);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerWhite)
+            {
+                return new ItemStack(BlockInit.flowerWhite);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerYellow)
+            {
+                return new ItemStack(BlockInit.flowerYellow);
+            }
+        }
+
+        else
+        {
+            if(state.getBlock() == BlockInit.cropFlowerBlack)
+            {
+                return new ItemStack(ItemInit.seedFlowerBlack);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerBlue)
+            {
+                return new ItemStack(ItemInit.seedFlowerBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerBrown)
+            {
+                return new ItemStack(ItemInit.seedFlowerBrown);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerCyan)
+            {
+                return new ItemStack(ItemInit.seedFlowerCyan);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerGray)
+            {
+                return new ItemStack(ItemInit.seedFlowerGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerGreen)
+            {
+                return new ItemStack(ItemInit.seedFlowerGreen);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLightBlue)
+            {
+                return new ItemStack(ItemInit.seedFlowerLightBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLightGray)
+            {
+                return new ItemStack(ItemInit.seedFlowerLightGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerLime)
+            {
+                return new ItemStack(ItemInit.seedFlowerLime);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerMagenta)
+            {
+                return new ItemStack(ItemInit.seedFlowerMagenta);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerOrange)
+            {
+                return new ItemStack(ItemInit.seedFlowerOrange);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerPink)
+            {
+                return new ItemStack(ItemInit.seedFlowerPink);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerPurple)
+            {
+                return new ItemStack(ItemInit.seedFlowerPurple);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerRed)
+            {
+                return new ItemStack(ItemInit.seedFlowerRed);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerWhite)
+            {
+                return new ItemStack(ItemInit.seedFlowerWhite);
+            }
+
+            if(state.getBlock() == BlockInit.cropFlowerYellow)
+            {
+                return new ItemStack(ItemInit.seedFlowerYellow);
+            }
+        }
+
+        return new ItemStack(Blocks.AIR);
     }
 
     @Override

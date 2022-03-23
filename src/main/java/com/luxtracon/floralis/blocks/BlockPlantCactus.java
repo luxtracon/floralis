@@ -12,6 +12,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
@@ -256,5 +257,12 @@ public class BlockPlantCactus extends Block implements IPlantable, IShearable
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         return Collections.singletonList(new ItemStack(this));
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public PathNodeType getAiPathNodeType(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return PathNodeType.DAMAGE_CACTUS;
     }
 }

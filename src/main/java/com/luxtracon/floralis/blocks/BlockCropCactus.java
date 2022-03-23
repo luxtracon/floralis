@@ -12,14 +12,15 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.IShearable;
 
 import java.util.Collections;
@@ -45,16 +46,17 @@ public class BlockCropCactus extends BlockCrops implements IShearable
         return (world.getLight(pos) >= 8 || world.canSeeSky(pos)) && world.getBlockState(pos.down()).getBlock() == Blocks.SAND;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
+    public boolean canSilkHarvest()
     {
         return true;
     }
 
     @Override
-    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
     {
-        return 300;
+        return true;
     }
 
     @Override
@@ -89,82 +91,82 @@ public class BlockCropCactus extends BlockCrops implements IShearable
     {
         if(getAge(state) < getMaxAge())
         {
-            if(state.getBlock() == BlockInit.cropCactusBlack && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusBlack)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusBlack));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusBlue && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusBlue)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusBlue));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusBrown && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusBrown)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusBrown));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusCyan && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusCyan)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusCyan));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusGray && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusGray)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusGray));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusGreen && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusGreen)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusGreen));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusLightBlue && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusLightBlue)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusLightBlue));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusLightGray && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusLightGray)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusLightGray));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusLime && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusLime)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusLime));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusMagenta && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusMagenta)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusMagenta));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusOrange && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusOrange)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusOrange));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusPink && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusPink)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusPink));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusPurple && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusPurple)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusPurple));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusRed && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusRed)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusRed));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusWhite && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusWhite)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusWhite));
             }
 
-            if(state.getBlock() == BlockInit.cropCactusYellow && getAge(state) < getMaxAge())
+            if(state.getBlock() == BlockInit.cropCactusYellow)
             {
                 drops.add(new ItemStack(ItemInit.seedCactusYellow));
             }
@@ -391,6 +393,178 @@ public class BlockCropCactus extends BlockCrops implements IShearable
     }
 
     @Override
+    public ItemStack getSilkTouchDrop(IBlockState state)
+    {
+        if(getAge(state) == getMaxAge())
+        {
+            if(state.getBlock() == BlockInit.cropCactusBlack)
+            {
+                return new ItemStack(BlockInit.cactusBlack);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusBlue)
+            {
+                return new ItemStack(BlockInit.cactusBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusBrown)
+            {
+                return new ItemStack(BlockInit.cactusBrown);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusCyan)
+            {
+                return new ItemStack(BlockInit.cactusCyan);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusGray)
+            {
+                return new ItemStack(BlockInit.cactusGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusGreen)
+            {
+                return new ItemStack(BlockInit.cactusGreen);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLightBlue)
+            {
+                return new ItemStack(BlockInit.cactusLightBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLightGray)
+            {
+                return new ItemStack(BlockInit.cactusLightGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLime)
+            {
+                return new ItemStack(BlockInit.cactusLime);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusMagenta)
+            {
+                return new ItemStack(BlockInit.cactusMagenta);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusOrange)
+            {
+                return new ItemStack(BlockInit.cactusOrange);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusPink)
+            {
+                return new ItemStack(BlockInit.cactusPink);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusPurple)
+            {
+                return new ItemStack(BlockInit.cactusPurple);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusRed)
+            {
+                return new ItemStack(BlockInit.cactusRed);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusWhite)
+            {
+                return new ItemStack(BlockInit.cactusWhite);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusYellow)
+            {
+                return new ItemStack(BlockInit.cactusYellow);
+            }
+        }
+
+        else
+        {
+            if(state.getBlock() == BlockInit.cropCactusBlack)
+            {
+                return new ItemStack(ItemInit.seedCactusBlack);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusBlue)
+            {
+                return new ItemStack(ItemInit.seedCactusBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusBrown)
+            {
+                return new ItemStack(ItemInit.seedCactusBrown);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusCyan)
+            {
+                return new ItemStack(ItemInit.seedCactusCyan);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusGray)
+            {
+                return new ItemStack(ItemInit.seedCactusGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusGreen)
+            {
+                return new ItemStack(ItemInit.seedCactusGreen);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLightBlue)
+            {
+                return new ItemStack(ItemInit.seedCactusLightBlue);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLightGray)
+            {
+                return new ItemStack(ItemInit.seedCactusLightGray);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusLime)
+            {
+                return new ItemStack(ItemInit.seedCactusLime);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusMagenta)
+            {
+                return new ItemStack(ItemInit.seedCactusMagenta);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusOrange)
+            {
+                return new ItemStack(ItemInit.seedCactusOrange);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusPink)
+            {
+                return new ItemStack(ItemInit.seedCactusPink);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusPurple)
+            {
+                return new ItemStack(ItemInit.seedCactusPurple);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusRed)
+            {
+                return new ItemStack(ItemInit.seedCactusRed);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusWhite)
+            {
+                return new ItemStack(ItemInit.seedCactusWhite);
+            }
+
+            if(state.getBlock() == BlockInit.cropCactusYellow)
+            {
+                return new ItemStack(ItemInit.seedCactusYellow);
+            }
+        }
+
+        return new ItemStack(Blocks.AIR);
+    }
+
+    @Override
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         IBlockState state = world.getBlockState(pos);
@@ -562,6 +736,13 @@ public class BlockCropCactus extends BlockCrops implements IShearable
         }
 
         return Collections.singletonList(new ItemStack(Blocks.AIR));
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public PathNodeType getAiPathNodeType(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return PathNodeType.DAMAGE_CACTUS;
     }
 
     @Override
