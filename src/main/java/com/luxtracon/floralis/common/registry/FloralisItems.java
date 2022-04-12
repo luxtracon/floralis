@@ -2,17 +2,22 @@ package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.client.tabs.FloralisTabs;
+
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.ItemNameBlockItem;
+
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nonnull;
 import java.util.function.Supplier;
+
+@SuppressWarnings("unused")
+@MethodsReturnNonnullByDefault
 
 public class FloralisItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Floralis.MODID);
@@ -123,7 +128,7 @@ public class FloralisItems {
 
 	public static final RegistryObject<Item> PLANT_FIBERS = register("plant_fibers", () -> new BoneMealItem(propertiesItem()));
 
-	private static @Nonnull Properties propertiesItem() {
+	private static Properties propertiesItem() {
 		return new Properties().tab(FloralisTabs.floralisTab);
 	}
 

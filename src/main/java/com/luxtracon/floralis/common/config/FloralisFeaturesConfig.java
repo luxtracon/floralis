@@ -1,8 +1,11 @@
 package com.luxtracon.floralis.common.config;
 
-import com.luxtracon.floralis.Floralis;
 import net.minecraftforge.common.ForgeConfigSpec.Builder;
 import net.minecraftforge.common.ForgeConfigSpec.IntValue;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 
 public class FloralisFeaturesConfig {
 	public static IntValue RARITY_FLOWER;

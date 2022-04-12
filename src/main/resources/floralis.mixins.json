@@ -4,8 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "floralis.refmap.json",
   "mixins": [
-   "MixinFireBlock",
-   "MixinSinglePoolElement"
+   "FireBlockAccess",
+   "SingleJigsawAccess"
   ],
   "client": [
   ],

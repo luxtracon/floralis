@@ -1,22 +1,25 @@
 package com.luxtracon.floralis.common.world.structure;
 
 import com.google.common.collect.ImmutableList;
+
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.config.FloralisStructuresConfig;
-import com.luxtracon.floralis.mixin.MixinSinglePoolElement;
+import com.luxtracon.floralis.mixin.SingleJigsawAccess;
+
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Lifecycle;
+
 import it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+
 import net.minecraft.core.WritableRegistry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.*;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.levelgen.feature.structures.StructurePoolElement;
-import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
-import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool.Projection;
+import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
+import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -68,7 +71,7 @@ public class FloralisStructures {
 			structurePoolElementMap.computeInt(structurePoolElement, (StructurePoolElement p, Integer i) -> (i == null ? 0 : i) + 1);
 		}
 
-		structurePoolElementMap.put(MixinSinglePoolElement.construct(Either.left(structure), () -> ProcessorLists.EMPTY, Projection.RIGID), WEIGHT);
+		structurePoolElementMap.put(SingleJigsawAccess.construct(Either.left(structure), ProcessorLists.EMPTY, StructureTemplatePool.Projection.RIGID), WEIGHT);
 		List<Pair<StructurePoolElement, Integer>> newStructure = structurePoolElementMap.object2IntEntrySet().stream().map(e -> Pair.of(e.getKey(), e.getIntValue())).collect(Collectors.toList());
 
 		ResourceLocation resourceLocation = structureTemplatePool.getName();

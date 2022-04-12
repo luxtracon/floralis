@@ -2,6 +2,7 @@ package com.luxtracon.floralis.client.proxy;
 
 import com.luxtracon.floralis.common.proxy.CommonProxy;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.renderer.BiomeColors;

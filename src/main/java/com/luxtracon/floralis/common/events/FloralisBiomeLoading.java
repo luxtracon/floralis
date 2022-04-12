@@ -2,12 +2,16 @@ package com.luxtracon.floralis.common.events;
 
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.world.feature.FloralisPlacedFeatures;
+
 import net.minecraft.world.level.biome.Biome.BiomeCategory;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
+
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+@SuppressWarnings("unused")
 
 @Mod.EventBusSubscriber(modid = Floralis.MODID)
 public class FloralisBiomeLoading {

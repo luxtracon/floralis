@@ -2,6 +2,8 @@ package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.blocks.*;
+
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -11,13 +13,18 @@ import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.util.function.Supplier;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@SuppressWarnings("deprecation, unused")
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
 
 public class FloralisBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Floralis.MODID);
@@ -177,36 +184,37 @@ public class FloralisBlocks {
 	public static final RegistryObject<Block> CLOCHED_RED_CACTUS_CROP = register("cloched_red_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 	public static final RegistryObject<Block> CLOCHED_BLACK_CACTUS_CROP = register("cloched_black_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 
-	private static @Nonnull Properties propertiesDyeBlock() {
+	private static Properties propertiesDyeBlock() {
 		return Properties.of(Material.SAND).sound(SoundType.SAND).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static @Nonnull Properties propertiesFibersBlock() {
+	private static Properties propertiesFibersBlock() {
 		return Properties.of(Material.GRASS).color(MaterialColor.COLOR_GREEN).sound(SoundType.GRASS).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static @Nonnull Properties propertiesFlower() {
+	private static Properties propertiesFlower() {
 		return Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak();
 	}
 
-	private static @Nonnull Properties propertiesCactus() {
+	private static Properties propertiesCactus() {
 		return Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak().dynamicShape();
 	}
 
-	private static @Nonnull Properties propertiesPottedPlant() {
+	private static Properties propertiesPottedPlant() {
 		return Properties.of(Material.DECORATION).instabreak().noOcclusion();
 	}
 
-	private static @Nonnull Properties propertiesCrop() {
+	private static Properties propertiesCrop() {
 		return Properties.of(Material.PLANT).sound(SoundType.CROP).noCollission().instabreak().randomTicks();
 	}
 
 	private static class SpecialFlowerPotBlock extends FlowerPotBlock {
-		public SpecialFlowerPotBlock(@Nullable Supplier<FlowerPotBlock> emptyPot, Supplier<? extends Block> pContent, Properties properties) {
+		public SpecialFlowerPotBlock(Supplier<FlowerPotBlock> emptyPot, Supplier<? extends Block> pContent, Properties properties) {
 			super(emptyPot, pContent, properties);
 		}
 
-		public @SuppressWarnings("deprecation") void entityInside(@Nonnull BlockState pState, @Nonnull Level pLevel, @Nonnull BlockPos pPos, @Nonnull Entity pEntity) {
+		@Override
+		public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
 			pEntity.hurt(DamageSource.CACTUS, 1.0F);
 		}
 	}
