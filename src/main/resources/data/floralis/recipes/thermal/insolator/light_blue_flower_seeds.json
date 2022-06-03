@@ -1,0 +1,20 @@
+{
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "floralis:light_blue_flower_seeds"
+  },
+  "result": [
+    {
+      "item": "floralis:light_blue_flower_seeds",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:light_blue_petals",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "chance": 1.0
+    }
+  ]
+}

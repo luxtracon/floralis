@@ -1,0 +1,20 @@
+{
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "floralis:pink_cactus_seeds"
+  },
+  "result": [
+    {
+      "item": "floralis:pink_cactus_seeds",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:pink_petals",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "chance": 1.0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "floralis:blue_cactus"
+  },
+  "result": [
+    {
+      "item": "floralis:blue_cactus",
+      "chance": 2.0
+    }
+  ]
+}

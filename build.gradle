@@ -67,14 +67,22 @@ sourceSets.main.resources {
 }
 
 repositories {
+    // JEI
     maven {
-        name 'progwml6' // JEI
+        name 'progwml6'
         url 'https://dvs1.progwml6.com/files/maven'
     }
 
+    // Immersive Engineering
     maven {
-        name 'blamejared' // Immersive Engineering
+        name 'blamejared'
         url 'https://maven.blamejared.com/'
+    }
+
+    // Thermal Series
+    maven {
+        name 'cursemaven'
+        url "https://www.cursemaven.com"
     }
 }
 
@@ -84,6 +92,13 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}")
     implementation fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:${version_minecraft}-${version_ie}")
+    implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_core}")
+    implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermal_cultivation}")
+    implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermal_expansion}")
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermal_foundation}")
+    implementation fg.deobf("curse.maven:thermal-innovation-291737:${thermal_innovation}")
+    implementation fg.deobf("curse.maven:thermal-integration-626708:${thermal_integration}")
+    implementation fg.deobf("curse.maven:thermal-locomotion-406959:${thermal_locomotion}")
 }
 
 mixin {
