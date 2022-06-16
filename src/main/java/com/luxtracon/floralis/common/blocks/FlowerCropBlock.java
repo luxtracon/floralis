@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Ravager;
 import net.minecraft.world.level.BlockGetter;
@@ -24,8 +25,6 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.event.ForgeEventFactory;
-
-import java.util.Random;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -50,7 +49,7 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	@Override
-	public boolean isBonemealSuccess(Level pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
+	public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
 		return this.isNotMaxAge(pState);
 	}
 
@@ -147,12 +146,12 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	@Override
-	public void performBonemeal(ServerLevel pLevel, Random pRandom, BlockPos pPos, BlockState pState) {
+	public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
 		this.growCrops(pLevel, pPos, pState);
 	}
 
 	@Override
-	public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+	public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
 		if (!pLevel.isAreaLoaded(pPos, 1)) {
 			return;
 		}

@@ -18,6 +18,7 @@ import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.*;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 
@@ -61,7 +62,7 @@ public class FloralisStructures {
 
 		List<StructurePoolElement> structurePoolElementList;
 		if (structureTemplatePool != null) {
-			structurePoolElementList = structureTemplatePool.getShuffledTemplates(new Random(0));
+			structurePoolElementList = structureTemplatePool.getShuffledTemplates(RandomSource.create(0));
 		} else {
 			structurePoolElementList = ImmutableList.of();
 		}

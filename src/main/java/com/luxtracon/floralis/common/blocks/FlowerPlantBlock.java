@@ -43,11 +43,6 @@ public class FlowerPlantBlock extends Block {
 	}
 
 	@Override
-	public OffsetType getOffsetType() {
-		return OffsetType.XZ;
-	}
-
-	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
 		Vec3 vec3 = pState.getOffset(pLevel, pPos);
 		return SHAPE.move(vec3.x, vec3.y, vec3.z);

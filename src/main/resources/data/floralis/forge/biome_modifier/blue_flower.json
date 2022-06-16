@@ -1,0 +1,5 @@
+{
+  "type": "floralis:vegetal",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "floralis:blue_flower"
+}

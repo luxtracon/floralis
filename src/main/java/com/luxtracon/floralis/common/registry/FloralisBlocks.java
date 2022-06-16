@@ -9,6 +9,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -193,11 +194,11 @@ public class FloralisBlocks {
 	}
 
 	private static Properties propertiesFlower() {
-		return Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak();
+		return Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak();
 	}
 
 	private static Properties propertiesCactus() {
-		return Properties.of(Material.PLANT).sound(SoundType.GRASS).noCollission().instabreak().dynamicShape();
+		return Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak().dynamicShape();
 	}
 
 	private static Properties propertiesPottedPlant() {

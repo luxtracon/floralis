@@ -1,19 +1,19 @@
 buildscript {
     repositories {
         maven { url 'https://maven.minecraftforge.net' }
-        maven { url 'https://maven.parchmentmc.org' }
+        // maven { url 'https://maven.parchmentmc.org' }
         maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
     }
 
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+'
+        // classpath 'org.parchmentmc:librarian:1.+'
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
+// apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
 archivesBaseName = 'floralis'
@@ -23,7 +23,8 @@ version = "${version_minecraft}-${version_floralis}"
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'parchment', version: "${version_mappings}-${version_minecraft}"
+    // mappings channel: 'parchment', version: "${version_mappings}-${version_minecraft}"
+    mappings channel: 'official', version: '1.19'
 
     runs {
         client {
@@ -67,19 +68,6 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // JEI
-    maven {
-        name 'progwml6'
-        url 'https://dvs1.progwml6.com/files/maven'
-    }
-
-    // Immersive Engineering
-    maven {
-        name 'blamejared'
-        url 'https://maven.blamejared.com/'
-    }
-
-    // Thermal Series
     maven {
         name 'cursemaven'
         url "https://www.cursemaven.com"
@@ -89,16 +77,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${version_minecraft}-${version_forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    compileOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}")
-    implementation fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:${version_minecraft}-${version_ie}")
-    implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_core}")
-    implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermal_cultivation}")
-    implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermal_expansion}")
-    implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermal_foundation}")
-    implementation fg.deobf("curse.maven:thermal-innovation-291737:${thermal_innovation}")
-    implementation fg.deobf("curse.maven:thermal-integration-626708:${thermal_integration}")
-    implementation fg.deobf("curse.maven:thermal-locomotion-406959:${thermal_locomotion}")
+    implementation fg.deobf("curse.maven:jei-238222:${just_enough_items}")
 }
 
 mixin {

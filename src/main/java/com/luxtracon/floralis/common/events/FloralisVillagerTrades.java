@@ -8,6 +8,7 @@ import com.luxtracon.floralis.common.registry.FloralisItems;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerDataHolder;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -22,11 +23,11 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Random;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -53,7 +54,7 @@ public class FloralisVillagerTrades {
 		Int2ObjectMap<List<ItemListing>> trades = event.getTrades();
 		VillagerProfession profession = event.getType();
 
-		if (Objects.requireNonNull(profession.getRegistryName()).getPath().equals("farmer")) {
+		if (Objects.requireNonNull(ForgeRegistries.PROFESSIONS.getKey(profession)).getPath().equals("farmer")) {
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.WHITE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.ORANGE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.MAGENTA_PETALS.get())));
@@ -98,7 +99,7 @@ public class FloralisVillagerTrades {
 		}
 
 		@Override
-		public MerchantOffer getOffer(Entity pTrader, Random pRand) {
+		public MerchantOffer getOffer(Entity pTrader, RandomSource pRand) {
 			return new MerchantOffer(new ItemStack(Items.EMERALD, sellEmeralds), new ItemStack(this.itemStack.getItem(), sellItems), sellUses, sellXp, sellMultiplier);
 		}
 	}
@@ -111,7 +112,7 @@ public class FloralisVillagerTrades {
 		}
 
 		@Override
-		public MerchantOffer getOffer(Entity pTrader, Random pRand) {
+		public MerchantOffer getOffer(Entity pTrader, RandomSource pRand) {
 			if (pTrader instanceof VillagerDataHolder) {
 				return new MerchantOffer(new ItemStack(this.trades.get(((VillagerDataHolder)pTrader).getVillagerData().getType()), buyItems), new ItemStack(Items.EMERALD, buyEmeralds), buyUses, buyXp, buyMultiplier);
 			} else {

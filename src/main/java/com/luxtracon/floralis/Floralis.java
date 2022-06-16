@@ -2,13 +2,14 @@ package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.client.proxy.ClientProxy;
 import com.luxtracon.floralis.common.config.FloralisConfig;
-import com.luxtracon.floralis.common.events.FloralisBiomeLoading;
 import com.luxtracon.floralis.common.proxy.CommonProxy;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 import com.luxtracon.floralis.common.registry.FloralisCompostables;
 import com.luxtracon.floralis.common.registry.FloralisFlammables;
 import com.luxtracon.floralis.common.registry.FloralisPottables;
+import com.luxtracon.floralis.common.world.feature.FloralisPlacedFeatures;
+import com.luxtracon.floralis.common.world.modifier.FloralisBiomeModifiers;
 import com.luxtracon.floralis.common.world.structure.FloralisStructures;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -29,19 +30,21 @@ public class Floralis {
 	public static final String MODID = "floralis";
 
 	public Floralis() {
-		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		bus.addListener(this::onCommonSetupEvent);
+		bus.addListener(this::loadComplete);
 
 		FloralisConfig.register();
 		FloralisStructures.register();
 
-		eventBus.addListener(this::onCommonSetupEvent);
-		eventBus.addListener(this::loadComplete);
+		FloralisBiomeModifiers.register(bus);
+		FloralisPlacedFeatures.register(bus);
 
-		FloralisBlocks.BLOCKS.register(eventBus);
-		FloralisItems.ITEMS.register(eventBus);
+		FloralisBlocks.BLOCKS.register(bus);
+		FloralisItems.ITEMS.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(Floralis.class);
-		MinecraftForge.EVENT_BUS.register(FloralisBiomeLoading.class);
 	}
 
 	public void onCommonSetupEvent(FMLCommonSetupEvent event) {
