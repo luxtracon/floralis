@@ -7,7 +7,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.ItemNameBlockItem;
 
 import net.minecraftforge.registries.DeferredRegister;
@@ -128,8 +127,8 @@ public class FloralisItems {
 
 	public static final RegistryObject<Item> PLANT_FIBERS = register("plant_fibers", () -> new BoneMealItem(propertiesItem()));
 
-	private static Properties propertiesItem() {
-		return new Properties().tab(FloralisTabs.floralisTab);
+	private static Item.Properties propertiesItem() {
+		return new Item.Properties().tab(FloralisTabs.floralisTab);
 	}
 
 	private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {

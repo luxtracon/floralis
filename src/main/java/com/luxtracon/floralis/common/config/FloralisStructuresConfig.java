@@ -1,18 +1,17 @@
 package com.luxtracon.floralis.common.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 
 public class FloralisStructuresConfig {
-	public static BooleanValue PLAINS_FIELD;
-	public static BooleanValue SNOWY_FIELD;
-	public static BooleanValue SAVANNA_FIELD;
-	public static BooleanValue DESERT_FIELD;
-	public static BooleanValue TAIGA_FIELD;
+	public static ForgeConfigSpec.BooleanValue PLAINS_FIELD;
+	public static ForgeConfigSpec.BooleanValue SNOWY_FIELD;
+	public static ForgeConfigSpec.BooleanValue SAVANNA_FIELD;
+	public static ForgeConfigSpec.BooleanValue DESERT_FIELD;
+	public static ForgeConfigSpec.BooleanValue TAIGA_FIELD;
 
 	public static void registerCommonConfig(ForgeConfigSpec.Builder COMMON_BUILDER) {
 		COMMON_BUILDER.comment("Structure settings").push("structureSettings");

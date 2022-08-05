@@ -10,7 +10,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -185,28 +184,28 @@ public class FloralisBlocks {
 	public static final RegistryObject<Block> CLOCHED_RED_CACTUS_CROP = register("cloched_red_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 	public static final RegistryObject<Block> CLOCHED_BLACK_CACTUS_CROP = register("cloched_black_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 
-	private static Properties propertiesDyeBlock() {
-		return Properties.of(Material.SAND).sound(SoundType.SAND).explosionResistance(0.5F).strength(0.5F);
+	private static BlockBehaviour.Properties propertiesDyeBlock() {
+		return BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static Properties propertiesFibersBlock() {
-		return Properties.of(Material.GRASS).color(MaterialColor.COLOR_GREEN).sound(SoundType.GRASS).explosionResistance(0.5F).strength(0.5F);
+	private static BlockBehaviour.Properties propertiesFibersBlock() {
+		return BlockBehaviour.Properties.of(Material.GRASS).color(MaterialColor.COLOR_GREEN).sound(SoundType.GRASS).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static Properties propertiesFlower() {
-		return Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak();
+	private static BlockBehaviour.Properties propertiesFlower() {
+		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak();
 	}
 
-	private static Properties propertiesCactus() {
-		return Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak().dynamicShape();
+	private static BlockBehaviour.Properties propertiesCactus() {
+		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak().dynamicShape();
 	}
 
-	private static Properties propertiesPottedPlant() {
-		return Properties.of(Material.DECORATION).instabreak().noOcclusion();
+	private static BlockBehaviour.Properties propertiesPottedPlant() {
+		return BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion();
 	}
 
-	private static Properties propertiesCrop() {
-		return Properties.of(Material.PLANT).sound(SoundType.CROP).noCollission().instabreak().randomTicks();
+	private static BlockBehaviour.Properties propertiesCrop() {
+		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.CROP).noCollission().instabreak().randomTicks();
 	}
 
 	private static class SpecialFlowerPotBlock extends FlowerPotBlock {

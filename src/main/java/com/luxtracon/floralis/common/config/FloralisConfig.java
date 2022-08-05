@@ -1,18 +1,21 @@
 package com.luxtracon.floralis.common.config;
 
-import net.minecraftforge.common.ForgeConfigSpec.Builder;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig.Type;
+import net.minecraftforge.fml.config.ModConfig;
 
 public class FloralisConfig {
+	public static ForgeConfigSpec SPEC;
+
 	public static void register() {
 		registerCommonConfigs();
 	}
 
 	private static void registerCommonConfigs() {
-		Builder COMMON_BUILDER = new Builder();
+		ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 		FloralisFeaturesConfig.registerCommonConfig(COMMON_BUILDER);
 		FloralisStructuresConfig.registerCommonConfig(COMMON_BUILDER);
-		ModLoadingContext.get().registerConfig(Type.COMMON, COMMON_BUILDER.build());
+		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, COMMON_BUILDER.build());
+		SPEC = COMMON_BUILDER.build();
 	}
 }

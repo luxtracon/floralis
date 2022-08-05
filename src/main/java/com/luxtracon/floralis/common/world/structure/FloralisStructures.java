@@ -3,6 +3,7 @@ package com.luxtracon.floralis.common.world.structure;
 import com.google.common.collect.ImmutableList;
 
 import com.luxtracon.floralis.Floralis;
+import com.luxtracon.floralis.common.config.FloralisConfig;
 import com.luxtracon.floralis.common.config.FloralisStructuresConfig;
 import com.luxtracon.floralis.mixin.SingleJigsawAccess;
 
@@ -35,23 +36,23 @@ public class FloralisStructures {
 		DesertVillagePools.bootstrap();
 		TaigaVillagePools.bootstrap();
 
-		if(FloralisStructuresConfig.PLAINS_FIELD.get()) {
+		if(FloralisConfig.SPEC.isLoaded() ? FloralisStructuresConfig.PLAINS_FIELD.get() : FloralisStructuresConfig.PLAINS_FIELD.getDefault()) {
 			addStructureToPool(new ResourceLocation("village/plains/houses"), new ResourceLocation(Floralis.MODID, "village/houses/plains_field"));
 		}
 
-		if(FloralisStructuresConfig.SNOWY_FIELD.get()) {
+		if(FloralisConfig.SPEC.isLoaded() ? FloralisStructuresConfig.SNOWY_FIELD.get() : FloralisStructuresConfig.SNOWY_FIELD.getDefault()) {
 			addStructureToPool(new ResourceLocation("village/snowy/houses"), new ResourceLocation(Floralis.MODID, "village/houses/snowy_field"));
 		}
 
-		if(FloralisStructuresConfig.SAVANNA_FIELD.get()) {
+		if(FloralisConfig.SPEC.isLoaded() ? FloralisStructuresConfig.SAVANNA_FIELD.get() : FloralisStructuresConfig.SAVANNA_FIELD.getDefault()) {
 			addStructureToPool(new ResourceLocation("village/savanna/houses"), new ResourceLocation(Floralis.MODID, "village/houses/savanna_field"));
 		}
 
-		if(FloralisStructuresConfig.DESERT_FIELD.get()) {
+		if(FloralisConfig.SPEC.isLoaded() ? FloralisStructuresConfig.DESERT_FIELD.get() : FloralisStructuresConfig.DESERT_FIELD.getDefault()) {
 			addStructureToPool(new ResourceLocation("village/desert/houses"), new ResourceLocation(Floralis.MODID, "village/houses/desert_field"));
 		}
 
-		if(FloralisStructuresConfig.TAIGA_FIELD.get()) {
+		if(FloralisConfig.SPEC.isLoaded() ? FloralisStructuresConfig.TAIGA_FIELD.get() : FloralisStructuresConfig.TAIGA_FIELD.getDefault()) {
 			addStructureToPool(new ResourceLocation("village/taiga/houses"), new ResourceLocation(Floralis.MODID, "village/houses/taiga_field"));
 		}
 	}

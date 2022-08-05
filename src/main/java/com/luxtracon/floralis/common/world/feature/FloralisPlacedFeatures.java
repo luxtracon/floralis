@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.common.world.feature;
 
 import com.luxtracon.floralis.Floralis;
+import com.luxtracon.floralis.common.config.FloralisConfig;
 import com.luxtracon.floralis.common.config.FloralisFeaturesConfig;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -20,8 +21,8 @@ import java.util.List;
 @MethodsReturnNonnullByDefault
 
 public class FloralisPlacedFeatures {
-	private static final int RARITY_FLOWER = FloralisFeaturesConfig.RARITY_FLOWER.get();
-	private static final int RARITY_CACTUS = FloralisFeaturesConfig.RARITY_CACTUS.get();
+	private static final int RARITY_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_FLOWER.get() : FloralisFeaturesConfig.RARITY_FLOWER.getDefault();
+	private static final int RARITY_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_CACTUS.get() : FloralisFeaturesConfig.RARITY_CACTUS.getDefault();
 
 	public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Floralis.MODID);
 

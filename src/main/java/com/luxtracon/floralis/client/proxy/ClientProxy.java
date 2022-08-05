@@ -10,6 +10,8 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.GrassColor;
 
+@SuppressWarnings("deprecation")
+
 public class ClientProxy extends CommonProxy {
 	public ClientProxy() {
 

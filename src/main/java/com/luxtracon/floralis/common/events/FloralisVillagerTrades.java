@@ -13,7 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerDataHolder;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +21,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
@@ -35,7 +34,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 
-@EventBusSubscriber(modid = Floralis.MODID)
+@Mod.EventBusSubscriber(modid = Floralis.MODID)
 public class FloralisVillagerTrades {
 	private static final int sellEmeralds = 1;
 	private static final int sellItems = 16;
@@ -51,10 +50,10 @@ public class FloralisVillagerTrades {
 
 	@SubscribeEvent
 	public static void onVillagerTrades(VillagerTradesEvent event) {
-		Int2ObjectMap<List<ItemListing>> trades = event.getTrades();
+		Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 		VillagerProfession profession = event.getType();
 
-		if (Objects.requireNonNull(ForgeRegistries.PROFESSIONS.getKey(profession)).getPath().equals("farmer")) {
+		if (Objects.requireNonNull(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(profession)).getPath().equals("farmer")) {
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.WHITE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.ORANGE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.MAGENTA_PETALS.get())));
@@ -91,7 +90,7 @@ public class FloralisVillagerTrades {
 		}
 	}
 
-	private static class ItemsForEmeralds implements ItemListing {
+	private static class ItemsForEmeralds implements VillagerTrades.ItemListing {
 		private final ItemStack itemStack;
 
 		public ItemsForEmeralds(ItemStack pItemStack) {
