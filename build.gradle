@@ -77,6 +77,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${version_minecraft}-${version_forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering}")
     implementation fg.deobf("curse.maven:jei-238222:${just_enough_items}")
 }
 
