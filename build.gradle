@@ -89,6 +89,7 @@ dependencies {
     implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
     implementation fg.deobf("curse.maven:industrial-foregoing-266515:${industrialforegoing}")
     implementation fg.deobf("curse.maven:jei-238222:${jei}")
+    implementation fg.deobf("curse.maven:mekanism-268560:${mekanism}")
     implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermalcultivation}")
     implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermalexpansion}")
     implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermalfoundation}")
