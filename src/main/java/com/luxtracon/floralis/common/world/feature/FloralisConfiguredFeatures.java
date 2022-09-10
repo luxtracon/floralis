@@ -14,10 +14,10 @@ import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConf
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
 public class FloralisConfiguredFeatures {
-	private static final int TRIES_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.TRIES_FLOWER.get() : FloralisFeaturesConfig.TRIES_FLOWER.getDefault();
-	private static final int SPREAD_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.SPREAD_FLOWER.get() : FloralisFeaturesConfig.SPREAD_FLOWER.getDefault();
-	private static final int TRIES_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.TRIES_CACTUS.get() : FloralisFeaturesConfig.TRIES_CACTUS.getDefault();
-	private static final int SPREAD_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.SPREAD_CACTUS.get() : FloralisFeaturesConfig.SPREAD_CACTUS.getDefault();
+	public static final int TRIES_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.TRIES_FLOWER.get() : FloralisFeaturesConfig.TRIES_FLOWER.getDefault();
+	public static final int SPREAD_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.SPREAD_FLOWER.get() : FloralisFeaturesConfig.SPREAD_FLOWER.getDefault();
+	public static final int TRIES_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.TRIES_CACTUS.get() : FloralisFeaturesConfig.TRIES_CACTUS.getDefault();
+	public static final int SPREAD_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.SPREAD_CACTUS.get() : FloralisFeaturesConfig.SPREAD_CACTUS.getDefault();
 
 	public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> WHITE_FLOWER = FeatureUtils.register("white_flower", Feature.FLOWER, new RandomPatchConfiguration(TRIES_FLOWER, SPREAD_FLOWER, SPREAD_FLOWER, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralisBlocks.WHITE_FLOWER.get())))));
 	public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> ORANGE_FLOWER = FeatureUtils.register("orange_flower", Feature.FLOWER, new RandomPatchConfiguration(TRIES_FLOWER, SPREAD_FLOWER, SPREAD_FLOWER, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralisBlocks.ORANGE_FLOWER.get())))));

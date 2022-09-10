@@ -14,11 +14,11 @@ import net.minecraftforge.common.world.ModifiableBiomeInfo;
 
 @MethodsReturnNonnullByDefault
 
-public record FloralisVegetalBiomeModifier(HolderSet<Biome> biomes, Holder<PlacedFeature> feature) implements BiomeModifier {
+public record FloralisVegetalBiomeModifier(HolderSet<Biome> pSet, Holder<PlacedFeature> pHolder) implements BiomeModifier {
     @Override
-    public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (phase == Phase.ADD && biomes.contains(biome)) {
-            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, feature);
+    public void modify(Holder<Biome> pHolder, Phase pPhase, ModifiableBiomeInfo.BiomeInfo.Builder pBuilder) {
+        if (pPhase == Phase.ADD && pSet.contains(pHolder)) {
+            pBuilder.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, this.pHolder);
         }
     }
 

@@ -1,15 +1,13 @@
 package com.luxtracon.floralis.common.registry;
 
-import com.luxtracon.floralis.mixin.FireBlockAccess;
+import com.luxtracon.floralis.mixin.FireBlockMixin;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FireBlock;
 
 public class FloralisFlammables {
-	public static void flammableBlock(Block block, int flameOdds, int burnOdds) {
-		FireBlock fireBlock = (FireBlock) Blocks.FIRE;
-		((FireBlockAccess) fireBlock).mixinFlammable(block, flameOdds, burnOdds);
+	public static void flammableBlock(Block pBlock, int flameOdds, int burnOdds) {
+		((FireBlockMixin) Blocks.FIRE).mixinFlammable(pBlock, flameOdds, burnOdds);
 	}
 
 	public static void setup() {
