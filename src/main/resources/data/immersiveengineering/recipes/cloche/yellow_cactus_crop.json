@@ -21,7 +21,7 @@
     "item": "floralis:yellow_cactus_seeds"
   },
   "soil": {
-    "tag": "forge:sand"
+    "item": "minecraft:sand"
   },
   "render": {
     "type": "crop",
