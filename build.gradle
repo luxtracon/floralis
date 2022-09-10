@@ -78,6 +78,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("curse.maven:jei-238222:${jei}")
+    implementation fg.deobf("curse.maven:mekanism-268560:${mekanism}")
 }
 
 mixin {
