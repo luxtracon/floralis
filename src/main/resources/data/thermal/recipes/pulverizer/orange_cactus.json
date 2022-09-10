@@ -1,0 +1,20 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "floralis:orange_cactus"
+  },
+  "result": [
+    {
+      "item": "floralis:orange_cactus_seeds",
+      "chance": 2.0
+    },
+    {
+      "item": "floralis:orange_petals",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "chance": 1.0
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "floralis:black_cactus"
+  },
+  "result": [
+    {
+      "item": "floralis:black_cactus_seeds",
+      "chance": 2.0
+    },
+    {
+      "item": "floralis:black_petals",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "chance": 1.0
+    }
+  ]
+}
