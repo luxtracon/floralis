@@ -1,0 +1,23 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "floralis:gray_cactus"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:gray_cactus_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:gray_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

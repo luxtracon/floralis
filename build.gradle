@@ -83,6 +83,8 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("curse.maven:create-328085:${create}")
+    implementation fg.deobf("curse.maven:flywheel-486392:${flywheel}")
     implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
     implementation fg.deobf("curse.maven:jei-238222:${jei}")
 }

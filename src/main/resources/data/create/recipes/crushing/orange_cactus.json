@@ -1,0 +1,23 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "floralis:orange_cactus"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:orange_cactus_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:orange_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}
