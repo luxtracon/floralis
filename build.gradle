@@ -1,8 +1,16 @@
 buildscript {
     repositories {
-        maven { url 'https://maven.minecraftforge.net' }
-        maven { url 'https://maven.parchmentmc.org' }
-        maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven {
+            url 'https://maven.minecraftforge.net'
+        }
+
+        maven {
+            url 'https://maven.parchmentmc.org'
+        }
+
+        maven {
+            url 'https://repo.spongepowered.org/repository/maven-public/'
+        }
     }
 
     dependencies {
@@ -18,12 +26,12 @@ apply plugin: 'org.spongepowered.mixin'
 
 archivesBaseName = 'floralis'
 group = 'com.luxtracon.floralis'
-version = "${version_minecraft}-${version_floralis}"
+version = "${minecraft}-${floralis}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'parchment', version: "${version_mappings}-${version_minecraft}"
+    mappings channel: 'parchment', version: "${parchment}-${minecraft}"
 
     runs {
         client {
@@ -68,22 +76,15 @@ sourceSets.main.resources {
 
 repositories {
     maven {
-        name 'progwml6' // JEI
-        url 'https://dvs1.progwml6.com/files/maven'
-    }
-
-    maven {
-        name 'blamejared' // Immersive Engineering
-        url 'https://maven.blamejared.com/'
+        url "https://www.cursemaven.com"
     }
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${version_minecraft}-${version_forge}"
+    minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    compileOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${version_minecraft}:${version_jei}")
-    implementation fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:${version_minecraft}-${version_ie}")
+    implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
+    implementation fg.deobf("curse.maven:jei-238222:${jei}")
 }
 
 mixin {
@@ -96,7 +97,7 @@ jar {
         attributes([
                 "Specification-Title"     : "floralis",
                 "Specification-Vendor"    : "luxtracon",
-                "Specification-Version"   : "${version_minecraft}-${version_floralis}",
+                "Specification-Version"   : "${minecraft}-${floralis}",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.version,
                 "Implementation-Vendor"   : "luxtracon",

@@ -9,8 +9,8 @@ import net.minecraft.world.level.levelgen.placement.*;
 @MethodsReturnNonnullByDefault
 
 public class FloralisPlacedFeatures {
-	private static final int RARITY_FLOWER = FloralisFeaturesConfig.RARITY_FLOWER.get();
-	private static final int RARITY_CACTUS = FloralisFeaturesConfig.RARITY_CACTUS.get();
+	public static final int RARITY_FLOWER = FloralisFeaturesConfig.RARITY_FLOWER.get();
+	public static final int RARITY_CACTUS = FloralisFeaturesConfig.RARITY_CACTUS.get();
 
 	public static final PlacedFeature WHITE_FLOWER = PlacementUtils.register("white_flower", FloralisConfiguredFeatures.WHITE_FLOWER.placed(rarityFlower(), inSquarePlacement(), placementModifier(), biomeFilter()));
 	public static final PlacedFeature ORANGE_FLOWER = PlacementUtils.register("orange_flower", FloralisConfiguredFeatures.ORANGE_FLOWER.placed(rarityFlower(), inSquarePlacement(), placementModifier(), biomeFilter()));
@@ -46,23 +46,23 @@ public class FloralisPlacedFeatures {
 	public static final PlacedFeature RED_CACTUS = PlacementUtils.register("red_cactus", FloralisConfiguredFeatures.RED_CACTUS.placed(rarityCactus(), inSquarePlacement(), placementModifier(), biomeFilter()));
 	public static final PlacedFeature BLACK_CACTUS = PlacementUtils.register("black_cactus", FloralisConfiguredFeatures.BLACK_CACTUS.placed(rarityCactus(), inSquarePlacement(), placementModifier(), biomeFilter()));
 
-	private static RarityFilter rarityFlower() {
+	public static RarityFilter rarityFlower() {
 		return RarityFilter.onAverageOnceEvery(RARITY_FLOWER);
 	}
 
-	private static RarityFilter rarityCactus() {
+	public static RarityFilter rarityCactus() {
 		return RarityFilter.onAverageOnceEvery(RARITY_CACTUS);
 	}
 
-	private static InSquarePlacement inSquarePlacement() {
+	public static InSquarePlacement inSquarePlacement() {
 		return InSquarePlacement.spread();
 	}
 
-	private static PlacementModifier placementModifier() {
+	public static PlacementModifier placementModifier() {
 		return PlacementUtils.HEIGHTMAP;
 	}
 
-	private static BiomeFilter biomeFilter() {
+	public static BiomeFilter biomeFilter() {
 		return BiomeFilter.biome();
 	}
 }

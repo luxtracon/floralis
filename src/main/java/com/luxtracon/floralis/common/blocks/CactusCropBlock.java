@@ -37,13 +37,13 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-	private static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(7.0D, 0.0D, 7.0D, 9.0D, 2.0D, 9.0D), Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D)};
-	private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
-	private static final int MAX_AGE = 5;
 public class CactusCropBlock extends CropBlock implements BonemealableBlock, IPlantable {
+	public static final int MAX_AGE = 5;
+	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
+	public static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(7.0D, 0.0D, 7.0D, 9.0D, 2.0D, 9.0D), Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D)};
 
-	public CactusCropBlock(Properties properties) {
-		super(properties);
+	public CactusCropBlock(Properties pProperties) {
+		super(pProperties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(this.getAgeProperty(), 0));
 	}
 

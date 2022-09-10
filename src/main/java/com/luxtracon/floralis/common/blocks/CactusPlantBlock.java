@@ -27,10 +27,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class CactusPlantBlock extends Block {
-	private static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
+	public static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
 
-	public CactusPlantBlock(Properties properties) {
-		super(properties);
+	public CactusPlantBlock(Properties pProperties) {
+		super(pProperties);
 	}
 
 	@Override

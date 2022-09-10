@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 
 import com.luxtracon.floralis.Floralis;
 import com.luxtracon.floralis.common.config.FloralisStructuresConfig;
-import com.luxtracon.floralis.mixin.MixinSinglePoolElement;
+import com.luxtracon.floralis.mixin.SinglePoolElementMixin;
 
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Pair;
@@ -20,13 +20,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.structures.StructurePoolElement;
 import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
-import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool.Projection;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class FloralisStructures {
-	private static final int WEIGHT = 4;
+	public static final int WEIGHT = 4;
 
 	public static void register() {
 		PlainVillagePools.bootstrap();
@@ -56,10 +55,8 @@ public class FloralisStructures {
 		}
 	}
 
-	private static void addStructureToPool(ResourceLocation pool, ResourceLocation structure) {
+	public static void addStructureToPool(ResourceLocation pool, ResourceLocation structure) {
 		StructureTemplatePool structureTemplatePool = BuiltinRegistries.TEMPLATE_POOL.get(pool);
-		int id = BuiltinRegistries.TEMPLATE_POOL.getId(structureTemplatePool);
-
 		List<StructurePoolElement> structurePoolElementList;
 		if (structureTemplatePool != null) {
 			structurePoolElementList = structureTemplatePool.getShuffledTemplates(new Random(0));
@@ -69,13 +66,11 @@ public class FloralisStructures {
 
 		Object2IntMap<StructurePoolElement> structurePoolElementMap = new Object2IntLinkedOpenHashMap<>();
 		for(StructurePoolElement structurePoolElement : structurePoolElementList) {
-			structurePoolElementMap.computeInt(structurePoolElement, (StructurePoolElement p, Integer i) -> (i == null ? 0 : i) + 1);
+			structurePoolElementMap.computeInt(structurePoolElement, (StructurePoolElement e, Integer i) -> (i == null ? 0 : i) + 1);
 		}
 
-		structurePoolElementMap.put(MixinSinglePoolElement.construct(Either.left(structure), () -> ProcessorLists.EMPTY, Projection.RIGID), WEIGHT);
-		List<Pair<StructurePoolElement, Integer>> newStructure = structurePoolElementMap.object2IntEntrySet().stream().map(e -> Pair.of(e.getKey(), e.getIntValue())).collect(Collectors.toList());
-
+		structurePoolElementMap.put(SinglePoolElementMixin.construct(Either.left(structure), () -> ProcessorLists.EMPTY, StructureTemplatePool.Projection.RIGID), WEIGHT);
 		ResourceLocation resourceLocation = structureTemplatePool.getName();
-		((WritableRegistry<StructureTemplatePool>)BuiltinRegistries.TEMPLATE_POOL).registerOrOverride(OptionalInt.of(id), ResourceKey.create(BuiltinRegistries.TEMPLATE_POOL.key(), resourceLocation), new StructureTemplatePool(pool, resourceLocation, newStructure), Lifecycle.stable());
+		((WritableRegistry<StructureTemplatePool>)BuiltinRegistries.TEMPLATE_POOL).registerOrOverride(OptionalInt.of(BuiltinRegistries.TEMPLATE_POOL.getId(structureTemplatePool)), ResourceKey.create(BuiltinRegistries.TEMPLATE_POOL.key(), resourceLocation), new StructureTemplatePool(pool, resourceLocation, structurePoolElementMap.object2IntEntrySet().stream().map(e -> Pair.of(e.getKey(), e.getIntValue())).collect(Collectors.toList())), Lifecycle.stable());
 	}
 }
