@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:lime_petals"
+    },
+    {
+      "item": "floralis:lime_cactus_seeds"
+    }
+  ],
+  "input": {
+    "item": "floralis:lime_cactus_seeds"
+  },
+  "soil": {
+    "item": "minecraft:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_lime_cactus_crop"
+  },
+  "time": 600
+}

@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:magenta_petals"
+    },
+    {
+      "item": "floralis:magenta_cactus_seeds"
+    }
+  ],
+  "input": {
+    "item": "floralis:magenta_cactus_seeds"
+  },
+  "soil": {
+    "item": "minecraft:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_magenta_cactus_crop"
+  },
+  "time": 600
+}
