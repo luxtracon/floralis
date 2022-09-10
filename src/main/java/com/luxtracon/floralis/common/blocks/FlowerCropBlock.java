@@ -14,6 +14,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -33,10 +34,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-public class FlowerCropBlock extends Block implements BonemealableBlock, IPlantable {
 	private static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(5.25D, -1.0D, 5.25D, 10.75D, 1.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 3.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 5.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 7.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 9.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 11.0D, 10.75D)};
 	private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 	private static final int MAX_AGE = 5;
+public class FlowerCropBlock extends CropBlock implements BonemealableBlock, IPlantable {
 
 	public FlowerCropBlock(Properties properties) {
 		super(properties);
@@ -113,14 +114,17 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 		return floatFirst;
 	}
 
+	@Override
 	public int getAge(BlockState pState) {
 		return pState.getValue(this.getAgeProperty());
 	}
 
+	@Override
 	public int getBonemealAgeIncrease(Level pLevel) {
 		return Mth.nextInt(pLevel.random, 1, 3);
 	}
 
+	@Override
 	public int getMaxAge() {
 		return MAX_AGE;
 	}
@@ -137,6 +141,7 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 		}
 	}
 
+	@Override
 	public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
 		int i = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
 		if (i > this.getMaxAge()) {
@@ -168,10 +173,11 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	@Override
-	public BlockState getPlant(BlockGetter world, BlockPos pos) {
-		return world.getBlockState(pos);
+	public BlockState getPlant(BlockGetter pLevel, BlockPos pPos) {
+		return defaultBlockState();
 	}
 
+	@Override
 	public BlockState getStateForAge(int pAge) {
 		return this.defaultBlockState().setValue(this.getAgeProperty(), pAge);
 	}
@@ -181,12 +187,13 @@ public class FlowerCropBlock extends Block implements BonemealableBlock, IPlanta
 		return !pState.canSurvive(pLevel, pCurrentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);
 	}
 
+	@Override
 	public IntegerProperty getAgeProperty() {
 		return AGE;
 	}
 
 	@Override
-	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
+	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
 		return PlantType.CROP;
 	}
 
