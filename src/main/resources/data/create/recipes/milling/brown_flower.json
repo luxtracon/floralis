@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floralis:brown_flower"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:brown_flower_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:brown_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

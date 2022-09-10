@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floralis:lime_flower"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:lime_flower_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:lime_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}
