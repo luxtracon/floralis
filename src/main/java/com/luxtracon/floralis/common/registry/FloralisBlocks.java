@@ -184,33 +184,33 @@ public class FloralisBlocks {
 	public static final RegistryObject<Block> CLOCHED_RED_CACTUS_CROP = register("cloched_red_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 	public static final RegistryObject<Block> CLOCHED_BLACK_CACTUS_CROP = register("cloched_black_cactus_crop", () -> new CactusCropBlock(propertiesCrop()));
 
-	private static BlockBehaviour.Properties propertiesDyeBlock() {
+	public static BlockBehaviour.Properties propertiesDyeBlock() {
 		return BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static BlockBehaviour.Properties propertiesFibersBlock() {
+	public static BlockBehaviour.Properties propertiesFibersBlock() {
 		return BlockBehaviour.Properties.of(Material.GRASS).color(MaterialColor.COLOR_GREEN).sound(SoundType.GRASS).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	private static BlockBehaviour.Properties propertiesFlower() {
+	public static BlockBehaviour.Properties propertiesFlower() {
 		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak();
 	}
 
-	private static BlockBehaviour.Properties propertiesCactus() {
+	public static BlockBehaviour.Properties propertiesCactus() {
 		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).noCollission().instabreak().dynamicShape();
 	}
 
-	private static BlockBehaviour.Properties propertiesPottedPlant() {
+	public static BlockBehaviour.Properties propertiesPottedPlant() {
 		return BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion();
 	}
 
-	private static BlockBehaviour.Properties propertiesCrop() {
+	public static BlockBehaviour.Properties propertiesCrop() {
 		return BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.CROP).noCollission().instabreak().randomTicks();
 	}
 
-	private static class SpecialFlowerPotBlock extends FlowerPotBlock {
-		public SpecialFlowerPotBlock(Supplier<FlowerPotBlock> emptyPot, Supplier<? extends Block> pContent, Properties properties) {
-			super(emptyPot, pContent, properties);
+	public static class SpecialFlowerPotBlock extends FlowerPotBlock {
+		public SpecialFlowerPotBlock(Supplier<FlowerPotBlock> emptyPot, Supplier<? extends Block> potContent, Properties pProperties) {
+			super(emptyPot, potContent, pProperties);
 		}
 
 		@Override
@@ -219,7 +219,7 @@ public class FloralisBlocks {
 		}
 	}
 
-	private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block) {
-		return BLOCKS.register(name, block);
+	public static <T extends Block> RegistryObject<T> register(final String pString, final Supplier<? extends T> pSupplier) {
+		return BLOCKS.register(pString, pSupplier);
 	}
 }

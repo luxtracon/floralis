@@ -4,11 +4,11 @@ import com.luxtracon.floralis.common.proxy.CommonProxy;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.GrassColor;
+import net.minecraft.world.level.block.Block;
 
 @SuppressWarnings("deprecation")
 
@@ -19,211 +19,208 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void loadComplete() {
-		BlockColors blockColors = Minecraft.getInstance().getBlockColors();
+		// BLOCK COLOR
+		blockColor(FloralisBlocks.WHITE_FLOWER.get());
+		blockColor(FloralisBlocks.ORANGE_FLOWER.get());
+		blockColor(FloralisBlocks.MAGENTA_FLOWER.get());
+		blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER.get());
+		blockColor(FloralisBlocks.YELLOW_FLOWER.get());
+		blockColor(FloralisBlocks.LIME_FLOWER.get());
+		blockColor(FloralisBlocks.PINK_FLOWER.get());
+		blockColor(FloralisBlocks.GRAY_FLOWER.get());
+		blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER.get());
+		blockColor(FloralisBlocks.CYAN_FLOWER.get());
+		blockColor(FloralisBlocks.PURPLE_FLOWER.get());
+		blockColor(FloralisBlocks.BLUE_FLOWER.get());
+		blockColor(FloralisBlocks.BROWN_FLOWER.get());
+		blockColor(FloralisBlocks.GREEN_FLOWER.get());
+		blockColor(FloralisBlocks.RED_FLOWER.get());
+		blockColor(FloralisBlocks.BLACK_FLOWER.get());
+		blockColor(FloralisBlocks.WHITE_CACTUS.get());
+		blockColor(FloralisBlocks.ORANGE_CACTUS.get());
+		blockColor(FloralisBlocks.MAGENTA_CACTUS.get());
+		blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS.get());
+		blockColor(FloralisBlocks.YELLOW_CACTUS.get());
+		blockColor(FloralisBlocks.LIME_CACTUS.get());
+		blockColor(FloralisBlocks.PINK_CACTUS.get());
+		blockColor(FloralisBlocks.GRAY_CACTUS.get());
+		blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS.get());
+		blockColor(FloralisBlocks.CYAN_CACTUS.get());
+		blockColor(FloralisBlocks.PURPLE_CACTUS.get());
+		blockColor(FloralisBlocks.BLUE_CACTUS.get());
+		blockColor(FloralisBlocks.BROWN_CACTUS.get());
+		blockColor(FloralisBlocks.GREEN_CACTUS.get());
+		blockColor(FloralisBlocks.RED_CACTUS.get());
+		blockColor(FloralisBlocks.BLACK_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_WHITE_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_ORANGE_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_MAGENTA_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_YELLOW_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_LIME_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_PINK_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_GRAY_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_CYAN_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_PURPLE_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_BLUE_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_BROWN_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_GREEN_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_RED_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_BLACK_FLOWER.get());
+		blockColor(FloralisBlocks.POTTED_WHITE_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_ORANGE_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_MAGENTA_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_YELLOW_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_LIME_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_PINK_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_GRAY_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_CYAN_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_PURPLE_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_BLUE_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_BROWN_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_GREEN_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_RED_CACTUS.get());
+		blockColor(FloralisBlocks.POTTED_BLACK_CACTUS.get());
+		blockColor(FloralisBlocks.WHITE_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.ORANGE_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.MAGENTA_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.YELLOW_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.LIME_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.PINK_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.GRAY_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.CYAN_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.PURPLE_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.BLUE_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.BROWN_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.GREEN_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.RED_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.BLACK_FLOWER_CROP.get());
+		blockColor(FloralisBlocks.WHITE_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.ORANGE_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.MAGENTA_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.YELLOW_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.LIME_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.PINK_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.GRAY_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.CYAN_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.PURPLE_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.BLUE_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.BROWN_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.GREEN_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.RED_CACTUS_CROP.get());
+		blockColor(FloralisBlocks.BLACK_CACTUS_CROP.get());
 
-		blockColors.register((pState, pLevel, pPos, pTintIndex) -> pLevel != null && pPos != null ? BiomeColors.getAverageGrassColor(pLevel, pPos) : GrassColor.get(0.5, 1.0),
-			FloralisBlocks.WHITE_FLOWER.get(),
-			FloralisBlocks.ORANGE_FLOWER.get(),
-			FloralisBlocks.MAGENTA_FLOWER.get(),
-			FloralisBlocks.LIGHT_BLUE_FLOWER.get(),
-			FloralisBlocks.YELLOW_FLOWER.get(),
-			FloralisBlocks.LIME_FLOWER.get(),
-			FloralisBlocks.PINK_FLOWER.get(),
-			FloralisBlocks.GRAY_FLOWER.get(),
-			FloralisBlocks.LIGHT_GRAY_FLOWER.get(),
-			FloralisBlocks.CYAN_FLOWER.get(),
-			FloralisBlocks.PURPLE_FLOWER.get(),
-			FloralisBlocks.BLUE_FLOWER.get(),
-			FloralisBlocks.BROWN_FLOWER.get(),
-			FloralisBlocks.GREEN_FLOWER.get(),
-			FloralisBlocks.RED_FLOWER.get(),
-			FloralisBlocks.BLACK_FLOWER.get(),
+		// RENDER CUTOUT
+		renderCutout(FloralisBlocks.WHITE_FLOWER.get());
+		renderCutout(FloralisBlocks.ORANGE_FLOWER.get());
+		renderCutout(FloralisBlocks.MAGENTA_FLOWER.get());
+		renderCutout(FloralisBlocks.LIGHT_BLUE_FLOWER.get());
+		renderCutout(FloralisBlocks.YELLOW_FLOWER.get());
+		renderCutout(FloralisBlocks.LIME_FLOWER.get());
+		renderCutout(FloralisBlocks.PINK_FLOWER.get());
+		renderCutout(FloralisBlocks.GRAY_FLOWER.get());
+		renderCutout(FloralisBlocks.LIGHT_GRAY_FLOWER.get());
+		renderCutout(FloralisBlocks.CYAN_FLOWER.get());
+		renderCutout(FloralisBlocks.PURPLE_FLOWER.get());
+		renderCutout(FloralisBlocks.BLUE_FLOWER.get());
+		renderCutout(FloralisBlocks.BROWN_FLOWER.get());
+		renderCutout(FloralisBlocks.GREEN_FLOWER.get());
+		renderCutout(FloralisBlocks.RED_FLOWER.get());
+		renderCutout(FloralisBlocks.BLACK_FLOWER.get());
+		renderCutout(FloralisBlocks.WHITE_CACTUS.get());
+		renderCutout(FloralisBlocks.ORANGE_CACTUS.get());
+		renderCutout(FloralisBlocks.MAGENTA_CACTUS.get());
+		renderCutout(FloralisBlocks.LIGHT_BLUE_CACTUS.get());
+		renderCutout(FloralisBlocks.YELLOW_CACTUS.get());
+		renderCutout(FloralisBlocks.LIME_CACTUS.get());
+		renderCutout(FloralisBlocks.PINK_CACTUS.get());
+		renderCutout(FloralisBlocks.GRAY_CACTUS.get());
+		renderCutout(FloralisBlocks.LIGHT_GRAY_CACTUS.get());
+		renderCutout(FloralisBlocks.CYAN_CACTUS.get());
+		renderCutout(FloralisBlocks.PURPLE_CACTUS.get());
+		renderCutout(FloralisBlocks.BLUE_CACTUS.get());
+		renderCutout(FloralisBlocks.BROWN_CACTUS.get());
+		renderCutout(FloralisBlocks.GREEN_CACTUS.get());
+		renderCutout(FloralisBlocks.RED_CACTUS.get());
+		renderCutout(FloralisBlocks.BLACK_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_WHITE_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_ORANGE_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_MAGENTA_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_YELLOW_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_LIME_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_PINK_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_GRAY_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_CYAN_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_PURPLE_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_BLUE_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_BROWN_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_GREEN_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_RED_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_BLACK_FLOWER.get());
+		renderCutout(FloralisBlocks.POTTED_WHITE_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_ORANGE_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_MAGENTA_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_YELLOW_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_LIME_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_PINK_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_GRAY_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_CYAN_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_PURPLE_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_BLUE_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_BROWN_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_GREEN_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_RED_CACTUS.get());
+		renderCutout(FloralisBlocks.POTTED_BLACK_CACTUS.get());
+		renderCutout(FloralisBlocks.WHITE_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.ORANGE_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.MAGENTA_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.YELLOW_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.LIME_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.PINK_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.GRAY_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.CYAN_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.PURPLE_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.BLUE_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.BROWN_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.GREEN_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.RED_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.BLACK_FLOWER_CROP.get());
+		renderCutout(FloralisBlocks.WHITE_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.ORANGE_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.MAGENTA_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.YELLOW_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.LIME_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.PINK_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.GRAY_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.CYAN_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.PURPLE_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.BLUE_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.BROWN_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.GREEN_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.RED_CACTUS_CROP.get());
+		renderCutout(FloralisBlocks.BLACK_CACTUS_CROP.get());
+	}
 
-			FloralisBlocks.WHITE_CACTUS.get(),
-			FloralisBlocks.ORANGE_CACTUS.get(),
-			FloralisBlocks.MAGENTA_CACTUS.get(),
-			FloralisBlocks.LIGHT_BLUE_CACTUS.get(),
-			FloralisBlocks.YELLOW_CACTUS.get(),
-			FloralisBlocks.LIME_CACTUS.get(),
-			FloralisBlocks.PINK_CACTUS.get(),
-			FloralisBlocks.GRAY_CACTUS.get(),
-			FloralisBlocks.LIGHT_GRAY_CACTUS.get(),
-			FloralisBlocks.CYAN_CACTUS.get(),
-			FloralisBlocks.PURPLE_CACTUS.get(),
-			FloralisBlocks.BLUE_CACTUS.get(),
-			FloralisBlocks.BROWN_CACTUS.get(),
-			FloralisBlocks.GREEN_CACTUS.get(),
-			FloralisBlocks.RED_CACTUS.get(),
-			FloralisBlocks.BLACK_CACTUS.get(),
+	public void blockColor(Block pBlock) {
+		Minecraft.getInstance().getBlockColors().register((pState, pLevel, pPos, pTintIndex) -> pLevel != null && pPos != null ? BiomeColors.getAverageGrassColor(pLevel, pPos) : GrassColor.get(0.5D, 1.0D), pBlock);
+	}
 
-			FloralisBlocks.POTTED_WHITE_FLOWER.get(),
-			FloralisBlocks.POTTED_ORANGE_FLOWER.get(),
-			FloralisBlocks.POTTED_MAGENTA_FLOWER.get(),
-			FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get(),
-			FloralisBlocks.POTTED_YELLOW_FLOWER.get(),
-			FloralisBlocks.POTTED_LIME_FLOWER.get(),
-			FloralisBlocks.POTTED_PINK_FLOWER.get(),
-			FloralisBlocks.POTTED_GRAY_FLOWER.get(),
-			FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get(),
-			FloralisBlocks.POTTED_CYAN_FLOWER.get(),
-			FloralisBlocks.POTTED_PURPLE_FLOWER.get(),
-			FloralisBlocks.POTTED_BLUE_FLOWER.get(),
-			FloralisBlocks.POTTED_BROWN_FLOWER.get(),
-			FloralisBlocks.POTTED_GREEN_FLOWER.get(),
-			FloralisBlocks.POTTED_RED_FLOWER.get(),
-			FloralisBlocks.POTTED_BLACK_FLOWER.get(),
-
-			FloralisBlocks.POTTED_WHITE_CACTUS.get(),
-			FloralisBlocks.POTTED_ORANGE_CACTUS.get(),
-			FloralisBlocks.POTTED_MAGENTA_CACTUS.get(),
-			FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get(),
-			FloralisBlocks.POTTED_YELLOW_CACTUS.get(),
-			FloralisBlocks.POTTED_LIME_CACTUS.get(),
-			FloralisBlocks.POTTED_PINK_CACTUS.get(),
-			FloralisBlocks.POTTED_GRAY_CACTUS.get(),
-			FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get(),
-			FloralisBlocks.POTTED_CYAN_CACTUS.get(),
-			FloralisBlocks.POTTED_PURPLE_CACTUS.get(),
-			FloralisBlocks.POTTED_BLUE_CACTUS.get(),
-			FloralisBlocks.POTTED_BROWN_CACTUS.get(),
-			FloralisBlocks.POTTED_GREEN_CACTUS.get(),
-			FloralisBlocks.POTTED_RED_CACTUS.get(),
-			FloralisBlocks.POTTED_BLACK_CACTUS.get(),
-
-			FloralisBlocks.WHITE_FLOWER_CROP.get(),
-			FloralisBlocks.ORANGE_FLOWER_CROP.get(),
-			FloralisBlocks.MAGENTA_FLOWER_CROP.get(),
-			FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get(),
-			FloralisBlocks.YELLOW_FLOWER_CROP.get(),
-			FloralisBlocks.LIME_FLOWER_CROP.get(),
-			FloralisBlocks.PINK_FLOWER_CROP.get(),
-			FloralisBlocks.GRAY_FLOWER_CROP.get(),
-			FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get(),
-			FloralisBlocks.CYAN_FLOWER_CROP.get(),
-			FloralisBlocks.PURPLE_FLOWER_CROP.get(),
-			FloralisBlocks.BLUE_FLOWER_CROP.get(),
-			FloralisBlocks.BROWN_FLOWER_CROP.get(),
-			FloralisBlocks.GREEN_FLOWER_CROP.get(),
-			FloralisBlocks.RED_FLOWER_CROP.get(),
-			FloralisBlocks.BLACK_FLOWER_CROP.get(),
-
-			FloralisBlocks.WHITE_CACTUS_CROP.get(),
-			FloralisBlocks.ORANGE_CACTUS_CROP.get(),
-			FloralisBlocks.MAGENTA_CACTUS_CROP.get(),
-			FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get(),
-			FloralisBlocks.YELLOW_CACTUS_CROP.get(),
-			FloralisBlocks.LIME_CACTUS_CROP.get(),
-			FloralisBlocks.PINK_CACTUS_CROP.get(),
-			FloralisBlocks.GRAY_CACTUS_CROP.get(),
-			FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get(),
-			FloralisBlocks.CYAN_CACTUS_CROP.get(),
-			FloralisBlocks.PURPLE_CACTUS_CROP.get(),
-			FloralisBlocks.BLUE_CACTUS_CROP.get(),
-			FloralisBlocks.BROWN_CACTUS_CROP.get(),
-			FloralisBlocks.GREEN_CACTUS_CROP.get(),
-			FloralisBlocks.RED_CACTUS_CROP.get(),
-			FloralisBlocks.BLACK_CACTUS_CROP.get());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.WHITE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.ORANGE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.MAGENTA_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_BLUE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.YELLOW_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIME_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PINK_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GRAY_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_GRAY_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.CYAN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PURPLE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLUE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BROWN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GREEN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.RED_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLACK_FLOWER.get(), RenderType.cutout());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.WHITE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.ORANGE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.MAGENTA_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_BLUE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.YELLOW_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIME_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PINK_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GRAY_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_GRAY_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.CYAN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PURPLE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLUE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BROWN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GREEN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.RED_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLACK_CACTUS.get(), RenderType.cutout());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_WHITE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_ORANGE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_MAGENTA_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_YELLOW_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIME_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_PINK_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_GRAY_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_CYAN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_PURPLE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BLUE_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BROWN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_GREEN_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_RED_FLOWER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BLACK_FLOWER.get(), RenderType.cutout());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_WHITE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_ORANGE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_MAGENTA_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_YELLOW_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIME_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_PINK_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_GRAY_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_CYAN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_PURPLE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BLUE_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BROWN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_GREEN_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_RED_CACTUS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.POTTED_BLACK_CACTUS.get(), RenderType.cutout());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.WHITE_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.ORANGE_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.MAGENTA_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.YELLOW_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIME_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PINK_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GRAY_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.CYAN_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PURPLE_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLUE_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BROWN_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GREEN_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.RED_FLOWER_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLACK_FLOWER_CROP.get(), RenderType.cutout());
-
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.WHITE_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.ORANGE_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.MAGENTA_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.YELLOW_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIME_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PINK_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GRAY_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.CYAN_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.PURPLE_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLUE_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BROWN_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.GREEN_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.RED_CACTUS_CROP.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(FloralisBlocks.BLACK_CACTUS_CROP.get(), RenderType.cutout());
+	public void renderCutout(Block pBlock) {
+		ItemBlockRenderTypes.setRenderLayer(pBlock, RenderType.cutout());
 	}
 }

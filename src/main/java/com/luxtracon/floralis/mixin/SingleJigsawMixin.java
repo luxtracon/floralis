@@ -15,9 +15,9 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @SuppressWarnings("unused")
 
 @Mixin(LegacySinglePoolElement.class)
-public interface SingleJigsawAccess {
+public interface SingleJigsawMixin {
 	@Invoker("<init>")
-	static LegacySinglePoolElement construct(Either<ResourceLocation, StructureTemplate> either, Holder<StructureProcessorList> holder, StructureTemplatePool.Projection projection) {
+	static LegacySinglePoolElement construct(Either<ResourceLocation, StructureTemplate> pEither, Holder<StructureProcessorList> pHolder, StructureTemplatePool.Projection pProjection) {
 		throw new UnsupportedOperationException("Replaced by Mixin");
 	}
 }

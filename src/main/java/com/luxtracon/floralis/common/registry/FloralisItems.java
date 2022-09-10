@@ -127,11 +127,11 @@ public class FloralisItems {
 
 	public static final RegistryObject<Item> PLANT_FIBERS = register("plant_fibers", () -> new BoneMealItem(propertiesItem()));
 
-	private static Item.Properties propertiesItem() {
+	public static Item.Properties propertiesItem() {
 		return new Item.Properties().tab(FloralisTabs.floralisTab);
 	}
 
-	private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
-		return ITEMS.register(name, item);
+	public static <T extends Item> RegistryObject<T> register(final String pString, final Supplier<T> pSupplier) {
+		return ITEMS.register(pString, pSupplier);
 	}
 }

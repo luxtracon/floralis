@@ -30,30 +30,30 @@ public class Floralis {
 	public static final String MODID = "floralis";
 
 	public Floralis() {
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-		bus.addListener(this::onCommonSetupEvent);
-		bus.addListener(this::loadComplete);
+		eventBus.addListener(this::onCommonSetupEvent);
+		eventBus.addListener(this::loadComplete);
 
 		FloralisConfig.register();
 		FloralisStructures.register();
 
-		FloralisBiomeModifiers.register(bus);
-		FloralisPlacedFeatures.register(bus);
+		FloralisBiomeModifiers.register(eventBus);
+		FloralisPlacedFeatures.register(eventBus);
 
-		FloralisBlocks.BLOCKS.register(bus);
-		FloralisItems.ITEMS.register(bus);
+		FloralisBlocks.BLOCKS.register(eventBus);
+		FloralisItems.ITEMS.register(eventBus);
 
 		MinecraftForge.EVENT_BUS.register(Floralis.class);
 	}
 
-	public void onCommonSetupEvent(FMLCommonSetupEvent event) {
-		event.enqueueWork(FloralisCompostables::setup);
-		event.enqueueWork(FloralisFlammables::setup);
-		event.enqueueWork(FloralisPottables::setup);
+	public void onCommonSetupEvent(FMLCommonSetupEvent pEvent) {
+		pEvent.enqueueWork(FloralisCompostables::setup);
+		pEvent.enqueueWork(FloralisFlammables::setup);
+		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 
-	private void loadComplete(final FMLLoadCompleteEvent event) {
+	public void loadComplete(final FMLLoadCompleteEvent pEvent) {
 		proxy.loadComplete();
 	}
 }

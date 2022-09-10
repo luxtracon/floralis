@@ -11,7 +11,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerDataHolder;
-import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.item.Item;
@@ -36,24 +35,23 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 @Mod.EventBusSubscriber(modid = Floralis.MODID)
 public class FloralisVillagerTrades {
-	private static final int sellEmeralds = 1;
-	private static final int sellItems = 16;
-	private static final int sellUses = 12;
-	private static final int sellXp = 1;
-	private static final float sellMultiplier = 0.05F;
+	public static final int sellEmeralds = 1;
+	public static final int sellItems = 16;
+	public static final int sellUses = 12;
+	public static final int sellXp = 1;
+	public static final float sellMultiplier = 0.05F;
 
-	private static final int buyEmeralds = 1;
-	private static final int buyItems = 64;
-	private static final int buyUses = 16;
-	private static final int buyXp = 2;
-	private static final float buyMultiplier = 0.05F;
+	public static final int buyEmeralds = 1;
+	public static final int buyItems = 64;
+	public static final int buyUses = 16;
+	public static final int buyXp = 2;
+	public static final float buyMultiplier = 0.05F;
 
 	@SubscribeEvent
 	public static void onVillagerTrades(VillagerTradesEvent event) {
 		Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-		VillagerProfession profession = event.getType();
 
-		if (Objects.requireNonNull(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(profession)).getPath().equals("farmer")) {
+		if (Objects.requireNonNull(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(event.getType())).getPath().equals("farmer")) {
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.WHITE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.ORANGE_PETALS.get())));
 			trades.get(1).add(new ItemsForEmeralds(new ItemStack(FloralisItems.MAGENTA_PETALS.get())));
@@ -90,8 +88,8 @@ public class FloralisVillagerTrades {
 		}
 	}
 
-	private static class ItemsForEmeralds implements VillagerTrades.ItemListing {
-		private final ItemStack itemStack;
+	public static class ItemsForEmeralds implements VillagerTrades.ItemListing {
+		public final ItemStack itemStack;
 
 		public ItemsForEmeralds(ItemStack pItemStack) {
 			this.itemStack = pItemStack;
@@ -103,8 +101,8 @@ public class FloralisVillagerTrades {
 		}
 	}
 
-	private static class EmeraldsForVillagerTypeItem implements VillagerTrades.ItemListing {
-		private final Map<VillagerType, Item> trades;
+	public static class EmeraldsForVillagerTypeItem implements VillagerTrades.ItemListing {
+		public final Map<VillagerType, Item> trades;
 
 		public EmeraldsForVillagerTypeItem(Map<VillagerType, Item> pTrades) {
 			this.trades = pTrades;
