@@ -44,13 +44,13 @@ public class Floralis {
 		MinecraftForge.EVENT_BUS.register(FloralisBiomeLoading.class);
 	}
 
-	public void onCommonSetupEvent(FMLCommonSetupEvent event) {
-		event.enqueueWork(FloralisCompostables::setup);
-		event.enqueueWork(FloralisFlammables::setup);
-		event.enqueueWork(FloralisPottables::setup);
+	public void onCommonSetupEvent(FMLCommonSetupEvent pEvent) {
+		pEvent.enqueueWork(FloralisCompostables::setup);
+		pEvent.enqueueWork(FloralisFlammables::setup);
+		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 
-	private void loadComplete(final FMLLoadCompleteEvent event) {
+	public void loadComplete(final FMLLoadCompleteEvent pEvent) {
 		proxy.loadComplete();
 	}
 }

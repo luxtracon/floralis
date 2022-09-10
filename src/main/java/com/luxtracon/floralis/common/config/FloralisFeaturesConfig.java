@@ -1,21 +1,20 @@
 package com.luxtracon.floralis.common.config;
 
-import net.minecraftforge.common.ForgeConfigSpec.Builder;
-import net.minecraftforge.common.ForgeConfigSpec.IntValue;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 
 public class FloralisFeaturesConfig {
-	public static IntValue RARITY_FLOWER;
-	public static IntValue TRIES_FLOWER;
-	public static IntValue SPREAD_FLOWER;
-	public static IntValue RARITY_CACTUS;
-	public static IntValue TRIES_CACTUS;
-	public static IntValue SPREAD_CACTUS;
+	public static ForgeConfigSpec.IntValue RARITY_FLOWER;
+	public static ForgeConfigSpec.IntValue TRIES_FLOWER;
+	public static ForgeConfigSpec.IntValue SPREAD_FLOWER;
+	public static ForgeConfigSpec.IntValue RARITY_CACTUS;
+	public static ForgeConfigSpec.IntValue TRIES_CACTUS;
+	public static ForgeConfigSpec.IntValue SPREAD_CACTUS;
 
-	public static void registerCommonConfig(Builder COMMON_BUILDER) {
+	public static void registerCommonConfig(ForgeConfigSpec.Builder COMMON_BUILDER) {
 		COMMON_BUILDER.comment("Feature settings").push("featureSettings");
 
 		RARITY_FLOWER = COMMON_BUILDER

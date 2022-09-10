@@ -1,8 +1,16 @@
 buildscript {
     repositories {
-        maven { url 'https://maven.minecraftforge.net' }
-        maven { url 'https://maven.parchmentmc.org' }
-        maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven {
+            url 'https://maven.minecraftforge.net'
+        }
+
+        maven {
+            url 'https://maven.parchmentmc.org'
+        }
+
+        maven {
+            url 'https://repo.spongepowered.org/repository/maven-public/'
+        }
     }
 
     dependencies {
@@ -18,12 +26,12 @@ apply plugin: 'org.spongepowered.mixin'
 
 archivesBaseName = 'floralis'
 group = 'com.luxtracon.floralis'
-version = "${version_minecraft}-${version_floralis}"
+version = "${minecraft}-${floralis}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'parchment', version: "${version_mappings}-${version_minecraft}"
+    mappings channel: 'parchment', version: "${parchment}-${minecraft}"
 
     runs {
         client {
@@ -68,24 +76,23 @@ sourceSets.main.resources {
 
 repositories {
     maven {
-        name 'cursemaven'
         url "https://www.cursemaven.com"
     }
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${version_minecraft}-${version_forge}"
+    minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation fg.deobf("curse.maven:cofh-core-69162:${cofh_core}")
-    implementation fg.deobf("curse.maven:jei-238222:${just_enough_items}")
-    implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersive_engineering}")
-    implementation fg.deobf("curse.maven:industrial-foregoing-266515:${industrial_foregoing}")
-    implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermal_cultivation}")
-    implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermal_expansion}")
-    implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermal_foundation}")
-    implementation fg.deobf("curse.maven:thermal-innovation-291737:${thermal_innovation}")
-    implementation fg.deobf("curse.maven:thermal-integration-626708:${thermal_integration}")
-    implementation fg.deobf("curse.maven:thermal-locomotion-406959:${thermal_locomotion}")
+    implementation fg.deobf("curse.maven:cofh-core-69162:${cofhcore}")
+    implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
+    implementation fg.deobf("curse.maven:industrial-foregoing-266515:${industrialforegoing}")
+    implementation fg.deobf("curse.maven:jei-238222:${jei}")
+    implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermalcultivation}")
+    implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermalexpansion}")
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermalfoundation}")
+    implementation fg.deobf("curse.maven:thermal-innovation-291737:${thermalinnovation}")
+    implementation fg.deobf("curse.maven:thermal-integration-626708:${thermalintegration}")
+    implementation fg.deobf("curse.maven:thermal-locomotion-406959:${thermallocomotion}")
     implementation fg.deobf("curse.maven:titanium-287342:${titanium}")
 }
 
@@ -99,7 +106,7 @@ jar {
         attributes([
                 "Specification-Title"     : "floralis",
                 "Specification-Vendor"    : "luxtracon",
-                "Specification-Version"   : "${version_minecraft}-${version_floralis}",
+                "Specification-Version"   : "${minecraft}-${floralis}",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.version,
                 "Implementation-Vendor"   : "luxtracon",
