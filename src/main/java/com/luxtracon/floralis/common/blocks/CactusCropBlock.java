@@ -4,7 +4,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,6 +17,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -35,10 +35,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-public class CactusCropBlock extends Block implements BonemealableBlock, IPlantable {
 	private static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(7.0D, 0.0D, 7.0D, 9.0D, 2.0D, 9.0D), Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D)};
 	private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 	private static final int MAX_AGE = 5;
+public class CactusCropBlock extends CropBlock implements BonemealableBlock, IPlantable {
 
 	public CactusCropBlock(Properties properties) {
 		super(properties);
@@ -71,7 +71,7 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	public boolean mayPlaceOn(BlockState pState) {
-		return pState.is(BlockTags.SAND);
+		return pState.is(Blocks.SAND);
 	}
 
 	public static float getGrowthSpeed(Block pBlock, BlockGetter pLevel, BlockPos pPos) {
@@ -115,14 +115,17 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		return floatFirst;
 	}
 
+	@Override
 	public int getAge(BlockState pState) {
 		return pState.getValue(this.getAgeProperty());
 	}
 
+	@Override
 	public int getBonemealAgeIncrease(Level pLevel) {
 		return Mth.nextInt(pLevel.random, 1, 3);
 	}
 
+	@Override
 	public int getMaxAge() {
 		return MAX_AGE;
 	}
@@ -147,6 +150,7 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		}
 	}
 
+	@Override
 	public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
 		int i = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
 		if (i > this.getMaxAge()) {
@@ -178,10 +182,11 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	@Override
-	public BlockState getPlant(BlockGetter world, BlockPos pos) {
-		return world.getBlockState(pos);
+	public BlockState getPlant(BlockGetter pLevel, BlockPos pPos) {
+		return defaultBlockState();
 	}
 
+	@Override
 	public BlockState getStateForAge(int pAge) {
 		return this.defaultBlockState().setValue(this.getAgeProperty(), pAge);
 	}
@@ -191,12 +196,17 @@ public class CactusCropBlock extends Block implements BonemealableBlock, IPlanta
 		return !pState.canSurvive(pLevel, pCurrentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);
 	}
 
+	@Override
 	public IntegerProperty getAgeProperty() {
 		return AGE;
 	}
 
 	@Override
-	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
+	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
+		if (mayPlaceOn(pLevel.getBlockState(pPos.below()))) {
+			return PlantType.DESERT;
+		}
+
 		return PlantType.CROP;
 	}
 
