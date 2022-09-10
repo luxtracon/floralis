@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floralis:yellow_flower"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:yellow_flower_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:yellow_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}

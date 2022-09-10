@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floralis:purple_flower"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:purple_flower_seeds",
+      "count": 2
+    },
+    {
+      "item": "floralis:purple_petals",
+      "count": 1
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processingTime": 50
+}
