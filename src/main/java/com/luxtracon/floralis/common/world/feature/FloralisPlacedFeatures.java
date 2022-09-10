@@ -21,8 +21,8 @@ import java.util.List;
 @MethodsReturnNonnullByDefault
 
 public class FloralisPlacedFeatures {
-	private static final int RARITY_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_FLOWER.get() : FloralisFeaturesConfig.RARITY_FLOWER.getDefault();
-	private static final int RARITY_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_CACTUS.get() : FloralisFeaturesConfig.RARITY_CACTUS.getDefault();
+	public static final int RARITY_FLOWER = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_FLOWER.get() : FloralisFeaturesConfig.RARITY_FLOWER.getDefault();
+	public static final int RARITY_CACTUS = FloralisConfig.SPEC.isLoaded() ? FloralisFeaturesConfig.RARITY_CACTUS.get() : FloralisFeaturesConfig.RARITY_CACTUS.getDefault();
 
 	public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Floralis.MODID);
 
@@ -60,23 +60,23 @@ public class FloralisPlacedFeatures {
 	public static final RegistryObject<PlacedFeature> RED_CACTUS = PLACED_FEATURES.register("red_cactus", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) FloralisConfiguredFeatures.RED_CACTUS, List.of(rarityCactus(), inSquarePlacement(), placementModifier(), biomeFilter())));
 	public static final RegistryObject<PlacedFeature> BLACK_CACTUS = PLACED_FEATURES.register("black_cactus", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) FloralisConfiguredFeatures.BLACK_CACTUS, List.of(rarityCactus(), inSquarePlacement(), placementModifier(), biomeFilter())));
 
-	private static RarityFilter rarityFlower() {
+	public static RarityFilter rarityFlower() {
 		return RarityFilter.onAverageOnceEvery(RARITY_FLOWER);
 	}
 
-	private static RarityFilter rarityCactus() {
+	public static RarityFilter rarityCactus() {
 		return RarityFilter.onAverageOnceEvery(RARITY_CACTUS);
 	}
 
-	private static InSquarePlacement inSquarePlacement() {
+	public static InSquarePlacement inSquarePlacement() {
 		return InSquarePlacement.spread();
 	}
 
-	private static PlacementModifier placementModifier() {
+	public static PlacementModifier placementModifier() {
 		return PlacementUtils.HEIGHTMAP;
 	}
 
-	private static BiomeFilter biomeFilter() {
+	public static BiomeFilter biomeFilter() {
 		return BiomeFilter.biome();
 	}
 

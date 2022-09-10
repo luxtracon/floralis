@@ -1,6 +1,7 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[${forge},)"
 license="MIT License"
+
 [[mods]]
 modId="floralis"
 version="${file.jarVersion}"
@@ -12,13 +13,13 @@ description='''Floralis adds farmable cacti and flowers for an automatable way t
 [[dependencies.floralis]]
 modId="forge"
 mandatory=true
-versionRange="[43,)"
+versionRange="[${forge},)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.floralis]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.19.2,)"
+versionRange="[${minecraft},)"
 ordering="NONE"
 side="BOTH"

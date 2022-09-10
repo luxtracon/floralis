@@ -21,16 +21,15 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class FlowerPlantBlock extends Block {
-	private static final VoxelShape SHAPE = Block.box(5.25D, 0.0D, 5.25D, 10.75D, 12.0D, 10.75D);
+	public static final VoxelShape SHAPE = Block.box(5.25D, 0.0D, 5.25D, 10.75D, 12.0D, 10.75D);
 
-	public FlowerPlantBlock(Properties properties) {
-		super(properties);
+	public FlowerPlantBlock(Properties pProperties) {
+		super(pProperties);
 	}
 
 	@Override
 	public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
-		BlockPos posBelow = pPos.below();
-		return this.mayPlaceOn(pLevel.getBlockState(posBelow));
+		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()));
 	}
 
 	public boolean mayPlaceOn(BlockState pState) {

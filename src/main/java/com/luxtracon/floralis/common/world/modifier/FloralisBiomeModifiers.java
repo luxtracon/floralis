@@ -17,9 +17,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class FloralisBiomeModifiers {
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIERS = DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, Floralis.MODID);
 
-    public static RegistryObject<Codec<FloralisVegetalBiomeModifier>> VEGETAL_MODIFIERS = BIOME_MODIFIERS.register("vegetal", () -> RecordCodecBuilder.create(builder -> builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(FloralisVegetalBiomeModifier::biomes), PlacedFeature.CODEC.fieldOf("feature").forGetter(FloralisVegetalBiomeModifier::feature)).apply(builder, FloralisVegetalBiomeModifier::new)));
+    public static RegistryObject<Codec<FloralisVegetalBiomeModifier>> VEGETAL_MODIFIERS = BIOME_MODIFIERS.register("vegetal", () -> RecordCodecBuilder.create(pBuilder -> pBuilder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(FloralisVegetalBiomeModifier::pSet), PlacedFeature.CODEC.fieldOf("feature").forGetter(FloralisVegetalBiomeModifier::pHolder)).apply(pBuilder, FloralisVegetalBiomeModifier::new)));
 
-    public static void register(IEventBus bus) {
-        BIOME_MODIFIERS.register(bus);
+    public static void register(IEventBus eventBus) {
+        BIOME_MODIFIERS.register(eventBus);
     }
 }
