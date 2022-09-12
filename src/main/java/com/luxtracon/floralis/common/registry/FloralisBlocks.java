@@ -7,6 +7,8 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -14,12 +16,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @SuppressWarnings("deprecation, unused")
@@ -216,6 +220,11 @@ public class FloralisBlocks {
 		@Override
 		public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
 			pEntity.hurt(DamageSource.CACTUS, 1.0F);
+		}
+
+		@Override
+		public BlockPathTypes getAiPathNodeType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
+			return BlockPathTypes.DAMAGE_CACTUS;
 		}
 	}
 
