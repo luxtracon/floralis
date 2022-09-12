@@ -7,6 +7,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.Ravager;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
@@ -18,6 +19,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.minecraftforge.common.PlantType;
+import net.minecraftforge.event.ForgeEventFactory;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -63,6 +65,10 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+		if (pEntity instanceof Ravager && ForgeEventFactory.getMobGriefingEvent(pLevel, pEntity)) {
+			pLevel.destroyBlock(pPos, true, pEntity);
+		}
+
 		if (pEntity instanceof Villager) {
 			pEntity.setInvulnerable(true);
 		}
@@ -73,8 +79,12 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
+	public BlockPathTypes getAiPathNodeType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
+		if (this.getAge(pState) >= 3) {
+			return BlockPathTypes.DAMAGE_CACTUS;
 		}
 
+		return BlockPathTypes.WALKABLE;
 	}
 
 	@Override
@@ -91,12 +101,15 @@ public class CactusCropBlock extends CropBlock {
 	public ItemLike getBaseSeedId() {
 		return this;
 	}
+
+	@Override
+	@Nullable
 	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
 		if (mayPlaceOn(pLevel.getBlockState(pPos.below()), pLevel, pPos)) {
 			return PlantType.DESERT;
 		}
 
-		return PlantType.CROP;
+		return null;
 	}
 
 	@Override
