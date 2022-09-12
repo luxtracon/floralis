@@ -45,6 +45,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+		return pState.getBlock() instanceof SandBlock;
 	}
 
 	@Override
