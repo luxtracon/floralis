@@ -63,6 +63,8 @@ public class FlowerCropBlock extends CropBlock {
 	}
 
 	@Override
+	public ItemLike getBaseSeedId() {
+		return this;
 	}
 
 	@Override

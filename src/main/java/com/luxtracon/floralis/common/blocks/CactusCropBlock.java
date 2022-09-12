@@ -88,6 +88,9 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
+	public ItemLike getBaseSeedId() {
+		return this;
+	}
 	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
 		if (mayPlaceOn(pLevel.getBlockState(pPos.below()), pLevel, pPos)) {
 			return PlantType.DESERT;
