@@ -9,6 +9,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -20,7 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-public class FlowerPlantBlock extends Block {
+public class FlowerPlantBlock extends BushBlock {
 	public static final VoxelShape SHAPE = Block.box(5.25D, 0.0D, 5.25D, 10.75D, 12.0D, 10.75D);
 
 	public FlowerPlantBlock(Properties pProperties) {
@@ -29,10 +30,11 @@ public class FlowerPlantBlock extends Block {
 
 	@Override
 	public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
-		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()));
+		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()), pLevel, pPos);
 	}
 
-	public boolean mayPlaceOn(BlockState pState) {
+	@Override
+	public boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
 		return pState.is(BlockTags.DIRT);
 	}
 

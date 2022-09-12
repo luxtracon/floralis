@@ -223,7 +223,7 @@ public class FloralisBlocks {
 		}
 
 		@Override
-		public BlockPathTypes getAiPathNodeType(BlockState state, BlockGetter level, BlockPos pos, @Nullable Mob entity) {
+		public BlockPathTypes getAiPathNodeType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
 			return BlockPathTypes.DAMAGE_CACTUS;
 		}
 	}
