@@ -90,6 +90,9 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
+	public ItemLike getBaseSeedId() {
+		return this;
+	}
 
 	@Override
 	@Nullable
