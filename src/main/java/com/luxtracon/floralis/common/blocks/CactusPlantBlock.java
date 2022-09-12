@@ -23,7 +23,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-public class CactusPlantBlock extends Block {
+public class CactusPlantBlock extends BushBlock {
 	public static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
 
 	public CactusPlantBlock(Properties pProperties) {
@@ -32,10 +32,11 @@ public class CactusPlantBlock extends Block {
 
 	@Override
 	public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
-		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()));
+		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()), pLevel, pPos);
 	}
 
-	public boolean mayPlaceOn(BlockState pState) {
+	@Override
+	public boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
 		return pState.is(BlockTags.SAND);
 	}
 
