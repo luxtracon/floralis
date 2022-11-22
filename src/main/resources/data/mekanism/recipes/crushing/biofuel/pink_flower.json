@@ -1,5 +1,11 @@
 {
   "type": "mekanism:crushing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
   "input": {
     "ingredient": {
       "item": "floralis:pink_flower"
