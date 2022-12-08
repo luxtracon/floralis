@@ -83,12 +83,19 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("curse.maven:cofh-core-69162:${cofhcore}")
     implementation fg.deobf("curse.maven:create-328085:${create}")
     implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
     implementation fg.deobf("curse.maven:industrial-foregoing-266515:${industrialforegoing}")
     implementation fg.deobf("curse.maven:jei-238222:${jei}")
     implementation fg.deobf("curse.maven:mekanism-268560:${mekanism}")
     implementation fg.deobf("curse.maven:patchouli-306770:${patchouli}")
+    implementation fg.deobf("curse.maven:thermal-cultivation-271835:${thermalcultivation}")
+    implementation fg.deobf("curse.maven:thermal-expansion-69163:${thermalexpansion}")
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:${thermalfoundation}")
+    implementation fg.deobf("curse.maven:thermal-innovation-291737:${thermalinnovation}")
+    implementation fg.deobf("curse.maven:thermal-integration-626708:${thermalintegration}")
+    implementation fg.deobf("curse.maven:thermal-locomotion-406959:${thermallocomotion}")
     implementation fg.deobf("curse.maven:titanium-287342:${titanium}")
 }
 

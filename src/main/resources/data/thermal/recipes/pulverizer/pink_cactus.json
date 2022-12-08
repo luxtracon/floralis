@@ -1,0 +1,26 @@
+{
+  "type": "thermal:pulverizer",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "thermal"
+    }
+  ],
+  "ingredient": {
+    "item": "floralis:pink_cactus"
+  },
+  "result": [
+    {
+      "item": "floralis:pink_cactus_seeds",
+      "chance": 2.0
+    },
+    {
+      "item": "floralis:pink_petals",
+      "chance": 1.0
+    },
+    {
+      "item": "floralis:plant_fibers",
+      "chance": 1.0
+    }
+  ]
+}
