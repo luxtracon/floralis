@@ -1,5 +1,11 @@
 {
-  "type": "floralis:vegetal",
-  "biomes": "desert",
-  "feature": "floralis:lime_cactus"
+  "biomes": [
+    "minecraft:badlands",
+    "minecraft:desert",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands"
+  ],
+  "features": "floralis:lime_cactus",
+  "step": "vegetal_decoration",
+  "type": "forge:add_features"
 }

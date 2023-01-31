@@ -1,59 +1,66 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.client.proxy.ClientProxy;
-import com.luxtracon.floralis.common.config.FloralisConfig;
-import com.luxtracon.floralis.common.proxy.CommonProxy;
-import com.luxtracon.floralis.common.registry.FloralisBlocks;
-import com.luxtracon.floralis.common.registry.FloralisItems;
-import com.luxtracon.floralis.common.registry.FloralisCompostables;
-import com.luxtracon.floralis.common.registry.FloralisFlammables;
-import com.luxtracon.floralis.common.registry.FloralisPottables;
-import com.luxtracon.floralis.common.world.feature.FloralisPlacedFeatures;
-import com.luxtracon.floralis.common.world.modifier.FloralisBiomeModifiers;
-import com.luxtracon.floralis.common.world.structure.FloralisStructures;
+import com.luxtracon.floralis.constant.FloralisConstant;
+import com.luxtracon.floralis.proxy.ClientProxy;
+import com.luxtracon.floralis.config.FloralisConfig;
+import com.luxtracon.floralis.proxy.CommonProxy;
+import com.luxtracon.floralis.registry.FloralisBlocks;
+import com.luxtracon.floralis.registry.FloralisItems;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.server.ServerAboutToStartEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+@SuppressWarnings("unused")
 
-@ParametersAreNonnullByDefault
-
-@Mod("floralis")
+@Mod(FloralisConstant.MODID)
 public class Floralis {
-	public static CommonProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
-	public static final String MODID = "floralis";
+	public CommonProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 
 	public Floralis() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-		eventBus.addListener(this::onCommonSetupEvent);
-		eventBus.addListener(this::loadComplete);
+		eventBus.addListener(this::onCreativeModeTabRegister);
+		eventBus.addListener(this::onFMLCommonSetup);
+		eventBus.addListener(this::onFMLLoadComplete);
 
-		FloralisConfig.register();
-		FloralisStructures.register();
-
-		FloralisBiomeModifiers.register(eventBus);
-		FloralisPlacedFeatures.register(eventBus);
+		FloralisConfig.registerClientConfig();
+		FloralisConfig.registerCommonConfig();
+		FloralisConfig.registerServerConfig();
 
 		FloralisBlocks.BLOCKS.register(eventBus);
 		FloralisItems.ITEMS.register(eventBus);
 
-		MinecraftForge.EVENT_BUS.register(Floralis.class);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	public void onCommonSetupEvent(FMLCommonSetupEvent pEvent) {
-		pEvent.enqueueWork(FloralisCompostables::setup);
-		pEvent.enqueueWork(FloralisFlammables::setup);
-		pEvent.enqueueWork(FloralisPottables::setup);
+	public void onCreativeModeTabRegister(CreativeModeTabEvent.Register pEvent) {
+		this.proxy.onCreativeModeTabRegister(pEvent);
 	}
 
-	public void loadComplete(final FMLLoadCompleteEvent pEvent) {
-		proxy.loadComplete();
+	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
+		this.proxy.onFMLCommonSetup(pEvent);
+	}
+
+	public void onFMLLoadComplete(FMLLoadCompleteEvent pEvent) {
+		this.proxy.onFMLLoadComplete(pEvent);
+	}
+
+	@SubscribeEvent
+	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
+		this.proxy.onServerAboutToStart(pEvent);
+	}
+
+	@SubscribeEvent
+	public void onVillagerTrades(VillagerTradesEvent pEvent) {
+		this.proxy.onVillagerTrades(pEvent);
 	}
 }

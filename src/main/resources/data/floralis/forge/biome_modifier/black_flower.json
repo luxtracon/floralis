@@ -1,5 +1,6 @@
 {
-  "type": "floralis:vegetal",
   "biomes": "#minecraft:is_overworld",
-  "feature": "floralis:black_flower"
+  "features": "floralis:black_flower",
+  "step": "vegetal_decoration",
+  "type": "forge:add_features"
 }

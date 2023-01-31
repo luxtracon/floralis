@@ -4,8 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "floralis.refmap.json",
   "mixins": [
-   "FireBlockMixin",
-   "SingleJigsawMixin"
+   "FireBlockMixin"
   ],
   "client": [
   ],

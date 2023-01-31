@@ -1,5 +1,6 @@
 {
   "parent": "block/block",
+  "render_type": "cutout",
   "texture_size": [ 96, 96 ],
   "textures": {
     "cactus": "floralis:block/lime_cactus",
