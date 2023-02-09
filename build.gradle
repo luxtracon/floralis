@@ -32,7 +32,8 @@ buildscript {
 
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation fg.deobf("curse.maven:jade-324717:${jade}")
+    implementation fg.deobf("curse.maven:immersive-engineering-231951:${immersiveengineering}")
+    // implementation fg.deobf("curse.maven:jade-324717:${jade}")
     implementation fg.deobf("curse.maven:jei-238222:${jei}")
     minecraft "net.minecraftforge:forge:${minecraft}-${forge}"
 }
