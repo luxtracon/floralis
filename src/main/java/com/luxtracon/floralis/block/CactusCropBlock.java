@@ -4,7 +4,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Ravager;
@@ -76,13 +75,13 @@ public class CactusCropBlock extends CropBlock {
 		}
 
 		if (this.getAge(pState) >= 3) {
-			pEntity.hurt(DamageSource.CACTUS, 1.0F);
+			pEntity.hurt(pLevel.damageSources().cactus(), 1.0F);
 		}
 	}
 
 	@Override
 	public BlockPathTypes getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
-		return  this.getAge(pState) >= 3 ? BlockPathTypes.DAMAGE_CACTUS : BlockPathTypes.WALKABLE;
+		return  this.getAge(pState) >= 3 ? BlockPathTypes.DAMAGE_OTHER : BlockPathTypes.WALKABLE;
 	}
 
 	@Override

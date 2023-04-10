@@ -4,7 +4,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.animal.Bee;
@@ -49,12 +48,12 @@ public class CactusPlantBlock extends BushBlock {
 			pEntity.setInvulnerable(true);
 		}
 
-		pEntity.hurt(DamageSource.CACTUS, 1.0F);
+		pEntity.hurt(pLevel.damageSources().cactus(), 1.0F);
 	}
 
 	@Override
 	public BlockPathTypes getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
-		return BlockPathTypes.DAMAGE_CACTUS;
+		return BlockPathTypes.DAMAGE_OTHER;
 	}
 
 	@Override

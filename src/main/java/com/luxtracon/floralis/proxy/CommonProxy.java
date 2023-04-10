@@ -57,6 +57,17 @@ public class CommonProxy {
 
 	}
 
+	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
+		Registry<StructureProcessorList> structureProcessorList = pEvent.getServer().registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
+		Registry<StructureTemplatePool> structureTemplatePool = pEvent.getServer().registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
+
+		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
+		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
+		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
+		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
+		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
+	}
+
 	public void onVillagerTrades(VillagerTradesEvent pEvent) {
 		if (pEvent.getType() == VillagerProfession.FARMER) {
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.WHITE_PETALS.get())));
@@ -93,17 +104,6 @@ public class CommonProxy {
 			pEvent.getTrades().get(1).add(new EmeraldsForItemsTrade(ImmutableMap.<VillagerType, Item>builder().put(VillagerType.PLAINS, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.TAIGA, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SNOW, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.DESERT, FloralisItems.MAGENTA_CACTUS_SEEDS.get()).put(VillagerType.JUNGLE, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SAVANNA, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).put(VillagerType.SWAMP, FloralisItems.MAGENTA_FLOWER_SEEDS.get()).build()));
 			pEvent.getTrades().get(1).add(new EmeraldsForItemsTrade(ImmutableMap.<VillagerType, Item>builder().put(VillagerType.PLAINS, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.TAIGA, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SNOW, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.DESERT, FloralisItems.PINK_CACTUS_SEEDS.get()).put(VillagerType.JUNGLE, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SAVANNA, FloralisItems.PINK_FLOWER_SEEDS.get()).put(VillagerType.SWAMP, FloralisItems.PINK_FLOWER_SEEDS.get()).build()));
 		}
-	}
-
-	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
-		Registry<StructureProcessorList> structureProcessorList = pEvent.getServer().registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
-		Registry<StructureTemplatePool> structureTemplatePool = pEvent.getServer().registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
-
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
 	}
 
 	public void addPieceToPool(Registry<StructureProcessorList> pStructureProcessorList, Registry<StructureTemplatePool> pStructureTemplatePool, String pPiece, ResourceLocation pPool, int pWeight) {

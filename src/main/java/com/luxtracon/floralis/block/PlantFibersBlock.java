@@ -1,7 +1,6 @@
 package com.luxtracon.floralis.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -18,6 +17,6 @@ public class PlantFibersBlock extends RotatedPillarBlock {
 
     @Override
     public void fallOn(Level pLevel, BlockState pState, BlockPos pPos, Entity pEntity, float pFallDistance) {
-        pEntity.causeFallDamage(pFallDistance, 0.2F, DamageSource.FALL);
+        pEntity.causeFallDamage(pFallDistance, 0.2F, pLevel.damageSources().fall());
     }
 }
