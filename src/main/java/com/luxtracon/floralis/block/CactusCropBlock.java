@@ -1,5 +1,7 @@
 package com.luxtracon.floralis.block;
 
+import com.luxtracon.floralis.registry.FloralisBlockStateProperties;
+
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -9,7 +11,10 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Ravager;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -28,8 +33,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class CactusCropBlock extends CropBlock {
-	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
-
 	public static final VoxelShape[] SHAPES = new VoxelShape[] {
 		Block.box(7.0D, 0.0D, 7.0D, 9.0D, 2.0D, 9.0D), Block.box(6.0D, 0.0D, 6.0D, 10.0D, 4.0D, 10.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D), Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D)
 	};
@@ -61,7 +64,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-		pBuilder.add(AGE);
+		pBuilder.add(FloralisBlockStateProperties.AGE);
 	}
 
 	@Override
@@ -91,7 +94,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public IntegerProperty getAgeProperty() {
-		return AGE;
+		return FloralisBlockStateProperties.AGE;
 	}
 
 	@Override
@@ -107,11 +110,11 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		return SHAPES[pState.getValue(this.getAgeProperty())];
+		return CactusCropBlock.SHAPES[pState.getValue(this.getAgeProperty())];
 	}
 
 	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		return SHAPES[pState.getValue(this.getAgeProperty())];
+		return CactusCropBlock.SHAPES[pState.getValue(this.getAgeProperty())];
 	}
 }

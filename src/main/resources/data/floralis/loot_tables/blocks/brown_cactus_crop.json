@@ -19,7 +19,7 @@
                   }
                 },
                 {
-                  "condition": "minecraft:alternative",
+                  "condition": "minecraft:any_of",
                   "terms": [
                     {
                       "condition": "minecraft:match_tool",
@@ -51,7 +51,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:alternative",
+                  "condition": "minecraft:any_of",
                   "terms": [
                     {
                       "condition": "minecraft:match_tool",
@@ -121,7 +121,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -187,7 +187,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -253,7 +253,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -306,7 +306,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -359,7 +359,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -412,7 +412,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -465,7 +465,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",
@@ -518,7 +518,7 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:alternative",
+            "condition": "minecraft:any_of",
             "terms": [
               {
                 "condition": "minecraft:match_tool",

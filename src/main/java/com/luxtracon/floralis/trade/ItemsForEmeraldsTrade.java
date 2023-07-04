@@ -12,14 +12,14 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class ItemsForEmeraldsTrade implements VillagerTrades.ItemListing {
-    public ItemStack itemStack;
+    public ItemStack stack;
 
     public ItemsForEmeraldsTrade(ItemStack pStack) {
-        this.itemStack = pStack;
+        this.stack = pStack;
     }
 
     @Override
     public MerchantOffer getOffer(Entity pTrader, RandomSource pRandom) {
-        return new MerchantOffer(new ItemStack(Items.EMERALD, 1), new ItemStack(this.itemStack.getItem(), 16), 12, 1, 0.05F);
+        return new MerchantOffer(new ItemStack(Items.EMERALD, 1), new ItemStack(this.stack.getItem(), 16), 12, 1, 0.05F);
     }
 }

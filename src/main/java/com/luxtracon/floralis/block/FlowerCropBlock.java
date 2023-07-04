@@ -1,11 +1,16 @@
 package com.luxtracon.floralis.block;
 
+import com.luxtracon.floralis.registry.FloralisBlockStateProperties;
+
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.FarmBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -18,8 +23,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class FlowerCropBlock extends CropBlock {
-	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
-
 	public static final VoxelShape[] SHAPES = new VoxelShape[] {
 		Block.box(5.25D, -1.0D, 5.25D, 10.75D, 1.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 3.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 5.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 7.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 9.0D, 10.75D), Block.box(5.25D, -1.0D, 5.25D, 10.75D, 11.0D, 10.75D)
 	};
@@ -51,7 +54,7 @@ public class FlowerCropBlock extends CropBlock {
 
 	@Override
 	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-		pBuilder.add(AGE);
+		pBuilder.add(FloralisBlockStateProperties.AGE);
 	}
 
 	@Override
@@ -61,7 +64,7 @@ public class FlowerCropBlock extends CropBlock {
 
 	@Override
 	public IntegerProperty getAgeProperty() {
-		return AGE;
+		return FloralisBlockStateProperties.AGE;
 	}
 
 	@Override
@@ -71,6 +74,6 @@ public class FlowerCropBlock extends CropBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		return SHAPES[pState.getValue(this.getAgeProperty())];
+		return FlowerCropBlock.SHAPES[pState.getValue(this.getAgeProperty())];
 	}
 }

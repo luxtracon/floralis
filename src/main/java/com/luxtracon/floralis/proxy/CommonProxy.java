@@ -2,7 +2,7 @@ package com.luxtracon.floralis.proxy;
 
 import com.google.common.collect.ImmutableMap;
 
-import com.luxtracon.floralis.config.FloralisConfig;
+import com.luxtracon.floralis.registry.FloralisConfig;
 import com.luxtracon.floralis.registry.FloralisCompostables;
 import com.luxtracon.floralis.registry.FloralisFlammables;
 import com.luxtracon.floralis.registry.FloralisItems;
@@ -25,7 +25,7 @@ import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -43,7 +43,7 @@ public class CommonProxy {
 
 	}
 
-	public void onCreativeModeTabRegister(CreativeModeTabEvent.Register pEvent) {
+	public void onCreativeModeTabRegister(BuildCreativeModeTabContentsEvent pEvent) {
 
 	}
 
@@ -58,18 +58,19 @@ public class CommonProxy {
 	}
 
 	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
-		Registry<StructureProcessorList> structureProcessorList = pEvent.getServer().registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
-		Registry<StructureTemplatePool> structureTemplatePool = pEvent.getServer().registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
+		var registryAccess = pEvent.getServer().registryAccess();
+		var processorList = registryAccess.registry(Registries.PROCESSOR_LIST).orElseThrow();
+		var templatePool = registryAccess.registry(Registries.TEMPLATE_POOL).orElseThrow();
 
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
-		this.addPieceToPool(structureProcessorList, structureTemplatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
+		this.addPieceToPool(processorList, templatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
+		this.addPieceToPool(processorList, templatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
+		this.addPieceToPool(processorList, templatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
+		this.addPieceToPool(processorList, templatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
+		this.addPieceToPool(processorList, templatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
 	}
 
 	public void onVillagerTrades(VillagerTradesEvent pEvent) {
-		if (pEvent.getType() == VillagerProfession.FARMER) {
+		if (pEvent.getType().equals(VillagerProfession.FARMER)) {
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.WHITE_PETALS.get())));
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.LIGHT_GRAY_PETALS.get())));
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.GRAY_PETALS.get())));
@@ -107,8 +108,8 @@ public class CommonProxy {
 	}
 
 	public void addPieceToPool(Registry<StructureProcessorList> pStructureProcessorList, Registry<StructureTemplatePool> pStructureTemplatePool, String pPiece, ResourceLocation pPool, int pWeight) {
-		SinglePoolElement singlePoolElement = SinglePoolElement.legacy(pPiece, pStructureProcessorList.getHolderOrThrow(ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty")))).apply(StructureTemplatePool.Projection.RIGID);
-		StructureTemplatePool structureTemplatePool = pStructureTemplatePool.get(pPool);
+		var singlePoolElement = SinglePoolElement.legacy(pPiece, pStructureProcessorList.getHolderOrThrow(ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty")))).apply(StructureTemplatePool.Projection.RIGID);
+		var structureTemplatePool = pStructureTemplatePool.get(pPool);
 		List<Pair<StructurePoolElement, Integer>> list;
 		if (structureTemplatePool != null) {
 			list = new ArrayList<>(structureTemplatePool.rawTemplates);

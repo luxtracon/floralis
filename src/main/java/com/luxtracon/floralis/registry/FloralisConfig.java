@@ -1,4 +1,4 @@
-package com.luxtracon.floralis.config;
+package com.luxtracon.floralis.registry;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -12,13 +12,14 @@ public class FloralisConfig {
 	public static ForgeConfigSpec.IntValue TAIGA_FARM;
 
 	public static void registerClientConfig() {
-		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+		var builder = new ForgeConfigSpec.Builder();
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, builder.build());
 	}
 
 	public static void registerCommonConfig() {
-		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+		var builder = new ForgeConfigSpec.Builder();
+
 		builder.comment("Structure settings").push("structureSettings");
 
 		DESERT_FARM = builder.comment("Default: 64. Spawn rate for cactus farms in desert villages. 0 disables spawning cactus farms in desert villages.").defineInRange("desertFarms", 64, 0, 256);
@@ -28,11 +29,12 @@ public class FloralisConfig {
 		TAIGA_FARM = builder.comment("Default: 64. Spawn rate for flower farms in taiga villages. 0 disables spawning flower farms in taiga villages.").defineInRange("taigaFarms", 64, 0, 256);
 
 		builder.pop();
+
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, builder.build());
 	}
 
 	public static void registerServerConfig() {
-		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+		var builder = new ForgeConfigSpec.Builder();
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, builder.build());
 	}

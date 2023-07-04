@@ -1,17 +1,13 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.constant.FloralisConstant;
 import com.luxtracon.floralis.proxy.ClientProxy;
-import com.luxtracon.floralis.config.FloralisConfig;
 import com.luxtracon.floralis.proxy.CommonProxy;
-import com.luxtracon.floralis.registry.FloralisBlocks;
-import com.luxtracon.floralis.registry.FloralisItems;
+import com.luxtracon.floralis.registry.*;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -21,12 +17,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @SuppressWarnings("unused")
 
-@Mod(FloralisConstant.MODID)
+@Mod(FloralisConstant.ID)
 public class Floralis {
 	public CommonProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 
 	public Floralis() {
-		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		var eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		eventBus.addListener(this::onCreativeModeTabRegister);
 		eventBus.addListener(this::onFMLCommonSetup);
@@ -37,12 +33,13 @@ public class Floralis {
 		FloralisConfig.registerServerConfig();
 
 		FloralisBlocks.BLOCKS.register(eventBus);
+		FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(eventBus);
 		FloralisItems.ITEMS.register(eventBus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	public void onCreativeModeTabRegister(CreativeModeTabEvent.Register pEvent) {
+	public void onCreativeModeTabRegister(BuildCreativeModeTabContentsEvent pEvent) {
 		this.proxy.onCreativeModeTabRegister(pEvent);
 	}
 
