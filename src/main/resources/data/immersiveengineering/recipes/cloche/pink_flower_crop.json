@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:pink_petals"
+    },
+    {
+      "item": "floralis:pink_flower_seeds"
+    }
+  ],
+  "input": {
+    "item": "floralis:pink_flower_seeds"
+  },
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_pink_flower_crop"
+  },
+  "time": 600
+}
