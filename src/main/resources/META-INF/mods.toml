@@ -7,6 +7,7 @@ modId="floralis"
 version="${file.jarVersion}"
 displayName="Floralis"
 logoFile="logo.png"
+credits="unroman"
 authors="luxtracon"
 description='''Floralis adds farmable cacti and flowers for an automatable way to obtain all dyes.'''
 
