@@ -37,6 +37,86 @@ public class ItemSeedFlower extends Item implements IPlantable
     @Override
     public IBlockState getPlant(IBlockAccess world, BlockPos pos)
     {
+        if (this.equals(ItemInit.seedFlowerBlack))
+        {
+            return BlockInit.cropFlowerBlack.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerBlue))
+        {
+            return BlockInit.cropFlowerBlue.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerBrown))
+        {
+            return BlockInit.cropFlowerBrown.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerCyan))
+        {
+            return BlockInit.cropFlowerCyan.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerGray))
+        {
+            return BlockInit.cropFlowerGray.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerGreen))
+        {
+            return BlockInit.cropFlowerGreen.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerLightBlue))
+        {
+            return BlockInit.cropFlowerLightBlue.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerLightGray))
+        {
+            return BlockInit.cropFlowerLightGray.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerLime))
+        {
+            return BlockInit.cropFlowerLime.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerMagenta))
+        {
+            return BlockInit.cropFlowerMagenta.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerOrange))
+        {
+            return BlockInit.cropFlowerOrange.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerPink))
+        {
+            return BlockInit.cropFlowerPink.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerPurple))
+        {
+            return BlockInit.cropFlowerPurple.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerRed))
+        {
+            return BlockInit.cropFlowerRed.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerWhite))
+        {
+            return BlockInit.cropFlowerWhite.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedFlowerYellow))
+        {
+            return BlockInit.cropFlowerYellow.getDefaultState();
+        }
+
         return null;
     }
 

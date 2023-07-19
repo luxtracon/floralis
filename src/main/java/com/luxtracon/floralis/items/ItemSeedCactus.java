@@ -37,6 +37,86 @@ public class ItemSeedCactus extends Item implements IPlantable
     @Override
     public IBlockState getPlant(IBlockAccess world, BlockPos pos)
     {
+        if (this.equals(ItemInit.seedCactusBlack))
+        {
+            return BlockInit.cropCactusBlack.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusBlue))
+        {
+            return BlockInit.cropCactusBlue.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusBrown))
+        {
+            return BlockInit.cropCactusBrown.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusCyan))
+        {
+            return BlockInit.cropCactusCyan.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusGray))
+        {
+            return BlockInit.cropCactusGray.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusGreen))
+        {
+            return BlockInit.cropCactusGreen.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusLightBlue))
+        {
+            return BlockInit.cropCactusLightBlue.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusLightGray))
+        {
+            return BlockInit.cropCactusLightGray.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusLime))
+        {
+            return BlockInit.cropCactusLime.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusMagenta))
+        {
+            return BlockInit.cropCactusMagenta.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusOrange))
+        {
+            return BlockInit.cropCactusOrange.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusPink))
+        {
+            return BlockInit.cropCactusPink.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusPurple))
+        {
+            return BlockInit.cropCactusPurple.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusRed))
+        {
+            return BlockInit.cropCactusRed.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusWhite))
+        {
+            return BlockInit.cropCactusWhite.getDefaultState();
+        }
+
+        else if (this.equals(ItemInit.seedCactusYellow))
+        {
+            return BlockInit.cropCactusYellow.getDefaultState();
+        }
+
         return null;
     }
 
