@@ -1,6 +1,6 @@
 Floralis aims to make any type of dye farmable by adding farmable cacti and flowers to the game. Furthemore it aims to do that in an automatable way with the help of third party mods. For example with a Multi Farm from Forestry, Garden Cloche from Immersive Engineering, Plant Sower and Plant Gatherer from Industrial Foregoing and Phytogenic Insulator from Thermal Expansion.
 
-![An image showing the mods logo](https://cdn.zekro.de/mods/floralis/media/logo_v3.png 'Floralis Logo')
+![An image showing the mods logo](https://cdn.zekro.de/mods/floralis/media/logo_v3.png 'Floralis logo')
 
 As soon as you travel around your world, you'll either find a new type of cactus or a new type of flower, depending on the biome you wander through. Cactus plants can be found in any desert type biome, while flower plants can be found in any other biome but not in desert type biomes. When you look around for a while, you'll see that there is one type of cactus and one type of flower for each type of dye. You'll find them every few chunks in small groups sorted by their color. But take care, the cacti might sting! Besides from looking pretty and attracting bees, they serve another useful purpose. Upon breaking one of either a cactus or flower, they'll drop two respective seeds depending on their plant type and color, one plant petal in their respective color and one plant fiber. Harvesting them with a pair of shears or a silk touch enchanted tool will drop the cactus or flower itself instead, for you to plant or pot it as decoration.
 
