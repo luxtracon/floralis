@@ -22,8 +22,8 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.common.PlantType;
-import net.minecraftforge.event.ForgeEventFactory;
+import net.neoforged.neoforge.common.PlantType;
+import net.neoforged.neoforge.event.EventHooks;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -69,7 +69,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-		if (pEntity instanceof Ravager && ForgeEventFactory.getMobGriefingEvent(pLevel, pEntity)) {
+		if (pEntity instanceof Ravager && EventHooks.getMobGriefingEvent(pLevel, pEntity)) {
 			pLevel.destroyBlock(pPos, true, pEntity);
 		}
 

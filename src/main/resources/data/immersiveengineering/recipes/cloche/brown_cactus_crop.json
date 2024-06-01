@@ -1,8 +1,8 @@
 {
   "type": "immersiveengineering:cloche",
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "forge:mod_loaded",
+      "type": "neoforge:mod_loaded",
       "modid": "immersiveengineering"
     }
   ],
@@ -21,7 +21,7 @@
     "item": "floralis:brown_cactus_seeds"
   },
   "soil": {
-    "tag": "forge:sand"
+    "tag": "neoforge:sand"
   },
   "render": {
     "type": "crop",

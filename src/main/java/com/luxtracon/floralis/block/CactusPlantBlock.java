@@ -44,6 +44,16 @@ public class CactusPlantBlock extends BushBlock {
 	}
 
 	@Override
+	public int getFireSpreadSpeed(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
+		return 60;
+	}
+
+	@Override
+	public int getFlammability(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
+		return 100;
+	}
+
+	@Override
 	public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
 		if (pEntity instanceof Bee) {
 			pEntity.setInvulnerable(true);

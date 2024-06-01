@@ -1,24 +1,24 @@
 package com.luxtracon.floralis.registry;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig;
+import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class FloralisConfig {
-	public static ForgeConfigSpec.IntValue DESERT_FARM;
-	public static ForgeConfigSpec.IntValue PLAINS_FARM;
-	public static ForgeConfigSpec.IntValue SAVANNA_FARM;
-	public static ForgeConfigSpec.IntValue SNOWY_FARM;
-	public static ForgeConfigSpec.IntValue TAIGA_FARM;
+	public static ModConfigSpec.IntValue DESERT_FARM;
+	public static ModConfigSpec.IntValue PLAINS_FARM;
+	public static ModConfigSpec.IntValue SAVANNA_FARM;
+	public static ModConfigSpec.IntValue SNOWY_FARM;
+	public static ModConfigSpec.IntValue TAIGA_FARM;
 
 	public static void registerClientConfig() {
-		var builder = new ForgeConfigSpec.Builder();
+		var builder = new ModConfigSpec.Builder();
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, builder.build());
 	}
 
 	public static void registerCommonConfig() {
-		var builder = new ForgeConfigSpec.Builder();
+		var builder = new ModConfigSpec.Builder();
 
 		builder.comment("Structure settings").push("structureSettings");
 
@@ -34,7 +34,7 @@ public class FloralisConfig {
 	}
 
 	public static void registerServerConfig() {
-		var builder = new ForgeConfigSpec.Builder();
+		var builder = new ModConfigSpec.Builder();
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, builder.build());
 	}

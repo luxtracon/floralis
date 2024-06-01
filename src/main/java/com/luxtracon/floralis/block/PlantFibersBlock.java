@@ -1,7 +1,9 @@
 package com.luxtracon.floralis.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,6 +15,16 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class PlantFibersBlock extends RotatedPillarBlock {
     public PlantFibersBlock(Properties pProperties) {
         super(pProperties);
+    }
+
+    @Override
+    public int getFireSpreadSpeed(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
+        return 60;
+    }
+
+    @Override
+    public int getFlammability(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
+        return 20;
     }
 
     @Override

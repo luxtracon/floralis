@@ -1,0 +1,11 @@
+{
+  "biomes": [
+    "minecraft:badlands",
+    "minecraft:desert",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands"
+  ],
+  "features": "floralis:red_cactus",
+  "step": "vegetal_decoration",
+  "type": "neoforge:add_features"
+}

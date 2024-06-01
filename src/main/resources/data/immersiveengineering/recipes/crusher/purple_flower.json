@@ -1,8 +1,8 @@
 {
   "type": "immersiveengineering:crusher",
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "forge:mod_loaded",
+      "type": "neoforge:mod_loaded",
       "modid": "immersiveengineering"
     }
   ],

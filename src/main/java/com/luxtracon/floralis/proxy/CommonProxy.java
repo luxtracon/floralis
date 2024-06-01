@@ -2,9 +2,8 @@ package com.luxtracon.floralis.proxy;
 
 import com.google.common.collect.ImmutableMap;
 
-import com.luxtracon.floralis.registry.FloralisConfig;
 import com.luxtracon.floralis.registry.FloralisCompostables;
-import com.luxtracon.floralis.registry.FloralisFlammables;
+import com.luxtracon.floralis.registry.FloralisConfig;
 import com.luxtracon.floralis.registry.FloralisItems;
 import com.luxtracon.floralis.registry.FloralisPottables;
 import com.luxtracon.floralis.trade.EmeraldsForItemsTrade;
@@ -25,11 +24,11 @@ import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +48,6 @@ public class CommonProxy {
 
 	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
 		pEvent.enqueueWork(FloralisCompostables::setup);
-		pEvent.enqueueWork(FloralisFlammables::setup);
 		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 

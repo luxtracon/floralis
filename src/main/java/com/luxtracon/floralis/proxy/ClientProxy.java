@@ -1,7 +1,7 @@
 package com.luxtracon.floralis.proxy;
 
-import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
 import com.luxtracon.floralis.registry.FloralisBlocks;
+import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
 import com.luxtracon.floralis.registry.FloralisItems;
 
 import net.minecraft.client.Minecraft;
@@ -9,11 +9,11 @@ import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Block;
 
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
