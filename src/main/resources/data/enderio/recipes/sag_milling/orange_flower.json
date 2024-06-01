@@ -1,0 +1,25 @@
+{
+  "type": "enderio:sag_milling",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "energy": 2400,
+  "input": {
+    "item": "floralis:orange_flower"
+  },
+  "outputs": [
+    {
+      "count": 2,
+      "item": "floralis:orange_flower_seeds"
+    },
+    {
+      "item": "floralis:orange_petals"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    }
+  ]
+}

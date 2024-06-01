@@ -1,0 +1,25 @@
+{
+  "type": "enderio:sag_milling",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "energy": 2400,
+  "input": {
+    "item": "floralis:light_gray_cactus"
+  },
+  "outputs": [
+    {
+      "count": 2,
+      "item": "floralis:light_gray_cactus_seeds"
+    },
+    {
+      "item": "floralis:light_gray_petals"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    }
+  ]
+}
