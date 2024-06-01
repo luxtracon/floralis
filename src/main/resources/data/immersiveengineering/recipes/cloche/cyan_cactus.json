@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:cyan_cactus"
+    }
+  ],
+  "input": {
+    "item": "floralis:cyan_cactus"
+  },
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_cyan_cactus_crop"
+  },
+  "time": 480
+}

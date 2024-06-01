@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:pink_cactus"
+    }
+  ],
+  "input": {
+    "item": "floralis:pink_cactus"
+  },
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_pink_cactus_crop"
+  },
+  "time": 480
+}

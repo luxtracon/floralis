@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:brown_flower"
+    }
+  ],
+  "input": {
+    "item": "floralis:brown_flower"
+  },
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_brown_flower_crop"
+  },
+  "time": 480
+}

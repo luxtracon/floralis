@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:white_flower"
+    }
+  ],
+  "input": {
+    "item": "floralis:white_flower"
+  },
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_white_flower_crop"
+  },
+  "time": 480
+}

@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "results": [
+    {
+      "item": "floralis:blue_cactus"
+    }
+  ],
+  "input": {
+    "item": "floralis:blue_cactus"
+  },
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "render": {
+    "type": "crop",
+    "block": "floralis:cloched_blue_cactus_crop"
+  },
+  "time": 480
+}
