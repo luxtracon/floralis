@@ -1,5 +1,7 @@
 package com.luxtracon.floralis.block;
 
+import com.mojang.serialization.MapCodec;
+
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -27,6 +29,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class CactusPlantBlock extends BushBlock {
+	public static final MapCodec<CactusPlantBlock> CODEC = Block.simpleCodec(CactusPlantBlock::new);
+
 	public static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
 
 	public CactusPlantBlock(Properties pProperties) {
@@ -70,6 +74,11 @@ public class CactusPlantBlock extends BushBlock {
 	@Override
 	public BlockState updateShape(BlockState pState, Direction pFacing, BlockState pFacingState, LevelAccessor pLevel, BlockPos pCurrentPos, BlockPos pFacingPos) {
 		return !pState.canSurvive(pLevel, pCurrentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);
+	}
+
+	@Override
+	public MapCodec<CactusPlantBlock> codec() {
+		return CactusPlantBlock.CODEC;
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package com.luxtracon.floralis.block;
 
+import com.mojang.serialization.MapCodec;
+
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,6 +23,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class FlowerPlantBlock extends BushBlock {
+	public static final MapCodec<FlowerPlantBlock> CODEC = Block.simpleCodec(FlowerPlantBlock::new);
+
 	public static final VoxelShape SHAPE = Block.box(5.25D, 0.0D, 5.25D, 10.75D, 12.0D, 10.75D);
 
 	public FlowerPlantBlock(Properties pProperties) {
@@ -53,8 +57,13 @@ public class FlowerPlantBlock extends BushBlock {
 	}
 
 	@Override
+	public MapCodec<FlowerPlantBlock> codec() {
+		return FlowerPlantBlock.CODEC;
+	}
+
+	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
 		var vec3 = pState.getOffset(pLevel, pPos);
-		return SHAPE.move(vec3.x, vec3.y, vec3.z);
+		return FlowerPlantBlock.SHAPE.move(vec3.x, vec3.y, vec3.z);
 	}
 }
