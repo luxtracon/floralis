@@ -4,10 +4,7 @@ import com.luxtracon.floralis.block.*;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -23,22 +20,22 @@ import java.util.function.Supplier;
 public class FloralisBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, FloralisConstant.ID);
 
-	public static final Supplier<Block> WHITE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("white_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.SNOW)));
-	public static final Supplier<Block> LIGHT_GRAY_DYE_BLOCK = FloralisBlocks.BLOCKS.register("light_gray_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GRAY)));
-	public static final Supplier<Block> GRAY_DYE_BLOCK = FloralisBlocks.BLOCKS.register("gray_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_GRAY)));
-	public static final Supplier<Block> BLACK_DYE_BLOCK = FloralisBlocks.BLOCKS.register("black_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BLACK)));
-	public static final Supplier<Block> BROWN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("brown_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BROWN)));
-	public static final Supplier<Block> RED_DYE_BLOCK = FloralisBlocks.BLOCKS.register("red_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_RED)));
-	public static final Supplier<Block> ORANGE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("orange_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_ORANGE)));
-	public static final Supplier<Block> YELLOW_DYE_BLOCK = FloralisBlocks.BLOCKS.register("yellow_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_YELLOW)));
-	public static final Supplier<Block> LIME_DYE_BLOCK = FloralisBlocks.BLOCKS.register("lime_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GREEN)));
-	public static final Supplier<Block> GREEN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("green_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_GREEN)));
-	public static final Supplier<Block> CYAN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("cyan_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_CYAN)));
-	public static final Supplier<Block> LIGHT_BLUE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("light_blue_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_BLUE)));
-	public static final Supplier<Block> BLUE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("blue_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BLUE)));
-	public static final Supplier<Block> PURPLE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("purple_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_PURPLE)));
-	public static final Supplier<Block> MAGENTA_DYE_BLOCK = FloralisBlocks.BLOCKS.register("magenta_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_MAGENTA)));
-	public static final Supplier<Block> PINK_DYE_BLOCK = FloralisBlocks.BLOCKS.register("pink_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_PINK)));
+	public static final Supplier<Block> WHITE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("white_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.SNOW)));
+	public static final Supplier<Block> LIGHT_GRAY_DYE_BLOCK = FloralisBlocks.BLOCKS.register("light_gray_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GRAY)));
+	public static final Supplier<Block> GRAY_DYE_BLOCK = FloralisBlocks.BLOCKS.register("gray_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_GRAY)));
+	public static final Supplier<Block> BLACK_DYE_BLOCK = FloralisBlocks.BLOCKS.register("black_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BLACK)));
+	public static final Supplier<Block> BROWN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("brown_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BROWN)));
+	public static final Supplier<Block> RED_DYE_BLOCK = FloralisBlocks.BLOCKS.register("red_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_RED)));
+	public static final Supplier<Block> ORANGE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("orange_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_ORANGE)));
+	public static final Supplier<Block> YELLOW_DYE_BLOCK = FloralisBlocks.BLOCKS.register("yellow_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_YELLOW)));
+	public static final Supplier<Block> LIME_DYE_BLOCK = FloralisBlocks.BLOCKS.register("lime_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GREEN)));
+	public static final Supplier<Block> GREEN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("green_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_GREEN)));
+	public static final Supplier<Block> CYAN_DYE_BLOCK = FloralisBlocks.BLOCKS.register("cyan_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_CYAN)));
+	public static final Supplier<Block> LIGHT_BLUE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("light_blue_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_BLUE)));
+	public static final Supplier<Block> BLUE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("blue_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_BLUE)));
+	public static final Supplier<Block> PURPLE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("purple_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_PURPLE)));
+	public static final Supplier<Block> MAGENTA_DYE_BLOCK = FloralisBlocks.BLOCKS.register("magenta_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_MAGENTA)));
+	public static final Supplier<Block> PINK_DYE_BLOCK = FloralisBlocks.BLOCKS.register("pink_dye_block", () -> new FallingBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_PINK)));
 
 	public static final Supplier<Block> PLANT_FIBERS_BLOCK = FloralisBlocks.BLOCKS.register("plant_fibers_block", () -> new PlantFibersBlock(FloralisBlocks.propertiesFibersBlock()));
 

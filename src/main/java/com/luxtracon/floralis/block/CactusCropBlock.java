@@ -5,7 +5,6 @@ import com.luxtracon.floralis.registry.FloralisBlockStateProperties;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
@@ -15,6 +14,7 @@ import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -49,7 +49,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-		return pState.is(BlockTags.SAND);
+		return pState.getBlock() instanceof SandBlock;
 	}
 
 	@Override
