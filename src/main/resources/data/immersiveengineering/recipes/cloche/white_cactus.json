@@ -15,7 +15,7 @@
     "item": "floralis:white_cactus"
   },
   "soil": {
-    "tag": "neoforge:sand"
+    "tag": "forge:sand"
   },
   "render": {
     "type": "crop",
