@@ -1,4 +1,8 @@
-Floralis aims to make any type of dye farmable by adding farmable cacti and flowers to the game. Furthemore it aims to do that in an automatable way with the help of third party mods. For example with a Multi Farm from Forestry, Garden Cloche from Immersive Engineering, Plant Sower and Plant Gatherer from Industrial Foregoing and Phytogenic Insulator from Thermal Expansion.
+[![CurseForge](https://img.shields.io/curseforge/dt/458358?style=flat-square&logo=curseforge&logoColor=ffffff&label=curseforge&labelColor=f16436&color=808080)](https://www.curseforge.com/minecraft/mc-mods/floralis) [![Modrinth](https://img.shields.io/modrinth/dt/1Nde79GO?style=flat-square&logo=modrinth&logoColor=ffffff&label=modrinth&labelColor=1bd96a&color=808080)](https://modrinth.com/mod/floralis)
+
+---
+
+Floralis aims to make any type of dye farmable by adding farmable cacti and flowers to the game. Furthermore it aims to do that in an automatable way with the help of third party mods. For example with a Multi Farm from Forestry, Garden Cloche from Immersive Engineering, Plant Sower and Plant Gatherer from Industrial Foregoing and Phytogenic Insulator from Thermal Expansion.
 
 ![An image showing the mods logo](https://cdn.zekro.de/mods/floralis/media/logo_v3.png 'Floralis logo')
 
@@ -10,7 +14,7 @@ If you're lucky enough, you'll find a village with one or more custom fields of 
 
 ![An animated image showing the mods villager trades](https://cdn.zekro.de/mods/floralis/media/trades.gif 'Villager trades')
 
-The seeds you just have gotten are pretty straight forward to use, either plant cactus seeds on some sand or plant flower seeds on farmland. Give them time to grow to their full size, which will be indicated by the fully blooming blossom on top of the crop. You wont get back more than the one seed you used to plant the crop as long as they aren't fully grown. When fully grown, they'll drop two respective seeds depending on their plant type and color, one plant petal in their respective color and one plant fiber, just like their natural spawning counterparts. Harvesting them with a pair of shears or a silk touch enchanted tool will drop the cactus or flower itself instead, for you to plant or pot it as decoration. As long as a cactus crop isn't old enough to develop its thorns, it wont hurt you or any other entity.
+The seeds you just have gotten are pretty straight forward to use, either plant cactus seeds on some sand or plant flower seeds on farmland. Give them time to grow to their full size, which will be indicated by the fully blooming blossom on top of the crop. You won't get back more than the one seed you used to plant the crop as long as they aren't fully grown. When fully grown, they'll drop two respective seeds depending on their plant type and color, one plant petal in their respective color and one plant fiber, just like their natural spawning counterparts. Harvesting them with a pair of shears or a silk touch enchanted tool will drop the cactus or flower itself instead, for you to plant or pot it as decoration. As long as a cactus crop isn't old enough to develop its thorns, it won't hurt you or any other entity.
 
 ![An animated image showing the process of cactus and flower crops growing](https://cdn.zekro.de/mods/floralis/media/drops_crops.gif 'Crops growing')
 
@@ -26,9 +30,9 @@ Of course you can reverse this progress to get the dye back out of their respect
 
 ![An animated image showing the process of decompressing dye blocks to dye](https://cdn.zekro.de/mods/floralis/media/crafting_decompress_dye_block.gif 'Dye decompression')
 
-Plant fibers can be used just like bone meal, to speed up the growth of crops, sow some grass and flowers, or use it as a fertilizer with third party mods. Just like with dye, there is a storage block in case you've piled up to much plant fibers.
+Plant fibers can be used just like bone meal, to speed up the growth of crops, sow some grass and flowers, or use it as a fertilizer with third party mods. Just like with dye, there is a storage block in case you've piled up too much plant fibers.
 
-![An image showing the process of compressing plant fiebers to plant fibers blocks](https://cdn.zekro.de/mods/floralis/media/crafting_compress_plant_fibers_block.png 'Fibers compression')
+![An image showing the process of compressing plant fibers to plant fibers blocks](https://cdn.zekro.de/mods/floralis/media/crafting_compress_plant_fibers_block.png 'Fibers compression')
 
 Of course you can reverse this progress to get the plant fibers back out of the storage block.
 
@@ -44,6 +48,6 @@ Since all blocks and items in this mod are of natural origin, they can be compos
 - Plant Fibers: 30 %
 - Plant Fibers Block: 85 %
 
-The provided config file will let you adjust the way the mod generates its features. You can enable and disable independently whether cacti and flowers should get generated naturally, as well as enable and disbale whether cacti and flower fields should get generated in villages. You can enable and disable village field generation independently per village type. You can also adjust the rarity and density in which natural generating cacti and flowers occur.
+The provided config file will let you adjust the way the mod generates its features. You can enable and disable independently whether cacti and flowers should get generated naturally, as well as enable and disable whether cacti and flower fields should get generated in villages. You can enable and disable village field generation independently per village type. You can also adjust the rarity and density in which natural generating cacti and flowers occur.
 
 You are allowed to use this mod in any modpack, as long as it's credited in some kind of modlist, in case the modpack is public.
