@@ -15,7 +15,7 @@
     "item": "floralis:brown_cactus"
   },
   "soil": {
-    "tag": "neoforge:sand"
+    "tag": "forge:sand"
   },
   "render": {
     "type": "crop",
