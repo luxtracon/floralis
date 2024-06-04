@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:cyan_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_cyan_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:cyan_flower"
     }
   ],
-  "input": {
-    "item": "floralis:cyan_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_cyan_flower_crop"
   },
   "time": 480
 }

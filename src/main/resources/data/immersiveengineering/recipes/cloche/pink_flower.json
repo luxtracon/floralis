@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:pink_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_pink_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:pink_flower"
     }
   ],
-  "input": {
-    "item": "floralis:pink_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_pink_flower_crop"
   },
   "time": 480
 }

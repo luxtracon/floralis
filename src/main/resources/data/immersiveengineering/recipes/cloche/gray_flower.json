@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:gray_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_gray_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:gray_flower"
     }
   ],
-  "input": {
-    "item": "floralis:gray_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_gray_flower_crop"
   },
   "time": 480
 }

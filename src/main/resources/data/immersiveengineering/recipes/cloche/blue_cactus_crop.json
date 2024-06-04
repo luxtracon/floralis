@@ -6,26 +6,29 @@
       "modid": "immersiveengineering"
     }
   ],
-  "results": [
-    {
-      "item": "floralis:plant_fibers"
-    },
-    {
-      "item": "floralis:blue_petals"
-    },
-    {
-      "item": "floralis:blue_cactus_seeds"
-    }
-  ],
   "input": {
     "item": "floralis:blue_cactus_seeds"
   },
-  "soil": {
-    "tag": "neoforge:sand"
-  },
   "render": {
-    "type": "crop",
-    "block": "floralis:cloched_blue_cactus_crop"
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_blue_cactus_crop"
   },
-  "time": 640
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:blue_cactus_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:blue_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "time": 800
 }

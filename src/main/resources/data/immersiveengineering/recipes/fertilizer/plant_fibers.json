@@ -6,8 +6,8 @@
       "modid": "immersiveengineering"
     }
   ],
+  "growthModifier": 1.25,
   "input": {
     "item": "floralis:plant_fibers"
-  },
-  "growthModifier": 1.25
+  }
 }

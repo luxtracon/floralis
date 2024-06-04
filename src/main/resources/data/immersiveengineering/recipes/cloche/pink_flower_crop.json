@@ -6,26 +6,29 @@
       "modid": "immersiveengineering"
     }
   ],
-  "results": [
-    {
-      "item": "floralis:plant_fibers"
-    },
-    {
-      "item": "floralis:pink_petals"
-    },
-    {
-      "item": "floralis:pink_flower_seeds"
-    }
-  ],
   "input": {
     "item": "floralis:pink_flower_seeds"
   },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_pink_flower_crop"
+  },
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:pink_flower_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:pink_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
   "soil": {
     "item": "minecraft:dirt"
   },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_pink_flower_crop"
-  },
-  "time": 640
+  "time": 800
 }

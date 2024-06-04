@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:white_cactus"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_white_cactus_crop"
+  },
   "results": [
     {
       "item": "floralis:white_cactus"
     }
   ],
-  "input": {
-    "item": "floralis:white_cactus"
-  },
   "soil": {
-    "tag": "neoforge:sand"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_white_cactus_crop"
+    "tag": "forge:sand"
   },
   "time": 480
 }

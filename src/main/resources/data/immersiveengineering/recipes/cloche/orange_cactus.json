@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:orange_cactus"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_orange_cactus_crop"
+  },
   "results": [
     {
       "item": "floralis:orange_cactus"
     }
   ],
-  "input": {
-    "item": "floralis:orange_cactus"
-  },
   "soil": {
-    "tag": "neoforge:sand"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_orange_cactus_crop"
+    "tag": "forge:sand"
   },
   "time": 480
 }

@@ -6,26 +6,29 @@
       "modid": "immersiveengineering"
     }
   ],
-  "results": [
-    {
-      "item": "floralis:plant_fibers"
-    },
-    {
-      "item": "floralis:orange_petals"
-    },
-    {
-      "item": "floralis:orange_flower_seeds"
-    }
-  ],
   "input": {
     "item": "floralis:orange_flower_seeds"
   },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_orange_flower_crop"
+  },
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:orange_flower_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:orange_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
   "soil": {
     "item": "minecraft:dirt"
   },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_orange_flower_crop"
-  },
-  "time": 640
+  "time": 800
 }

@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:cyan_cactus"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_cyan_cactus_crop"
+  },
   "results": [
     {
       "item": "floralis:cyan_cactus"
     }
   ],
-  "input": {
-    "item": "floralis:cyan_cactus"
-  },
   "soil": {
-    "tag": "neoforge:sand"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_cyan_cactus_crop"
+    "tag": "forge:sand"
   },
   "time": 480
 }

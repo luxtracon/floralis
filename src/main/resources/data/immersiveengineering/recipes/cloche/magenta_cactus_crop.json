@@ -6,26 +6,29 @@
       "modid": "immersiveengineering"
     }
   ],
-  "results": [
-    {
-      "item": "floralis:plant_fibers"
-    },
-    {
-      "item": "floralis:magenta_petals"
-    },
-    {
-      "item": "floralis:magenta_cactus_seeds"
-    }
-  ],
   "input": {
     "item": "floralis:magenta_cactus_seeds"
   },
-  "soil": {
-    "tag": "neoforge:sand"
-  },
   "render": {
-    "type": "crop",
-    "block": "floralis:cloched_magenta_cactus_crop"
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_magenta_cactus_crop"
   },
-  "time": 640
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:magenta_cactus_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:magenta_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
+  "soil": {
+    "tag": "forge:sand"
+  },
+  "time": 800
 }

@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:white_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_white_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:white_flower"
     }
   ],
-  "input": {
-    "item": "floralis:white_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_white_flower_crop"
   },
   "time": 480
 }

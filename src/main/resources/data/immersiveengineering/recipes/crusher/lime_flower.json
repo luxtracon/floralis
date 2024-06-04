@@ -6,30 +6,28 @@
       "modid": "immersiveengineering"
     }
   ],
+  "energy": 3200,
+  "input": {
+    "item": "floralis:lime_flower"
+  },
+  "result": {
+    "Count": 2,
+    "id": "floralis:lime_flower_seeds"
+  },
   "secondaries": [
     {
       "chance": 1.0,
+      "conditions": [],
       "output": {
-        "item": "floralis:plant_fibers",
-        "count": 1
+        "item": "floralis:lime_petals"
       }
     },
     {
       "chance": 1.0,
+      "conditions": [],
       "output": {
-        "item": "floralis:lime_petals",
-        "count": 1
+        "item": "floralis:plant_fibers"
       }
     }
-  ],
-  "result": {
-    "count": 2,
-    "base_ingredient": {
-      "item": "floralis:lime_flower_seeds"
-    }
-  },
-  "input": {
-    "item": "floralis:lime_flower"
-  },
-  "energy": 3200
+  ]
 }

@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:magenta_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_magenta_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:magenta_flower"
     }
   ],
-  "input": {
-    "item": "floralis:magenta_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_magenta_flower_crop"
   },
   "time": 480
 }

@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:purple_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_purple_flower_crop"
+  },
   "results": [
     {
       "item": "floralis:purple_flower"
     }
   ],
-  "input": {
-    "item": "floralis:purple_flower"
-  },
   "soil": {
     "item": "minecraft:dirt"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_purple_flower_crop"
   },
   "time": 480
 }

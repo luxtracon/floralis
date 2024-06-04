@@ -6,20 +6,20 @@
       "modid": "immersiveengineering"
     }
   ],
+  "input": {
+    "item": "floralis:yellow_cactus"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_yellow_cactus_crop"
+  },
   "results": [
     {
       "item": "floralis:yellow_cactus"
     }
   ],
-  "input": {
-    "item": "floralis:yellow_cactus"
-  },
   "soil": {
-    "tag": "neoforge:sand"
-  },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_yellow_cactus_crop"
+    "tag": "forge:sand"
   },
   "time": 480
 }

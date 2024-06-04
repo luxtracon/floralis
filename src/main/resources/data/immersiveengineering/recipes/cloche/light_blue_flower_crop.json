@@ -6,26 +6,29 @@
       "modid": "immersiveengineering"
     }
   ],
-  "results": [
-    {
-      "item": "floralis:plant_fibers"
-    },
-    {
-      "item": "floralis:light_blue_petals"
-    },
-    {
-      "item": "floralis:light_blue_flower_seeds"
-    }
-  ],
   "input": {
     "item": "floralis:light_blue_flower_seeds"
   },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "value": "floralis:cloched_light_blue_flower_crop"
+  },
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:light_blue_flower_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:light_blue_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
   "soil": {
     "item": "minecraft:dirt"
   },
-  "render": {
-    "type": "crop",
-    "block": "floralis:cloched_light_blue_flower_crop"
-  },
-  "time": 640
+  "time": 800
 }
