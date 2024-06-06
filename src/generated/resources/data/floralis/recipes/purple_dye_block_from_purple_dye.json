@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralis:purple_dye_block"
+  }
+}

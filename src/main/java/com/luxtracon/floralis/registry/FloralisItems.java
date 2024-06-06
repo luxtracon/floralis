@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class FloralisItems {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, FloralisConstant.ID);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, FloralisConstants.FLORALIS);
 
 	public static final Supplier<Item> WHITE_DYE_BLOCK = FloralisItems.ITEMS.register("white_dye_block", () -> new BlockItem(FloralisBlocks.WHITE_DYE_BLOCK.get(), new Item.Properties()));
 	public static final Supplier<Item> LIGHT_GRAY_DYE_BLOCK = FloralisItems.ITEMS.register("light_gray_dye_block", () -> new BlockItem(FloralisBlocks.LIGHT_GRAY_DYE_BLOCK.get(), new Item.Properties()));

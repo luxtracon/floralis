@@ -2,8 +2,16 @@ package com.luxtracon.floralis.proxy;
 
 import com.google.common.collect.ImmutableMap;
 
-import com.luxtracon.floralis.registry.FloralisCompostables;
-import com.luxtracon.floralis.registry.FloralisConfig;
+import com.luxtracon.floralis.config.FloralisConfig;
+import com.luxtracon.floralis.data.FloralisBuiltinEntries;
+import com.luxtracon.floralis.data.FloralisDataMaps;
+import com.luxtracon.floralis.data.FloralisRecipes;
+import com.luxtracon.floralis.data.FloralisRegistrySetBuilder;
+import com.luxtracon.floralis.data.loot.FloralisLoot;
+import com.luxtracon.floralis.data.tags.FloralisBiomeTags;
+import com.luxtracon.floralis.data.tags.FloralisBlockTags;
+import com.luxtracon.floralis.data.tags.FloralisItemTags;
+import com.luxtracon.floralis.registry.FloralisConstants;
 import com.luxtracon.floralis.registry.FloralisItems;
 import com.luxtracon.floralis.registry.FloralisPottables;
 import com.luxtracon.floralis.trade.EmeraldsForItemsTrade;
@@ -24,9 +32,10 @@ import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
@@ -35,39 +44,52 @@ import java.util.List;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
+@SuppressWarnings("unused")
 @ParametersAreNonnullByDefault
 
+@EventBusSubscriber(modid = FloralisConstants.FLORALIS)
 public class CommonProxy {
 	public CommonProxy() {
 
 	}
 
-	public void onCreativeModeTabRegister(BuildCreativeModeTabContentsEvent pEvent) {
-
-	}
-
-	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
-		pEvent.enqueueWork(FloralisCompostables::setup);
+	public static void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
 		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 
-	public void onFMLLoadComplete(FMLLoadCompleteEvent pEvent) {
+	public static void onGatherData(GatherDataEvent pEvent) {
+		var generator = pEvent.getGenerator();
+		var existingFileHelper = pEvent.getExistingFileHelper();
+		var packOutput = generator.getPackOutput();
+		var lookupProvider = pEvent.getLookupProvider();
 
+		var blockTags = new FloralisBlockTags(packOutput, lookupProvider, FloralisConstants.FLORALIS, existingFileHelper);
+		var registrySet = new FloralisRegistrySetBuilder();
+
+		generator.addProvider(pEvent.includeServer(), new FloralisLoot(packOutput, lookupProvider));
+		generator.addProvider(pEvent.includeServer(), new FloralisBiomeTags(packOutput, lookupProvider, FloralisConstants.FLORALIS, existingFileHelper));
+		generator.addProvider(pEvent.includeServer(), blockTags);
+		generator.addProvider(pEvent.includeServer(), new FloralisItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), FloralisConstants.FLORALIS, existingFileHelper));
+		generator.addProvider(pEvent.includeServer(), new FloralisDataMaps(packOutput, lookupProvider));
+		generator.addProvider(pEvent.includeServer(), new FloralisRecipes(packOutput, lookupProvider));
+		generator.addProvider(pEvent.includeServer(), new FloralisBuiltinEntries(packOutput, lookupProvider, registrySet, FloralisConstants.FLORALIS));
 	}
 
-	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
+	@SubscribeEvent
+	public static void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
 		var registryAccess = pEvent.getServer().registryAccess();
 		var processorList = registryAccess.registry(Registries.PROCESSOR_LIST).orElseThrow();
 		var templatePool = registryAccess.registry(Registries.TEMPLATE_POOL).orElseThrow();
 
-		this.addPieceToPool(processorList, templatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
-		this.addPieceToPool(processorList, templatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
-		this.addPieceToPool(processorList, templatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
-		this.addPieceToPool(processorList, templatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
-		this.addPieceToPool(processorList, templatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
+		CommonProxy.addPieceToPool(processorList, templatePool, "floralis:village/desert/houses/farm", new ResourceLocation("minecraft:village/desert/houses"), FloralisConfig.DESERT_FARM.get());
+		CommonProxy.addPieceToPool(processorList, templatePool, "floralis:village/plains/houses/farm", new ResourceLocation("minecraft:village/plains/houses"), FloralisConfig.PLAINS_FARM.get());
+		CommonProxy.addPieceToPool(processorList, templatePool, "floralis:village/savanna/houses/farm", new ResourceLocation("minecraft:village/savanna/houses"), FloralisConfig.SAVANNA_FARM.get());
+		CommonProxy.addPieceToPool(processorList, templatePool, "floralis:village/snowy/houses/farm", new ResourceLocation("minecraft:village/snowy/houses"), FloralisConfig.SNOWY_FARM.get());
+		CommonProxy.addPieceToPool(processorList, templatePool, "floralis:village/taiga/houses/farm", new ResourceLocation("minecraft:village/taiga/houses"), FloralisConfig.TAIGA_FARM.get());
 	}
 
-	public void onVillagerTrades(VillagerTradesEvent pEvent) {
+	@SubscribeEvent
+	public static void onVillagerTrades(VillagerTradesEvent pEvent) {
 		if (pEvent.getType().equals(VillagerProfession.FARMER)) {
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.WHITE_PETALS.get())));
 			pEvent.getTrades().get(1).add(new ItemsForEmeraldsTrade(new ItemStack(FloralisItems.LIGHT_GRAY_PETALS.get())));
@@ -105,7 +127,7 @@ public class CommonProxy {
 		}
 	}
 
-	public void addPieceToPool(Registry<StructureProcessorList> pStructureProcessorList, Registry<StructureTemplatePool> pStructureTemplatePool, String pPiece, ResourceLocation pPool, int pWeight) {
+	public static void addPieceToPool(Registry<StructureProcessorList> pStructureProcessorList, Registry<StructureTemplatePool> pStructureTemplatePool, String pPiece, ResourceLocation pPool, int pWeight) {
 		var singlePoolElement = SinglePoolElement.legacy(pPiece, pStructureProcessorList.getHolderOrThrow(ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty")))).apply(StructureTemplatePool.Projection.RIGID);
 		var structureTemplatePool = pStructureTemplatePool.get(pPool);
 		List<Pair<StructurePoolElement, Integer>> list;

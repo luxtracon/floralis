@@ -1,6 +1,7 @@
 package com.luxtracon.floralis.proxy;
 
 import com.luxtracon.floralis.registry.FloralisBlocks;
+import com.luxtracon.floralis.registry.FloralisConstants;
 import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
 import com.luxtracon.floralis.registry.FloralisItems;
 
@@ -9,24 +10,24 @@ import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Block;
 
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
-import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation, unused")
 @ParametersAreNonnullByDefault
 
-public class ClientProxy extends CommonProxy {
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = FloralisConstants.FLORALIS, value = Dist.CLIENT)
+public class ClientProxy {
 	public ClientProxy() {
 
 	}
 
-	@Override
-	public void onCreativeModeTabRegister(BuildCreativeModeTabContentsEvent pEvent) {
+	public static void onCreativeModeTabRegister(BuildCreativeModeTabContentsEvent pEvent) {
 		if (pEvent.getTab().equals(FloralisCreativeModeTabs.FLORALIS.get())) {
 			pEvent.accept(FloralisItems.WHITE_DYE_BLOCK.get());
 			pEvent.accept(FloralisItems.LIGHT_GRAY_DYE_BLOCK.get());
@@ -136,127 +137,112 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 
-	@Override
-	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
-		super.onFMLCommonSetup(pEvent);
+	@SubscribeEvent
+	public static void onFMLLoadComplete(FMLLoadCompleteEvent pEvent) {
+		ClientProxy.blockColor(FloralisBlocks.WHITE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.GRAY_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.BLACK_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.BROWN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.RED_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.ORANGE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.YELLOW_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.LIME_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.GREEN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.CYAN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.BLUE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.PURPLE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.MAGENTA_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.PINK_FLOWER.get());
+
+		ClientProxy.blockColor(FloralisBlocks.WHITE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.GRAY_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.BLACK_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.BROWN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.RED_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.ORANGE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.YELLOW_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.LIME_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.GREEN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.CYAN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.BLUE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.PURPLE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.MAGENTA_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.PINK_CACTUS.get());
+
+		ClientProxy.blockColor(FloralisBlocks.POTTED_WHITE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_GRAY_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BLACK_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BROWN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_RED_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_ORANGE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_YELLOW_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIME_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_GREEN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_CYAN_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BLUE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_PURPLE_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_MAGENTA_FLOWER.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_PINK_FLOWER.get());
+
+		ClientProxy.blockColor(FloralisBlocks.POTTED_WHITE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_GRAY_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BLACK_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BROWN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_RED_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_ORANGE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_YELLOW_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIME_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_GREEN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_CYAN_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_BLUE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_PURPLE_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_MAGENTA_CACTUS.get());
+		ClientProxy.blockColor(FloralisBlocks.POTTED_PINK_CACTUS.get());
+
+		ClientProxy.blockColor(FloralisBlocks.WHITE_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.GRAY_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BLACK_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BROWN_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.RED_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.ORANGE_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.YELLOW_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIME_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.GREEN_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.CYAN_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BLUE_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.PURPLE_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.MAGENTA_FLOWER_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.PINK_FLOWER_CROP.get());
+
+		ClientProxy.blockColor(FloralisBlocks.WHITE_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.GRAY_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BLACK_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BROWN_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.RED_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.ORANGE_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.YELLOW_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIME_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.GREEN_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.CYAN_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.BLUE_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.PURPLE_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.MAGENTA_CACTUS_CROP.get());
+		ClientProxy.blockColor(FloralisBlocks.PINK_CACTUS_CROP.get());
 	}
 
-	@Override
-	public void onFMLLoadComplete(FMLLoadCompleteEvent pEvent) {
-		this.blockColor(FloralisBlocks.WHITE_FLOWER.get());
-		this.blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER.get());
-		this.blockColor(FloralisBlocks.GRAY_FLOWER.get());
-		this.blockColor(FloralisBlocks.BLACK_FLOWER.get());
-		this.blockColor(FloralisBlocks.BROWN_FLOWER.get());
-		this.blockColor(FloralisBlocks.RED_FLOWER.get());
-		this.blockColor(FloralisBlocks.ORANGE_FLOWER.get());
-		this.blockColor(FloralisBlocks.YELLOW_FLOWER.get());
-		this.blockColor(FloralisBlocks.LIME_FLOWER.get());
-		this.blockColor(FloralisBlocks.GREEN_FLOWER.get());
-		this.blockColor(FloralisBlocks.CYAN_FLOWER.get());
-		this.blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER.get());
-		this.blockColor(FloralisBlocks.BLUE_FLOWER.get());
-		this.blockColor(FloralisBlocks.PURPLE_FLOWER.get());
-		this.blockColor(FloralisBlocks.MAGENTA_FLOWER.get());
-		this.blockColor(FloralisBlocks.PINK_FLOWER.get());
-
-		this.blockColor(FloralisBlocks.WHITE_CACTUS.get());
-		this.blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS.get());
-		this.blockColor(FloralisBlocks.GRAY_CACTUS.get());
-		this.blockColor(FloralisBlocks.BLACK_CACTUS.get());
-		this.blockColor(FloralisBlocks.BROWN_CACTUS.get());
-		this.blockColor(FloralisBlocks.RED_CACTUS.get());
-		this.blockColor(FloralisBlocks.ORANGE_CACTUS.get());
-		this.blockColor(FloralisBlocks.YELLOW_CACTUS.get());
-		this.blockColor(FloralisBlocks.LIME_CACTUS.get());
-		this.blockColor(FloralisBlocks.GREEN_CACTUS.get());
-		this.blockColor(FloralisBlocks.CYAN_CACTUS.get());
-		this.blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS.get());
-		this.blockColor(FloralisBlocks.BLUE_CACTUS.get());
-		this.blockColor(FloralisBlocks.PURPLE_CACTUS.get());
-		this.blockColor(FloralisBlocks.MAGENTA_CACTUS.get());
-		this.blockColor(FloralisBlocks.PINK_CACTUS.get());
-
-		this.blockColor(FloralisBlocks.POTTED_WHITE_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_GRAY_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_BLACK_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_BROWN_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_RED_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_ORANGE_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_YELLOW_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_LIME_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_GREEN_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_CYAN_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_BLUE_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_PURPLE_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_MAGENTA_FLOWER.get());
-		this.blockColor(FloralisBlocks.POTTED_PINK_FLOWER.get());
-
-		this.blockColor(FloralisBlocks.POTTED_WHITE_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_LIGHT_GRAY_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_GRAY_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_BLACK_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_BROWN_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_RED_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_ORANGE_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_YELLOW_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_LIME_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_GREEN_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_CYAN_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_LIGHT_BLUE_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_BLUE_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_PURPLE_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_MAGENTA_CACTUS.get());
-		this.blockColor(FloralisBlocks.POTTED_PINK_CACTUS.get());
-
-		this.blockColor(FloralisBlocks.WHITE_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.GRAY_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.BLACK_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.BROWN_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.RED_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.ORANGE_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.YELLOW_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.LIME_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.GREEN_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.CYAN_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.BLUE_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.PURPLE_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.MAGENTA_FLOWER_CROP.get());
-		this.blockColor(FloralisBlocks.PINK_FLOWER_CROP.get());
-
-		this.blockColor(FloralisBlocks.WHITE_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.GRAY_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.BLACK_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.BROWN_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.RED_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.ORANGE_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.YELLOW_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.LIME_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.GREEN_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.CYAN_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.LIGHT_BLUE_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.BLUE_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.PURPLE_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.MAGENTA_CACTUS_CROP.get());
-		this.blockColor(FloralisBlocks.PINK_CACTUS_CROP.get());
-	}
-
-	@Override
-	public void onServerAboutToStart(ServerAboutToStartEvent pEvent) {
-		super.onServerAboutToStart(pEvent);
-	}
-
-	@Override
-	public void onVillagerTrades(VillagerTradesEvent pEvent) {
-		super.onVillagerTrades(pEvent);
-	}
-
-	public void blockColor(Block pBlock) {
+	public static void blockColor(Block pBlock) {
 		Minecraft.getInstance().getBlockColors().register((pState, pLevel, pPos, pIndex) -> pLevel != null && pPos != null ? BiomeColors.getAverageGrassColor(pLevel, pPos) : GrassColor.get(0.5D, 1.0D), pBlock);
 	}
 }

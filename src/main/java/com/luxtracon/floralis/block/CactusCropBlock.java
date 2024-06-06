@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -28,7 +28,6 @@ import net.neoforged.neoforge.event.EventHooks;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-@SuppressWarnings("deprecation")
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
@@ -83,8 +82,8 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
-		return  this.getAge(pState) >= 3 ? BlockPathTypes.DAMAGE_OTHER : BlockPathTypes.WALKABLE;
+	public PathType getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
+		return  this.getAge(pState) >= 3 ? PathType.DAMAGE_OTHER : PathType.WALKABLE;
 	}
 
 	@Override
@@ -103,9 +102,8 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
-	@Nullable
 	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
-		return this.mayPlaceOn(pLevel.getBlockState(pPos.below()), pLevel, pPos) ? PlantType.DESERT : null;
+		return PlantType.DESERT;
 	}
 
 	@Override

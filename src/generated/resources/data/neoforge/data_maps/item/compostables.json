@@ -1,0 +1,250 @@
+{
+  "values": {
+    "floralis:black_cactus": {
+      "chance": 0.65
+    },
+    "floralis:black_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:black_flower": {
+      "chance": 0.65
+    },
+    "floralis:black_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:black_petals": {
+      "chance": 0.3
+    },
+    "floralis:blue_cactus": {
+      "chance": 0.65
+    },
+    "floralis:blue_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:blue_flower": {
+      "chance": 0.65
+    },
+    "floralis:blue_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:blue_petals": {
+      "chance": 0.3
+    },
+    "floralis:brown_cactus": {
+      "chance": 0.65
+    },
+    "floralis:brown_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:brown_flower": {
+      "chance": 0.65
+    },
+    "floralis:brown_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:brown_petals": {
+      "chance": 0.3
+    },
+    "floralis:cyan_cactus": {
+      "chance": 0.65
+    },
+    "floralis:cyan_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:cyan_flower": {
+      "chance": 0.65
+    },
+    "floralis:cyan_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:cyan_petals": {
+      "chance": 0.3
+    },
+    "floralis:gray_cactus": {
+      "chance": 0.65
+    },
+    "floralis:gray_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:gray_flower": {
+      "chance": 0.65
+    },
+    "floralis:gray_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:gray_petals": {
+      "chance": 0.3
+    },
+    "floralis:green_cactus": {
+      "chance": 0.65
+    },
+    "floralis:green_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:green_flower": {
+      "chance": 0.65
+    },
+    "floralis:green_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:green_petals": {
+      "chance": 0.3
+    },
+    "floralis:light_blue_cactus": {
+      "chance": 0.65
+    },
+    "floralis:light_blue_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:light_blue_flower": {
+      "chance": 0.65
+    },
+    "floralis:light_blue_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:light_blue_petals": {
+      "chance": 0.3
+    },
+    "floralis:light_gray_cactus": {
+      "chance": 0.65
+    },
+    "floralis:light_gray_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:light_gray_flower": {
+      "chance": 0.65
+    },
+    "floralis:light_gray_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:light_gray_petals": {
+      "chance": 0.3
+    },
+    "floralis:lime_cactus": {
+      "chance": 0.65
+    },
+    "floralis:lime_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:lime_flower": {
+      "chance": 0.65
+    },
+    "floralis:lime_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:lime_petals": {
+      "chance": 0.3
+    },
+    "floralis:magenta_cactus": {
+      "chance": 0.65
+    },
+    "floralis:magenta_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:magenta_flower": {
+      "chance": 0.65
+    },
+    "floralis:magenta_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:magenta_petals": {
+      "chance": 0.3
+    },
+    "floralis:orange_cactus": {
+      "chance": 0.65
+    },
+    "floralis:orange_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:orange_flower": {
+      "chance": 0.65
+    },
+    "floralis:orange_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:orange_petals": {
+      "chance": 0.3
+    },
+    "floralis:pink_cactus": {
+      "chance": 0.65
+    },
+    "floralis:pink_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:pink_flower": {
+      "chance": 0.65
+    },
+    "floralis:pink_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:pink_petals": {
+      "chance": 0.3
+    },
+    "floralis:plant_fibers": {
+      "chance": 0.3
+    },
+    "floralis:plant_fibers_block": {
+      "chance": 0.85
+    },
+    "floralis:purple_cactus": {
+      "chance": 0.65
+    },
+    "floralis:purple_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:purple_flower": {
+      "chance": 0.65
+    },
+    "floralis:purple_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:purple_petals": {
+      "chance": 0.3
+    },
+    "floralis:red_cactus": {
+      "chance": 0.65
+    },
+    "floralis:red_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:red_flower": {
+      "chance": 0.65
+    },
+    "floralis:red_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:red_petals": {
+      "chance": 0.3
+    },
+    "floralis:white_cactus": {
+      "chance": 0.65
+    },
+    "floralis:white_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:white_flower": {
+      "chance": 0.65
+    },
+    "floralis:white_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:white_petals": {
+      "chance": 0.3
+    },
+    "floralis:yellow_cactus": {
+      "chance": 0.65
+    },
+    "floralis:yellow_cactus_seeds": {
+      "chance": 0.3
+    },
+    "floralis:yellow_flower": {
+      "chance": 0.65
+    },
+    "floralis:yellow_flower_seeds": {
+      "chance": 0.3
+    },
+    "floralis:yellow_petals": {
+      "chance": 0.3
+    }
+  }
+}

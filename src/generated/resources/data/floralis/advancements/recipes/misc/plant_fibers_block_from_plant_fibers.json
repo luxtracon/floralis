@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plant_fibers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralis:plant_fibers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralis:plant_fibers_block_from_plant_fibers"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plant_fibers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralis:plant_fibers_block_from_plant_fibers"
+    ]
+  }
+}

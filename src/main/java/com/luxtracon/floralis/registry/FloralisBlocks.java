@@ -17,11 +17,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-@SuppressWarnings("unused")
 @MethodsReturnNonnullByDefault
 
 public class FloralisBlocks {
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, FloralisConstant.ID);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, FloralisConstants.FLORALIS);
 
 	public static final Supplier<Block> WHITE_DYE_BLOCK = FloralisBlocks.BLOCKS.register("white_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.SNOW)));
 	public static final Supplier<Block> LIGHT_GRAY_DYE_BLOCK = FloralisBlocks.BLOCKS.register("light_gray_dye_block", () -> new DyeBlock(FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_LIGHT_GRAY)));

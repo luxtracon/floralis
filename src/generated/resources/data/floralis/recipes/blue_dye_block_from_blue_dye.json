@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralis:blue_dye_block"
+  }
+}

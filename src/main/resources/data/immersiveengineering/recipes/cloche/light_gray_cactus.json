@@ -19,7 +19,7 @@
     }
   ],
   "soil": {
-    "tag": "forge:sand"
+    "tag": "c:sands"
   },
   "time": 480
 }

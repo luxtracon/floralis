@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralis:brown_dye_block"
+  }
+}

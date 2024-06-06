@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    },
+    {
+      "item": "floralis:plant_fibers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralis:plant_fibers_block"
+  }
+}

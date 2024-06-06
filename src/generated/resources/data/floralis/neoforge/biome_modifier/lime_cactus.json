@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#floralis:has_cactus",
+  "features": "floralis:lime_cactus",
+  "step": "vegetal_decoration"
+}

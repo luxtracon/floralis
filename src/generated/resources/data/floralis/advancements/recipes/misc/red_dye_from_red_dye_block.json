@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_dye_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralis:red_dye_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralis:red_dye_from_red_dye_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_dye_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralis:red_dye_from_red_dye_block"
+    ]
+  }
+}

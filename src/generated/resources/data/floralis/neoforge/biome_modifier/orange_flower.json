@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "floralis:orange_flower",
+  "step": "vegetal_decoration"
+}

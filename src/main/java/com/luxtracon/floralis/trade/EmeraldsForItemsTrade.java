@@ -8,6 +8,7 @@ import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 
 import java.util.Map;
@@ -25,6 +26,6 @@ public class EmeraldsForItemsTrade implements VillagerTrades.ItemListing {
 
     @Override
     public MerchantOffer getOffer(Entity pTrader, RandomSource pRandom) {
-        return pTrader instanceof VillagerDataHolder ? new MerchantOffer(new ItemStack(this.map.get(((VillagerDataHolder) pTrader).getVillagerData().getType()), 64), new ItemStack(Items.EMERALD, 1), 12, 2, 0.05F) : null;
+        return pTrader instanceof VillagerDataHolder ? new MerchantOffer(new ItemCost(this.map.get(((VillagerDataHolder) pTrader).getVillagerData().getType()), 64), new ItemStack(Items.EMERALD, 1), 12, 2, 0.05F) : null;
     }
 }

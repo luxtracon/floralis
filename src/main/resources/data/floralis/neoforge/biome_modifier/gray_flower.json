@@ -1,6 +1,0 @@
-{
-  "biomes": "#minecraft:is_overworld",
-  "features": "floralis:gray_flower",
-  "step": "vegetal_decoration",
-  "type": "neoforge:add_features"
-}

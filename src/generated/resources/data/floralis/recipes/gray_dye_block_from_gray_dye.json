@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralis:gray_dye_block"
+  }
+}

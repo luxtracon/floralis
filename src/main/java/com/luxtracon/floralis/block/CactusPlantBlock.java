@@ -17,14 +17,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-@SuppressWarnings("deprecation")
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
@@ -67,8 +66,8 @@ public class CactusPlantBlock extends BushBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
-		return BlockPathTypes.DAMAGE_OTHER;
+	public PathType getBlockPathType(BlockState pState, BlockGetter pLevel, BlockPos pPos, @Nullable Mob pMob) {
+		return PathType.DAMAGE_OTHER;
 	}
 
 	@Override
