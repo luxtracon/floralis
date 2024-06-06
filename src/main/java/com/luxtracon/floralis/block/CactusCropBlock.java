@@ -68,7 +68,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-		if (pEntity instanceof Ravager && EventHooks.getMobGriefingEvent(pLevel, pEntity)) {
+		if (pEntity instanceof Ravager && EventHooks.canEntityGrief(pLevel, pEntity)) {
 			pLevel.destroyBlock(pPos, true, pEntity);
 		}
 
