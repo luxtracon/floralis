@@ -96,6 +96,6 @@ public class FloralisConfiguredFeatures {
 	}
 
 	public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String pName) {
-		return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FloralisConstants.FLORALIS, pName));
+		return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
 	}
 }

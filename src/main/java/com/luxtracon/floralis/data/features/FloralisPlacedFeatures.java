@@ -96,6 +96,6 @@ public class FloralisPlacedFeatures {
 	}
 
 	public static ResourceKey<PlacedFeature> registerKey(String pName) {
-		return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FloralisConstants.FLORALIS, pName));
+		return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
 	}
 }

@@ -1,33 +1,28 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.config.FloralisConfig;
-import com.luxtracon.floralis.proxy.ClientProxy;
-import com.luxtracon.floralis.proxy.CommonProxy;
-import com.luxtracon.floralis.registry.FloralisBlocks;
-import com.luxtracon.floralis.registry.FloralisConstants;
-import com.luxtracon.floralis.registry.FloralisCreativeModeTabs;
-import com.luxtracon.floralis.registry.FloralisItems;
+import com.luxtracon.floralis.registry.*;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
-import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 @SuppressWarnings("unused")
 
+@ParametersAreNonnullByDefault
+
 @Mod(FloralisConstants.FLORALIS)
 public class Floralis {
-	public Floralis(@Nonnull IEventBus pBus) {
-		pBus.addListener(ClientProxy::onCreativeModeTabRegister);
-		pBus.addListener(CommonProxy::onFMLCommonSetup);
-		pBus.addListener(CommonProxy::onGatherData);
-
-		FloralisConfig.registerClientConfig();
-		FloralisConfig.registerCommonConfig();
-		FloralisConfig.registerServerConfig();
+	public Floralis(IEventBus pBus) {
+		pBus.addListener(this::onFMLCommonSetup);
 
 		FloralisBlocks.BLOCKS.register(pBus);
 		FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(pBus);
 		FloralisItems.ITEMS.register(pBus);
+	}
+
+	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
+		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 }

@@ -22,6 +22,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @SuppressWarnings("unused")
+
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
@@ -147,7 +148,7 @@ public class FloralisItemTags extends ItemTagsProvider {
 	}
 
 	public static TagKey<Item> bind(String pName) {
-		return TagKey.create(Registries.ITEM, new ResourceLocation(pName));
+		return TagKey.create(Registries.ITEM, ResourceLocation.parse(pName));
 	}
 
 	public static TagKey<Item> cTag(String pName) {

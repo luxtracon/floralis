@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import java.util.function.Supplier;
 
 public class FloralisPottables {
+
 	public static void setup() {
 		FloralisPottables.set(FloralisBlocks.WHITE_FLOWER.get(), FloralisBlocks.POTTED_WHITE_FLOWER);
 		FloralisPottables.set(FloralisBlocks.LIGHT_GRAY_FLOWER.get(), FloralisBlocks.POTTED_LIGHT_GRAY_FLOWER);

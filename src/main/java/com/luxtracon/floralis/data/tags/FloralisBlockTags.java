@@ -21,6 +21,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @SuppressWarnings("unused")
+
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
@@ -175,7 +176,7 @@ public class FloralisBlockTags extends BlockTagsProvider {
 	}
 
 	public static TagKey<Block> bind(String pName) {
-		return TagKey.create(Registries.BLOCK, new ResourceLocation(pName));
+		return TagKey.create(Registries.BLOCK, ResourceLocation.parse(pName));
 	}
 
 	public static TagKey<Block> cTag(String pName) {

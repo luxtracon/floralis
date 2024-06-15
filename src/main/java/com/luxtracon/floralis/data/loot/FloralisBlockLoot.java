@@ -6,6 +6,8 @@ import com.luxtracon.floralis.registry.FloralisItems;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.critereon.*;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -30,20 +32,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
+
 @MethodsReturnNonnullByDefault
 
 public class FloralisBlockLoot extends BlockLootSubProvider {
-	public static final EnchantmentPredicate SILK_TOUCH = new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1));
-
-	public static final LootItemCondition.Builder SILK = MatchTool.toolMatches(ItemPredicate.Builder.item().withSubPredicate(ItemSubPredicates.ENCHANTMENTS, ItemEnchantmentsPredicate.enchantments(List.of(FloralisBlockLoot.SILK_TOUCH))));
-	public static final LootItemCondition.Builder NO_SILK = FloralisBlockLoot.SILK.invert();
-	public static final LootItemCondition.Builder SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
-	public static final LootItemCondition.Builder NO_SHEARS = FloralisBlockLoot.SHEARS.invert();
-	public static final LootItemCondition.Builder SILK_OR_SHEARS = FloralisBlockLoot.SHEARS.or(FloralisBlockLoot.SILK);
-	public static final LootItemCondition.Builder NO_SILK_OR_SHEARS = FloralisBlockLoot.SILK_OR_SHEARS.invert();
-
-	public FloralisBlockLoot() {
-		super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+	public FloralisBlockLoot(HolderLookup.Provider pProvider) {
+		super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pProvider);
 	}
 
 	@Override
@@ -209,11 +203,13 @@ public class FloralisBlockLoot extends BlockLootSubProvider {
 	}
 
 	public void dropSeed(Block pBlock, Item pSeeds, Item pPetals) {
-		this.add(pBlock, LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(pBlock).when(FloralisBlockLoot.SILK_OR_SHEARS))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pPetals).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(FloralisItems.PLANT_FIBERS.get()).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)))));
+		var registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+		this.add(pBlock, LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(pBlock).when(this.shearsOrSilk()))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(this.noShearsOrSilk()).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pPetals).when(this.noShearsOrSilk()).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(FloralisItems.PLANT_FIBERS.get()).when(this.noShearsOrSilk()).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)))));
 	}
 
 	public void dropCrop(Block pBlock, Item pItem, Item pSeeds, Item pPetals) {
-		this.add(pBlock, LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(pItem).when(FloralisBlockLoot.SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(FloralisBlockLoot.SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5)).invert()))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pPetals).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(FloralisItems.PLANT_FIBERS.get()).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.FORTUNE, 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(FloralisBlockLoot.NO_SILK_OR_SHEARS).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5)).invert()))));
+		var registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+		this.add(pBlock, LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(pItem).when(this.shearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(this.shearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5)).invert()))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(this.noShearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pPetals).when(this.noShearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(FloralisItems.PLANT_FIBERS.get()).when(this.noShearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5))).apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE), 2)))).withPool(LootPool.lootPool().add(LootItem.lootTableItem(pSeeds).when(this.noShearsOrSilk()).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FloralisBlockStateProperties.AGE, 5)).invert()))));
 	}
 
 	public void dropPots(Block pBlock, Item pItem) {
@@ -227,5 +223,31 @@ public class FloralisBlockLoot extends BlockLootSubProvider {
 	@Override
 	public Iterable<Block> getKnownBlocks() {
 		return FloralisBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::value).collect(Collectors.toList());
+	}
+
+	public LootItemCondition.Builder noShears() {
+		return this.shears().invert();
+	}
+
+	public LootItemCondition.Builder noShearsOrSilk() {
+		return this.shearsOrSilk().invert();
+	}
+
+	public LootItemCondition.Builder noSilk() {
+		return this.silk().invert();
+	}
+
+	public LootItemCondition.Builder shears() {
+		return MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
+	}
+
+	public LootItemCondition.Builder shearsOrSilk() {
+		return this.shears().or(this.silk());
+	}
+
+	public LootItemCondition.Builder silk() {
+		var registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+		var enchantmentPredicate = new EnchantmentPredicate(registryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1));
+		return MatchTool.toolMatches(ItemPredicate.Builder.item().withSubPredicate(ItemSubPredicates.ENCHANTMENTS, ItemEnchantmentsPredicate.enchantments(List.of(enchantmentPredicate))));
 	}
 }
