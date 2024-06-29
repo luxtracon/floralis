@@ -22,7 +22,6 @@ import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.neoforged.neoforge.common.PlantType;
 import net.neoforged.neoforge.event.EventHooks;
 
 import javax.annotation.Nullable;
@@ -99,11 +98,6 @@ public class CactusCropBlock extends CropBlock {
 	@Override
 	public ItemLike getBaseSeedId() {
 		return this;
-	}
-
-	@Override
-	public PlantType getPlantType(BlockGetter pLevel, BlockPos pPos) {
-		return PlantType.DESERT;
 	}
 
 	@Override
