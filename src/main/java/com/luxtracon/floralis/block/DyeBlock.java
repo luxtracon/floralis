@@ -16,7 +16,7 @@ public class DyeBlock extends FallingBlock {
 	}
 
 	@Override
-	protected MapCodec<DyeBlock> codec() {
+	public MapCodec<DyeBlock> codec() {
 		return DyeBlock.CODEC;
 	}
 }

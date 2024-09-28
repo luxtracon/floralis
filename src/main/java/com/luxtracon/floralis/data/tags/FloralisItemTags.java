@@ -27,8 +27,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class FloralisItemTags extends ItemTagsProvider {
-	public static final TagKey<Item> FERTILIZER = FloralisItemTags.cTag("fertilizer");
-
 	public static final TagKey<Item> BIOREACTOR = FloralisItemTags.industrialforegoingTag("bioreactor");
 
 	public FloralisItemTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pProvider, CompletableFuture<TagLookup<Block>> pTags, String pId, ExistingFileHelper pHelper) {
@@ -36,7 +34,7 @@ public class FloralisItemTags extends ItemTagsProvider {
 	}
 
 	@Override
-	protected void addTags(HolderLookup.Provider pProvider) {
+	public void addTags(HolderLookup.Provider pProvider) {
 		this.tag(Tags.Items.STORAGE_BLOCKS)
 			.add(FloralisItems.WHITE_DYE_BLOCK.get())
 			.add(FloralisItems.LIGHT_GRAY_DYE_BLOCK.get())
@@ -143,7 +141,7 @@ public class FloralisItemTags extends ItemTagsProvider {
 			.add(FloralisItems.PINK_PETALS.get())
 			.add(FloralisItems.PLANT_FIBERS.get());
 
-		this.tag(FloralisItemTags.FERTILIZER)
+		this.tag(Tags.Items.FERTILIZERS)
 			.add(FloralisItems.PLANT_FIBERS.get());
 	}
 

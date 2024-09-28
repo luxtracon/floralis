@@ -31,7 +31,7 @@ public class FloralisBlockTags extends BlockTagsProvider {
 	}
 
 	@Override
-	protected void addTags(HolderLookup.Provider pProvider) {
+	public void addTags(HolderLookup.Provider pProvider) {
 		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
 			.add(FloralisBlocks.WHITE_DYE_BLOCK.get())
 			.add(FloralisBlocks.LIGHT_GRAY_DYE_BLOCK.get())

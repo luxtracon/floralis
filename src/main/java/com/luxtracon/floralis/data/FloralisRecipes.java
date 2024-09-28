@@ -22,7 +22,7 @@ public class FloralisRecipes extends RecipeProvider {
 	}
 
 	@Override
-	protected void buildRecipes(RecipeOutput pOutput) {
+	public void buildRecipes(RecipeOutput pOutput) {
 		this.craftingRecipe(pOutput, FloralisItems.WHITE_DYE_BLOCK.get(), Items.WHITE_DYE);
 		this.craftingRecipe(pOutput, FloralisItems.LIGHT_GRAY_DYE_BLOCK.get(), Items.LIGHT_GRAY_DYE);
 		this.craftingRecipe(pOutput, FloralisItems.GRAY_DYE_BLOCK.get(), Items.GRAY_DYE);
