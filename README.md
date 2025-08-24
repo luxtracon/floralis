@@ -10,10 +10,6 @@ As soon as you travel around your world, you'll either find a new type of cactus
 
 ![An animated image showing the process of breaking a cactus and flower plant resulting in their drops spawning](https://cdn.zekro.de/mods/floralis/media/drops_plants.gif 'Plant drops')
 
-If you're lucky enough, you'll find a village with one or more custom fields of either cacti or flowers, again depending on the biome the village is generated in. A field packed with cacti will only generate in desert type villages, while a field packed with flowers will only generate in any other biome but not in desert type biomes. A farmer villager near the field will offer you some trades to either get emeralds for seeds or to get plant petals for emeralds. The type of seeds the farmer villager will trade with you is again depending on the village type. Cactus seeds can only be obtained by farmer villager in desert type villages, while flower seeds can be obtained by farmer villager in any other village type but not in desert type villages.
-
-![An animated image showing the mods villager trades](https://cdn.zekro.de/mods/floralis/media/trades.gif 'Villager trades')
-
 The seeds you just have gotten are pretty straight forward to use, either plant cactus seeds on some sand or plant flower seeds on farmland. Give them time to grow to their full size, which will be indicated by the fully blooming blossom on top of the crop. You won't get back more than the one seed you used to plant the crop as long as they aren't fully grown. When fully grown, they'll drop two respective seeds depending on their plant type and color, one plant petal in their respective color and one plant fiber, just like their natural spawning counterparts. Harvesting them with a pair of shears or a silk touch enchanted tool will drop the cactus or flower itself instead, for you to plant or pot it as decoration. As long as a cactus crop isn't old enough to develop its thorns, it won't hurt you or any other entity.
 
 ![An animated image showing the process of cactus and flower crops growing](https://cdn.zekro.de/mods/floralis/media/drops_crops.gif 'Crops growing')
@@ -26,7 +22,7 @@ In case you stock up too much dye, you can store it in compact storage blocks, o
 
 ![An animated image showing the process of compressing dye to dye blocks](https://cdn.zekro.de/mods/floralis/media/crafting_compress_dye_block.gif 'Dye compression')
 
-Of course you can reverse this progress to get the dye back out of their respective storage blocks.
+Of course you can reverse this process to get the dye back out of their respective storage blocks.
 
 ![An animated image showing the process of decompressing dye blocks to dye](https://cdn.zekro.de/mods/floralis/media/crafting_decompress_dye_block.gif 'Dye decompression')
 
@@ -34,7 +30,7 @@ Plant fibers can be used just like bone meal, to speed up the growth of crops, s
 
 ![An image showing the process of compressing plant fibers to plant fibers blocks](https://cdn.zekro.de/mods/floralis/media/crafting_compress_plant_fibers_block.png 'Fibers compression')
 
-Of course you can reverse this progress to get the plant fibers back out of the storage block.
+Of course you can reverse this process to get the plant fibers back out of the storage block.
 
 ![An image showing the process of decompressing plant fibers blocks to plant fibers](https://cdn.zekro.de/mods/floralis/media/crafting_decompress_plant_fibers_block.png 'Fibers decompression')
 
@@ -47,7 +43,3 @@ Since all blocks and items in this mod are of natural origin, they can be compos
 - Petals: 30 %
 - Plant Fibers: 30 %
 - Plant Fibers Block: 85 %
-
-The provided config file will let you adjust the way the mod generates its features. You can enable and disable independently whether cacti and flowers should get generated naturally, as well as enable and disable whether cacti and flower fields should get generated in villages. You can enable and disable village field generation independently per village type. You can also adjust the rarity and density in which natural generating cacti and flowers occur.
-
-You are allowed to use this mod in any modpack, as long as it's credited in some kind of modlist, in case the modpack is public.
