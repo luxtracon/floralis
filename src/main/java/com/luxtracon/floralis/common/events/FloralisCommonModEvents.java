@@ -25,7 +25,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = FloralisConstants.FLORALIS)
+@EventBusSubscriber(modid = FloralisConstants.FLORALIS)
 public class FloralisCommonModEvents {
 
 	@SubscribeEvent

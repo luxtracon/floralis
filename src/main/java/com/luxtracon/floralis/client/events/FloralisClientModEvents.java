@@ -22,7 +22,7 @@ import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsE
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = FloralisConstants.FLORALIS, value = Dist.CLIENT)
+@EventBusSubscriber(modid = FloralisConstants.FLORALIS, value = Dist.CLIENT)
 public class FloralisClientModEvents {
 
 	@SubscribeEvent
