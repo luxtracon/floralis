@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_dye_block": {
+    "has_floralis:lime_dye_block": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_dye_block"
+      "has_floralis:lime_dye_block"
     ]
   ],
   "rewards": {

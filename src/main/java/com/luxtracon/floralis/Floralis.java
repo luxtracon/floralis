@@ -1,28 +1,43 @@
 package com.luxtracon.floralis;
 
-import com.luxtracon.floralis.registry.*;
+import com.luxtracon.floralis.common.registry.*;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import net.minecraft.MethodsReturnNonnullByDefault;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 @SuppressWarnings("unused")
 
+@MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
 @Mod(FloralisConstants.FLORALIS)
 public class Floralis {
 	public Floralis(IEventBus pBus) {
-		pBus.addListener(this::onFMLCommonSetup);
+		Floralis.addListeners(pBus);
+		Floralis.registerRegistries(pBus);
+	}
 
+	public static void addListeners(IEventBus pBus) {
+		pBus.addListener(Floralis::onFMLCommonSetup);
+	}
+
+	public static void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
+		Floralis.registerSetups(pEvent);
+	}
+
+	public static void registerRegistries(IEventBus pBus) {
 		FloralisBlocks.BLOCKS.register(pBus);
 		FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(pBus);
 		FloralisItems.ITEMS.register(pBus);
 	}
 
-	public void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
+	public static void registerSetups(FMLCommonSetupEvent pEvent) {
+		pEvent.enqueueWork(FloralisFlammables::setup);
 		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 }

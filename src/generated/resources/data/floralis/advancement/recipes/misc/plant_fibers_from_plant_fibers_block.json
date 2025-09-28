@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_plant_fibers_block": {
+    "has_floralis:plant_fibers_block": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_plant_fibers_block"
+      "has_floralis:plant_fibers_block"
     ]
   ],
   "rewards": {

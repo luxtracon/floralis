@@ -1,13 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "floralis:white_dye_from_white_dye_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_white_dye_block": {
+    "has_floralis:white_dye_block": {
       "conditions": {
         "items": [
           {
@@ -16,12 +10,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralis:white_dye_from_white_dye_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_white_dye_block"
+      "has_floralis:white_dye_block"
     ]
   ],
   "rewards": {

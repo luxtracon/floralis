@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "floralis:blue_dye_block"
-    }
+    "floralis:blue_dye_block"
   ],
   "result": {
     "count": 9,

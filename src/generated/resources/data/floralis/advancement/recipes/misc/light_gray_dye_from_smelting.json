@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floralis:light_gray_petals": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralis:light_gray_petals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralis:light_gray_dye_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floralis:light_gray_petals"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralis:light_gray_dye_from_smelting"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_dye": {
+    "has_minecraft:lime_dye": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_dye"
+      "has_minecraft:lime_dye"
     ]
   ],
   "rewards": {

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "floralis:light_blue_petals",
+  "result": {
+    "count": 1,
+    "id": "minecraft:light_blue_dye"
+  }
+}

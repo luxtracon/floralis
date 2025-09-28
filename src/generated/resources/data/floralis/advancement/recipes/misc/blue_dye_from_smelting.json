@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floralis:blue_petals": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralis:blue_petals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralis:blue_dye_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floralis:blue_petals"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralis:blue_dye_from_smelting"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_dye_block": {
+    "has_floralis:red_dye_block": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_dye_block"
+      "has_floralis:red_dye_block"
     ]
   ],
   "rewards": {

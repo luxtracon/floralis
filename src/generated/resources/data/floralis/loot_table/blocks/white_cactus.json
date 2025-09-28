@@ -83,14 +83,9 @@
               "parameters": {
                 "bonusMultiplier": 2
               }
-            },
-            {
-              "add": false,
-              "count": 2.0,
-              "function": "minecraft:set_count"
             }
           ],
-          "name": "floralis:white_cactus_seeds"
+          "name": "floralis:plant_fibers"
         }
       ],
       "rolls": 1.0
@@ -190,9 +185,14 @@
               "parameters": {
                 "bonusMultiplier": 2
               }
+            },
+            {
+              "add": false,
+              "count": 2.0,
+              "function": "minecraft:set_count"
             }
           ],
-          "name": "floralis:plant_fibers"
+          "name": "floralis:white_cactus_seeds"
         }
       ],
       "rolls": 1.0

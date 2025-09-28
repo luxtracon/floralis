@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_purple_dye_block": {
+    "has_floralis:purple_dye_block": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_purple_dye_block"
+      "has_floralis:purple_dye_block"
     ]
   ],
   "rewards": {
