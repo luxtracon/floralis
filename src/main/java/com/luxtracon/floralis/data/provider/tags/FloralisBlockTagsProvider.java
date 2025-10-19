@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.Block;
 
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 @SuppressWarnings("unused")
 
@@ -26,12 +25,46 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 @ParametersAreNonnullByDefault
 
 public class FloralisBlockTagsProvider extends BlockTagsProvider {
-	public FloralisBlockTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, String pId, ExistingFileHelper pExistingFileHelper) {
-		super(pPackOutput, pProvider, pId, pExistingFileHelper);
+	public FloralisBlockTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, String pId) {
+		super(pPackOutput, pProvider, pId);
 	}
 
 	@Override
 	public void addTags(HolderLookup.Provider pProvider) {
+		this.tag(BlockTags.BEE_ATTRACTIVE)
+			.add(FloralisBlocks.WHITE_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_GRAY_FLOWER.get())
+			.add(FloralisBlocks.GRAY_FLOWER.get())
+			.add(FloralisBlocks.BLACK_FLOWER.get())
+			.add(FloralisBlocks.BROWN_FLOWER.get())
+			.add(FloralisBlocks.RED_FLOWER.get())
+			.add(FloralisBlocks.ORANGE_FLOWER.get())
+			.add(FloralisBlocks.YELLOW_FLOWER.get())
+			.add(FloralisBlocks.LIME_FLOWER.get())
+			.add(FloralisBlocks.GREEN_FLOWER.get())
+			.add(FloralisBlocks.CYAN_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_BLUE_FLOWER.get())
+			.add(FloralisBlocks.BLUE_FLOWER.get())
+			.add(FloralisBlocks.PURPLE_FLOWER.get())
+			.add(FloralisBlocks.MAGENTA_FLOWER.get())
+			.add(FloralisBlocks.PINK_FLOWER.get())
+			.add(FloralisBlocks.WHITE_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_GRAY_CACTUS.get())
+			.add(FloralisBlocks.GRAY_CACTUS.get())
+			.add(FloralisBlocks.BLACK_CACTUS.get())
+			.add(FloralisBlocks.BROWN_CACTUS.get())
+			.add(FloralisBlocks.RED_CACTUS.get())
+			.add(FloralisBlocks.ORANGE_CACTUS.get())
+			.add(FloralisBlocks.YELLOW_CACTUS.get())
+			.add(FloralisBlocks.LIME_CACTUS.get())
+			.add(FloralisBlocks.GREEN_CACTUS.get())
+			.add(FloralisBlocks.CYAN_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_BLUE_CACTUS.get())
+			.add(FloralisBlocks.BLUE_CACTUS.get())
+			.add(FloralisBlocks.PURPLE_CACTUS.get())
+			.add(FloralisBlocks.MAGENTA_CACTUS.get())
+			.add(FloralisBlocks.PINK_CACTUS.get());
+
 		this.tag(BlockTags.CROPS)
 			.add(FloralisBlocks.WHITE_FLOWER_CROP.get())
 			.add(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get())
@@ -122,6 +155,74 @@ public class FloralisBlockTagsProvider extends BlockTagsProvider {
 			.add(FloralisBlocks.PINK_DYE_BLOCK.get());
 
 		this.tag(BlockTags.SMALL_FLOWERS)
+			.add(FloralisBlocks.WHITE_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_GRAY_FLOWER.get())
+			.add(FloralisBlocks.GRAY_FLOWER.get())
+			.add(FloralisBlocks.BLACK_FLOWER.get())
+			.add(FloralisBlocks.BROWN_FLOWER.get())
+			.add(FloralisBlocks.RED_FLOWER.get())
+			.add(FloralisBlocks.ORANGE_FLOWER.get())
+			.add(FloralisBlocks.YELLOW_FLOWER.get())
+			.add(FloralisBlocks.LIME_FLOWER.get())
+			.add(FloralisBlocks.GREEN_FLOWER.get())
+			.add(FloralisBlocks.CYAN_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_BLUE_FLOWER.get())
+			.add(FloralisBlocks.BLUE_FLOWER.get())
+			.add(FloralisBlocks.PURPLE_FLOWER.get())
+			.add(FloralisBlocks.MAGENTA_FLOWER.get())
+			.add(FloralisBlocks.PINK_FLOWER.get())
+			.add(FloralisBlocks.WHITE_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_GRAY_CACTUS.get())
+			.add(FloralisBlocks.GRAY_CACTUS.get())
+			.add(FloralisBlocks.BLACK_CACTUS.get())
+			.add(FloralisBlocks.BROWN_CACTUS.get())
+			.add(FloralisBlocks.RED_CACTUS.get())
+			.add(FloralisBlocks.ORANGE_CACTUS.get())
+			.add(FloralisBlocks.YELLOW_CACTUS.get())
+			.add(FloralisBlocks.LIME_CACTUS.get())
+			.add(FloralisBlocks.GREEN_CACTUS.get())
+			.add(FloralisBlocks.CYAN_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_BLUE_CACTUS.get())
+			.add(FloralisBlocks.BLUE_CACTUS.get())
+			.add(FloralisBlocks.PURPLE_CACTUS.get())
+			.add(FloralisBlocks.MAGENTA_CACTUS.get())
+			.add(FloralisBlocks.PINK_CACTUS.get());
+
+		this.tag(Tags.Blocks.FLOWERS)
+			.add(FloralisBlocks.WHITE_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_GRAY_FLOWER.get())
+			.add(FloralisBlocks.GRAY_FLOWER.get())
+			.add(FloralisBlocks.BLACK_FLOWER.get())
+			.add(FloralisBlocks.BROWN_FLOWER.get())
+			.add(FloralisBlocks.RED_FLOWER.get())
+			.add(FloralisBlocks.ORANGE_FLOWER.get())
+			.add(FloralisBlocks.YELLOW_FLOWER.get())
+			.add(FloralisBlocks.LIME_FLOWER.get())
+			.add(FloralisBlocks.GREEN_FLOWER.get())
+			.add(FloralisBlocks.CYAN_FLOWER.get())
+			.add(FloralisBlocks.LIGHT_BLUE_FLOWER.get())
+			.add(FloralisBlocks.BLUE_FLOWER.get())
+			.add(FloralisBlocks.PURPLE_FLOWER.get())
+			.add(FloralisBlocks.MAGENTA_FLOWER.get())
+			.add(FloralisBlocks.PINK_FLOWER.get())
+			.add(FloralisBlocks.WHITE_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_GRAY_CACTUS.get())
+			.add(FloralisBlocks.GRAY_CACTUS.get())
+			.add(FloralisBlocks.BLACK_CACTUS.get())
+			.add(FloralisBlocks.BROWN_CACTUS.get())
+			.add(FloralisBlocks.RED_CACTUS.get())
+			.add(FloralisBlocks.ORANGE_CACTUS.get())
+			.add(FloralisBlocks.YELLOW_CACTUS.get())
+			.add(FloralisBlocks.LIME_CACTUS.get())
+			.add(FloralisBlocks.GREEN_CACTUS.get())
+			.add(FloralisBlocks.CYAN_CACTUS.get())
+			.add(FloralisBlocks.LIGHT_BLUE_CACTUS.get())
+			.add(FloralisBlocks.BLUE_CACTUS.get())
+			.add(FloralisBlocks.PURPLE_CACTUS.get())
+			.add(FloralisBlocks.MAGENTA_CACTUS.get())
+			.add(FloralisBlocks.PINK_CACTUS.get());
+
+		this.tag(Tags.Blocks.FLOWERS_SMALL)
 			.add(FloralisBlocks.WHITE_FLOWER.get())
 			.add(FloralisBlocks.LIGHT_GRAY_FLOWER.get())
 			.add(FloralisBlocks.GRAY_FLOWER.get())

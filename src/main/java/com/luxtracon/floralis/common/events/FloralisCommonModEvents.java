@@ -140,20 +140,19 @@ public class FloralisCommonModEvents {
 	}
 
 	@SubscribeEvent
-	public static void onGatherData(GatherDataEvent pEvent) {
-		var existingFileHelper = pEvent.getExistingFileHelper();
+	public static void onGatherData(GatherDataEvent.Client pEvent) {
 		var generator = pEvent.getGenerator();
 		var lookupProvider = pEvent.getLookupProvider();
 		var packOutput = generator.getPackOutput();
 
-		var blockTags = new FloralisBlockTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS, existingFileHelper);
+		var blockTags = new FloralisBlockTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS);
 
-		generator.addProvider(pEvent.includeServer(), new FloralisLootTableProvider(packOutput, lookupProvider));
-		generator.addProvider(pEvent.includeServer(), new FloralisBiomeTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS, existingFileHelper));
-		generator.addProvider(pEvent.includeServer(), blockTags);
-		generator.addProvider(pEvent.includeServer(), new FloralisItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), FloralisConstants.FLORALIS, existingFileHelper));
-		generator.addProvider(pEvent.includeServer(), new FloralisDataMapProvider(packOutput, lookupProvider));
-		generator.addProvider(pEvent.includeServer(), new FloralisDatapackBuiltinEntriesProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
-		generator.addProvider(pEvent.includeServer(), new FloralisRecipeRunner(packOutput, lookupProvider));
+		pEvent.addProvider(new FloralisLootTableProvider(packOutput, lookupProvider));
+		pEvent.addProvider(new FloralisBiomeTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
+		pEvent.addProvider(blockTags);
+		pEvent.addProvider(new FloralisItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), FloralisConstants.FLORALIS));
+		pEvent.addProvider(new FloralisDataMapProvider(packOutput, lookupProvider));
+		pEvent.addProvider(new FloralisDatapackBuiltinEntriesProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
+		pEvent.addProvider(new FloralisRecipeRunner(packOutput, lookupProvider));
 	}
 }

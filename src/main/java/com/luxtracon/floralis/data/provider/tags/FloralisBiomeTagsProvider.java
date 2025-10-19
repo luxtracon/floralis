@@ -16,8 +16,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-
 @SuppressWarnings("unused")
 
 @MethodsReturnNonnullByDefault
@@ -26,8 +24,8 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 public class FloralisBiomeTagsProvider extends BiomeTagsProvider {
 	public static final TagKey<Biome> HAS_CACTUS = FloralisBiomeTagsProvider.floralisKey("has_cactus");
 
-	public FloralisBiomeTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, String pId, ExistingFileHelper pExistingFileHelper) {
-		super(pPackOutput, pProvider, pId, pExistingFileHelper);
+	public FloralisBiomeTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, String pId) {
+		super(pPackOutput, pProvider, pId);
 	}
 
 	@Override
