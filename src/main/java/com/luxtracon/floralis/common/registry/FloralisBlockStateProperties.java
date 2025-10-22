@@ -9,5 +9,5 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 @ParametersAreNonnullByDefault
 
 public class FloralisBlockStateProperties {
-	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
+	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
 }

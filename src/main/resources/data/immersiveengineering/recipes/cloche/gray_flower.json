@@ -11,7 +11,7 @@
   },
   "render": {
     "type": "immersiveengineering:crop",
-    "value": "floralis:cloched_gray_flower_crop"
+    "value": "floralis:gray_flower_crop"
   },
   "results": [
     {

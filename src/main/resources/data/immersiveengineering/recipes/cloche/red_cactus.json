@@ -11,7 +11,7 @@
   },
   "render": {
     "type": "immersiveengineering:crop",
-    "value": "floralis:cloched_red_cactus_crop"
+    "value": "floralis:red_cactus_crop"
   },
   "results": [
     {

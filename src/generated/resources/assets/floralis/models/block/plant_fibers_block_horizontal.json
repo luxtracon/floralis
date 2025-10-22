@@ -1,0 +1,7 @@
+{
+  "parent": "floralis:block/template_plant_fibers_block_horizontal",
+  "textures": {
+    "particle": "floralis:block/particle",
+    "texture": "floralis:block/plant_fibers_block"
+  }
+}

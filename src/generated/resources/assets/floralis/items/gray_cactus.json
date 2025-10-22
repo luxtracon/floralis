@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "floralis:item/gray_cactus",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -7226023
+      }
+    ]
+  }
+}

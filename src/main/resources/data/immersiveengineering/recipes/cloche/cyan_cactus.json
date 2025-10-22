@@ -11,7 +11,7 @@
   },
   "render": {
     "type": "immersiveengineering:crop",
-    "value": "floralis:cloched_cyan_cactus_crop"
+    "value": "floralis:cyan_cactus_crop"
   },
   "results": [
     {

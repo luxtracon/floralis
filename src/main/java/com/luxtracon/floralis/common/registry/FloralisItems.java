@@ -41,23 +41,6 @@ public class FloralisItems {
 
 	public static final DeferredHolder<Item, Item> PLANT_FIBERS_BLOCK = FloralisItems.register("plant_fibers_block", properties -> new BlockItem(FloralisBlocks.PLANT_FIBERS_BLOCK.get(), properties), FloralisItems.propertiesBlock());
 
-	public static final DeferredHolder<Item, Item> WHITE_FLOWER = FloralisItems.register("white_flower", properties -> new BlockItem(FloralisBlocks.WHITE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> LIGHT_GRAY_FLOWER = FloralisItems.register("light_gray_flower", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> GRAY_FLOWER = FloralisItems.register("gray_flower", properties -> new BlockItem(FloralisBlocks.GRAY_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> BLACK_FLOWER = FloralisItems.register("black_flower", properties -> new BlockItem(FloralisBlocks.BLACK_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> BROWN_FLOWER = FloralisItems.register("brown_flower", properties -> new BlockItem(FloralisBlocks.BROWN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> RED_FLOWER = FloralisItems.register("red_flower", properties -> new BlockItem(FloralisBlocks.RED_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> ORANGE_FLOWER = FloralisItems.register("orange_flower", properties -> new BlockItem(FloralisBlocks.ORANGE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> YELLOW_FLOWER = FloralisItems.register("yellow_flower", properties -> new BlockItem(FloralisBlocks.YELLOW_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> LIME_FLOWER = FloralisItems.register("lime_flower", properties -> new BlockItem(FloralisBlocks.LIME_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> GREEN_FLOWER = FloralisItems.register("green_flower", properties -> new BlockItem(FloralisBlocks.GREEN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> CYAN_FLOWER = FloralisItems.register("cyan_flower", properties -> new BlockItem(FloralisBlocks.CYAN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> LIGHT_BLUE_FLOWER = FloralisItems.register("light_blue_flower", properties -> new BlockItem(FloralisBlocks.LIGHT_BLUE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> BLUE_FLOWER = FloralisItems.register("blue_flower", properties -> new BlockItem(FloralisBlocks.BLUE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> PURPLE_FLOWER = FloralisItems.register("purple_flower", properties -> new BlockItem(FloralisBlocks.PURPLE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> MAGENTA_FLOWER = FloralisItems.register("magenta_flower", properties -> new BlockItem(FloralisBlocks.MAGENTA_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-	public static final DeferredHolder<Item, Item> PINK_FLOWER = FloralisItems.register("pink_flower", properties -> new BlockItem(FloralisBlocks.PINK_FLOWER.get(), properties), FloralisItems.propertiesBlock());
-
 	public static final DeferredHolder<Item, Item> WHITE_CACTUS = FloralisItems.register("white_cactus", properties -> new BlockItem(FloralisBlocks.WHITE_CACTUS.get(), properties), FloralisItems.propertiesBlock());
 	public static final DeferredHolder<Item, Item> LIGHT_GRAY_CACTUS = FloralisItems.register("light_gray_cactus", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_CACTUS.get(), properties), FloralisItems.propertiesBlock());
 	public static final DeferredHolder<Item, Item> GRAY_CACTUS = FloralisItems.register("gray_cactus", properties -> new BlockItem(FloralisBlocks.GRAY_CACTUS.get(), properties), FloralisItems.propertiesBlock());
@@ -75,22 +58,22 @@ public class FloralisItems {
 	public static final DeferredHolder<Item, Item> MAGENTA_CACTUS = FloralisItems.register("magenta_cactus", properties -> new BlockItem(FloralisBlocks.MAGENTA_CACTUS.get(), properties), FloralisItems.propertiesBlock());
 	public static final DeferredHolder<Item, Item> PINK_CACTUS = FloralisItems.register("pink_cactus", properties -> new BlockItem(FloralisBlocks.PINK_CACTUS.get(), properties), FloralisItems.propertiesBlock());
 
-	public static final DeferredHolder<Item, Item> WHITE_FLOWER_SEEDS = FloralisItems.register("white_flower_seeds", properties -> new BlockItem(FloralisBlocks.WHITE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> LIGHT_GRAY_FLOWER_SEEDS = FloralisItems.register("light_gray_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> GRAY_FLOWER_SEEDS = FloralisItems.register("gray_flower_seeds", properties -> new BlockItem(FloralisBlocks.GRAY_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> BLACK_FLOWER_SEEDS = FloralisItems.register("black_flower_seeds", properties -> new BlockItem(FloralisBlocks.BLACK_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> BROWN_FLOWER_SEEDS = FloralisItems.register("brown_flower_seeds", properties -> new BlockItem(FloralisBlocks.BROWN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> RED_FLOWER_SEEDS = FloralisItems.register("red_flower_seeds", properties -> new BlockItem(FloralisBlocks.RED_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> ORANGE_FLOWER_SEEDS = FloralisItems.register("orange_flower_seeds", properties -> new BlockItem(FloralisBlocks.ORANGE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> YELLOW_FLOWER_SEEDS = FloralisItems.register("yellow_flower_seeds", properties -> new BlockItem(FloralisBlocks.YELLOW_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> LIME_FLOWER_SEEDS = FloralisItems.register("lime_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIME_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> GREEN_FLOWER_SEEDS = FloralisItems.register("green_flower_seeds", properties -> new BlockItem(FloralisBlocks.GREEN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> CYAN_FLOWER_SEEDS = FloralisItems.register("cyan_flower_seeds", properties -> new BlockItem(FloralisBlocks.CYAN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> LIGHT_BLUE_FLOWER_SEEDS = FloralisItems.register("light_blue_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> BLUE_FLOWER_SEEDS = FloralisItems.register("blue_flower_seeds", properties -> new BlockItem(FloralisBlocks.BLUE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> PURPLE_FLOWER_SEEDS = FloralisItems.register("purple_flower_seeds", properties -> new BlockItem(FloralisBlocks.PURPLE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> MAGENTA_FLOWER_SEEDS = FloralisItems.register("magenta_flower_seeds", properties -> new BlockItem(FloralisBlocks.MAGENTA_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
-	public static final DeferredHolder<Item, Item> PINK_FLOWER_SEEDS = FloralisItems.register("pink_flower_seeds", properties -> new BlockItem(FloralisBlocks.PINK_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> WHITE_FLOWER = FloralisItems.register("white_flower", properties -> new BlockItem(FloralisBlocks.WHITE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> LIGHT_GRAY_FLOWER = FloralisItems.register("light_gray_flower", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> GRAY_FLOWER = FloralisItems.register("gray_flower", properties -> new BlockItem(FloralisBlocks.GRAY_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> BLACK_FLOWER = FloralisItems.register("black_flower", properties -> new BlockItem(FloralisBlocks.BLACK_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> BROWN_FLOWER = FloralisItems.register("brown_flower", properties -> new BlockItem(FloralisBlocks.BROWN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> RED_FLOWER = FloralisItems.register("red_flower", properties -> new BlockItem(FloralisBlocks.RED_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> ORANGE_FLOWER = FloralisItems.register("orange_flower", properties -> new BlockItem(FloralisBlocks.ORANGE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> YELLOW_FLOWER = FloralisItems.register("yellow_flower", properties -> new BlockItem(FloralisBlocks.YELLOW_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> LIME_FLOWER = FloralisItems.register("lime_flower", properties -> new BlockItem(FloralisBlocks.LIME_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> GREEN_FLOWER = FloralisItems.register("green_flower", properties -> new BlockItem(FloralisBlocks.GREEN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> CYAN_FLOWER = FloralisItems.register("cyan_flower", properties -> new BlockItem(FloralisBlocks.CYAN_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> LIGHT_BLUE_FLOWER = FloralisItems.register("light_blue_flower", properties -> new BlockItem(FloralisBlocks.LIGHT_BLUE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> BLUE_FLOWER = FloralisItems.register("blue_flower", properties -> new BlockItem(FloralisBlocks.BLUE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> PURPLE_FLOWER = FloralisItems.register("purple_flower", properties -> new BlockItem(FloralisBlocks.PURPLE_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> MAGENTA_FLOWER = FloralisItems.register("magenta_flower", properties -> new BlockItem(FloralisBlocks.MAGENTA_FLOWER.get(), properties), FloralisItems.propertiesBlock());
+	public static final DeferredHolder<Item, Item> PINK_FLOWER = FloralisItems.register("pink_flower", properties -> new BlockItem(FloralisBlocks.PINK_FLOWER.get(), properties), FloralisItems.propertiesBlock());
 
 	public static final DeferredHolder<Item, Item> WHITE_CACTUS_SEEDS = FloralisItems.register("white_cactus_seeds", properties -> new BlockItem(FloralisBlocks.WHITE_CACTUS_CROP.get(), properties), FloralisItems.propertiesItem());
 	public static final DeferredHolder<Item, Item> LIGHT_GRAY_CACTUS_SEEDS = FloralisItems.register("light_gray_cactus_seeds", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_CACTUS_CROP.get(), properties), FloralisItems.propertiesItem());
@@ -108,6 +91,23 @@ public class FloralisItems {
 	public static final DeferredHolder<Item, Item> PURPLE_CACTUS_SEEDS = FloralisItems.register("purple_cactus_seeds", properties -> new BlockItem(FloralisBlocks.PURPLE_CACTUS_CROP.get(), properties), FloralisItems.propertiesItem());
 	public static final DeferredHolder<Item, Item> MAGENTA_CACTUS_SEEDS = FloralisItems.register("magenta_cactus_seeds", properties -> new BlockItem(FloralisBlocks.MAGENTA_CACTUS_CROP.get(), properties), FloralisItems.propertiesItem());
 	public static final DeferredHolder<Item, Item> PINK_CACTUS_SEEDS = FloralisItems.register("pink_cactus_seeds", properties -> new BlockItem(FloralisBlocks.PINK_CACTUS_CROP.get(), properties), FloralisItems.propertiesItem());
+
+	public static final DeferredHolder<Item, Item> WHITE_FLOWER_SEEDS = FloralisItems.register("white_flower_seeds", properties -> new BlockItem(FloralisBlocks.WHITE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> LIGHT_GRAY_FLOWER_SEEDS = FloralisItems.register("light_gray_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIGHT_GRAY_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> GRAY_FLOWER_SEEDS = FloralisItems.register("gray_flower_seeds", properties -> new BlockItem(FloralisBlocks.GRAY_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> BLACK_FLOWER_SEEDS = FloralisItems.register("black_flower_seeds", properties -> new BlockItem(FloralisBlocks.BLACK_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> BROWN_FLOWER_SEEDS = FloralisItems.register("brown_flower_seeds", properties -> new BlockItem(FloralisBlocks.BROWN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> RED_FLOWER_SEEDS = FloralisItems.register("red_flower_seeds", properties -> new BlockItem(FloralisBlocks.RED_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> ORANGE_FLOWER_SEEDS = FloralisItems.register("orange_flower_seeds", properties -> new BlockItem(FloralisBlocks.ORANGE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> YELLOW_FLOWER_SEEDS = FloralisItems.register("yellow_flower_seeds", properties -> new BlockItem(FloralisBlocks.YELLOW_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> LIME_FLOWER_SEEDS = FloralisItems.register("lime_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIME_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> GREEN_FLOWER_SEEDS = FloralisItems.register("green_flower_seeds", properties -> new BlockItem(FloralisBlocks.GREEN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> CYAN_FLOWER_SEEDS = FloralisItems.register("cyan_flower_seeds", properties -> new BlockItem(FloralisBlocks.CYAN_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> LIGHT_BLUE_FLOWER_SEEDS = FloralisItems.register("light_blue_flower_seeds", properties -> new BlockItem(FloralisBlocks.LIGHT_BLUE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> BLUE_FLOWER_SEEDS = FloralisItems.register("blue_flower_seeds", properties -> new BlockItem(FloralisBlocks.BLUE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> PURPLE_FLOWER_SEEDS = FloralisItems.register("purple_flower_seeds", properties -> new BlockItem(FloralisBlocks.PURPLE_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> MAGENTA_FLOWER_SEEDS = FloralisItems.register("magenta_flower_seeds", properties -> new BlockItem(FloralisBlocks.MAGENTA_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
+	public static final DeferredHolder<Item, Item> PINK_FLOWER_SEEDS = FloralisItems.register("pink_flower_seeds", properties -> new BlockItem(FloralisBlocks.PINK_FLOWER_CROP.get(), properties), FloralisItems.propertiesItem());
 
 	public static final DeferredHolder<Item, Item> WHITE_PETALS = FloralisItems.register("white_petals", Item::new, FloralisItems.propertiesItem());
 	public static final DeferredHolder<Item, Item> LIGHT_GRAY_PETALS = FloralisItems.register("light_gray_petals", Item::new, FloralisItems.propertiesItem());

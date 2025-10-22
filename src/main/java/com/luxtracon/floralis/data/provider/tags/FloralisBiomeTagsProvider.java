@@ -54,6 +54,10 @@ public class FloralisBiomeTagsProvider extends BiomeTagsProvider {
 		return FloralisBiomeTagsProvider.createKey(FloralisConstants.INDUSTRIALFOREGOING + ":" + pName);
 	}
 
+	public static TagKey<Biome> minecraftKey(String pName) {
+		return FloralisBiomeTagsProvider.createKey(FloralisConstants.MINECRAFT + ":" + pName);
+	}
+
 	public static TagKey<Biome> neoforgeKey(String pName) {
 		return FloralisBiomeTagsProvider.createKey(FloralisConstants.NEOFORGE + ":" + pName);
 	}

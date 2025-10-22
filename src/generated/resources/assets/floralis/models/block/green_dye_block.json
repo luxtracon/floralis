@@ -1,0 +1,7 @@
+{
+  "parent": "floralis:block/template_dye_block",
+  "textures": {
+    "particle": "floralis:block/green_dye_block",
+    "texture": "floralis:block/green_dye_block"
+  }
+}

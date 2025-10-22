@@ -9,13 +9,15 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,6 +26,8 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import net.neoforged.neoforge.common.Tags;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -35,29 +39,30 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
-	public boolean mayPlaceOn(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos) {
-		return pBlockState.is(BlockTags.SAND);
-	}
-
-	@Override
-	public int getBonemealAgeIncrease(Level pLevel) {
-		return Mth.nextInt(pLevel.getRandom(), 1, 3);
-	}
-
-	@Override
-	public int getMaxAge() {
-		return 5;
-	}
-
-	@Override
 	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
 		pBuilder.add(FloralisBlockStateProperties.AGE);
 	}
 
 	@Override
-	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity) {
-		super.entityInside(pBlockState, pLevel, pBlockPos, pEntity);
-		FloralisHelper.hurt(pLevel.damageSources().cactus(), pEntity, 1.0F);
+	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity, InsideBlockEffectApplier pInsideBlockEffectApplier) {
+		if (pEntity.level() instanceof ServerLevel serverLevel && pBlockState.getValue(FloralisBlockStateProperties.AGE) > 1) {
+			pEntity.hurtServer(serverLevel, pLevel.damageSources().cactus(), 1.0F);
+		}
+	}
+
+	@Override
+	public boolean canSurvive(BlockState pBlockState, LevelReader pLevelReader, BlockPos pBlockPos) {
+		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.SAND) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
+	}
+
+	@Override
+	public int getBonemealAgeIncrease(Level pLevel) {
+		return 1;
+	}
+
+	@Override
+	public int getMaxAge() {
+		return 3;
 	}
 
 	@Override
@@ -72,7 +77,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public PathType getBlockPathType(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, @Nullable Mob pMob) {
-		return pBlockState.getValue(FloralisBlockStateProperties.AGE) >= 3 ? PathType.DAMAGE_OTHER : PathType.WALKABLE;
+		return pBlockState.getValue(FloralisBlockStateProperties.AGE) > 1 ? PathType.DAMAGE_OTHER : PathType.WALKABLE;
 	}
 
 	@Override

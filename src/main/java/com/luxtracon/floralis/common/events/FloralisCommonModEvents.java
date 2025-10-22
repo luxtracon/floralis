@@ -6,7 +6,9 @@ import com.luxtracon.floralis.common.registry.FloralisItems;
 import com.luxtracon.floralis.data.FloralisRecipeRunner;
 import com.luxtracon.floralis.data.provider.FloralisDataMapProvider;
 import com.luxtracon.floralis.data.provider.FloralisDatapackBuiltinEntriesProvider;
+import com.luxtracon.floralis.data.provider.language.*;
 import com.luxtracon.floralis.data.provider.loot.FloralisLootTableProvider;
+import com.luxtracon.floralis.data.provider.model.FloralisModelProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisBlockTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisItemTagsProvider;
@@ -47,26 +49,7 @@ public class FloralisCommonModEvents {
 			pEvent.accept(FloralisItems.PURPLE_DYE_BLOCK.get());
 			pEvent.accept(FloralisItems.MAGENTA_DYE_BLOCK.get());
 			pEvent.accept(FloralisItems.PINK_DYE_BLOCK.get());
-
 			pEvent.accept(FloralisItems.PLANT_FIBERS_BLOCK.get());
-
-			pEvent.accept(FloralisItems.WHITE_FLOWER.get());
-			pEvent.accept(FloralisItems.LIGHT_GRAY_FLOWER.get());
-			pEvent.accept(FloralisItems.GRAY_FLOWER.get());
-			pEvent.accept(FloralisItems.BLACK_FLOWER.get());
-			pEvent.accept(FloralisItems.BROWN_FLOWER.get());
-			pEvent.accept(FloralisItems.RED_FLOWER.get());
-			pEvent.accept(FloralisItems.ORANGE_FLOWER.get());
-			pEvent.accept(FloralisItems.YELLOW_FLOWER.get());
-			pEvent.accept(FloralisItems.LIME_FLOWER.get());
-			pEvent.accept(FloralisItems.GREEN_FLOWER.get());
-			pEvent.accept(FloralisItems.CYAN_FLOWER.get());
-			pEvent.accept(FloralisItems.LIGHT_BLUE_FLOWER.get());
-			pEvent.accept(FloralisItems.BLUE_FLOWER.get());
-			pEvent.accept(FloralisItems.PURPLE_FLOWER.get());
-			pEvent.accept(FloralisItems.MAGENTA_FLOWER.get());
-			pEvent.accept(FloralisItems.PINK_FLOWER.get());
-
 			pEvent.accept(FloralisItems.WHITE_CACTUS.get());
 			pEvent.accept(FloralisItems.LIGHT_GRAY_CACTUS.get());
 			pEvent.accept(FloralisItems.GRAY_CACTUS.get());
@@ -83,24 +66,22 @@ public class FloralisCommonModEvents {
 			pEvent.accept(FloralisItems.PURPLE_CACTUS.get());
 			pEvent.accept(FloralisItems.MAGENTA_CACTUS.get());
 			pEvent.accept(FloralisItems.PINK_CACTUS.get());
-
-			pEvent.accept(FloralisItems.WHITE_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.LIGHT_GRAY_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.GRAY_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.BLACK_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.BROWN_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.RED_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.ORANGE_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.YELLOW_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.LIME_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.GREEN_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.CYAN_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.LIGHT_BLUE_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.BLUE_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.PURPLE_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.MAGENTA_FLOWER_SEEDS.get());
-			pEvent.accept(FloralisItems.PINK_FLOWER_SEEDS.get());
-
+			pEvent.accept(FloralisItems.WHITE_FLOWER.get());
+			pEvent.accept(FloralisItems.LIGHT_GRAY_FLOWER.get());
+			pEvent.accept(FloralisItems.GRAY_FLOWER.get());
+			pEvent.accept(FloralisItems.BLACK_FLOWER.get());
+			pEvent.accept(FloralisItems.BROWN_FLOWER.get());
+			pEvent.accept(FloralisItems.RED_FLOWER.get());
+			pEvent.accept(FloralisItems.ORANGE_FLOWER.get());
+			pEvent.accept(FloralisItems.YELLOW_FLOWER.get());
+			pEvent.accept(FloralisItems.LIME_FLOWER.get());
+			pEvent.accept(FloralisItems.GREEN_FLOWER.get());
+			pEvent.accept(FloralisItems.CYAN_FLOWER.get());
+			pEvent.accept(FloralisItems.LIGHT_BLUE_FLOWER.get());
+			pEvent.accept(FloralisItems.BLUE_FLOWER.get());
+			pEvent.accept(FloralisItems.PURPLE_FLOWER.get());
+			pEvent.accept(FloralisItems.MAGENTA_FLOWER.get());
+			pEvent.accept(FloralisItems.PINK_FLOWER.get());
 			pEvent.accept(FloralisItems.WHITE_CACTUS_SEEDS.get());
 			pEvent.accept(FloralisItems.LIGHT_GRAY_CACTUS_SEEDS.get());
 			pEvent.accept(FloralisItems.GRAY_CACTUS_SEEDS.get());
@@ -117,7 +98,22 @@ public class FloralisCommonModEvents {
 			pEvent.accept(FloralisItems.PURPLE_CACTUS_SEEDS.get());
 			pEvent.accept(FloralisItems.MAGENTA_CACTUS_SEEDS.get());
 			pEvent.accept(FloralisItems.PINK_CACTUS_SEEDS.get());
-
+			pEvent.accept(FloralisItems.WHITE_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.LIGHT_GRAY_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.GRAY_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.BLACK_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.BROWN_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.RED_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.ORANGE_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.YELLOW_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.LIME_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.GREEN_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.CYAN_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.LIGHT_BLUE_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.BLUE_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.PURPLE_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.MAGENTA_FLOWER_SEEDS.get());
+			pEvent.accept(FloralisItems.PINK_FLOWER_SEEDS.get());
 			pEvent.accept(FloralisItems.WHITE_PETALS.get());
 			pEvent.accept(FloralisItems.LIGHT_GRAY_PETALS.get());
 			pEvent.accept(FloralisItems.GRAY_PETALS.get());
@@ -134,7 +130,6 @@ public class FloralisCommonModEvents {
 			pEvent.accept(FloralisItems.PURPLE_PETALS.get());
 			pEvent.accept(FloralisItems.MAGENTA_PETALS.get());
 			pEvent.accept(FloralisItems.PINK_PETALS.get());
-
 			pEvent.accept(FloralisItems.PLANT_FIBERS.get());
 		}
 	}
@@ -147,7 +142,13 @@ public class FloralisCommonModEvents {
 
 		var blockTags = new FloralisBlockTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS);
 
+		pEvent.addProvider(new FloralisChineseLanguageProvider(packOutput, FloralisConstants.FLORALIS, "zh_cn"));
+		pEvent.addProvider(new FloralisEnglishLanguageProvider(packOutput, FloralisConstants.FLORALIS, "en_us"));
+		pEvent.addProvider(new FloralisGermanLanguageProvider(packOutput, FloralisConstants.FLORALIS, "de_de"));
+		pEvent.addProvider(new FloralisRussianLanguageProvider(packOutput, FloralisConstants.FLORALIS, "ru_ru"));
+		pEvent.addProvider(new FloralisUkrainianLanguageProvider(packOutput, FloralisConstants.FLORALIS, "uk_ua"));
 		pEvent.addProvider(new FloralisLootTableProvider(packOutput, lookupProvider));
+		pEvent.addProvider(new FloralisModelProvider(packOutput, FloralisConstants.FLORALIS));
 		pEvent.addProvider(new FloralisBiomeTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
 		pEvent.addProvider(blockTags);
 		pEvent.addProvider(new FloralisItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), FloralisConstants.FLORALIS));

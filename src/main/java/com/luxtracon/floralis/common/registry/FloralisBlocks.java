@@ -45,41 +45,92 @@ public class FloralisBlocks {
 	public static final DeferredHolder<Block, Block> MAGENTA_DYE_BLOCK = FloralisBlocks.register("magenta_dye_block", DyeBlock::new, FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_MAGENTA));
 	public static final DeferredHolder<Block, Block> PINK_DYE_BLOCK = FloralisBlocks.register("pink_dye_block", DyeBlock::new, FloralisBlocks.propertiesDyeBlock(MapColor.COLOR_PINK));
 
-	public static final DeferredHolder<Block, Block> PLANT_FIBERS_BLOCK = FloralisBlocks.register("plant_fibers_block", PlantFibersBlock::new, FloralisBlocks.propertiesFibersBlock());
+	public static final DeferredHolder<Block, Block> PLANT_FIBERS_BLOCK = FloralisBlocks.register("plant_fibers_block", PlantFibersBlock::new, FloralisBlocks.propertiesPlantFibersBlock());
 
-	public static final DeferredHolder<Block, Block> WHITE_FLOWER = FloralisBlocks.register("white_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> LIGHT_GRAY_FLOWER = FloralisBlocks.register("light_gray_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> GRAY_FLOWER = FloralisBlocks.register("gray_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> BLACK_FLOWER = FloralisBlocks.register("black_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> BROWN_FLOWER = FloralisBlocks.register("brown_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> RED_FLOWER = FloralisBlocks.register("red_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> ORANGE_FLOWER = FloralisBlocks.register("orange_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> YELLOW_FLOWER = FloralisBlocks.register("yellow_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> LIME_FLOWER = FloralisBlocks.register("lime_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> GREEN_FLOWER = FloralisBlocks.register("green_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> CYAN_FLOWER = FloralisBlocks.register("cyan_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> LIGHT_BLUE_FLOWER = FloralisBlocks.register("light_blue_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> BLUE_FLOWER = FloralisBlocks.register("blue_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> PURPLE_FLOWER = FloralisBlocks.register("purple_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> MAGENTA_FLOWER = FloralisBlocks.register("magenta_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
-	public static final DeferredHolder<Block, Block> PINK_FLOWER = FloralisBlocks.register("pink_flower", FlowerPlantBlock::new, FloralisBlocks.propertiesFlowerPlant());
+	public static final DeferredHolder<Block, Block> WHITE_CACTUS = FloralisBlocks.register("white_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIGHT_GRAY_CACTUS = FloralisBlocks.register("light_gray_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> GRAY_CACTUS = FloralisBlocks.register("gray_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BLACK_CACTUS = FloralisBlocks.register("black_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BROWN_CACTUS = FloralisBlocks.register("brown_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> RED_CACTUS = FloralisBlocks.register("red_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> ORANGE_CACTUS = FloralisBlocks.register("orange_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> YELLOW_CACTUS = FloralisBlocks.register("yellow_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIME_CACTUS = FloralisBlocks.register("lime_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> GREEN_CACTUS = FloralisBlocks.register("green_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> CYAN_CACTUS = FloralisBlocks.register("cyan_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIGHT_BLUE_CACTUS = FloralisBlocks.register("light_blue_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BLUE_CACTUS = FloralisBlocks.register("blue_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> PURPLE_CACTUS = FloralisBlocks.register("purple_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> MAGENTA_CACTUS = FloralisBlocks.register("magenta_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> PINK_CACTUS = FloralisBlocks.register("pink_cactus", CactusBushBlock::new, FloralisBlocks.propertiesBush());
 
-	public static final DeferredHolder<Block, Block> WHITE_CACTUS = FloralisBlocks.register("white_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> LIGHT_GRAY_CACTUS = FloralisBlocks.register("light_gray_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> GRAY_CACTUS = FloralisBlocks.register("gray_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> BLACK_CACTUS = FloralisBlocks.register("black_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> BROWN_CACTUS = FloralisBlocks.register("brown_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> RED_CACTUS = FloralisBlocks.register("red_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> ORANGE_CACTUS = FloralisBlocks.register("orange_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> YELLOW_CACTUS = FloralisBlocks.register("yellow_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> LIME_CACTUS = FloralisBlocks.register("lime_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> GREEN_CACTUS = FloralisBlocks.register("green_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> CYAN_CACTUS = FloralisBlocks.register("cyan_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> LIGHT_BLUE_CACTUS = FloralisBlocks.register("light_blue_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> BLUE_CACTUS = FloralisBlocks.register("blue_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> PURPLE_CACTUS = FloralisBlocks.register("purple_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> MAGENTA_CACTUS = FloralisBlocks.register("magenta_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
-	public static final DeferredHolder<Block, Block> PINK_CACTUS = FloralisBlocks.register("pink_cactus", CactusPlantBlock::new, FloralisBlocks.propertiesCactusPlant());
+	public static final DeferredHolder<Block, Block> WHITE_FLOWER = FloralisBlocks.register("white_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIGHT_GRAY_FLOWER = FloralisBlocks.register("light_gray_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> GRAY_FLOWER = FloralisBlocks.register("gray_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BLACK_FLOWER = FloralisBlocks.register("black_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BROWN_FLOWER = FloralisBlocks.register("brown_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> RED_FLOWER = FloralisBlocks.register("red_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> ORANGE_FLOWER = FloralisBlocks.register("orange_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> YELLOW_FLOWER = FloralisBlocks.register("yellow_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIME_FLOWER = FloralisBlocks.register("lime_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> GREEN_FLOWER = FloralisBlocks.register("green_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> CYAN_FLOWER = FloralisBlocks.register("cyan_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> LIGHT_BLUE_FLOWER = FloralisBlocks.register("light_blue_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> BLUE_FLOWER = FloralisBlocks.register("blue_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> PURPLE_FLOWER = FloralisBlocks.register("purple_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> MAGENTA_FLOWER = FloralisBlocks.register("magenta_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+	public static final DeferredHolder<Block, Block> PINK_FLOWER = FloralisBlocks.register("pink_flower", FlowerBushBlock::new, FloralisBlocks.propertiesBush());
+
+	public static final DeferredHolder<Block, Block> WHITE_CACTUS_CROP = FloralisBlocks.register("white_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIGHT_GRAY_CACTUS_CROP = FloralisBlocks.register("light_gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> GRAY_CACTUS_CROP = FloralisBlocks.register("gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BLACK_CACTUS_CROP = FloralisBlocks.register("black_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BROWN_CACTUS_CROP = FloralisBlocks.register("brown_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> RED_CACTUS_CROP = FloralisBlocks.register("red_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> ORANGE_CACTUS_CROP = FloralisBlocks.register("orange_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> YELLOW_CACTUS_CROP = FloralisBlocks.register("yellow_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIME_CACTUS_CROP = FloralisBlocks.register("lime_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> GREEN_CACTUS_CROP = FloralisBlocks.register("green_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> CYAN_CACTUS_CROP = FloralisBlocks.register("cyan_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIGHT_BLUE_CACTUS_CROP = FloralisBlocks.register("light_blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BLUE_CACTUS_CROP = FloralisBlocks.register("blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> PURPLE_CACTUS_CROP = FloralisBlocks.register("purple_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> MAGENTA_CACTUS_CROP = FloralisBlocks.register("magenta_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> PINK_CACTUS_CROP = FloralisBlocks.register("pink_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCrop());
+
+	public static final DeferredHolder<Block, Block> WHITE_FLOWER_CROP = FloralisBlocks.register("white_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIGHT_GRAY_FLOWER_CROP = FloralisBlocks.register("light_gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> GRAY_FLOWER_CROP = FloralisBlocks.register("gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BLACK_FLOWER_CROP = FloralisBlocks.register("black_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BROWN_FLOWER_CROP = FloralisBlocks.register("brown_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> RED_FLOWER_CROP = FloralisBlocks.register("red_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> ORANGE_FLOWER_CROP = FloralisBlocks.register("orange_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> YELLOW_FLOWER_CROP = FloralisBlocks.register("yellow_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIME_FLOWER_CROP = FloralisBlocks.register("lime_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> GREEN_FLOWER_CROP = FloralisBlocks.register("green_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> CYAN_FLOWER_CROP = FloralisBlocks.register("cyan_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> LIGHT_BLUE_FLOWER_CROP = FloralisBlocks.register("light_blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> BLUE_FLOWER_CROP = FloralisBlocks.register("blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> PURPLE_FLOWER_CROP = FloralisBlocks.register("purple_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> MAGENTA_FLOWER_CROP = FloralisBlocks.register("magenta_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+	public static final DeferredHolder<Block, Block> PINK_FLOWER_CROP = FloralisBlocks.register("pink_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesCrop());
+
+	public static final DeferredHolder<Block, Block> POTTED_WHITE_CACTUS = FloralisBlocks.register("potted_white_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.WHITE_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_LIGHT_GRAY_CACTUS = FloralisBlocks.register("potted_light_gray_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIGHT_GRAY_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_GRAY_CACTUS = FloralisBlocks.register("potted_gray_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.GRAY_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_BLACK_CACTUS = FloralisBlocks.register("potted_black_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BLACK_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_BROWN_CACTUS = FloralisBlocks.register("potted_brown_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BROWN_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_RED_CACTUS = FloralisBlocks.register("potted_red_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.RED_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_ORANGE_CACTUS = FloralisBlocks.register("potted_orange_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.ORANGE_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_YELLOW_CACTUS = FloralisBlocks.register("potted_yellow_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.YELLOW_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_LIME_CACTUS = FloralisBlocks.register("potted_lime_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIME_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_GREEN_CACTUS = FloralisBlocks.register("potted_green_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.GREEN_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_CYAN_CACTUS = FloralisBlocks.register("potted_cyan_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.CYAN_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_LIGHT_BLUE_CACTUS = FloralisBlocks.register("potted_light_blue_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIGHT_BLUE_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_BLUE_CACTUS = FloralisBlocks.register("potted_blue_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BLUE_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_PURPLE_CACTUS = FloralisBlocks.register("potted_purple_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.PURPLE_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_MAGENTA_CACTUS = FloralisBlocks.register("potted_magenta_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.MAGENTA_CACTUS, properties), FloralisBlocks.propertiesPotted());
+	public static final DeferredHolder<Block, Block> POTTED_PINK_CACTUS = FloralisBlocks.register("potted_pink_cactus", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.PINK_CACTUS, properties), FloralisBlocks.propertiesPotted());
 
 	public static final DeferredHolder<Block, Block> POTTED_WHITE_FLOWER = FloralisBlocks.register("potted_white_flower", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.WHITE_FLOWER, properties), FloralisBlocks.propertiesPotted());
 	public static final DeferredHolder<Block, Block> POTTED_LIGHT_GRAY_FLOWER = FloralisBlocks.register("potted_light_gray_flower", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIGHT_GRAY_FLOWER, properties), FloralisBlocks.propertiesPotted());
@@ -98,117 +149,24 @@ public class FloralisBlocks {
 	public static final DeferredHolder<Block, Block> POTTED_MAGENTA_FLOWER = FloralisBlocks.register("potted_magenta_flower", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.MAGENTA_FLOWER, properties), FloralisBlocks.propertiesPotted());
 	public static final DeferredHolder<Block, Block> POTTED_PINK_FLOWER = FloralisBlocks.register("potted_pink_flower", properties -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.PINK_FLOWER, properties), FloralisBlocks.propertiesPotted());
 
-	public static final DeferredHolder<Block, Block> POTTED_WHITE_CACTUS = FloralisBlocks.register("potted_white_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.WHITE_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_LIGHT_GRAY_CACTUS = FloralisBlocks.register("potted_light_gray_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIGHT_GRAY_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_GRAY_CACTUS = FloralisBlocks.register("potted_gray_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.GRAY_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_BLACK_CACTUS = FloralisBlocks.register("potted_black_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BLACK_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_BROWN_CACTUS = FloralisBlocks.register("potted_brown_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BROWN_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_RED_CACTUS = FloralisBlocks.register("potted_red_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.RED_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_ORANGE_CACTUS = FloralisBlocks.register("potted_orange_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.ORANGE_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_YELLOW_CACTUS = FloralisBlocks.register("potted_yellow_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.YELLOW_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_LIME_CACTUS = FloralisBlocks.register("potted_lime_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIME_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_GREEN_CACTUS = FloralisBlocks.register("potted_green_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.GREEN_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_CYAN_CACTUS = FloralisBlocks.register("potted_cyan_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.CYAN_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_LIGHT_BLUE_CACTUS = FloralisBlocks.register("potted_light_blue_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.LIGHT_BLUE_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_BLUE_CACTUS = FloralisBlocks.register("potted_blue_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.BLUE_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_PURPLE_CACTUS = FloralisBlocks.register("potted_purple_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.PURPLE_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_MAGENTA_CACTUS = FloralisBlocks.register("potted_magenta_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.MAGENTA_CACTUS, properties), FloralisBlocks.propertiesPotted());
-	public static final DeferredHolder<Block, Block> POTTED_PINK_CACTUS = FloralisBlocks.register("potted_pink_cactus", properties -> new CactusPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FloralisBlocks.PINK_CACTUS, properties), FloralisBlocks.propertiesPotted());
-
-	public static final DeferredHolder<Block, Block> WHITE_FLOWER_CROP = FloralisBlocks.register("white_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> LIGHT_GRAY_FLOWER_CROP = FloralisBlocks.register("light_gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> GRAY_FLOWER_CROP = FloralisBlocks.register("gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> BLACK_FLOWER_CROP = FloralisBlocks.register("black_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> BROWN_FLOWER_CROP = FloralisBlocks.register("brown_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> RED_FLOWER_CROP = FloralisBlocks.register("red_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> ORANGE_FLOWER_CROP = FloralisBlocks.register("orange_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> YELLOW_FLOWER_CROP = FloralisBlocks.register("yellow_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> LIME_FLOWER_CROP = FloralisBlocks.register("lime_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> GREEN_FLOWER_CROP = FloralisBlocks.register("green_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CYAN_FLOWER_CROP = FloralisBlocks.register("cyan_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> LIGHT_BLUE_FLOWER_CROP = FloralisBlocks.register("light_blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> BLUE_FLOWER_CROP = FloralisBlocks.register("blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> PURPLE_FLOWER_CROP = FloralisBlocks.register("purple_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> MAGENTA_FLOWER_CROP = FloralisBlocks.register("magenta_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> PINK_FLOWER_CROP = FloralisBlocks.register("pink_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-
-	public static final DeferredHolder<Block, Block> WHITE_CACTUS_CROP = FloralisBlocks.register("white_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> LIGHT_GRAY_CACTUS_CROP = FloralisBlocks.register("light_gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> GRAY_CACTUS_CROP = FloralisBlocks.register("gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> BLACK_CACTUS_CROP = FloralisBlocks.register("black_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> BROWN_CACTUS_CROP = FloralisBlocks.register("brown_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> RED_CACTUS_CROP = FloralisBlocks.register("red_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> ORANGE_CACTUS_CROP = FloralisBlocks.register("orange_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> YELLOW_CACTUS_CROP = FloralisBlocks.register("yellow_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> LIME_CACTUS_CROP = FloralisBlocks.register("lime_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> GREEN_CACTUS_CROP = FloralisBlocks.register("green_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CYAN_CACTUS_CROP = FloralisBlocks.register("cyan_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> LIGHT_BLUE_CACTUS_CROP = FloralisBlocks.register("light_blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> BLUE_CACTUS_CROP = FloralisBlocks.register("blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> PURPLE_CACTUS_CROP = FloralisBlocks.register("purple_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> MAGENTA_CACTUS_CROP = FloralisBlocks.register("magenta_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> PINK_CACTUS_CROP = FloralisBlocks.register("pink_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-
-	public static final DeferredHolder<Block, Block> CLOCHED_WHITE_FLOWER_CROP = FloralisBlocks.register("cloched_white_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIGHT_GRAY_FLOWER_CROP = FloralisBlocks.register("cloched_light_gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_GRAY_FLOWER_CROP = FloralisBlocks.register("cloched_gray_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BLACK_FLOWER_CROP = FloralisBlocks.register("cloched_black_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BROWN_FLOWER_CROP = FloralisBlocks.register("cloched_brown_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_RED_FLOWER_CROP = FloralisBlocks.register("cloched_red_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_ORANGE_FLOWER_CROP = FloralisBlocks.register("cloched_orange_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_YELLOW_FLOWER_CROP = FloralisBlocks.register("cloched_yellow_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIME_FLOWER_CROP = FloralisBlocks.register("cloched_lime_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_GREEN_FLOWER_CROP = FloralisBlocks.register("cloched_green_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_CYAN_FLOWER_CROP = FloralisBlocks.register("cloched_cyan_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIGHT_BLUE_FLOWER_CROP = FloralisBlocks.register("cloched_light_blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BLUE_FLOWER_CROP = FloralisBlocks.register("cloched_blue_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_PURPLE_FLOWER_CROP = FloralisBlocks.register("cloched_purple_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_MAGENTA_FLOWER_CROP = FloralisBlocks.register("cloched_magenta_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_PINK_FLOWER_CROP = FloralisBlocks.register("cloched_pink_flower_crop", FlowerCropBlock::new, FloralisBlocks.propertiesFlowerCrop());
-
-	public static final DeferredHolder<Block, Block> CLOCHED_WHITE_CACTUS_CROP = FloralisBlocks.register("cloched_white_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIGHT_GRAY_CACTUS_CROP = FloralisBlocks.register("cloched_light_gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_GRAY_CACTUS_CROP = FloralisBlocks.register("cloched_gray_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BLACK_CACTUS_CROP = FloralisBlocks.register("cloched_black_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BROWN_CACTUS_CROP = FloralisBlocks.register("cloched_brown_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_RED_CACTUS_CROP = FloralisBlocks.register("cloched_red_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_ORANGE_CACTUS_CROP = FloralisBlocks.register("cloched_orange_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_YELLOW_CACTUS_CROP = FloralisBlocks.register("cloched_yellow_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIME_CACTUS_CROP = FloralisBlocks.register("cloched_lime_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_GREEN_CACTUS_CROP = FloralisBlocks.register("cloched_green_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_CYAN_CACTUS_CROP = FloralisBlocks.register("cloched_cyan_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_LIGHT_BLUE_CACTUS_CROP = FloralisBlocks.register("cloched_light_blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_BLUE_CACTUS_CROP = FloralisBlocks.register("cloched_blue_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_PURPLE_CACTUS_CROP = FloralisBlocks.register("cloched_purple_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_MAGENTA_CACTUS_CROP = FloralisBlocks.register("cloched_magenta_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-	public static final DeferredHolder<Block, Block> CLOCHED_PINK_CACTUS_CROP = FloralisBlocks.register("cloched_pink_cactus_crop", CactusCropBlock::new, FloralisBlocks.propertiesCactusCrop());
-
 	public static BlockBehaviour.Properties propertiesDyeBlock(MapColor pMapColor) {
 		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE).mapColor(pMapColor).pushReaction(PushReaction.NORMAL).sound(SoundType.SAND).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	public static BlockBehaviour.Properties propertiesFibersBlock() {
+	public static BlockBehaviour.Properties propertiesPlantFibersBlock() {
 		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BANJO).mapColor(MapColor.COLOR_GREEN).pushReaction(PushReaction.NORMAL).sound(SoundType.GRASS).explosionResistance(0.5F).strength(0.5F);
 	}
 
-	public static BlockBehaviour.Properties propertiesFlowerPlant() {
-		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS).dynamicShape().instabreak().noCollission();
+	public static BlockBehaviour.Properties propertiesBush() {
+		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS).instabreak();
 	}
 
-	public static BlockBehaviour.Properties propertiesCactusPlant() {
-		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS).dynamicShape().instabreak();
+	public static BlockBehaviour.Properties propertiesCrop() {
+		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.CROP).instabreak().randomTicks();
 	}
 
 	public static BlockBehaviour.Properties propertiesPotted() {
 		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.NONE).pushReaction(PushReaction.DESTROY).sound(SoundType.STONE).instabreak().noOcclusion();
-	}
-
-	public static BlockBehaviour.Properties propertiesFlowerCrop() {
-		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.CROP).instabreak().noCollission().randomTicks();
-	}
-
-	public static BlockBehaviour.Properties propertiesCactusCrop() {
-		return BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).mapColor(MapColor.PLANT).pushReaction(PushReaction.DESTROY).sound(SoundType.CROP).instabreak().randomTicks();
 	}
 
 	public static <T extends Block> DeferredHolder<Block, T> register(String pName, Function<BlockBehaviour.Properties, T> pFunction, BlockBehaviour.Properties pProperties) {

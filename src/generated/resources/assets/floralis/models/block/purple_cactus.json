@@ -1,0 +1,7 @@
+{
+  "parent": "floralis:block/template_cactus_bush",
+  "textures": {
+    "particle": "floralis:block/particle",
+    "texture": "floralis:block/purple_cactus"
+  }
+}

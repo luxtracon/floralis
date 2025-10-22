@@ -1,0 +1,7 @@
+{
+  "parent": "floralis:block/template_flower_crop_0",
+  "textures": {
+    "particle": "floralis:block/particle",
+    "texture": "floralis:block/blue_flower"
+  }
+}

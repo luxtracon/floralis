@@ -1,5 +1,6 @@
 package com.luxtracon.floralis.common.block;
 
+import com.luxtracon.floralis.common.helper.FloralisHelper;
 import com.luxtracon.floralis.common.registry.FloralisBlockStateProperties;
 import com.luxtracon.floralis.common.registry.FloralisVoxelShapes;
 
@@ -7,10 +8,11 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,6 +20,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import net.neoforged.neoforge.common.Tags;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -29,18 +33,23 @@ public class FlowerCropBlock extends CropBlock {
 	}
 
 	@Override
+	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+		pBuilder.add(FloralisBlockStateProperties.AGE);
+	}
+
+	@Override
+	public boolean canSurvive(BlockState pBlockState, LevelReader pLevelReader, BlockPos pBlockPos) {
+		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.DIRT) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
+	}
+
+	@Override
 	public int getBonemealAgeIncrease(Level pLevel) {
-		return Mth.nextInt(pLevel.getRandom(), 1, 3);
+		return 1;
 	}
 
 	@Override
 	public int getMaxAge() {
-		return 5;
-	}
-
-	@Override
-	public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-		pBuilder.add(FloralisBlockStateProperties.AGE);
+		return 3;
 	}
 
 	@Override

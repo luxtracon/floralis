@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#floralis:has_cactus",
-  "features": "floralis:cyan_cactus",
-  "step": "vegetal_decoration"
-}

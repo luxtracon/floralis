@@ -37,7 +37,7 @@
               "block": "floralis:black_flower_crop",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "5"
+                "age": "3"
               }
             }
           ],
@@ -84,7 +84,7 @@
                 "block": "floralis:black_flower_crop",
                 "condition": "minecraft:block_state_property",
                 "properties": {
-                  "age": "5"
+                  "age": "3"
                 }
               }
             }
@@ -135,7 +135,7 @@
                 "block": "floralis:black_flower_crop",
                 "condition": "minecraft:block_state_property",
                 "properties": {
-                  "age": "5"
+                  "age": "3"
                 }
               }
             }
@@ -184,7 +184,7 @@
               "block": "floralis:black_flower_crop",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "5"
+                "age": "3"
               }
             }
           ],
@@ -242,7 +242,7 @@
               "block": "floralis:black_flower_crop",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "5"
+                "age": "3"
               }
             }
           ],
@@ -300,7 +300,7 @@
               "block": "floralis:black_flower_crop",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "5"
+                "age": "3"
               }
             }
           ],
