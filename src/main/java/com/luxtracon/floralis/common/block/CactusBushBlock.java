@@ -33,7 +33,7 @@ public class CactusBushBlock extends BushBlock {
 	}
 
 	@Override
-	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity, InsideBlockEffectApplier pInsideBlockEffectApplier) {
+	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity, InsideBlockEffectApplier pInsideBlockEffectApplier, boolean pIntersects) {
 		if (pEntity.level() instanceof ServerLevel serverLevel) {
 			pEntity.hurtServer(serverLevel, pLevel.damageSources().cactus(), 1.0F);
 		}

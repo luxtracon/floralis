@@ -44,7 +44,7 @@ public class CactusCropBlock extends CropBlock {
 	}
 
 	@Override
-	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity, InsideBlockEffectApplier pInsideBlockEffectApplier) {
+	public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pBlockPos, Entity pEntity, InsideBlockEffectApplier pInsideBlockEffectApplier, boolean pIntersects) {
 		if (pEntity.level() instanceof ServerLevel serverLevel && pBlockState.getValue(FloralisBlockStateProperties.AGE) > 1) {
 			pEntity.hurtServer(serverLevel, pLevel.damageSources().cactus(), 1.0F);
 		}
