@@ -140,8 +140,6 @@ public class FloralisCommonModEvents {
 		var lookupProvider = pEvent.getLookupProvider();
 		var packOutput = generator.getPackOutput();
 
-		var blockTags = new FloralisBlockTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS);
-
 		pEvent.addProvider(new FloralisChineseLanguageProvider(packOutput, FloralisConstants.FLORALIS, "zh_cn"));
 		pEvent.addProvider(new FloralisEnglishLanguageProvider(packOutput, FloralisConstants.FLORALIS, "en_us"));
 		pEvent.addProvider(new FloralisGermanLanguageProvider(packOutput, FloralisConstants.FLORALIS, "de_de"));
@@ -150,8 +148,8 @@ public class FloralisCommonModEvents {
 		pEvent.addProvider(new FloralisLootTableProvider(packOutput, lookupProvider));
 		pEvent.addProvider(new FloralisModelProvider(packOutput, FloralisConstants.FLORALIS));
 		pEvent.addProvider(new FloralisBiomeTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
-		pEvent.addProvider(blockTags);
-		pEvent.addProvider(new FloralisItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), FloralisConstants.FLORALIS));
+		pEvent.addProvider(new FloralisBlockTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
+		pEvent.addProvider(new FloralisItemTagsProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
 		pEvent.addProvider(new FloralisDataMapProvider(packOutput, lookupProvider));
 		pEvent.addProvider(new FloralisDatapackBuiltinEntriesProvider(packOutput, lookupProvider, FloralisConstants.FLORALIS));
 		pEvent.addProvider(new FloralisRecipeRunner(packOutput, lookupProvider));

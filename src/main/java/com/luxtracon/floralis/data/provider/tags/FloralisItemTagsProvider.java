@@ -11,14 +11,13 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 @SuppressWarnings("unused")
 
@@ -37,8 +36,8 @@ public class FloralisItemTagsProvider extends ItemTagsProvider {
 	public static final TagKey<Item> STORAGE_BLOCKS_DYE = FloralisItemTagsProvider.cKey("storage_blocks/dye");
 	public static final TagKey<Item> STORAGE_BLOCKS_PLANT_FIBERS = FloralisItemTagsProvider.cKey("storage_blocks/plant_fibers");
 
-	public FloralisItemTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, CompletableFuture<TagLookup<Block>> pTags, String pId) {
-		super(pPackOutput, pProvider, pTags, pId);
+	public FloralisItemTagsProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider, String pId) {
+		super(pPackOutput, pProvider, pId);
 	}
 
 	@Override
