@@ -18,5 +18,5 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class FloralisCreativeModeTabs {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FloralisConstants.FLORALIS);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FLORALIS = FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(FloralisConstants.FLORALIS, () -> CreativeModeTab.builder().icon(() -> new ItemStack(FloralisItems.PURPLE_CACTUS.get())).title(Component.translatable("tab" + "." + FloralisConstants.FLORALIS + "." + "item_group")).withSearchBar().withTabsBefore(CreativeModeTabs.SPAWN_EGGS).build());
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FLORALIS = FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(FloralisConstants.FLORALIS, () -> CreativeModeTab.builder().icon(() -> new ItemStack(FloralisItems.PURPLE_PETALS.get())).title(Component.translatable("tab" + "." + FloralisConstants.FLORALIS + "." + "item_group")).withSearchBar().withTabsBefore(CreativeModeTabs.SPAWN_EGGS).build());
 }
