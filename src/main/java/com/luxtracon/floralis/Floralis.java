@@ -2,9 +2,9 @@ package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.common.registry.*;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

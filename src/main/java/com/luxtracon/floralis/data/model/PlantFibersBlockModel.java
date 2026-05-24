@@ -4,11 +4,11 @@ import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisTextureSlots;
 import com.luxtracon.floralis.data.provider.model.FloralisModelProvider;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import com.mojang.math.Quadrant;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Direction;
 
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplate;
@@ -22,7 +22,7 @@ public class PlantFibersBlockModel {
 	public static ExtendedModelTemplate template() {
 		return ExtendedModelTemplateBuilder.builder().parent(FloralisModelProvider.blockFile(FloralisConstants.MINECRAFT, "block"))
 			.element(elementBuilder -> elementBuilder.from(0.0000F, 0.0000F, 0.0000F).to(16.0000F, 16.0000F, 16.0000F)
-				.rotation(rotationBuilder -> rotationBuilder.angle(0.0000F).axis(Direction.Axis.Y).origin(0.0000F, 0.0000F, 0.0000F))
+				.rotation(rotationBuilder -> rotationBuilder.eulerXYZ(0.0000F, 0.0000F, 0.0000F).origin(0.0000F, 0.0000F, 0.0000F))
 				.face(Direction.NORTH, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))
 				.face(Direction.EAST, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))
 				.face(Direction.SOUTH, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))
@@ -35,7 +35,7 @@ public class PlantFibersBlockModel {
 	public static ExtendedModelTemplate templateHorizontal() {
 		return ExtendedModelTemplateBuilder.builder().parent(FloralisModelProvider.blockFile(FloralisConstants.MINECRAFT, "block"))
 			.element(elementBuilder -> elementBuilder.from(0.0000F, 0.0000F, 0.0000F).to(16.0000F, 16.0000F, 16.0000F)
-				.rotation(rotationBuilder -> rotationBuilder.angle(0.0000F).axis(Direction.Axis.Y).origin(0.0000F, 0.0000F, 0.0000F))
+				.rotation(rotationBuilder -> rotationBuilder.eulerXYZ(0.0000F, 0.0000F, 0.0000F).origin(0.0000F, 0.0000F, 0.0000F))
 				.face(Direction.NORTH, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))
 				.face(Direction.EAST, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))
 				.face(Direction.SOUTH, faceBuilder -> faceBuilder.uvs(0.0000F, 0.0000F, 16.0000F, 16.0000F).tintindex(0).texture(FloralisTextureSlots.TEXTURE))

@@ -5,9 +5,10 @@ import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisTextureSlots;
 import com.luxtracon.floralis.data.model.*;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.world.level.block.Block;

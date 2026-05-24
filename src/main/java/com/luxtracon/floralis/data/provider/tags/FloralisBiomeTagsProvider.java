@@ -2,16 +2,17 @@ package com.luxtracon.floralis.data.provider.tags;
 
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
@@ -63,6 +64,6 @@ public class FloralisBiomeTagsProvider extends BiomeTagsProvider {
 	}
 
 	public static TagKey<Biome> createKey(String pName) {
-		return TagKey.create(Registries.BIOME, ResourceLocation.parse(pName));
+		return TagKey.create(Registries.BIOME, Identifier.parse(pName));
 	}
 }

@@ -2,14 +2,15 @@ package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.common.block.*;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.function.Function;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -170,6 +171,6 @@ public class FloralisBlocks {
 	}
 
 	public static <T extends Block> DeferredHolder<Block, T> register(String pName, Function<BlockBehaviour.Properties, T> pFunction, BlockBehaviour.Properties pProperties) {
-		return FloralisBlocks.BLOCKS.register(pName, () -> pFunction.apply(pProperties.setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName)))));
+		return FloralisBlocks.BLOCKS.register(pName, () -> pFunction.apply(pProperties.setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName)))));
 	}
 }

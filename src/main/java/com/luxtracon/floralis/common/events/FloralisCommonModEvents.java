@@ -13,9 +13,9 @@ import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisBlockTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisItemTagsProvider;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

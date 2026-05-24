@@ -3,9 +3,10 @@ package com.luxtracon.floralis.data.provider.model;
 import com.luxtracon.floralis.common.registry.FloralisBlockStateProperties;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;

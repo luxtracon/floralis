@@ -3,13 +3,14 @@ package com.luxtracon.floralis.data.provider.model;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplateBuilder;
@@ -134,7 +135,7 @@ public class FloralisItemModelProvider {
 	}
 
 	public static void parent(Item pItem, ItemModelGenerators pItemModelGenerators) {
-		ExtendedModelTemplateBuilder.builder().parent(ResourceLocation.fromNamespaceAndPath(FloralisModelProvider.itemId(pItem), "block" + "/" + FloralisModelProvider.itemName(pItem))).build()
+		ExtendedModelTemplateBuilder.builder().parent(Identifier.fromNamespaceAndPath(FloralisModelProvider.itemId(pItem), "block" + "/" + FloralisModelProvider.itemName(pItem))).build()
 			.create(FloralisModelProvider.itemFile(pItem), new TextureMapping(), pItemModelGenerators.modelOutput);
 	}
 }

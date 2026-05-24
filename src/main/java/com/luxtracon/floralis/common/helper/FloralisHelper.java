@@ -2,9 +2,10 @@ package com.luxtracon.floralis.common.helper;
 
 import com.luxtracon.floralis.common.registry.FloralisBlockStateProperties;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.random.WeightedList;

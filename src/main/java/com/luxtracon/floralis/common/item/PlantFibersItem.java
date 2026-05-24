@@ -2,12 +2,13 @@ package com.luxtracon.floralis.common.item;
 
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.function.Consumer;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;

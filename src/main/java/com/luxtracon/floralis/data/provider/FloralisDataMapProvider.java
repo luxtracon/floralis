@@ -2,11 +2,12 @@ package com.luxtracon.floralis.data.provider;
 
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;

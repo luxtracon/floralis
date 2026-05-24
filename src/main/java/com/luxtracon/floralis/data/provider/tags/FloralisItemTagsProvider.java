@@ -3,15 +3,16 @@ package com.luxtracon.floralis.data.provider.tags;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -25,13 +26,8 @@ import net.neoforged.neoforge.common.data.ItemTagsProvider;
 @ParametersAreNonnullByDefault
 
 public class FloralisItemTagsProvider extends ItemTagsProvider {
-
-	// ITEM TAGS
-
 	public static final TagKey<Item> SEEDS_CACTUS = FloralisItemTagsProvider.cKey("seeds/cactus");
 	public static final TagKey<Item> SEEDS_FLOWER = FloralisItemTagsProvider.cKey("seeds/flower");
-
-	// ITEMBLOCK TAGS
 
 	public static final TagKey<Item> STORAGE_BLOCKS_DYE = FloralisItemTagsProvider.cKey("storage_blocks/dye");
 	public static final TagKey<Item> STORAGE_BLOCKS_PLANT_FIBERS = FloralisItemTagsProvider.cKey("storage_blocks/plant_fibers");
@@ -589,6 +585,6 @@ public class FloralisItemTagsProvider extends ItemTagsProvider {
 	}
 
 	public static TagKey<Item> createKey(String pName) {
-		return TagKey.create(Registries.ITEM, ResourceLocation.parse(pName));
+		return TagKey.create(Registries.ITEM, Identifier.parse(pName));
 	}
 }

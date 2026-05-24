@@ -35,11 +35,11 @@ logoFile="logo.png" #optional
 # A text field displayed in the mod UI
 credits="Alexander317, junshengxie, unroman" #optional
 
-# A text field displayed in the mod UI
-authors="${mod_authors}" #optional
+# The authors of the mod, displayed in the mod UI (optional)
+authors="luxtracon"
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''${mod_description}'''
+description="Floralis adds cactus and flower crops for an automatable way to obtain all dyes."
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]

@@ -3,14 +3,15 @@ package com.luxtracon.floralis.data.registry;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
@@ -93,6 +94,6 @@ public class FloralisBiomeModifiers {
 	}
 
 	public static ResourceKey<BiomeModifier> createKey(String pName) {
-		return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
+		return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
 	}
 }

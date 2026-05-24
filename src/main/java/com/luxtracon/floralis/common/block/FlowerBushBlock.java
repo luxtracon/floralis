@@ -3,9 +3,10 @@ package com.luxtracon.floralis.common.block;
 import com.luxtracon.floralis.common.helper.FloralisHelper;
 import com.luxtracon.floralis.common.registry.FloralisVoxelShapes;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;

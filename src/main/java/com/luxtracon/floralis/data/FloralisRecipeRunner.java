@@ -2,11 +2,12 @@ package com.luxtracon.floralis.data;
 
 import com.luxtracon.floralis.data.provider.FloralisRecipeProvider;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;

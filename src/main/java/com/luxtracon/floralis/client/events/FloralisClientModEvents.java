@@ -5,9 +5,10 @@ import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisColors;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.BiomeColors;
 

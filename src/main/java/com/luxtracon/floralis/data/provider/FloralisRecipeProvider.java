@@ -3,9 +3,10 @@ package com.luxtracon.floralis.data.provider;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,8 +14,8 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -118,11 +119,11 @@ public class FloralisRecipeProvider extends RecipeProvider {
 	}
 
 	public ResourceKey<Recipe<?>> key(Item pResult, Item pResource) {
-		return ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, BuiltInRegistries.ITEM.getKey(pResult).getPath() + "_" + "from" + "_" + BuiltInRegistries.ITEM.getKey(pResource).getPath()));
+		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, BuiltInRegistries.ITEM.getKey(pResult).getPath() + "_" + "from" + "_" + BuiltInRegistries.ITEM.getKey(pResource).getPath()));
 	}
 
 	public ResourceKey<Recipe<?>> key(String pFrom, Item pResult) {
-		return ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, BuiltInRegistries.ITEM.getKey(pResult).getPath() + "_" + "from" + "_" + pFrom));
+		return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, BuiltInRegistries.ITEM.getKey(pResult).getPath() + "_" + "from" + "_" + pFrom));
 	}
 
 	public String name(Item pItem) {

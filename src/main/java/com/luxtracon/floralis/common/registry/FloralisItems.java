@@ -2,14 +2,15 @@ package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.common.item.PlantFibersItem;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.function.Function;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
@@ -137,6 +138,6 @@ public class FloralisItems {
 	}
 
 	public static <T extends Item> DeferredHolder<Item, T> register(String pName, Function<Item.Properties, T> pFunction, Item.Properties pProperties) {
-		return FloralisItems.ITEMS.register(pName, () -> pFunction.apply(pProperties.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName)))));
+		return FloralisItems.ITEMS.register(pName, () -> pFunction.apply(pProperties.setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName)))));
 	}
 }

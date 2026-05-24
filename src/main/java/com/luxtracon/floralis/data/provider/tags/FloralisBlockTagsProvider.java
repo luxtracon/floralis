@@ -3,15 +3,16 @@ package com.luxtracon.floralis.data.provider.tags;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
@@ -25,9 +26,6 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 @ParametersAreNonnullByDefault
 
 public class FloralisBlockTagsProvider extends BlockTagsProvider {
-
-	// ITEMBLOCK TAGS
-
 	public static final TagKey<Block> STORAGE_BLOCKS_DYE = FloralisBlockTagsProvider.cKey("storage_blocks/dye");
 	public static final TagKey<Block> STORAGE_BLOCKS_PLANT_FIBERS = FloralisBlockTagsProvider.cKey("storage_blocks/plant_fibers");
 
@@ -499,6 +497,6 @@ public class FloralisBlockTagsProvider extends BlockTagsProvider {
 	}
 
 	public static TagKey<Block> createKey(String pName) {
-		return TagKey.create(Registries.BLOCK, ResourceLocation.parse(pName));
+		return TagKey.create(Registries.BLOCK, Identifier.parse(pName));
 	}
 }

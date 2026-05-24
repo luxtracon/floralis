@@ -4,15 +4,16 @@ import com.luxtracon.floralis.common.helper.FloralisHelper;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
+import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
@@ -96,6 +97,6 @@ public class FloralisConfiguredFeatures {
 	}
 
 	public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String pName) {
-		return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
+		return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(FloralisConstants.FLORALIS, pName));
 	}
 }
