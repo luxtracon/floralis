@@ -1,0 +1,29 @@
+{
+  "type": "enderio:sag_milling",
+  "input": "floralis:light_blue_flower",
+  "energy": 2400,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "count": 2,
+        "id": "floralis:light_blue_flower_seeds"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:light_blue_petals"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:plant_fibers"
+      }
+    }
+  ]
+}

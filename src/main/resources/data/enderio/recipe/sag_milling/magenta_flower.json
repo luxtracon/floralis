@@ -1,0 +1,29 @@
+{
+  "type": "enderio:sag_milling",
+  "input": "floralis:magenta_flower",
+  "energy": 2400,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "count": 2,
+        "id": "floralis:magenta_flower_seeds"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:magenta_petals"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:plant_fibers"
+      }
+    }
+  ]
+}

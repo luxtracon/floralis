@@ -1,0 +1,29 @@
+{
+  "type": "enderio:sag_milling",
+  "input": "floralis:pink_flower",
+  "energy": 2400,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "count": 2,
+        "id": "floralis:pink_flower_seeds"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:pink_petals"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:plant_fibers"
+      }
+    }
+  ]
+}

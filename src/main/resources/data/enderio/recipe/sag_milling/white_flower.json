@@ -1,0 +1,29 @@
+{
+  "type": "enderio:sag_milling",
+  "input": "floralis:white_flower",
+  "energy": 2400,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "count": 2,
+        "id": "floralis:white_flower_seeds"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:white_petals"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:plant_fibers"
+      }
+    }
+  ]
+}

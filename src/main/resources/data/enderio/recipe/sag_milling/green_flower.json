@@ -1,0 +1,29 @@
+{
+  "type": "enderio:sag_milling",
+  "input": "floralis:green_flower",
+  "energy": 2400,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "count": 2,
+        "id": "floralis:green_flower_seeds"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:green_petals"
+      }
+    },
+    {
+      "item": {
+        "id": "floralis:plant_fibers"
+      }
+    }
+  ]
+}
