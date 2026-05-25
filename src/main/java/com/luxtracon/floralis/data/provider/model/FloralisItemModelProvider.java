@@ -10,6 +10,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 
@@ -131,7 +132,7 @@ public class FloralisItemModelProvider {
 
 	public static void generated(Item pItem, ItemModelGenerators pItemModelGenerators) {
 		ExtendedModelTemplateBuilder.builder().parent(FloralisModelProvider.itemFile(FloralisConstants.MINECRAFT, "generated")).build()
-			.create(FloralisModelProvider.itemFile(pItem), new TextureMapping().putForced(TextureSlot.LAYER0, FloralisModelProvider.itemFile(pItem)), pItemModelGenerators.modelOutput);
+			.create(FloralisModelProvider.itemFile(pItem), new TextureMapping().putForced(TextureSlot.LAYER0, new Material(FloralisModelProvider.itemFile(pItem))), pItemModelGenerators.modelOutput);
 	}
 
 	public static void parent(Item pItem, ItemModelGenerators pItemModelGenerators) {

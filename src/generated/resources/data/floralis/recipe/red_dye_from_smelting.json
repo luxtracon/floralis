@@ -5,7 +5,6 @@
   "experience": 0.1,
   "ingredient": "floralis:red_petals",
   "result": {
-    "count": 1,
     "id": "minecraft:red_dye"
   }
 }

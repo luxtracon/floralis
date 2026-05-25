@@ -40,7 +40,7 @@ public class FlowerCropBlock extends CropBlock {
 
 	@Override
 	public boolean canSurvive(BlockState pBlockState, LevelReader pLevelReader, BlockPos pBlockPos) {
-		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.DIRT) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
+		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.SUBSTRATE_OVERWORLD) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
 	}
 
 	@Override

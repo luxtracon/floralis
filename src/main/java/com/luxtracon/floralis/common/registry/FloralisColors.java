@@ -8,5 +8,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 
 public class FloralisColors {
+	public static final int NONE = 0xFFFFFFFF;
 	public static final int TINT = 0xFF91BD59;
 }

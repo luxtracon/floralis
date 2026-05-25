@@ -78,7 +78,7 @@ public class CactusCropBlock extends CropBlock {
 
 	@Override
 	public PathType getBlockPathType(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, @Nullable Mob pMob) {
-		return pBlockState.getValue(FloralisBlockStateProperties.AGE) > 1 ? PathType.DAMAGE_OTHER : PathType.WALKABLE;
+		return pBlockState.getValue(FloralisBlockStateProperties.AGE) > 1 ? PathType.DAMAGING : PathType.WALKABLE;
 	}
 
 	@Override

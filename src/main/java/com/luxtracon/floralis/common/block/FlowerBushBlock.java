@@ -8,6 +8,7 @@ import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
@@ -28,7 +29,17 @@ public class FlowerBushBlock extends BushBlock {
 
 	@Override
 	public boolean canSurvive(BlockState pBlockState, LevelReader pLevelReader, BlockPos pBlockPos) {
-		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.DIRT) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
+		return FloralisHelper.maintain(pBlockPos.below(), pLevelReader, BlockTags.SUBSTRATE_OVERWORLD) || FloralisHelper.maintain(pBlockPos.below(), pLevelReader, Tags.Blocks.VILLAGER_FARMLANDS);
+	}
+
+	@Override
+	public int getFireSpreadSpeed(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, Direction pDirection) {
+		return 60;
+	}
+
+	@Override
+	public int getFlammability(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, Direction pDirection) {
+		return 100;
 	}
 
 	@Override

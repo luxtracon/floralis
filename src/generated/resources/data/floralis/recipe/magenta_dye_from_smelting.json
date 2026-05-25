@@ -5,7 +5,6 @@
   "experience": 0.1,
   "ingredient": "floralis:magenta_petals",
   "result": {
-    "count": 1,
     "id": "minecraft:magenta_dye"
   }
 }

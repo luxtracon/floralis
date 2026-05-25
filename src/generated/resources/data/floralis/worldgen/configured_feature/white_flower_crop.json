@@ -1,79 +1,46 @@
 {
-  "type": "minecraft:random_patch",
+  "type": "minecraft:simple_block",
   "config": {
-    "feature": {
-      "feature": {
-        "type": "minecraft:simple_block",
-        "config": {
-          "to_place": {
-            "type": "minecraft:weighted_state_provider",
-            "entries": [
-              {
-                "data": {
-                  "Name": "floralis:white_flower_crop",
-                  "Properties": {
-                    "age": "0"
-                  }
-                },
-                "weight": 1
-              },
-              {
-                "data": {
-                  "Name": "floralis:white_flower_crop",
-                  "Properties": {
-                    "age": "1"
-                  }
-                },
-                "weight": 1
-              },
-              {
-                "data": {
-                  "Name": "floralis:white_flower_crop",
-                  "Properties": {
-                    "age": "2"
-                  }
-                },
-                "weight": 1
-              },
-              {
-                "data": {
-                  "Name": "floralis:white_flower_crop",
-                  "Properties": {
-                    "age": "3"
-                  }
-                },
-                "weight": 1
-              }
-            ]
-          }
-        }
-      },
-      "placement": [
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
         {
-          "type": "minecraft:block_predicate_filter",
-          "predicate": {
-            "type": "minecraft:all_of",
-            "predicates": [
-              {
-                "type": "minecraft:matching_block_tag",
-                "offset": [
-                  0,
-                  -1,
-                  0
-                ],
-                "tag": "minecraft:dirt"
-              },
-              {
-                "type": "minecraft:matching_blocks",
-                "blocks": "minecraft:air"
-              }
-            ]
-          }
+          "data": {
+            "Name": "floralis:white_flower_crop",
+            "Properties": {
+              "age": "0"
+            }
+          },
+          "weight": 1
+        },
+        {
+          "data": {
+            "Name": "floralis:white_flower_crop",
+            "Properties": {
+              "age": "1"
+            }
+          },
+          "weight": 1
+        },
+        {
+          "data": {
+            "Name": "floralis:white_flower_crop",
+            "Properties": {
+              "age": "2"
+            }
+          },
+          "weight": 1
+        },
+        {
+          "data": {
+            "Name": "floralis:white_flower_crop",
+            "Properties": {
+              "age": "3"
+            }
+          },
+          "weight": 1
         }
       ]
-    },
-    "tries": 64,
-    "xz_spread": 4,
-    "y_spread": 4
+    }
   }
 }

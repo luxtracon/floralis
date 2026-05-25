@@ -18,6 +18,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 
@@ -113,7 +114,7 @@ public class FloralisRecipeProvider extends RecipeProvider {
 	}
 
 	public void smelting(float pExperience, int pTime, Item pResult, Item pResource) {
-		SimpleCookingRecipeBuilder.smelting((Ingredient.of(pResource)), RecipeCategory.MISC, pResult, pExperience, pTime)
+		SimpleCookingRecipeBuilder.smelting((Ingredient.of(pResource)), RecipeCategory.MISC, CookingBookCategory.MISC, pResult, pExperience, pTime)
 			.unlockedBy(this.name(pResource), this.has(pResource))
 			.save(this.output, this.key("smelting", pResult));
 	}

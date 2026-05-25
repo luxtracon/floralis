@@ -5,7 +5,6 @@
   "experience": 0.1,
   "ingredient": "floralis:gray_petals",
   "result": {
-    "count": 1,
     "id": "minecraft:gray_dye"
   }
 }

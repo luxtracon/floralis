@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
@@ -46,8 +47,18 @@ public class CactusBushBlock extends BushBlock {
 	}
 
 	@Override
+	public int getFireSpreadSpeed(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, Direction pDirection) {
+		return 60;
+	}
+
+	@Override
+	public int getFlammability(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, Direction pDirection) {
+		return 100;
+	}
+
+	@Override
 	public PathType getBlockPathType(BlockState pBlockState, BlockGetter pBlockGetter, BlockPos pBlockPos, @Nullable Mob pMob) {
-		return PathType.DAMAGE_OTHER;
+		return PathType.DAMAGING;
 	}
 
 	@Override

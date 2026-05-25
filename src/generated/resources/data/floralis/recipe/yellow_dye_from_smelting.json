@@ -5,7 +5,6 @@
   "experience": 0.1,
   "ingredient": "floralis:yellow_petals",
   "result": {
-    "count": 1,
     "id": "minecraft:yellow_dye"
   }
 }

@@ -27,17 +27,12 @@ public class Floralis {
 	}
 
 	public static void onFMLCommonSetup(FMLCommonSetupEvent pEvent) {
-		Floralis.registerSetups(pEvent);
+		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 
 	public static void registerRegistries(IEventBus pBus) {
 		FloralisBlocks.BLOCKS.register(pBus);
 		FloralisCreativeModeTabs.CREATIVE_MODE_TABS.register(pBus);
 		FloralisItems.ITEMS.register(pBus);
-	}
-
-	public static void registerSetups(FMLCommonSetupEvent pEvent) {
-		pEvent.enqueueWork(FloralisFlammables::setup);
-		pEvent.enqueueWork(FloralisPottables::setup);
 	}
 }
