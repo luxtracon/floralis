@@ -1,16 +1,13 @@
 package com.luxtracon.floralis.common.registry;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.List;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisVoxelShapes {
 	public static final VoxelShape CACTUS_BUSH = Block.box(3.5D, 0.0D, 3.5D, 12.5D, 9.0D, 12.5D);

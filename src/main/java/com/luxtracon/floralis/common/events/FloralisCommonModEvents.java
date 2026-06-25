@@ -13,19 +13,16 @@ import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisBlockTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisItemTagsProvider;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
+import org.jspecify.annotations.NullMarked;
+
 @SuppressWarnings("unused")
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 @EventBusSubscriber(modid = FloralisConstants.FLORALIS)
 public class FloralisCommonModEvents {

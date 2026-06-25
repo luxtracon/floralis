@@ -3,10 +3,6 @@ package com.luxtracon.floralis.data.provider.model;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
@@ -16,8 +12,9 @@ import net.minecraft.world.item.Item;
 
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplateBuilder;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisItemModelProvider {
 

@@ -1,11 +1,8 @@
 package com.luxtracon.floralis.common.registry;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
+import org.jspecify.annotations.NullMarked;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 public class FloralisConstants {
 	public static final String C = "c";

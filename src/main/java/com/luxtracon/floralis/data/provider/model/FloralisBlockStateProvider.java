@@ -3,10 +3,6 @@ package com.luxtracon.floralis.data.provider.model;
 import com.luxtracon.floralis.common.registry.FloralisBlockStateProperties;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
@@ -14,8 +10,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisBlockStateProvider {
 

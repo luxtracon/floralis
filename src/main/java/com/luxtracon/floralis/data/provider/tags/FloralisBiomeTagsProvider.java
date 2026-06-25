@@ -2,11 +2,7 @@ package com.luxtracon.floralis.data.provider.tags;
 
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.concurrent.CompletableFuture;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -17,10 +13,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 
+import org.jspecify.annotations.NullMarked;
+
 @SuppressWarnings("unused")
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 public class FloralisBiomeTagsProvider extends BiomeTagsProvider {
 	public static final TagKey<Biome> HAS_CACTUS = FloralisBiomeTagsProvider.floralisKey("has_cactus");

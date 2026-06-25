@@ -5,11 +5,7 @@ import com.luxtracon.floralis.client.tint.FloralisPottedBlockTintSource;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.List;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.client.color.block.BlockTintSource;
 
@@ -18,10 +14,11 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
+import org.jspecify.annotations.NullMarked;
+
 @SuppressWarnings("unused")
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 @EventBusSubscriber(modid = FloralisConstants.FLORALIS, value = Dist.CLIENT)
 public class FloralisClientModEvents {

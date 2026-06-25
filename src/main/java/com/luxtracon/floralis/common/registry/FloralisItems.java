@@ -2,11 +2,7 @@ package com.luxtracon.floralis.common.registry;
 
 import com.luxtracon.floralis.common.item.PlantFibersItem;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.function.Function;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -17,8 +13,9 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, FloralisConstants.FLORALIS);

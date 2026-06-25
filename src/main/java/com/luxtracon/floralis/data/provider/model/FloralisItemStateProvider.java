@@ -3,20 +3,17 @@ package com.luxtracon.floralis.data.provider.model;
 import com.luxtracon.floralis.common.registry.FloralisColors;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.List;
 import java.util.Optional;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.client.color.item.Constant;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.renderer.item.CuboidItemModelWrapper;
 import net.minecraft.world.item.Item;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisItemStateProvider {
 

@@ -2,11 +2,7 @@ package com.luxtracon.floralis.data.provider;
 
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.concurrent.CompletableFuture;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,8 +13,9 @@ import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisDataMapProvider extends DataMapProvider {
 	public FloralisDataMapProvider(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider) {

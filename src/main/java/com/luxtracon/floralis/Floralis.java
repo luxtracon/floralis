@@ -2,18 +2,15 @@ package com.luxtracon.floralis;
 
 import com.luxtracon.floralis.common.registry.*;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
+import org.jspecify.annotations.NullMarked;
+
 @SuppressWarnings("unused")
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 @Mod(FloralisConstants.FLORALIS)
 public class Floralis {

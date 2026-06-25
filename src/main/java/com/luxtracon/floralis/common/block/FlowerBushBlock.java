@@ -3,10 +3,6 @@ package com.luxtracon.floralis.common.block;
 import com.luxtracon.floralis.common.helper.FloralisHelper;
 import com.luxtracon.floralis.common.registry.FloralisVoxelShapes;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -19,8 +15,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.neoforged.neoforge.common.Tags;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FlowerBushBlock extends BushBlock {
 	public FlowerBushBlock(Properties pProperties) {

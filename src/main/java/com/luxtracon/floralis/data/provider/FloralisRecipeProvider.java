@@ -3,10 +3,6 @@ package com.luxtracon.floralis.data.provider;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -22,8 +18,9 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisRecipeProvider extends RecipeProvider {
 	public FloralisRecipeProvider(HolderLookup.Provider pProvider, RecipeOutput pRecipeOutput) {
@@ -38,62 +35,62 @@ public class FloralisRecipeProvider extends RecipeProvider {
 	}
 
 	public void shaped() {
-		this.shaped(1, FloralisItems.WHITE_DYE_BLOCK.get(), Items.WHITE_DYE);
-		this.shaped(1, FloralisItems.LIGHT_GRAY_DYE_BLOCK.get(), Items.LIGHT_GRAY_DYE);
-		this.shaped(1, FloralisItems.GRAY_DYE_BLOCK.get(), Items.GRAY_DYE);
-		this.shaped(1, FloralisItems.BLACK_DYE_BLOCK.get(), Items.BLACK_DYE);
-		this.shaped(1, FloralisItems.BROWN_DYE_BLOCK.get(), Items.BROWN_DYE);
-		this.shaped(1, FloralisItems.RED_DYE_BLOCK.get(), Items.RED_DYE);
-		this.shaped(1, FloralisItems.ORANGE_DYE_BLOCK.get(), Items.ORANGE_DYE);
-		this.shaped(1, FloralisItems.YELLOW_DYE_BLOCK.get(), Items.YELLOW_DYE);
-		this.shaped(1, FloralisItems.LIME_DYE_BLOCK.get(), Items.LIME_DYE);
-		this.shaped(1, FloralisItems.GREEN_DYE_BLOCK.get(), Items.GREEN_DYE);
-		this.shaped(1, FloralisItems.CYAN_DYE_BLOCK.get(), Items.CYAN_DYE);
-		this.shaped(1, FloralisItems.LIGHT_BLUE_DYE_BLOCK.get(), Items.LIGHT_BLUE_DYE);
-		this.shaped(1, FloralisItems.BLUE_DYE_BLOCK.get(), Items.BLUE_DYE);
-		this.shaped(1, FloralisItems.PURPLE_DYE_BLOCK.get(), Items.PURPLE_DYE);
-		this.shaped(1, FloralisItems.MAGENTA_DYE_BLOCK.get(), Items.MAGENTA_DYE);
-		this.shaped(1, FloralisItems.PINK_DYE_BLOCK.get(), Items.PINK_DYE);
+		this.shaped(1, FloralisItems.WHITE_DYE_BLOCK.get(), Items.DYE.white());
+		this.shaped(1, FloralisItems.LIGHT_GRAY_DYE_BLOCK.get(), Items.DYE.lightGray());
+		this.shaped(1, FloralisItems.GRAY_DYE_BLOCK.get(), Items.DYE.gray());
+		this.shaped(1, FloralisItems.BLACK_DYE_BLOCK.get(), Items.DYE.black());
+		this.shaped(1, FloralisItems.BROWN_DYE_BLOCK.get(), Items.DYE.brown());
+		this.shaped(1, FloralisItems.RED_DYE_BLOCK.get(), Items.DYE.red());
+		this.shaped(1, FloralisItems.ORANGE_DYE_BLOCK.get(), Items.DYE.orange());
+		this.shaped(1, FloralisItems.YELLOW_DYE_BLOCK.get(), Items.DYE.yellow());
+		this.shaped(1, FloralisItems.LIME_DYE_BLOCK.get(), Items.DYE.lime());
+		this.shaped(1, FloralisItems.GREEN_DYE_BLOCK.get(), Items.DYE.green());
+		this.shaped(1, FloralisItems.CYAN_DYE_BLOCK.get(), Items.DYE.cyan());
+		this.shaped(1, FloralisItems.LIGHT_BLUE_DYE_BLOCK.get(), Items.DYE.lightBlue());
+		this.shaped(1, FloralisItems.BLUE_DYE_BLOCK.get(), Items.DYE.blue());
+		this.shaped(1, FloralisItems.PURPLE_DYE_BLOCK.get(), Items.DYE.purple());
+		this.shaped(1, FloralisItems.MAGENTA_DYE_BLOCK.get(), Items.DYE.magenta());
+		this.shaped(1, FloralisItems.PINK_DYE_BLOCK.get(), Items.DYE.pink());
 		this.shaped(1, FloralisItems.PLANT_FIBERS_BLOCK.get(), FloralisItems.PLANT_FIBERS.get());
 	}
 
 	public void shapeless() {
-		this.shapeless(9, Items.WHITE_DYE, FloralisItems.WHITE_DYE_BLOCK.get());
-		this.shapeless(9, Items.LIGHT_GRAY_DYE, FloralisItems.LIGHT_GRAY_DYE_BLOCK.get());
-		this.shapeless(9, Items.GRAY_DYE, FloralisItems.GRAY_DYE_BLOCK.get());
-		this.shapeless(9, Items.BLACK_DYE, FloralisItems.BLACK_DYE_BLOCK.get());
-		this.shapeless(9, Items.BROWN_DYE, FloralisItems.BROWN_DYE_BLOCK.get());
-		this.shapeless(9, Items.RED_DYE, FloralisItems.RED_DYE_BLOCK.get());
-		this.shapeless(9, Items.ORANGE_DYE, FloralisItems.ORANGE_DYE_BLOCK.get());
-		this.shapeless(9, Items.YELLOW_DYE, FloralisItems.YELLOW_DYE_BLOCK.get());
-		this.shapeless(9, Items.LIME_DYE, FloralisItems.LIME_DYE_BLOCK.get());
-		this.shapeless(9, Items.GREEN_DYE, FloralisItems.GREEN_DYE_BLOCK.get());
-		this.shapeless(9, Items.CYAN_DYE, FloralisItems.CYAN_DYE_BLOCK.get());
-		this.shapeless(9, Items.LIGHT_BLUE_DYE, FloralisItems.LIGHT_BLUE_DYE_BLOCK.get());
-		this.shapeless(9, Items.BLUE_DYE, FloralisItems.BLUE_DYE_BLOCK.get());
-		this.shapeless(9, Items.PURPLE_DYE, FloralisItems.PURPLE_DYE_BLOCK.get());
-		this.shapeless(9, Items.MAGENTA_DYE, FloralisItems.MAGENTA_DYE_BLOCK.get());
-		this.shapeless(9, Items.PINK_DYE, FloralisItems.PINK_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.white(), FloralisItems.WHITE_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.lightGray(), FloralisItems.LIGHT_GRAY_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.gray(), FloralisItems.GRAY_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.black(), FloralisItems.BLACK_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.brown(), FloralisItems.BROWN_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.red(), FloralisItems.RED_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.orange(), FloralisItems.ORANGE_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.yellow(), FloralisItems.YELLOW_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.lime(), FloralisItems.LIME_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.green(), FloralisItems.GREEN_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.cyan(), FloralisItems.CYAN_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.lightBlue(), FloralisItems.LIGHT_BLUE_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.blue(), FloralisItems.BLUE_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.purple(), FloralisItems.PURPLE_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.magenta(), FloralisItems.MAGENTA_DYE_BLOCK.get());
+		this.shapeless(9, Items.DYE.pink(), FloralisItems.PINK_DYE_BLOCK.get());
 		this.shapeless(9, FloralisItems.PLANT_FIBERS.get(), FloralisItems.PLANT_FIBERS_BLOCK.get());
 	}
 
 	public void smelting() {
-		this.smelting(0.1F, 200, Items.WHITE_DYE, FloralisItems.WHITE_PETALS.get());
-		this.smelting(0.1F, 200, Items.LIGHT_GRAY_DYE, FloralisItems.LIGHT_GRAY_PETALS.get());
-		this.smelting(0.1F, 200, Items.GRAY_DYE, FloralisItems.GRAY_PETALS.get());
-		this.smelting(0.1F, 200, Items.BLACK_DYE, FloralisItems.BLACK_PETALS.get());
-		this.smelting(0.1F, 200, Items.BROWN_DYE, FloralisItems.BROWN_PETALS.get());
-		this.smelting(0.1F, 200, Items.RED_DYE, FloralisItems.RED_PETALS.get());
-		this.smelting(0.1F, 200, Items.ORANGE_DYE, FloralisItems.ORANGE_PETALS.get());
-		this.smelting(0.1F, 200, Items.YELLOW_DYE, FloralisItems.YELLOW_PETALS.get());
-		this.smelting(0.1F, 200, Items.LIME_DYE, FloralisItems.LIME_PETALS.get());
-		this.smelting(0.1F, 200, Items.GREEN_DYE, FloralisItems.GREEN_PETALS.get());
-		this.smelting(0.1F, 200, Items.CYAN_DYE, FloralisItems.CYAN_PETALS.get());
-		this.smelting(0.1F, 200, Items.LIGHT_BLUE_DYE, FloralisItems.LIGHT_BLUE_PETALS.get());
-		this.smelting(0.1F, 200, Items.BLUE_DYE, FloralisItems.BLUE_PETALS.get());
-		this.smelting(0.1F, 200, Items.PURPLE_DYE, FloralisItems.PURPLE_PETALS.get());
-		this.smelting(0.1F, 200, Items.MAGENTA_DYE, FloralisItems.MAGENTA_PETALS.get());
-		this.smelting(0.1F, 200, Items.PINK_DYE, FloralisItems.PINK_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.white(), FloralisItems.WHITE_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.lightGray(), FloralisItems.LIGHT_GRAY_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.gray(), FloralisItems.GRAY_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.black(), FloralisItems.BLACK_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.brown(), FloralisItems.BROWN_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.red(), FloralisItems.RED_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.orange(), FloralisItems.ORANGE_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.yellow(), FloralisItems.YELLOW_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.lime(), FloralisItems.LIME_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.green(), FloralisItems.GREEN_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.cyan(), FloralisItems.CYAN_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.lightBlue(), FloralisItems.LIGHT_BLUE_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.blue(), FloralisItems.BLUE_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.purple(), FloralisItems.PURPLE_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.magenta(), FloralisItems.MAGENTA_PETALS.get());
+		this.smelting(0.1F, 200, Items.DYE.pink(), FloralisItems.PINK_PETALS.get());
 	}
 
 	public void shaped(int pAmount, Item pResult, Item pResource) {

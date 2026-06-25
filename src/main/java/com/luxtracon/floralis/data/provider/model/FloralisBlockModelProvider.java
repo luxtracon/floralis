@@ -5,10 +5,6 @@ import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.common.registry.FloralisTextureSlots;
 import com.luxtracon.floralis.data.model.*;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.resources.model.sprite.Material;
@@ -16,8 +12,9 @@ import net.minecraft.world.level.block.Block;
 
 import net.neoforged.neoforge.client.model.generators.template.ExtendedModelTemplateBuilder;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisBlockModelProvider {
 

@@ -3,10 +3,6 @@ package com.luxtracon.floralis.data.registry;
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -19,8 +15,9 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisBiomeModifiers {
 	public static final ResourceKey<BiomeModifier> WHITE_CACTUS_CROP = FloralisBiomeModifiers.createKey("white_cactus_crop");

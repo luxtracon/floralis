@@ -2,19 +2,16 @@ package com.luxtracon.floralis.data;
 
 import com.luxtracon.floralis.data.provider.FloralisRecipeProvider;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.concurrent.CompletableFuture;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisRecipeRunner extends RecipeProvider.Runner {
 	public FloralisRecipeRunner(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pProvider) {

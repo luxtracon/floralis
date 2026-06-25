@@ -4,15 +4,11 @@ import com.luxtracon.floralis.common.registry.FloralisBlockStateProperties;
 import com.luxtracon.floralis.common.registry.FloralisBlocks;
 import com.luxtracon.floralis.common.registry.FloralisItems;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import net.minecraft.advancements.criterion.*;
+import net.minecraft.advancements.predicates.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.predicates.DataComponentPredicates;
 import net.minecraft.core.component.predicates.EnchantmentsPredicate;
@@ -36,8 +32,9 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisBlockLootSubProvider extends BlockLootSubProvider {
 	public FloralisBlockLootSubProvider(HolderLookup.Provider pProvider) {

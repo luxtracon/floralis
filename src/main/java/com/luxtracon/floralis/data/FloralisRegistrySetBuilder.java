@@ -4,17 +4,14 @@ import com.luxtracon.floralis.data.registry.FloralisBiomeModifiers;
 import com.luxtracon.floralis.data.registry.FloralisConfiguredFeatures;
 import com.luxtracon.floralis.data.registry.FloralisPlacedFeatures;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisRegistrySetBuilder extends RegistrySetBuilder {
 	public FloralisRegistrySetBuilder() {

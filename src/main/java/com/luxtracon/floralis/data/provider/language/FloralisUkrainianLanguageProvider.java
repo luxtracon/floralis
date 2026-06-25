@@ -7,16 +7,13 @@ import com.luxtracon.floralis.data.provider.tags.FloralisBiomeTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisBlockTagsProvider;
 import com.luxtracon.floralis.data.provider.tags.FloralisItemTagsProvider;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.data.PackOutput;
 
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisUkrainianLanguageProvider extends LanguageProvider {
 	public FloralisUkrainianLanguageProvider(PackOutput pPackOutput, String pId, String pLanguage) {

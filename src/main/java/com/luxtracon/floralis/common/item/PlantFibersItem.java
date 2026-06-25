@@ -2,11 +2,7 @@ package com.luxtracon.floralis.common.item;
 
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.function.Consumer;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -15,10 +11,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 
+import org.jspecify.annotations.NullMarked;
+
 @SuppressWarnings("deprecation")
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+@NullMarked
 
 public class PlantFibersItem extends BoneMealItem {
 	public PlantFibersItem(Properties pProperties) {

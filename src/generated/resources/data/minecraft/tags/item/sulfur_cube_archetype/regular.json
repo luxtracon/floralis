@@ -1,0 +1,20 @@
+{
+  "values": [
+    "floralis:white_dye_block",
+    "floralis:light_gray_dye_block",
+    "floralis:gray_dye_block",
+    "floralis:black_dye_block",
+    "floralis:brown_dye_block",
+    "floralis:red_dye_block",
+    "floralis:orange_dye_block",
+    "floralis:yellow_dye_block",
+    "floralis:lime_dye_block",
+    "floralis:green_dye_block",
+    "floralis:cyan_dye_block",
+    "floralis:light_blue_dye_block",
+    "floralis:blue_dye_block",
+    "floralis:purple_dye_block",
+    "floralis:magenta_dye_block",
+    "floralis:pink_dye_block"
+  ]
+}

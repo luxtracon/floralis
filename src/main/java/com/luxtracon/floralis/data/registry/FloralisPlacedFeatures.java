@@ -2,11 +2,7 @@ package com.luxtracon.floralis.data.registry;
 
 import com.luxtracon.floralis.common.registry.FloralisConstants;
 
-import com.mojang.logging.annotations.MethodsReturnNonnullByDefault;
-
 import java.util.List;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -19,8 +15,9 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.placement.*;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 
 public class FloralisPlacedFeatures {
 	public static final ResourceKey<PlacedFeature> WHITE_CACTUS_CROP = FloralisPlacedFeatures.registerKey("white_cactus_crop");
