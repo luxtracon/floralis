@@ -105,5 +105,6 @@
   "tag.item.c.storage_blocks.dye": "Dye Storage Blocks",
   "tag.item.c.storage_blocks.plant_fibers": "Plant Fibers Storage Blocks",
   "tag.worldgen.biome.floralis.has_cactus": "Has Cactus",
+  "tag.worldgen.biome.floralis.has_flower": "Has Flower",
   "tip.floralis.plant_fibers": "Used like Bone Meal or Fertilizer"
 }
