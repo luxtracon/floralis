@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "#floralis:has_flower",
   "features": "floralis:light_blue_flower_crop",
   "step": "vegetal_decoration"
 }
