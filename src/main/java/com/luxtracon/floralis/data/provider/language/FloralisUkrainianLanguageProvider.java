@@ -123,6 +123,7 @@ public class FloralisUkrainianLanguageProvider extends LanguageProvider {
 		this.add(FloralisItems.PLANT_FIBERS.get(), "Рослинні волокна");
 
 		this.add(FloralisBiomeTagsProvider.HAS_CACTUS, "Has Cactus");
+		this.add(FloralisBiomeTagsProvider.HAS_FLOWER, "Has Flower");
 
 		this.add(FloralisBlockTagsProvider.STORAGE_BLOCKS_DYE, "Dye Storage Blocks");
 		this.add(FloralisBlockTagsProvider.STORAGE_BLOCKS_PLANT_FIBERS, "Plant Fibers Storage Blocks");

@@ -123,6 +123,7 @@ public class FloralisGermanLanguageProvider extends LanguageProvider {
 		this.add(FloralisItems.PLANT_FIBERS.get(), "Pflanzenfasern");
 
 		this.add(FloralisBiomeTagsProvider.HAS_CACTUS, "Hat Kaktus");
+		this.add(FloralisBiomeTagsProvider.HAS_FLOWER, "Hat Blume");
 
 		this.add(FloralisBlockTagsProvider.STORAGE_BLOCKS_DYE, "Farbstoffspeicherblock");
 		this.add(FloralisBlockTagsProvider.STORAGE_BLOCKS_PLANT_FIBERS, "Pflanzenfaserspeicherblock");
