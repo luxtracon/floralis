@@ -105,5 +105,6 @@
   "tag.item.c.storage_blocks.dye": "Farbstoffspeicherblock",
   "tag.item.c.storage_blocks.plant_fibers": "Pflanzenfaserspeicherblock",
   "tag.worldgen.biome.floralis.has_cactus": "Hat Kaktus",
+  "tag.worldgen.biome.floralis.has_flower": "Hat Blume",
   "tip.floralis.plant_fibers": "Genutzt wie Knochenmehl oder Dünger"
 }
