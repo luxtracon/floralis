@@ -17,7 +17,9 @@ import net.minecraft.world.gen.structure.StructureVillagePieces;
 
 public class StructureFieldFlower extends StructureVillagePieces.Village
 {
-    private final BlockCropFlower crop;
+    private BlockCropFlower crop;
+
+    public StructureFieldFlower() {}
 
     public StructureFieldFlower(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {
@@ -86,38 +88,22 @@ public class StructureFieldFlower extends StructureVillagePieces.Village
     {
         switch (random.nextInt(16))
         {
-            case 0:
-                return BlockInit.cropFlowerBlack;
-            case 1:
-                return BlockInit.cropFlowerBlue;
-            case 2:
-                return BlockInit.cropFlowerBrown;
-            case 3:
-                return BlockInit.cropFlowerCyan;
-            case 4:
-                return BlockInit.cropFlowerGray;
-            case 5:
-                return BlockInit.cropFlowerGreen;
-            case 6:
-                return BlockInit.cropFlowerLightBlue;
-            case 7:
-                return BlockInit.cropFlowerLightGray;
-            case 8:
-                return BlockInit.cropFlowerLime;
-            case 9:
-                return BlockInit.cropFlowerMagenta;
-            case 10:
-                return BlockInit.cropFlowerOrange;
-            case 11:
-                return BlockInit.cropFlowerPink;
-            case 12:
-                return BlockInit.cropFlowerPurple;
-            case 13:
-                return BlockInit.cropFlowerRed;
-            case 14:
-                return BlockInit.cropFlowerWhite;
-            case 15:
-                return BlockInit.cropFlowerYellow;
+            case 0:     return BlockInit.cropFlowerBlack;
+            case 1:     return BlockInit.cropFlowerBlue;
+            case 2:     return BlockInit.cropFlowerBrown;
+            case 3:     return BlockInit.cropFlowerCyan;
+            case 4:     return BlockInit.cropFlowerGray;
+            case 5:     return BlockInit.cropFlowerGreen;
+            case 6:     return BlockInit.cropFlowerLightBlue;
+            case 7:     return BlockInit.cropFlowerLightGray;
+            case 8:     return BlockInit.cropFlowerLime;
+            case 9:     return BlockInit.cropFlowerMagenta;
+            case 10:    return BlockInit.cropFlowerOrange;
+            case 11:    return BlockInit.cropFlowerPink;
+            case 12:    return BlockInit.cropFlowerPurple;
+            case 13:    return BlockInit.cropFlowerRed;
+            case 14:    return BlockInit.cropFlowerWhite;
+            case 15:    return BlockInit.cropFlowerYellow;
         }
 
         return null;

@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,7 +29,9 @@ public class Tab extends CreativeTabs
     @Override
     public void displayAllRelevantItems(NonNullList<ItemStack> itemStack)
     {
-        List<Item> getItem = Arrays.asList
+        List<Item> getItem = new ArrayList<>();
+
+        getItem.addAll(Arrays.asList
             (
                 Item.getItemFromBlock(BlockInit.flowerWhite),
                 Item.getItemFromBlock(BlockInit.flowerOrange),
@@ -45,8 +48,11 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(BlockInit.flowerBrown),
                 Item.getItemFromBlock(BlockInit.flowerGreen),
                 Item.getItemFromBlock(BlockInit.flowerRed),
-                Item.getItemFromBlock(BlockInit.flowerBlack),
+                Item.getItemFromBlock(BlockInit.flowerBlack)
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 Item.getItemFromBlock(BlockInit.cactusWhite),
                 Item.getItemFromBlock(BlockInit.cactusOrange),
                 Item.getItemFromBlock(BlockInit.cactusMagenta),
@@ -62,8 +68,11 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(BlockInit.cactusBrown),
                 Item.getItemFromBlock(BlockInit.cactusGreen),
                 Item.getItemFromBlock(BlockInit.cactusRed),
-                Item.getItemFromBlock(BlockInit.cactusBlack),
+                Item.getItemFromBlock(BlockInit.cactusBlack)
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 ItemInit.seedFlowerWhite,
                 ItemInit.seedFlowerOrange,
                 ItemInit.seedFlowerMagenta,
@@ -79,8 +88,11 @@ public class Tab extends CreativeTabs
                 ItemInit.seedFlowerBrown,
                 ItemInit.seedFlowerGreen,
                 ItemInit.seedFlowerRed,
-                ItemInit.seedFlowerBlack,
+                ItemInit.seedFlowerBlack
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 ItemInit.seedCactusWhite,
                 ItemInit.seedCactusOrange,
                 ItemInit.seedCactusMagenta,
@@ -96,8 +108,11 @@ public class Tab extends CreativeTabs
                 ItemInit.seedCactusBrown,
                 ItemInit.seedCactusGreen,
                 ItemInit.seedCactusRed,
-                ItemInit.seedCactusBlack,
+                ItemInit.seedCactusBlack
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 ItemInit.partsWhite,
                 ItemInit.partsOrange,
                 ItemInit.partsMagenta,
@@ -113,8 +128,11 @@ public class Tab extends CreativeTabs
                 ItemInit.partsBrown,
                 ItemInit.partsGreen,
                 ItemInit.partsRed,
-                ItemInit.partsBlack,
+                ItemInit.partsBlack
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 ItemInit.petalWhite,
                 ItemInit.petalOrange,
                 ItemInit.petalMagenta,
@@ -130,8 +148,11 @@ public class Tab extends CreativeTabs
                 ItemInit.petalBrown,
                 ItemInit.petalGreen,
                 ItemInit.petalRed,
-                ItemInit.petalBlack,
+                ItemInit.petalBlack
+            ));
 
+        getItem.addAll(Arrays.asList
+            (
                 ItemInit.dyeWhite,
                 ItemInit.dyeOrange,
                 ItemInit.dyeMagenta,
@@ -147,93 +168,120 @@ public class Tab extends CreativeTabs
                 ItemInit.dyeBrown,
                 ItemInit.dyeGreen,
                 ItemInit.dyeRed,
-                ItemInit.dyeBlack,
+                ItemInit.dyeBlack
+            ));
 
-                ItemInit.clayWhite,
-                ItemInit.clayOrange,
-                ItemInit.clayMagenta,
-                ItemInit.clayLightBlue,
-                ItemInit.clayYellow,
-                ItemInit.clayLime,
-                ItemInit.clayPink,
-                ItemInit.clayGray,
-                ItemInit.clayLightGray,
-                ItemInit.clayCyan,
-                ItemInit.clayPurple,
-                ItemInit.clayBlue,
-                ItemInit.clayBrown,
-                ItemInit.clayGreen,
-                ItemInit.clayRed,
-                ItemInit.clayBlack,
+        if(Config.coloredclay)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    ItemInit.clayWhite,
+                    ItemInit.clayOrange,
+                    ItemInit.clayMagenta,
+                    ItemInit.clayLightBlue,
+                    ItemInit.clayYellow,
+                    ItemInit.clayLime,
+                    ItemInit.clayPink,
+                    ItemInit.clayGray,
+                    ItemInit.clayLightGray,
+                    ItemInit.clayCyan,
+                    ItemInit.clayPurple,
+                    ItemInit.clayBlue,
+                    ItemInit.clayBrown,
+                    ItemInit.clayGreen,
+                    ItemInit.clayRed,
+                    ItemInit.clayBlack
+                ));
+        }
 
-                ItemInit.potUnfiredWhite,
-                ItemInit.potUnfiredOrange,
-                ItemInit.potUnfiredMagenta,
-                ItemInit.potUnfiredLightBlue,
-                ItemInit.potUnfiredYellow,
-                ItemInit.potUnfiredLime,
-                ItemInit.potUnfiredPink,
-                ItemInit.potUnfiredGray,
-                ItemInit.potUnfiredLightGray,
-                ItemInit.potUnfiredCyan,
-                ItemInit.potUnfiredPurple,
-                ItemInit.potUnfiredBlue,
-                ItemInit.potUnfiredBrown,
-                ItemInit.potUnfiredGreen,
-                ItemInit.potUnfiredRed,
-                ItemInit.potUnfiredBlack,
+        if(Config.potload && Config.coloredclay)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    ItemInit.potUnfiredWhite,
+                    ItemInit.potUnfiredOrange,
+                    ItemInit.potUnfiredMagenta,
+                    ItemInit.potUnfiredLightBlue,
+                    ItemInit.potUnfiredYellow,
+                    ItemInit.potUnfiredLime,
+                    ItemInit.potUnfiredPink,
+                    ItemInit.potUnfiredGray,
+                    ItemInit.potUnfiredLightGray,
+                    ItemInit.potUnfiredCyan,
+                    ItemInit.potUnfiredPurple,
+                    ItemInit.potUnfiredBlue,
+                    ItemInit.potUnfiredBrown,
+                    ItemInit.potUnfiredGreen,
+                    ItemInit.potUnfiredRed,
+                    ItemInit.potUnfiredBlack
+                ));
+        }
 
-                ItemInit.potFiredWhite,
-                ItemInit.potFiredOrange,
-                ItemInit.potFiredMagenta,
-                ItemInit.potFiredLightBlue,
-                ItemInit.potFiredYellow,
-                ItemInit.potFiredLime,
-                ItemInit.potFiredPink,
-                ItemInit.potFiredGray,
-                ItemInit.potFiredLightGray,
-                ItemInit.potFiredCyan,
-                ItemInit.potFiredPurple,
-                ItemInit.potFiredBlue,
-                ItemInit.potFiredBrown,
-                ItemInit.potFiredGreen,
-                ItemInit.potFiredRed,
-                ItemInit.potFiredBlack,
+        if(Config.potload)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    ItemInit.potFiredWhite,
+                    ItemInit.potFiredOrange,
+                    ItemInit.potFiredMagenta,
+                    ItemInit.potFiredLightBlue,
+                    ItemInit.potFiredYellow,
+                    ItemInit.potFiredLime,
+                    ItemInit.potFiredPink,
+                    ItemInit.potFiredGray,
+                    ItemInit.potFiredLightGray,
+                    ItemInit.potFiredCyan,
+                    ItemInit.potFiredPurple,
+                    ItemInit.potFiredBlue,
+                    ItemInit.potFiredBrown,
+                    ItemInit.potFiredGreen,
+                    ItemInit.potFiredRed,
+                    ItemInit.potFiredBlack
+                ));
 
-                Item.getItemFromBlock(BlockInit.potFlowerWhite),
-                Item.getItemFromBlock(BlockInit.potFlowerOrange),
-                Item.getItemFromBlock(BlockInit.potFlowerMagenta),
-                Item.getItemFromBlock(BlockInit.potFlowerLightBlue),
-                Item.getItemFromBlock(BlockInit.potFlowerYellow),
-                Item.getItemFromBlock(BlockInit.potFlowerLime),
-                Item.getItemFromBlock(BlockInit.potFlowerPink),
-                Item.getItemFromBlock(BlockInit.potFlowerGray),
-                Item.getItemFromBlock(BlockInit.potFlowerLightGray),
-                Item.getItemFromBlock(BlockInit.potFlowerCyan),
-                Item.getItemFromBlock(BlockInit.potFlowerPurple),
-                Item.getItemFromBlock(BlockInit.potFlowerBlue),
-                Item.getItemFromBlock(BlockInit.potFlowerBrown),
-                Item.getItemFromBlock(BlockInit.potFlowerGreen),
-                Item.getItemFromBlock(BlockInit.potFlowerRed),
-                Item.getItemFromBlock(BlockInit.potFlowerBlack),
+            getItem.addAll(Arrays.asList
+                (
+                    Item.getItemFromBlock(BlockInit.potFlowerWhite),
+                    Item.getItemFromBlock(BlockInit.potFlowerOrange),
+                    Item.getItemFromBlock(BlockInit.potFlowerMagenta),
+                    Item.getItemFromBlock(BlockInit.potFlowerLightBlue),
+                    Item.getItemFromBlock(BlockInit.potFlowerYellow),
+                    Item.getItemFromBlock(BlockInit.potFlowerLime),
+                    Item.getItemFromBlock(BlockInit.potFlowerPink),
+                    Item.getItemFromBlock(BlockInit.potFlowerGray),
+                    Item.getItemFromBlock(BlockInit.potFlowerLightGray),
+                    Item.getItemFromBlock(BlockInit.potFlowerCyan),
+                    Item.getItemFromBlock(BlockInit.potFlowerPurple),
+                    Item.getItemFromBlock(BlockInit.potFlowerBlue),
+                    Item.getItemFromBlock(BlockInit.potFlowerBrown),
+                    Item.getItemFromBlock(BlockInit.potFlowerGreen),
+                    Item.getItemFromBlock(BlockInit.potFlowerRed),
+                    Item.getItemFromBlock(BlockInit.potFlowerBlack)
+                ));
 
-                Item.getItemFromBlock(BlockInit.potCactusWhite),
-                Item.getItemFromBlock(BlockInit.potCactusOrange),
-                Item.getItemFromBlock(BlockInit.potCactusMagenta),
-                Item.getItemFromBlock(BlockInit.potCactusLightBlue),
-                Item.getItemFromBlock(BlockInit.potCactusYellow),
-                Item.getItemFromBlock(BlockInit.potCactusLime),
-                Item.getItemFromBlock(BlockInit.potCactusPink),
-                Item.getItemFromBlock(BlockInit.potCactusGray),
-                Item.getItemFromBlock(BlockInit.potCactusLightGray),
-                Item.getItemFromBlock(BlockInit.potCactusCyan),
-                Item.getItemFromBlock(BlockInit.potCactusPurple),
-                Item.getItemFromBlock(BlockInit.potCactusBlue),
-                Item.getItemFromBlock(BlockInit.potCactusBrown),
-                Item.getItemFromBlock(BlockInit.potCactusGreen),
-                Item.getItemFromBlock(BlockInit.potCactusRed),
-                Item.getItemFromBlock(BlockInit.potCactusBlack),
+            getItem.addAll(Arrays.asList
+                (
+                    Item.getItemFromBlock(BlockInit.potCactusWhite),
+                    Item.getItemFromBlock(BlockInit.potCactusOrange),
+                    Item.getItemFromBlock(BlockInit.potCactusMagenta),
+                    Item.getItemFromBlock(BlockInit.potCactusLightBlue),
+                    Item.getItemFromBlock(BlockInit.potCactusYellow),
+                    Item.getItemFromBlock(BlockInit.potCactusLime),
+                    Item.getItemFromBlock(BlockInit.potCactusPink),
+                    Item.getItemFromBlock(BlockInit.potCactusGray),
+                    Item.getItemFromBlock(BlockInit.potCactusLightGray),
+                    Item.getItemFromBlock(BlockInit.potCactusCyan),
+                    Item.getItemFromBlock(BlockInit.potCactusPurple),
+                    Item.getItemFromBlock(BlockInit.potCactusBlue),
+                    Item.getItemFromBlock(BlockInit.potCactusBrown),
+                    Item.getItemFromBlock(BlockInit.potCactusGreen),
+                    Item.getItemFromBlock(BlockInit.potCactusRed),
+                    Item.getItemFromBlock(BlockInit.potCactusBlack)
+                ));
+        }
 
+        getItem.addAll(Arrays.asList
+            (
                 Item.getItemFromBlock(BlockInit.blockDyeWhite),
                 Item.getItemFromBlock(BlockInit.blockDyeOrange),
                 Item.getItemFromBlock(BlockInit.blockDyeMagenta),
@@ -249,25 +297,31 @@ public class Tab extends CreativeTabs
                 Item.getItemFromBlock(BlockInit.blockDyeBrown),
                 Item.getItemFromBlock(BlockInit.blockDyeGreen),
                 Item.getItemFromBlock(BlockInit.blockDyeRed),
-                Item.getItemFromBlock(BlockInit.blockDyeBlack),
+                Item.getItemFromBlock(BlockInit.blockDyeBlack)
+            ));
 
-                Item.getItemFromBlock(BlockInit.blockClayWhite),
-                Item.getItemFromBlock(BlockInit.blockClayOrange),
-                Item.getItemFromBlock(BlockInit.blockClayMagenta),
-                Item.getItemFromBlock(BlockInit.blockClayLightBlue),
-                Item.getItemFromBlock(BlockInit.blockClayYellow),
-                Item.getItemFromBlock(BlockInit.blockClayLime),
-                Item.getItemFromBlock(BlockInit.blockClayPink),
-                Item.getItemFromBlock(BlockInit.blockClayGray),
-                Item.getItemFromBlock(BlockInit.blockClayLightGray),
-                Item.getItemFromBlock(BlockInit.blockClayCyan),
-                Item.getItemFromBlock(BlockInit.blockClayPurple),
-                Item.getItemFromBlock(BlockInit.blockClayBlue),
-                Item.getItemFromBlock(BlockInit.blockClayBrown),
-                Item.getItemFromBlock(BlockInit.blockClayGreen),
-                Item.getItemFromBlock(BlockInit.blockClayRed),
-                Item.getItemFromBlock(BlockInit.blockClayBlack)
-            );
+        if(Config.coloredclay)
+        {
+            getItem.addAll(Arrays.asList
+                (
+                    Item.getItemFromBlock(BlockInit.blockClayWhite),
+                    Item.getItemFromBlock(BlockInit.blockClayOrange),
+                    Item.getItemFromBlock(BlockInit.blockClayMagenta),
+                    Item.getItemFromBlock(BlockInit.blockClayLightBlue),
+                    Item.getItemFromBlock(BlockInit.blockClayYellow),
+                    Item.getItemFromBlock(BlockInit.blockClayLime),
+                    Item.getItemFromBlock(BlockInit.blockClayPink),
+                    Item.getItemFromBlock(BlockInit.blockClayGray),
+                    Item.getItemFromBlock(BlockInit.blockClayLightGray),
+                    Item.getItemFromBlock(BlockInit.blockClayCyan),
+                    Item.getItemFromBlock(BlockInit.blockClayPurple),
+                    Item.getItemFromBlock(BlockInit.blockClayBlue),
+                    Item.getItemFromBlock(BlockInit.blockClayBrown),
+                    Item.getItemFromBlock(BlockInit.blockClayGreen),
+                    Item.getItemFromBlock(BlockInit.blockClayRed),
+                    Item.getItemFromBlock(BlockInit.blockClayBlack)
+                ));
+        }
 
         itemStack.clear();
 

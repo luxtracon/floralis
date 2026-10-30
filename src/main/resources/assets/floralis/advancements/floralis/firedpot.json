@@ -1,4 +1,9 @@
 {
+    "conditions": [
+        {
+            "type": "floralis:pots"
+        }
+    ],
     "display": {
         "title": {
             "translate": "advancement.floralis.firedpot.name"

@@ -3,3 +3,8 @@
 build
 libs
 run
+
+
+_KNOWN_ISSUES.txt
+.vscode
+bin

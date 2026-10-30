@@ -1,9 +1,12 @@
 package com.luxtracon.floralis.worldgens;
 
 import com.luxtracon.floralis.inits.BlockInit;
+import com.luxtracon.floralis.utilities.Config;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -15,275 +18,187 @@ import java.util.Random;
 
 public class WorldgenCactus implements IWorldGenerator
 {
-    public boolean BlackCactus(World world, Random random, BlockPos position)
+    private static final Block[] CACTI =
     {
-        IBlockState state = BlockInit.cactusBlack.getDefaultState();
+        BlockInit.cactusWhite,
+        BlockInit.cactusOrange,
+        BlockInit.cactusMagenta,
+        BlockInit.cactusLightBlue,
+        BlockInit.cactusYellow,
+        BlockInit.cactusLime,
+        BlockInit.cactusPink,
+        BlockInit.cactusGray,
+        BlockInit.cactusLightGray,
+        BlockInit.cactusCyan,
+        BlockInit.cactusPurple,
+        BlockInit.cactusBlue,
+        BlockInit.cactusBrown,
+        BlockInit.cactusGreen,
+        BlockInit.cactusRed,
+        BlockInit.cactusBlack
+    };
 
-        for (int tries = 0; tries < 64; tries++)
+    private static final Block[][] GROUPS =
+    {
+        { BlockInit.cactusBlack },
+        { BlockInit.cactusBlue, BlockInit.cactusLightBlue },
+        { BlockInit.cactusBrown },
+        { BlockInit.cactusCyan },
+        { BlockInit.cactusGray, BlockInit.cactusLightGray },
+        { BlockInit.cactusGreen },
+        { BlockInit.cactusLime },
+        { BlockInit.cactusMagenta },
+        { BlockInit.cactusOrange },
+        { BlockInit.cactusPink },
+        { BlockInit.cactusPurple },
+        { BlockInit.cactusRed },
+        { BlockInit.cactusWhite },
+        { BlockInit.cactusYellow }
+    };
+
+    private static int getCactusTries(Block cactus)
+    {
+        for (int index = 0; index < CACTI.length; index++)
         {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
+            if (CACTI[index] == cactus)
+            {
+                return Config.cactusTries[index];
+            }
+        }
 
-            if (world.isAirBlock(blockpos) && BlockInit.cactusBlack.canBlockStay(world, blockpos))
+        return 64;
+    }
+
+    private void placeCactus(World world, Random random, BlockPos position, Block cactus)
+    {
+        IBlockState state = cactus.getDefaultState();
+        int tries = getCactusTries(cactus);
+
+        for (int i = 0; i < tries; i++)
+        {
+            BlockPos blockpos = position.add(
+                    random.nextInt(8) - random.nextInt(8),
+                    random.nextInt(8) - random.nextInt(8),
+                    random.nextInt(8) - random.nextInt(8)
+            );
+
+            if (world.isAirBlock(blockpos) && cactus.canPlaceBlockAt(world, blockpos))
             {
                 world.setBlockState(blockpos, state, 2);
             }
         }
+    }
 
+    private void generateGroup(World world, Random random, int posX, int posZ, Block... cacti)
+    {
+        if (random.nextInt(8) == 0)
+        {
+            int xPos = posX + random.nextInt(16);
+            int yPos = random.nextInt(255);
+            int zPos = posZ + random.nextInt(16);
+
+            BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            for (Block cactus : cacti)
+            {
+                placeCactus(world, random, newPos, cactus);
+            }
+        }
+    }
+
+    public boolean BlackCactus(World world, Random random, BlockPos position)
+    {
+        placeCactus(world, random, position, BlockInit.cactusBlack);
         return true;
     }
 
     public boolean BlueCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusBlue.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusBlue.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusBlue);
         return true;
     }
 
     public boolean BrownCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusBrown.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusBrown.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusBrown);
         return true;
     }
 
     public boolean CyanCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusCyan.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusCyan.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusCyan);
         return true;
     }
 
     public boolean GrayCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusGray.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusGray.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusGray);
         return true;
     }
 
     public boolean GreenCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusGreen.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusGreen.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusGreen);
         return true;
     }
 
     public boolean LightBlueCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusLightBlue.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusLightBlue.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusLightBlue);
         return true;
     }
 
     public boolean LightGrayCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusLightGray.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusLightGray.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusLightGray);
         return true;
     }
 
     public boolean LimeCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusLime.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusLime.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusLime);
         return true;
     }
 
     public boolean MagentaCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusMagenta.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusMagenta.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusMagenta);
         return true;
     }
 
     public boolean OrangeCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusOrange.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusOrange.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusOrange);
         return true;
     }
 
     public boolean PinkCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusPink.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusPink.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusPink);
         return true;
     }
 
     public boolean PurpleCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusPurple.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusPurple.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusPurple);
         return true;
     }
 
     public boolean RedCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusRed.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusRed.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusRed);
         return true;
     }
 
     public boolean WhiteCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusWhite.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusWhite.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusWhite);
         return true;
     }
 
     public boolean YellowCactus(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.cactusYellow.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.cactusYellow.canBlockStay(world, blockpos))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeCactus(world, random, position, BlockInit.cactusYellow);
         return true;
     }
 
@@ -292,206 +207,11 @@ public class WorldgenCactus implements IWorldGenerator
         int posX = chunkX * 16 + 8;
         int posZ = chunkZ * 16 + 8;
 
-        if(world.provider.getDimension() == 0 && world.getWorldType() != WorldType.FLAT)
+        if (world.getWorldType() != WorldType.FLAT)
         {
-            if (random.nextInt(8) == 0)
+            for (Block[] group : GROUPS)
             {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BlackCactus(world, random, newPos);
-                }
-            }
-
-            //blue group
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BlueCactus(world, random, newPos);
-                    this.LightBlueCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BrownCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.CyanCactus(world, random, newPos);
-                }
-            }
-
-            //gray group
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.GrayCactus(world, random, newPos);
-                    this.LightGrayCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.GreenCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.LimeCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.MagentaCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.OrangeCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.PinkCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.PurpleCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.RedCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.WhiteCactus(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.YellowCactus(world, random, newPos);
-                }
+                generateGroup(world, random, posX, posZ, group);
             }
         }
     }
@@ -499,6 +219,11 @@ public class WorldgenCactus implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
+        if (world.provider.getDimensionType() != DimensionType.OVERWORLD)
+        {
+            return;
+        }
+
         this.groups(random, chunkX, chunkZ, world);
     }
 }

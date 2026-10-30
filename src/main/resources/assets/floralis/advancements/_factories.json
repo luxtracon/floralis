@@ -1,0 +1,6 @@
+{
+    "conditions": {
+        "cosmeticblocks": "com.luxtracon.floralis.utilities.ConditionCosmeticblocks",
+        "pots": "com.luxtracon.floralis.utilities.ConditionPots"
+    }
+}

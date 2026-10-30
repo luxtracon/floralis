@@ -3,6 +3,7 @@ package com.luxtracon.floralis;
 import com.luxtracon.floralis.compats.*;
 import com.luxtracon.floralis.inits.*;
 import com.luxtracon.floralis.proxies.CommonProxy;
+import com.luxtracon.floralis.recipes.*;
 import com.luxtracon.floralis.registries.*;
 import com.luxtracon.floralis.utilities.*;
 
@@ -83,5 +84,6 @@ public class Main
 		SmeltingRegistry.init();
 		StructureRegistry.init();
 		TradesRegistry.init();
+		CraftingRecipes.init();
 	}
 }

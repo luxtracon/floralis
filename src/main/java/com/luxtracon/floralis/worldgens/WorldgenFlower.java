@@ -1,9 +1,12 @@
 package com.luxtracon.floralis.worldgens;
 
 import com.luxtracon.floralis.inits.BlockInit;
+import com.luxtracon.floralis.utilities.Config;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -15,275 +18,187 @@ import java.util.Random;
 
 public class WorldgenFlower implements IWorldGenerator
 {
-    public boolean BlackFlower(World world, Random random, BlockPos position)
+    private static final Block[] FLOWERS =
     {
-        IBlockState state = BlockInit.flowerBlack.getDefaultState();
+        BlockInit.flowerWhite,
+        BlockInit.flowerOrange,
+        BlockInit.flowerMagenta,
+        BlockInit.flowerLightBlue,
+        BlockInit.flowerYellow,
+        BlockInit.flowerLime,
+        BlockInit.flowerPink,
+        BlockInit.flowerGray,
+        BlockInit.flowerLightGray,
+        BlockInit.flowerCyan,
+        BlockInit.flowerPurple,
+        BlockInit.flowerBlue,
+        BlockInit.flowerBrown,
+        BlockInit.flowerGreen,
+        BlockInit.flowerRed,
+        BlockInit.flowerBlack
+    };
 
-        for (int tries = 0; tries < 64; tries++)
+    private static final Block[][] GROUPS =
+    {
+        { BlockInit.flowerBlack },
+        { BlockInit.flowerBlue, BlockInit.flowerLightBlue },
+        { BlockInit.flowerBrown },
+        { BlockInit.flowerCyan },
+        { BlockInit.flowerGray, BlockInit.flowerLightGray },
+        { BlockInit.flowerGreen },
+        { BlockInit.flowerLime },
+        { BlockInit.flowerMagenta },
+        { BlockInit.flowerOrange },
+        { BlockInit.flowerPink },
+        { BlockInit.flowerPurple },
+        { BlockInit.flowerRed },
+        { BlockInit.flowerWhite },
+        { BlockInit.flowerYellow }
+    };
+
+    private static int getFlowerTries(Block flower)
+    {
+        for (int index = 0; index < FLOWERS.length; index++)
         {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
+            if (FLOWERS[index] == flower)
+            {
+                return Config.flowerTries[index];
+            }
+        }
 
-            if (world.isAirBlock(blockpos) && BlockInit.flowerBlack.canBlockStay(world, blockpos, state))
+        return 64;
+    }
+
+    private void placeFlower(World world, Random random, BlockPos position, Block flower)
+    {
+        IBlockState state = flower.getDefaultState();
+        int tries = getFlowerTries(flower);
+
+        for (int i = 0; i < tries; i++)
+        {
+            BlockPos blockpos = position.add(
+                    random.nextInt(8) - random.nextInt(8),
+                    random.nextInt(8) - random.nextInt(8),
+                    random.nextInt(8) - random.nextInt(8)
+            );
+
+            if (world.isAirBlock(blockpos) && flower.canPlaceBlockAt(world, blockpos))
             {
                 world.setBlockState(blockpos, state, 2);
             }
         }
+    }
 
+    private void generateGroup(World world, Random random, int posX, int posZ, Block... flowers)
+    {
+        if (random.nextInt(8) == 0)
+        {
+            int xPos = posX + random.nextInt(16);
+            int yPos = random.nextInt(255);
+            int zPos = posZ + random.nextInt(16);
+
+            BlockPos newPos = new BlockPos(xPos, yPos, zPos);
+
+            for (Block flower : flowers)
+            {
+                placeFlower(world, random, newPos, flower);
+            }
+        }
+    }
+
+    public boolean BlackFlower(World world, Random random, BlockPos position)
+    {
+        placeFlower(world, random, position, BlockInit.flowerBlack);
         return true;
     }
 
     public boolean BlueFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerBlue.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerBlue.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerBlue);
         return true;
     }
 
     public boolean BrownFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerBrown.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerBrown.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerBrown);
         return true;
     }
 
     public boolean CyanFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerCyan.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerCyan.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerCyan);
         return true;
     }
 
     public boolean GrayFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerGray.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerGray.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerGray);
         return true;
     }
 
     public boolean GreenFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerGreen.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerGreen.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerGreen);
         return true;
     }
 
     public boolean LightBlueFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerLightBlue.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerLightBlue.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerLightBlue);
         return true;
     }
 
     public boolean LightGrayFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerLightGray.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerLightGray.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerLightGray);
         return true;
     }
 
     public boolean LimeFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerLime.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerLime.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerLime);
         return true;
     }
 
     public boolean MagentaFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerMagenta.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerMagenta.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerMagenta);
         return true;
     }
 
     public boolean OrangeFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerOrange.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerOrange.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerOrange);
         return true;
     }
 
     public boolean PinkFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerPink.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerPink.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerPink);
         return true;
     }
 
     public boolean PurpleFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerPurple.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerPurple.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerPurple);
         return true;
     }
 
     public boolean RedFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerRed.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerRed.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerRed);
         return true;
     }
 
     public boolean WhiteFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerWhite.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerWhite.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerWhite);
         return true;
     }
 
     public boolean YellowFlower(World world, Random random, BlockPos position)
     {
-        IBlockState state = BlockInit.flowerYellow.getDefaultState();
-
-        for (int tries = 0; tries < 64; tries++)
-        {
-            BlockPos blockpos = position.add(random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8), random.nextInt(8) - random.nextInt(8));
-
-            if (world.isAirBlock(blockpos) && BlockInit.flowerYellow.canBlockStay(world, blockpos, state))
-            {
-                world.setBlockState(blockpos, state, 2);
-            }
-        }
-
+        placeFlower(world, random, position, BlockInit.flowerYellow);
         return true;
     }
 
@@ -292,206 +207,11 @@ public class WorldgenFlower implements IWorldGenerator
         int posX = chunkX * 16 + 8;
         int posZ = chunkZ * 16 + 8;
 
-        if(world.provider.getDimension() == 0 && world.getWorldType() != WorldType.FLAT)
+        if (world.getWorldType() != WorldType.FLAT)
         {
-            if (random.nextInt(8) == 0)
+            for (Block[] group : GROUPS)
             {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BlackFlower(world, random, newPos);
-                }
-            }
-
-            //blue group
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BlueFlower(world, random, newPos);
-                    this.LightBlueFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.BrownFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.CyanFlower(world, random, newPos);
-                }
-            }
-
-            //gray group
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.GrayFlower(world, random, newPos);
-                    this.LightGrayFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.GreenFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.LimeFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.MagentaFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.OrangeFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.PinkFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.PurpleFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.RedFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.WhiteFlower(world, random, newPos);
-                }
-            }
-
-            if (random.nextInt(8) == 0)
-            {
-                final int xPos = posX + random.nextInt(16);
-                final int yPos = random.nextInt(255);
-                final int zPos = posZ + random.nextInt(16);
-
-                final BlockPos newPos = new BlockPos(xPos, yPos, zPos);
-
-                if (newPos != null)
-                {
-                    this.YellowFlower(world, random, newPos);
-                }
+                generateGroup(world, random, posX, posZ, group);
             }
         }
     }
@@ -499,6 +219,11 @@ public class WorldgenFlower implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
+        if (world.provider.getDimensionType() != DimensionType.OVERWORLD)
+        {
+            return;
+        }
+
         this.groups(random, chunkX, chunkZ, world);
     }
 }

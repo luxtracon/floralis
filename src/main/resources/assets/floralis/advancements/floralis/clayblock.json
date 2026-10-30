@@ -1,4 +1,9 @@
 {
+    "conditions": [
+        {
+            "type": "floralis:cosmeticblocks"
+        }
+    ],
     "display": {
         "title": {
             "translate": "advancement.floralis.clayblock.name"

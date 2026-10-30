@@ -2,18 +2,17 @@ buildscript
 {
     repositories
     {
-        maven
-        {
-            url = 'https://files.minecraftforge.net/maven'
-        }
+        //maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://maven.minecraftforge.net' }
 
-        jcenter()
-         mavenCentral()
+        //jcenter()
+        mavenCentral()
     }
 
     dependencies
     {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:3+'
+        //classpath 'net.minecraftforge.gradle:ForgeGradle:3+'
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.53', changing: true
     }
 }
 
@@ -32,6 +31,7 @@ version = "${modversion}"
 archivesBaseName = "${modname}-${mcversion}"
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
+
 minecraft
 {
     mappings channel: 'stable', version: '39-1.12'
@@ -42,15 +42,33 @@ minecraft
         client
         {
             workingDirectory project.file('run')
+
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
+
+            mods
+            {
+                floralis
+                {
+                    source sourceSets.main
+                }
+            }
         }
 
         server
         {
             workingDirectory project.file('run')
+
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
+
+            mods
+            {
+                floralis
+                {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
@@ -61,7 +79,7 @@ dependencies
     compileOnly 'libs:CodeChickenLib:1.12.2-3.2.3.358:universal'
     compileOnly 'libs:CoFHCore:1.12.2-4.6.6.1:universal'
     compileOnly 'libs:CoFHWorld:1.12.2-1.4.0.1:universal'
-    compileOnly 'libs:forestry_1.12.2:5.8.2.422'
+    compileOnly 'libs:forestry_1.12.2:5.8.2.427'
     compileOnly 'libs:ImmersiveEngineering:0.12-98'
     compileOnly 'libs:industrialforegoing:1.12.2:1.12.13-237'
     compileOnly 'libs:RedstoneFlux:1.12-2.1.1.1:universal'
@@ -73,15 +91,9 @@ processResources
 {
     inputs.property "modversion", project.version
     inputs.property "mcversion", version
-    from(sourceSets.main.resources.srcDirs)
+    filesMatching('mcmod.info')
     {
-        include 'mcmod.info'
         expand 'modversion': project.version
-    }
-
-    from(sourceSets.main.resources.srcDirs)
-    {
-        exclude 'mcmod.info'
     }
 }
 
@@ -91,6 +103,20 @@ sourceSets
 {
     main
     {
-        output.resourcesDir = output.classesDir
+        output.resourcesDir = output.classesDirs.singleFile
+    }
+}
+
+// ========== JSON MINIFIER ==========
+afterEvaluate {
+    processResources {
+        doLast {
+            def outputDir = destinationDir ?: outputs.files.singleFile
+            fileTree(dir: outputDir, include: ['**/*.json','**/*.mcmeta']).each { file ->
+                try {
+                    file.text = groovy.json.JsonOutput.toJson(new groovy.json.JsonSlurper().parse(file))
+                } catch (Exception ignore) {}
+            }
+        }
     }
 }

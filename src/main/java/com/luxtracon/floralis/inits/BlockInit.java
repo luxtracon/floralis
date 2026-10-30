@@ -474,39 +474,42 @@ public class BlockInit
         event.getRegistry().registerAll(cropCactusGhostRed);
         event.getRegistry().registerAll(cropCactusGhostBlack);
 
-        event.getRegistry().registerAll(potFlowerWhite);
-        event.getRegistry().registerAll(potFlowerOrange);
-        event.getRegistry().registerAll(potFlowerMagenta);
-        event.getRegistry().registerAll(potFlowerLightBlue);
-        event.getRegistry().registerAll(potFlowerYellow);
-        event.getRegistry().registerAll(potFlowerLime);
-        event.getRegistry().registerAll(potFlowerPink);
-        event.getRegistry().registerAll(potFlowerGray);
-        event.getRegistry().registerAll(potFlowerLightGray);
-        event.getRegistry().registerAll(potFlowerCyan);
-        event.getRegistry().registerAll(potFlowerPurple);
-        event.getRegistry().registerAll(potFlowerBlue);
-        event.getRegistry().registerAll(potFlowerBrown);
-        event.getRegistry().registerAll(potFlowerGreen);
-        event.getRegistry().registerAll(potFlowerRed);
-        event.getRegistry().registerAll(potFlowerBlack);
+        if(Config.potload)
+        {
+            event.getRegistry().registerAll(potFlowerWhite);
+            event.getRegistry().registerAll(potFlowerOrange);
+            event.getRegistry().registerAll(potFlowerMagenta);
+            event.getRegistry().registerAll(potFlowerLightBlue);
+            event.getRegistry().registerAll(potFlowerYellow);
+            event.getRegistry().registerAll(potFlowerLime);
+            event.getRegistry().registerAll(potFlowerPink);
+            event.getRegistry().registerAll(potFlowerGray);
+            event.getRegistry().registerAll(potFlowerLightGray);
+            event.getRegistry().registerAll(potFlowerCyan);
+            event.getRegistry().registerAll(potFlowerPurple);
+            event.getRegistry().registerAll(potFlowerBlue);
+            event.getRegistry().registerAll(potFlowerBrown);
+            event.getRegistry().registerAll(potFlowerGreen);
+            event.getRegistry().registerAll(potFlowerRed);
+            event.getRegistry().registerAll(potFlowerBlack);
 
-        event.getRegistry().registerAll(potCactusWhite);
-        event.getRegistry().registerAll(potCactusOrange);
-        event.getRegistry().registerAll(potCactusMagenta);
-        event.getRegistry().registerAll(potCactusLightBlue);
-        event.getRegistry().registerAll(potCactusYellow);
-        event.getRegistry().registerAll(potCactusLime);
-        event.getRegistry().registerAll(potCactusPink);
-        event.getRegistry().registerAll(potCactusGray);
-        event.getRegistry().registerAll(potCactusLightGray);
-        event.getRegistry().registerAll(potCactusCyan);
-        event.getRegistry().registerAll(potCactusPurple);
-        event.getRegistry().registerAll(potCactusBlue);
-        event.getRegistry().registerAll(potCactusBrown);
-        event.getRegistry().registerAll(potCactusGreen);
-        event.getRegistry().registerAll(potCactusRed);
-        event.getRegistry().registerAll(potCactusBlack);
+            event.getRegistry().registerAll(potCactusWhite);
+            event.getRegistry().registerAll(potCactusOrange);
+            event.getRegistry().registerAll(potCactusMagenta);
+            event.getRegistry().registerAll(potCactusLightBlue);
+            event.getRegistry().registerAll(potCactusYellow);
+            event.getRegistry().registerAll(potCactusLime);
+            event.getRegistry().registerAll(potCactusPink);
+            event.getRegistry().registerAll(potCactusGray);
+            event.getRegistry().registerAll(potCactusLightGray);
+            event.getRegistry().registerAll(potCactusCyan);
+            event.getRegistry().registerAll(potCactusPurple);
+            event.getRegistry().registerAll(potCactusBlue);
+            event.getRegistry().registerAll(potCactusBrown);
+            event.getRegistry().registerAll(potCactusGreen);
+            event.getRegistry().registerAll(potCactusRed);
+            event.getRegistry().registerAll(potCactusBlack);
+        }
 
         if(Config.cosmeticblocks)
         {
@@ -526,7 +529,10 @@ public class BlockInit
             event.getRegistry().registerAll(blockDyeGreen);
             event.getRegistry().registerAll(blockDyeRed);
             event.getRegistry().registerAll(blockDyeBlack);
+        }
 
+        if(Config.coloredclay)
+        {
             event.getRegistry().registerAll(blockClayWhite);
             event.getRegistry().registerAll(blockClayOrange);
             event.getRegistry().registerAll(blockClayMagenta);
@@ -583,39 +589,42 @@ public class BlockInit
         event.getRegistry().registerAll(new ItemBlock(cactusRed).setRegistryName(Objects.requireNonNull(cactusRed.getRegistryName())));
         event.getRegistry().registerAll(new ItemBlock(cactusBlack).setRegistryName(Objects.requireNonNull(cactusBlack.getRegistryName())));
 
-        event.getRegistry().registerAll(new ItemBlock(potFlowerWhite).setRegistryName(Objects.requireNonNull(potFlowerWhite.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerOrange).setRegistryName(Objects.requireNonNull(potFlowerOrange.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerMagenta).setRegistryName(Objects.requireNonNull(potFlowerMagenta.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerLightBlue).setRegistryName(Objects.requireNonNull(potFlowerLightBlue.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerYellow).setRegistryName(Objects.requireNonNull(potFlowerYellow.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerLime).setRegistryName(Objects.requireNonNull(potFlowerLime.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerPink).setRegistryName(Objects.requireNonNull(potFlowerPink.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerGray).setRegistryName(Objects.requireNonNull(potFlowerGray.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerLightGray).setRegistryName(Objects.requireNonNull(potFlowerLightGray.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerCyan).setRegistryName(Objects.requireNonNull(potFlowerCyan.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerPurple).setRegistryName(Objects.requireNonNull(potFlowerPurple.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerBlue).setRegistryName(Objects.requireNonNull(potFlowerBlue.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerBrown).setRegistryName(Objects.requireNonNull(potFlowerBrown.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerGreen).setRegistryName(Objects.requireNonNull(potFlowerGreen.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerRed).setRegistryName(Objects.requireNonNull(potFlowerRed.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potFlowerBlack).setRegistryName(Objects.requireNonNull(potFlowerBlack.getRegistryName())));
+        if(Config.potload)
+        {
+            event.getRegistry().registerAll(new ItemBlock(potFlowerWhite).setRegistryName(Objects.requireNonNull(potFlowerWhite.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerOrange).setRegistryName(Objects.requireNonNull(potFlowerOrange.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerMagenta).setRegistryName(Objects.requireNonNull(potFlowerMagenta.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerLightBlue).setRegistryName(Objects.requireNonNull(potFlowerLightBlue.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerYellow).setRegistryName(Objects.requireNonNull(potFlowerYellow.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerLime).setRegistryName(Objects.requireNonNull(potFlowerLime.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerPink).setRegistryName(Objects.requireNonNull(potFlowerPink.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerGray).setRegistryName(Objects.requireNonNull(potFlowerGray.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerLightGray).setRegistryName(Objects.requireNonNull(potFlowerLightGray.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerCyan).setRegistryName(Objects.requireNonNull(potFlowerCyan.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerPurple).setRegistryName(Objects.requireNonNull(potFlowerPurple.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerBlue).setRegistryName(Objects.requireNonNull(potFlowerBlue.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerBrown).setRegistryName(Objects.requireNonNull(potFlowerBrown.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerGreen).setRegistryName(Objects.requireNonNull(potFlowerGreen.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerRed).setRegistryName(Objects.requireNonNull(potFlowerRed.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potFlowerBlack).setRegistryName(Objects.requireNonNull(potFlowerBlack.getRegistryName())));
 
-        event.getRegistry().registerAll(new ItemBlock(potCactusWhite).setRegistryName(Objects.requireNonNull(potCactusWhite.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusOrange).setRegistryName(Objects.requireNonNull(potCactusOrange.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusMagenta).setRegistryName(Objects.requireNonNull(potCactusMagenta.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusLightBlue).setRegistryName(Objects.requireNonNull(potCactusLightBlue.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusYellow).setRegistryName(Objects.requireNonNull(potCactusYellow.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusLime).setRegistryName(Objects.requireNonNull(potCactusLime.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusPink).setRegistryName(Objects.requireNonNull(potCactusPink.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusGray).setRegistryName(Objects.requireNonNull(potCactusGray.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusLightGray).setRegistryName(Objects.requireNonNull(potCactusLightGray.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusCyan).setRegistryName(Objects.requireNonNull(potCactusCyan.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusPurple).setRegistryName(Objects.requireNonNull(potCactusPurple.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusBlue).setRegistryName(Objects.requireNonNull(potCactusBlue.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusBrown).setRegistryName(Objects.requireNonNull(potCactusBrown.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusGreen).setRegistryName(Objects.requireNonNull(potCactusGreen.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusRed).setRegistryName(Objects.requireNonNull(potCactusRed.getRegistryName())));
-        event.getRegistry().registerAll(new ItemBlock(potCactusBlack).setRegistryName(Objects.requireNonNull(potCactusBlack.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusWhite).setRegistryName(Objects.requireNonNull(potCactusWhite.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusOrange).setRegistryName(Objects.requireNonNull(potCactusOrange.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusMagenta).setRegistryName(Objects.requireNonNull(potCactusMagenta.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusLightBlue).setRegistryName(Objects.requireNonNull(potCactusLightBlue.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusYellow).setRegistryName(Objects.requireNonNull(potCactusYellow.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusLime).setRegistryName(Objects.requireNonNull(potCactusLime.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusPink).setRegistryName(Objects.requireNonNull(potCactusPink.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusGray).setRegistryName(Objects.requireNonNull(potCactusGray.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusLightGray).setRegistryName(Objects.requireNonNull(potCactusLightGray.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusCyan).setRegistryName(Objects.requireNonNull(potCactusCyan.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusPurple).setRegistryName(Objects.requireNonNull(potCactusPurple.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusBlue).setRegistryName(Objects.requireNonNull(potCactusBlue.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusBrown).setRegistryName(Objects.requireNonNull(potCactusBrown.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusGreen).setRegistryName(Objects.requireNonNull(potCactusGreen.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusRed).setRegistryName(Objects.requireNonNull(potCactusRed.getRegistryName())));
+            event.getRegistry().registerAll(new ItemBlock(potCactusBlack).setRegistryName(Objects.requireNonNull(potCactusBlack.getRegistryName())));
+        }
 
         if(Config.cosmeticblocks)
         {
@@ -635,7 +644,10 @@ public class BlockInit
             event.getRegistry().registerAll(new ItemBlock(blockDyeGreen).setRegistryName(Objects.requireNonNull(blockDyeGreen.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockDyeRed).setRegistryName(Objects.requireNonNull(blockDyeRed.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockDyeBlack).setRegistryName(Objects.requireNonNull(blockDyeBlack.getRegistryName())));
+        }
 
+        if(Config.coloredclay)
+        {
             event.getRegistry().registerAll(new ItemBlock(blockClayWhite).setRegistryName(Objects.requireNonNull(blockClayWhite.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockClayOrange).setRegistryName(Objects.requireNonNull(blockClayOrange.getRegistryName())));
             event.getRegistry().registerAll(new ItemBlock(blockClayMagenta).setRegistryName(Objects.requireNonNull(blockClayMagenta.getRegistryName())));
@@ -692,39 +704,42 @@ public class BlockInit
         registerRender(Item.getItemFromBlock(cactusRed));
         registerRender(Item.getItemFromBlock(cactusBlack));
 
-        registerRender(Item.getItemFromBlock(potFlowerWhite));
-        registerRender(Item.getItemFromBlock(potFlowerOrange));
-        registerRender(Item.getItemFromBlock(potFlowerMagenta));
-        registerRender(Item.getItemFromBlock(potFlowerLightBlue));
-        registerRender(Item.getItemFromBlock(potFlowerYellow));
-        registerRender(Item.getItemFromBlock(potFlowerLime));
-        registerRender(Item.getItemFromBlock(potFlowerPink));
-        registerRender(Item.getItemFromBlock(potFlowerGray));
-        registerRender(Item.getItemFromBlock(potFlowerLightGray));
-        registerRender(Item.getItemFromBlock(potFlowerCyan));
-        registerRender(Item.getItemFromBlock(potFlowerPurple));
-        registerRender(Item.getItemFromBlock(potFlowerBlue));
-        registerRender(Item.getItemFromBlock(potFlowerBrown));
-        registerRender(Item.getItemFromBlock(potFlowerGreen));
-        registerRender(Item.getItemFromBlock(potFlowerRed));
-        registerRender(Item.getItemFromBlock(potFlowerBlack));
+        if(Config.potload)
+        {
+            registerRender(Item.getItemFromBlock(potFlowerWhite));
+            registerRender(Item.getItemFromBlock(potFlowerOrange));
+            registerRender(Item.getItemFromBlock(potFlowerMagenta));
+            registerRender(Item.getItemFromBlock(potFlowerLightBlue));
+            registerRender(Item.getItemFromBlock(potFlowerYellow));
+            registerRender(Item.getItemFromBlock(potFlowerLime));
+            registerRender(Item.getItemFromBlock(potFlowerPink));
+            registerRender(Item.getItemFromBlock(potFlowerGray));
+            registerRender(Item.getItemFromBlock(potFlowerLightGray));
+            registerRender(Item.getItemFromBlock(potFlowerCyan));
+            registerRender(Item.getItemFromBlock(potFlowerPurple));
+            registerRender(Item.getItemFromBlock(potFlowerBlue));
+            registerRender(Item.getItemFromBlock(potFlowerBrown));
+            registerRender(Item.getItemFromBlock(potFlowerGreen));
+            registerRender(Item.getItemFromBlock(potFlowerRed));
+            registerRender(Item.getItemFromBlock(potFlowerBlack));
 
-        registerRender(Item.getItemFromBlock(potCactusWhite));
-        registerRender(Item.getItemFromBlock(potCactusOrange));
-        registerRender(Item.getItemFromBlock(potCactusMagenta));
-        registerRender(Item.getItemFromBlock(potCactusLightBlue));
-        registerRender(Item.getItemFromBlock(potCactusYellow));
-        registerRender(Item.getItemFromBlock(potCactusLime));
-        registerRender(Item.getItemFromBlock(potCactusPink));
-        registerRender(Item.getItemFromBlock(potCactusGray));
-        registerRender(Item.getItemFromBlock(potCactusLightGray));
-        registerRender(Item.getItemFromBlock(potCactusCyan));
-        registerRender(Item.getItemFromBlock(potCactusPurple));
-        registerRender(Item.getItemFromBlock(potCactusBlue));
-        registerRender(Item.getItemFromBlock(potCactusBrown));
-        registerRender(Item.getItemFromBlock(potCactusGreen));
-        registerRender(Item.getItemFromBlock(potCactusRed));
-        registerRender(Item.getItemFromBlock(potCactusBlack));
+            registerRender(Item.getItemFromBlock(potCactusWhite));
+            registerRender(Item.getItemFromBlock(potCactusOrange));
+            registerRender(Item.getItemFromBlock(potCactusMagenta));
+            registerRender(Item.getItemFromBlock(potCactusLightBlue));
+            registerRender(Item.getItemFromBlock(potCactusYellow));
+            registerRender(Item.getItemFromBlock(potCactusLime));
+            registerRender(Item.getItemFromBlock(potCactusPink));
+            registerRender(Item.getItemFromBlock(potCactusGray));
+            registerRender(Item.getItemFromBlock(potCactusLightGray));
+            registerRender(Item.getItemFromBlock(potCactusCyan));
+            registerRender(Item.getItemFromBlock(potCactusPurple));
+            registerRender(Item.getItemFromBlock(potCactusBlue));
+            registerRender(Item.getItemFromBlock(potCactusBrown));
+            registerRender(Item.getItemFromBlock(potCactusGreen));
+            registerRender(Item.getItemFromBlock(potCactusRed));
+            registerRender(Item.getItemFromBlock(potCactusBlack));
+        }
 
         if(Config.cosmeticblocks)
         {
@@ -744,7 +759,10 @@ public class BlockInit
             registerRender(Item.getItemFromBlock(blockDyeGreen));
             registerRender(Item.getItemFromBlock(blockDyeRed));
             registerRender(Item.getItemFromBlock(blockDyeBlack));
+        }
 
+        if(Config.coloredclay)
+        {
             registerRender(Item.getItemFromBlock(blockClayWhite));
             registerRender(Item.getItemFromBlock(blockClayOrange));
             registerRender(Item.getItemFromBlock(blockClayMagenta));

@@ -17,7 +17,9 @@ import java.util.Random;
 
 public class StructureFieldCactus extends StructureVillagePieces.Village
 {
-    private final BlockCropCactus crop;
+    private BlockCropCactus crop;
+
+    public StructureFieldCactus() {}
 
     public StructureFieldCactus(StructureVillagePieces.Start start, int type, Random random, StructureBoundingBox box, EnumFacing facing)
     {
@@ -86,38 +88,22 @@ public class StructureFieldCactus extends StructureVillagePieces.Village
     {
         switch (random.nextInt(16))
         {
-            case 0:
-                return BlockInit.cropCactusBlack;
-            case 1:
-                return BlockInit.cropCactusBlue;
-            case 2:
-                return BlockInit.cropCactusBrown;
-            case 3:
-                return BlockInit.cropCactusCyan;
-            case 4:
-                return BlockInit.cropCactusGray;
-            case 5:
-                return BlockInit.cropCactusGreen;
-            case 6:
-                return BlockInit.cropCactusLightBlue;
-            case 7:
-                return BlockInit.cropCactusLightGray;
-            case 8:
-                return BlockInit.cropCactusLime;
-            case 9:
-                return BlockInit.cropCactusMagenta;
-            case 10:
-                return BlockInit.cropCactusOrange;
-            case 11:
-                return BlockInit.cropCactusPink;
-            case 12:
-                return BlockInit.cropCactusPurple;
-            case 13:
-                return BlockInit.cropCactusRed;
-            case 14:
-                return BlockInit.cropCactusWhite;
-            case 15:
-                return BlockInit.cropCactusYellow;
+            case 0:     return BlockInit.cropCactusBlack;
+            case 1:     return BlockInit.cropCactusBlue;
+            case 2:     return BlockInit.cropCactusBrown;
+            case 3:     return BlockInit.cropCactusCyan;
+            case 4:     return BlockInit.cropCactusGray;
+            case 5:     return BlockInit.cropCactusGreen;
+            case 6:     return BlockInit.cropCactusLightBlue;
+            case 7:     return BlockInit.cropCactusLightGray;
+            case 8:     return BlockInit.cropCactusLime;
+            case 9:     return BlockInit.cropCactusMagenta;
+            case 10:    return BlockInit.cropCactusOrange;
+            case 11:    return BlockInit.cropCactusPink;
+            case 12:    return BlockInit.cropCactusPurple;
+            case 13:    return BlockInit.cropCactusRed;
+            case 14:    return BlockInit.cropCactusWhite;
+            case 15:    return BlockInit.cropCactusYellow;
         }
 
         return null;
