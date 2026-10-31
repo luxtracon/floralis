@@ -1,0 +1,16 @@
+{
+  "type": "botanypots:block_derived_crop",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "block": "floralis:blue_flower",
+  "input": {
+    "item": "floralis:blue_flower"
+  },
+  "soil": {
+    "tag": "botanypots:soil/dirt"
+  }
+}

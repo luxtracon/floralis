@@ -1,0 +1,16 @@
+{
+  "type": "botanypots:block_derived_crop",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "block": "floralis:magenta_cactus",
+  "input": {
+    "item": "floralis:magenta_cactus"
+  },
+  "soil": {
+    "tag": "botanypots:soil/sand"
+  }
+}
