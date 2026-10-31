@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:crusher",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "energy": 3200,
+  "input": {
+    "item": "floralis:white_cactus"
+  },
+  "result": {
+    "count": 2,
+    "id": "floralis:white_cactus_seeds"
+  },
+  "secondaries": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "floralis:white_petals"
+      }
+    },
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "floralis:plant_fibers"
+      }
+    }
+  ]
+}

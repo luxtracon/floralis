@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:magenta_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_magenta_flower_crop"
+  },
+  "results": [
+    {
+      "item": "floralis:magenta_flower"
+    }
+  ],
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 480
+}

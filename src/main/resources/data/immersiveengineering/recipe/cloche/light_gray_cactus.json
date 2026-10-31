@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:light_gray_cactus"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_light_gray_cactus_crop"
+  },
+  "results": [
+    {
+      "item": "floralis:light_gray_cactus"
+    }
+  ],
+  "soil": {
+    "tag": "c:sands"
+  },
+  "time": 480
+}

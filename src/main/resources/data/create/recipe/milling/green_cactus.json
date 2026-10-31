@@ -1,0 +1,29 @@
+{
+  "type": "create:milling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "floralis:green_cactus"
+    }
+  ],
+  "results": [
+    {
+      "id": "floralis:green_cactus_seeds",
+      "count": 2
+    },
+    {
+      "id": "floralis:green_petals",
+      "count": 1
+    },
+    {
+      "id": "floralis:plant_fibers",
+      "count": 1
+    }
+  ],
+  "processing_time": 50
+}

@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:black_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_black_flower_crop"
+  },
+  "results": [
+    {
+      "item": "floralis:black_flower"
+    }
+  ],
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 480
+}

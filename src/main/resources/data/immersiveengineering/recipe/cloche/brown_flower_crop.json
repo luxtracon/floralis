@@ -1,0 +1,34 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:brown_flower_seeds"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_brown_flower_crop"
+  },
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:brown_flower_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:brown_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 800
+}

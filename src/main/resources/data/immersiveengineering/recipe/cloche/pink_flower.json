@@ -1,0 +1,25 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:pink_flower"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_pink_flower_crop"
+  },
+  "results": [
+    {
+      "item": "floralis:pink_flower"
+    }
+  ],
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 480
+}

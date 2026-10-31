@@ -1,0 +1,34 @@
+{
+  "type": "immersiveengineering:cloche",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "input": {
+    "item": "floralis:orange_cactus_seeds"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "floralis:cloched_orange_cactus_crop"
+  },
+  "results": [
+    {
+      "Count": 1,
+      "id": "floralis:orange_cactus_seeds"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:orange_petals"
+    },
+    {
+      "Count": 1,
+      "id": "floralis:plant_fibers"
+    }
+  ],
+  "soil": {
+    "tag": "c:sands"
+  },
+  "time": 800
+}

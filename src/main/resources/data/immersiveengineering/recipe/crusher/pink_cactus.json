@@ -1,0 +1,31 @@
+{
+  "type": "immersiveengineering:crusher",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "energy": 3200,
+  "input": {
+    "item": "floralis:pink_cactus"
+  },
+  "result": {
+    "count": 2,
+    "id": "floralis:pink_cactus_seeds"
+  },
+  "secondaries": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "floralis:pink_petals"
+      }
+    },
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "floralis:plant_fibers"
+      }
+    }
+  ]
+}
